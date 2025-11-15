@@ -27,13 +27,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Use Node.js 16.x for GitBook CLI compatibility
-      # GitBook CLI 3.2.3 is not fully compatible with Node.js 20+ due to graceful-fs dependency issues
-      # See GITBOOK_INTEGRATION.md troubleshooting section for details
-      - name: Setup Node.js 16.x
-        uses: actions/setup-node@v4
+      # Setup Python for BookGen (our custom GitBook alternative)
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version: '16'
+          python-version: '3.x'
 
       # Validate configuration files before build (fail fast if invalid)
       - name: Validate configuration files
@@ -44,29 +42,31 @@ jobs:
             exit 1
           }
           
-          echo "Validating .gitbook.yaml syntax..."
-          python3 -c "import yaml; yaml.safe_load(open('.gitbook.yaml')); print('✓ .gitbook.yaml is valid YAML')" || {
-            echo "❌ ERROR: .gitbook.yaml has invalid YAML syntax"
+          echo "Validating SUMMARY.md exists..."
+          if [ ! -f "SUMMARY.md" ]; then
+            echo "❌ ERROR: SUMMARY.md not found"
             exit 1
-          }
+          fi
+          echo "✓ SUMMARY.md exists"
           
           echo "✅ All configuration files are valid"
 
-      # Install GitBook CLI version 3.2.3 explicitly
-      - name: Install GitBook CLI
+      # Install BookGen dependencies
+      - name: Install dependencies
         run: |
-          npm install -g gitbook-cli@2.3.2
-          gitbook fetch 3.2.3
+          echo "📦 Installing Python markdown library..."
+          pip3 install markdown
 
-      - name: Install GitBook plugins
+      # Build with BookGen (custom GitBook alternative)
+      - name: Build with BookGen
         run: |
-          # If there's a book.json with plugins, install them
-          if [ -f "book.json" ]; then
-            gitbook install
-          fi
-
-      - name: Build GitBook
-        run: gitbook build
+          echo "🚀 Building documentation with BookGen..."
+          python3 .bookgen/generator.py .
+          
+          echo "📊 Build statistics:"
+          echo "  - Output directory: _book/"
+          echo "  - Total size: $(du -sh _book/ | cut -f1)"
+          echo "  - Files generated: $(find _book -type f | wc -l)"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

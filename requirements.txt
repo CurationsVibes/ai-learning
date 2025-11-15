@@ -1,0 +1,4 @@
+# Python dependencies for BookGen
+# A modern GitBook alternative
+
+markdown>=3.3.0
