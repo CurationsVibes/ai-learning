@@ -209,17 +209,17 @@ CURATIONS is a living collaboration. Here's how you can participate:
 
 ## 📖 About This Documentation
 
-This documentation is built with [GitBook](https://www.gitbook.com/) and hosted on GitHub Pages for easy access and collaboration.
+This documentation is built with **BookGen**, a modern custom static site generator designed specifically for this repository as a lightweight alternative to GitBook. It's hosted on GitHub Pages for easy access and collaboration.
 
 **For Repository Maintainers:**
-- 📘 [GitBook Integration Guide](GITBOOK_INTEGRATION.md) - Complete guide to the GitBook setup
+- 📘 [BookGen Documentation](BOOKGEN.md) - Complete guide to BookGen, our custom GitBook alternative
 - 🚀 [GitHub Pages Setup](GITHUB_PAGES_SETUP.md) - Step-by-step instructions to enable hosting
-- ✅ [Validation Checklist](VALIDATION_CHECKLIST.md) - Verify the setup is correct
+- 🔧 [BookGen Generator](.bookgen/generator.py) - The Python script that builds the site
 
 **For Contributors:**
 - All documentation is written in Markdown
 - See [How to Contribute](docs/get-involved.md) for guidelines
-- Changes to the `main` branch automatically rebuild and deploy the site
+- Changes to the `main` branch automatically rebuild and deploy the site using BookGen
 
 ---
 
