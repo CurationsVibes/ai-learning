@@ -1,5 +1,8 @@
 # Welcome to BUNKER
 
+[![Deploy Status](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml)
+[![Site](https://img.shields.io/badge/site-live-success)](https://curationsla.github.io/ai-learning/)
+
 **A Human × AI Creative Agency built on greater good creativity**
 
 ---
@@ -406,6 +409,16 @@ All documentation is written in Markdown/MDX and lives in `src/content/docs/`. T
 4. Submit a pull request
 
 See [How to Contribute](src/content/docs/get-involved.md) for detailed guidelines.
+
+### Deployment
+
+The site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch:
+
+- **Live Site**: https://curationsla.github.io/ai-learning/
+- **Build Status**: Check the badge at the top of this README
+- **Deployment Time**: ~2-3 minutes from push to live
+
+For detailed deployment setup and troubleshooting, see [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ---
 
