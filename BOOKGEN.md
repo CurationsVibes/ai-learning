@@ -1,3 +1,15 @@
+# BookGen - Modern GitBook Alternative (DEPRECATED)
+
+> **⚠️ DEPRECATED**: This repository has been migrated to Astro with Starlight. BookGen is no longer used for building this documentation site.
+> 
+> See the main [README.md](readme.md) for information about the current Astro-based documentation system.
+
+---
+
+**Original BookGen Documentation Below**
+
+---
+
 # BookGen - Modern GitBook Alternative
 
 **A lightweight, modern static site generator designed to mirror GitBook features while being compatible with current technology stacks.**
