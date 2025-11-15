@@ -1,7 +1,0 @@
-/* Code Highlighting */
-.codehilite { background: var(--code-bg); padding: 15px; border-radius: 6px; }
-.codehilite .c { color: #999; } /* Comment */
-.codehilite .k { color: #e06c75; font-weight: bold; } /* Keyword */
-.codehilite .s { color: #98c379; } /* String */
-.codehilite .n { color: #61afef; } /* Name */
-.codehilite .o { color: #c678dd; } /* Operator */

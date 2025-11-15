@@ -1,11 +1,11 @@
-name: Deploy Astro site to GitHub Pages
+name: Deploy BookGen site to GitHub Pages
 
-# Trigger the workflow on push to main branch
+# Trigger the workflow on push to main, pull requests, or manual dispatch
 on:
   push:
     branches:
       - main
-  # Allow manual workflow trigger from Actions tab
+  pull_request:
   workflow_dispatch:
 
 # Sets permissions for GitHub Pages deployment
@@ -14,13 +14,10 @@ permissions:
   pages: write
   id-token: write
 
-# Allow one concurrent deployment
+# Allow one concurrent deployment, but don't cancel in-progress runs for PR previews
 concurrency:
-  group: "pages"
+  group: "pages-${{ github.ref }}"
   cancel-in-progress: false
-
-env:
-  BUILD_PATH: "."
 
 jobs:
   # Build job
@@ -30,35 +27,51 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: npm
-          cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install dependencies
-        run: npm ci
-        working-directory: ${{ env.BUILD_PATH }}
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Build with Astro
+      - name: Install python-markdown
+        run: pip install markdown
+
+      - name: Validate required files
         run: |
-          npm run build -- \
-            --site "${{ steps.pages.outputs.origin }}" \
-            --base "${{ steps.pages.outputs.base_path }}"
-        working-directory: ${{ env.BUILD_PATH }}
+          echo "📋 Validating required files..."
+          if [ ! -f book.json ]; then
+            echo "❌ Error: book.json not found"
+            exit 1
+          fi
+          if [ ! -f SUMMARY.md ]; then
+            echo "❌ Error: SUMMARY.md not found"
+            exit 1
+          fi
+          if [ ! -f readme.md ]; then
+            echo "❌ Error: readme.md not found"
+            exit 1
+          fi
+          echo "✅ All required files present"
 
-      - name: Upload artifact
+      - name: Make build script executable
+        run: chmod +x ./.bookgen/build.sh
+
+      - name: Build with BookGen
+        run: ./.bookgen/build.sh
+
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_PATH }}/dist
+          path: _book/
 
   # Deployment job
   deploy:
+    # Only deploy on push to main or workflow_dispatch
+    # PR previews will get a deployment URL automatically from GitHub
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
