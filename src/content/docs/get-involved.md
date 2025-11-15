@@ -4,7 +4,7 @@ title: Get Involved
 
 # Get Involved
 
-**Join the VibeHub community - learn, contribute, collaborate**
+**Join the BUNKER community - learn, contribute, collaborate**
 
 🌐 **[curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
 
@@ -12,7 +12,7 @@ title: Get Involved
 
 ## How To Participate
 
-VibeHub is a living collaboration. Here's how you can be part of it:
+BUNKER is a living collaboration. Here's how you can be part of it:
 
 ---
 
@@ -93,7 +93,7 @@ We collaborate with brands and creators who:
 - Tests where appropriate
 - Respectful collaboration
 
-### Build With VibeHub
+### Build With BUNKER
 
 **Use our frameworks in your projects:**
 - All frameworks are open-source
@@ -201,7 +201,7 @@ We collaborate with brands and creators who:
 ### 1. **Share Knowledge**
 
 **What helps:**
-- Write about your experience using VibeHub frameworks
+- Write about your experience using BUNKER frameworks
 - Create tutorials or guides
 - Share case studies
 - Document your process
@@ -243,7 +243,7 @@ We collaborate with brands and creators who:
 
 ### 4. **Spread the Word**
 
-**Help others find VibeHub:**
+**Help others find BUNKER:**
 - Share on social media
 - Tell colleagues and friends
 - Link from your projects
@@ -275,7 +275,7 @@ We collaborate with brands and creators who:
 
 ### Our Values
 
-When participating in VibeHub community:
+When participating in BUNKER community:
 
 **✅ DO:**
 - Be respectful and kind
@@ -337,7 +337,7 @@ Open issues on [GitHub](https://github.com/curationsla/ai-learning)
 
 ## Frequently Asked Questions
 
-### Can I use VibeHub frameworks commercially?
+### Can I use BUNKER frameworks commercially?
 
 Yes. All frameworks are open-source. Attribution appreciated but not required.
 
@@ -362,7 +362,7 @@ For everything else: Start a discussion or send an email
 
 Yes. All contributors acknowledged in project documentation and release notes.
 
-### Can I get hired by VibeHub?
+### Can I get hired by BUNKER?
 
 We're a small operation. We don't have formal hiring, but we collaborate with talented people aligned with our mission. Reach out if you're interested.
 
@@ -402,7 +402,7 @@ For those ready to contribute to core frameworks
 
 Here's your architect-level challenge:
 
-"Using VibeHub principles (ethical AI, human-first design, open learning),
+"Using BUNKER principles (ethical AI, human-first design, open learning),
 design a new framework or Curator that we haven't covered yet.
 
 Your proposal should include:
@@ -413,7 +413,7 @@ Your proposal should include:
 5. How it integrates with existing Curators
 6. Ethical considerations
 
-Document it using the VibeHub style."
+Document it using the BUNKER style."
 
 Build it in:
 - ChatGPT: https://chat.openai.com

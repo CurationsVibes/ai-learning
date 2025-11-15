@@ -4,7 +4,7 @@ title: The Curators
 
 # The Curators
 
-**Specialized AI personas powering VibeHub**
+**Specialized AI personas powering BUNKER**
 
 🤖 **[Meet the Live Team at curations.org/ai-curators](https://curations.org/ai-curators)**
 
@@ -12,7 +12,7 @@ title: The Curators
 
 ## What Are "The Curators"?
 
-The Curators are **specialized AI personas** that form the intelligent core of VibeHub.
+The Curators are **specialized AI personas** that form the intelligent core of BUNKER.
 
 Think of them not as tools, but as **creative collaborators**—each with:
 - A specific domain of expertise
@@ -23,7 +23,7 @@ Think of them not as tools, but as **creative collaborators**—each with:
 
 **They're not chatbots. They're creative partners.**
 
-**The Production Team:** VibeHub operates with 8 specialized AI Curators, each serving different industries and use cases. [View their full profiles →](https://curations.org/ai-curators)
+**The Production Team:** BUNKER operates with 8 specialized AI Curators, each serving different industries and use cases. [View their full profiles →](https://curations.org/ai-curators)
 
 ---
 
@@ -48,13 +48,13 @@ Just like a creative agency has:
 - Researchers
 - Developers
 
-VibeHub has Curators who specialize and collaborate.
+BUNKER has Curators who specialize and collaborate.
 
 ---
 
 ## Meet The Curators
 
-### The VibeHub Production Team
+### The BUNKER Production Team
 
 **8 specialized AI Curators currently in production:**
 
@@ -127,7 +127,7 @@ Below are framework examples for how Curators work. The production team above im
 
 **Example prompt:**
 ```
-As VibeHub Design Curator, help me build a visual identity for
+As BUNKER Design Curator, help me build a visual identity for
 [project name]. Consider: audience, values, differentiation, and
 how the design reflects the mission.
 ```
@@ -155,7 +155,7 @@ how the design reflects the mission.
 
 **Example prompt:**
 ```
-As VibeHub Content Curator, help me develop a content strategy for
+As BUNKER Content Curator, help me develop a content strategy for
 [project]. Focus on: authentic voice, audience connection, and
 storytelling that serves the greater good.
 ```
@@ -183,7 +183,7 @@ storytelling that serves the greater good.
 
 **Example prompt:**
 ```
-As VibeHub Research Curator, help me research [topic].
+As BUNKER Research Curator, help me research [topic].
 Provide: key findings, credible sources, data/trends, and
 synthesize insights that inform strategy.
 ```
@@ -211,7 +211,7 @@ synthesize insights that inform strategy.
 
 **Example prompt:**
 ```
-As VibeHub Strategy Curator, help me develop a strategic framework
+As BUNKER Strategy Curator, help me develop a strategic framework
 for [initiative]. Consider: ecosystem, positioning, sustainability,
 and alignment with greater good principles.
 ```
@@ -239,7 +239,7 @@ and alignment with greater good principles.
 
 **Example prompt:**
 ```
-As VibeHub Technical Curator, help me architect a multi-agent system
+As BUNKER Technical Curator, help me architect a multi-agent system
 for [use case]. Design for: scalability, ethical operation, human
 oversight, and technical excellence.
 ```
@@ -267,7 +267,7 @@ oversight, and technical excellence.
 
 **Example prompt:**
 ```
-As VibeHub Youth Curator, help me design a learning module on [topic]
+As BUNKER Youth Curator, help me design a learning module on [topic]
 for ages [X-Y]. Ensure: age-appropriate language, emotional safety,
 creativity focus, and empowerment over hype.
 ```
@@ -295,7 +295,7 @@ creativity focus, and empowerment over hype.
 
 **Example prompt:**
 ```
-As VibeHub Community Curator, help me tell the story of [community/neighborhood].
+As BUNKER Community Curator, help me tell the story of [community/neighborhood].
 Focus on: authentic voices, cultural context, good vibes, and uplifting narratives.
 ```
 
@@ -322,7 +322,7 @@ Focus on: authentic voices, cultural context, good vibes, and uplifting narrativ
 
 **Example prompt:**
 ```
-As VibeHub Ethics Curator, audit [project/system] for ethical concerns.
+As BUNKER Ethics Curator, audit [project/system] for ethical concerns.
 Evaluate: bias, transparency, human dignity, consent, and potential harms.
 Provide recommendations aligned with greater good principles.
 ```
@@ -369,7 +369,7 @@ Example: Building a community storytelling platform
 Invoke a specific Curator in your prompts:
 
 ```
-As VibeHub [Curator Name], help me with [task].
+As BUNKER [Curator Name], help me with [task].
 ```
 
 This frames the AI's response through that Curator's expertise and perspective.
@@ -379,7 +379,7 @@ This frames the AI's response through that Curator's expertise and perspective.
 Have one Curator hand off to another:
 
 ```
-As VibeHub Strategy Curator, develop a framework for [project].
+As BUNKER Strategy Curator, develop a framework for [project].
 Then hand off to Design Curator to create visual identity.
 ```
 
@@ -388,7 +388,7 @@ Then hand off to Design Curator to create visual identity.
 Have multiple Curators work together:
 
 ```
-Convene VibeHub Strategy, Design, and Ethics Curators to collaborate on [project].
+Convene BUNKER Strategy, Design, and Ethics Curators to collaborate on [project].
 Each contribute your expertise, then synthesize into a unified approach.
 ```
 
@@ -417,7 +417,7 @@ Want to create your own Curator? Here's the framework:
 - [Use case 2]
 
 **Example prompt:**
-"As VibeHub [Name] Curator, [sample task]."
+"As BUNKER [Name] Curator, [sample task]."
 ```
 
 ### Create Your Own
@@ -459,7 +459,7 @@ Generic Prompt:
 → Generic, unfocused response
 
 Curator Prompt:
-"As VibeHub Design Curator, help me design a website for [purpose].
+"As BUNKER Design Curator, help me design a website for [purpose].
 Consider: visual hierarchy, brand coherence, accessibility, and how
 design serves the mission."
 → Focused, expert-level, values-aligned response
@@ -527,7 +527,7 @@ Pick one Curator and try a simple prompt:
 
 **Design Curator:**
 ```
-As VibeHub Design Curator, help me choose a color palette for a
+As BUNKER Design Curator, help me choose a color palette for a
 youth-focused community project. Consider: approachability, energy,
 and cultural relevance.
 ```
@@ -539,7 +539,7 @@ Try it in [ChatGPT](https://chat.openai.com) or [Claude](https://claude.ai)
 Have two Curators collaborate:
 
 ```
-As VibeHub Strategy Curator, develop a framework for [your project].
+As BUNKER Strategy Curator, develop a framework for [your project].
 Then, as Content Curator, translate that framework into a compelling narrative.
 ```
 
@@ -561,14 +561,14 @@ For those analyzing the Curator system itself
 
 Here's a research prompt to go deeper:
 
-"Analyze the VibeHub Curator system as a framework for AI collaboration.
+"Analyze the BUNKER Curator system as a framework for AI collaboration.
 Evaluate:
 1. How persona specialization improves output quality
 2. The role of personality in AI collaboration
 3. How multi-Curator orchestration enables complex projects
 4. Ethical implications of persona-based AI systems
 
-Then: design your own Curator for a domain VibeHub hasn't covered yet."
+Then: design your own Curator for a domain BUNKER hasn't covered yet."
 
 Test this in:
 - ChatGPT: https://chat.openai.com

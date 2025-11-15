@@ -1,4 +1,4 @@
-/* Custom styles for VibeHub */
+/* Custom styles for BUNKER - BY CURATIONS */
 
 :root {
   --sl-color-accent-low: #e0e7ff;
@@ -11,6 +11,32 @@
   --sl-color-gray-4: #cbd5e0;
   --sl-color-gray-5: #a0aec0;
   --sl-color-gray-6: #718096;
+  --bunker-primary: #2c3e50;
+  --bunker-secondary: #667eea;
+}
+
+/* BUNKER Brand Header - Add subtitle below the main title */
+.title-wrapper {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+.title-wrapper::after {
+  content: 'BY CURATIONS';
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  color: var(--sl-color-gray-5);
+  margin-top: 0.25rem;
+  margin-left: 0.1rem;
+}
+
+/* Make the site title more prominent */
+.site-title span {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-size: 1.1rem;
 }
 
 .hero {

@@ -4,13 +4,13 @@ title: Design Systems
 
 # Design Systems
 
-**The visual language and design philosophy of VibeHub**
+**The visual language and design philosophy of BUNKER**
 
 ---
 
 ## What Is This?
 
-This is VibeHub' **design system**—the visual identity, brand language, and design principles that guide everything we build.
+This is BUNKER' **design system**—the visual identity, brand language, and design principles that guide everything we build.
 
 **Open and documented.** Use it, remix it, learn from it.
 
@@ -326,9 +326,9 @@ Our design system is:
 
 ## Using This System
 
-### For VibeHub Projects
+### For BUNKER Projects
 
-All VibeHub projects should use this system as a foundation, but:
+All BUNKER projects should use this system as a foundation, but:
 - Adapt for specific project needs
 - Maintain core principles
 - Document deviations (and why)
@@ -336,7 +336,7 @@ All VibeHub projects should use this system as a foundation, but:
 ### For Your Own Projects
 
 You can:
-- **Use it as-is:** Especially if building with VibeHub
+- **Use it as-is:** Especially if building with BUNKER
 - **Remix it:** Take what works, adapt what doesn't
 - **Learn from it:** See how we think about design
 - **Contribute back:** Improvements welcome
@@ -373,7 +373,7 @@ You can:
 
 ## Examples in the Wild
 
-### VibeHub Website
+### BUNKER Website
 *Coming soon*
 
 ### CurationsLA
@@ -402,7 +402,7 @@ For those ready to combine design + AI techniques
 
 Try this advanced prompt:
 
-"As VibeHub Design Curator, using the design system principles,
+"As BUNKER Design Curator, using the design system principles,
 help me design [your project].
 
 Apply:

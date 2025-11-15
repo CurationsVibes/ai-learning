@@ -4,17 +4,17 @@ title: 🧠 The AI × Human Cookbook
 
 # 🧠 The AI × Human Cookbook
 
-**Comprehensive frameworks for building with AI - from VibeHub**
+**Comprehensive frameworks for building with AI - from BUNKER**
 
-🌐 **[curations.org](https://curations.org)** | **Part of the VibeHub ecosystem**
+🌐 **[curations.org](https://curations.org)** | **Part of the BUNKER ecosystem**
 
-Welcome to The AI × Human Cookbook - your comprehensive guide to building intelligent AI agents, advanced prompting techniques, and business strategies. This collection takes you from essential concepts to production-level implementation, all grounded in VibeHub' philosophy of greater good creativity.
+Welcome to The AI × Human Cookbook - your comprehensive guide to building intelligent AI agents, advanced prompting techniques, and business strategies. This collection takes you from essential concepts to production-level implementation, all grounded in BUNKER' philosophy of greater good creativity.
 
 **10 comprehensive frameworks:**
 - 5 AI Development & Advanced Prompting frameworks
 - 5 Business & Brand Strategy frameworks
 
-[← Back to VibeHub Welcome](../readme.md)
+[← Back to BUNKER Welcome](../readme.md)
 
 ## 🎯 Learning Paths
 
@@ -70,13 +70,13 @@ Throughout this cookbook, you'll encounter:
 
 ## 🤝 Human × AI Collaboration
 
-This cookbook celebrates the synergy between human creativity and AI capabilities, core to VibeHub' mission. As you learn, remember:
+This cookbook celebrates the synergy between human creativity and AI capabilities, core to BUNKER' mission. As you learn, remember:
 - AI agents augment human intelligence
 - Creativity comes from thoughtful design
 - Best results emerge from collaboration
 - Every framework should serve the greater good
 
-**Learn more about VibeHub:** [About VibeHub](../about-curations.md) | [Meet The Curators](../the-curators.md)
+**Learn more about BUNKER:** [About BUNKER](../about-curations.md) | [Meet The Curators](../the-curators.md)
 
 ## 🚀 Getting Started
 
@@ -89,11 +89,11 @@ Start with [Introduction to Interoperability](./foundations/01-interoperability-
 **Beyond the technical frameworks, explore:**
 - [Advanced Prompting Techniques](./advanced-prompting/README.md) - Meta-prompting, chain-of-thought, and more
 - [Business & Brand Frameworks](./business/README.md) - Quantum Brand, AI Discovery, Creator Engine
-- [VibeHub Services](https://curations.org) - Professional implementation and collaboration
+- [BUNKER Services](https://curations.org) - Professional implementation and collaboration
 - [The Curators](../the-curators.md) - Specialized AI personas for different domains
 
 ---
 
-*Built with ❤️ by VibeHub for learners who want to master AI × Human collaboration*
+*Built with ❤️ by BUNKER for learners who want to master AI × Human collaboration*
 
-[← Back to VibeHub Welcome](../readme.md)
+[← Back to BUNKER Welcome](../readme.md)

@@ -7,7 +7,7 @@ export default defineConfig({
 	base: '/ai-learning',
 	integrations: [
 		starlight({
-			title: 'VibeHub',
+			title: 'BUNKER',
 			description: 'Open-source frameworks, guides, and resources for AI development, collaboration, and creativity',
 			social: {
 				github: 'https://github.com/CurationsLA/ai-learning',
@@ -16,7 +16,7 @@ export default defineConfig({
 				{
 					label: '🏠 Welcome',
 					items: [
-						{ label: 'About VibeHub', link: '/about-vibehub/' },
+						{ label: 'About BUNKER', link: '/about-bunker/' },
 						{ label: 'Get Involved', link: '/get-involved/' },
 						{ label: 'Design Systems', link: '/design-systems/' },
 						{ label: 'Technical Architecture', link: '/technical-architecture/' },

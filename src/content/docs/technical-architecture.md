@@ -4,13 +4,13 @@ title: Technical Architecture
 
 # Technical Architecture
 
-**How VibeHub builds: systems, protocols, and philosophy**
+**How BUNKER builds: systems, protocols, and philosophy**
 
 ---
 
 ## Overview
 
-This is how VibeHub works technically—the architecture, tools, and principles behind our Human × AI collaboration.
+This is how BUNKER works technically—the architecture, tools, and principles behind our Human × AI collaboration.
 
 **For developers, engineers, and the technically curious.**
 
@@ -97,7 +97,7 @@ Using techniques from [Context Manipulation](cookbooks/advanced-prompting/contex
 ### Knowledge Architecture
 
 **Vector Databases:**
-- Embeddings of VibeHub frameworks, documentation, case studies
+- Embeddings of BUNKER frameworks, documentation, case studies
 - Enables semantic search and retrieval
 - Powers context-aware responses
 
@@ -120,7 +120,7 @@ Generate Response
 ```
 
 **Why this matters:**
-- AI responses grounded in VibeHub knowledge
+- AI responses grounded in BUNKER knowledge
 - Consistency across different interactions
 - Ability to cite sources and provide evidence
 - Scalable knowledge management
@@ -182,7 +182,7 @@ hub.curations.org (public access)
 **What it is:**
 A protocol for AI models to access external context and tools.
 
-**How VibeHub uses it:**
+**How BUNKER uses it:**
 - Curators can access external data sources
 - Integration with specialized tools
 - Consistent context across model providers
@@ -194,7 +194,7 @@ A protocol for AI models to access external context and tools.
 **What it is:**
 A protocol for AI agents to communicate and collaborate.
 
-**How VibeHub uses it:**
+**How BUNKER uses it:**
 - Curators exchange information
 - Collaborative workflows
 - Distributed intelligence
@@ -485,7 +485,7 @@ For those ready to implement the architecture
 <!--
 🛠️ You're ready to build. Here's an architectural challenge:
 
-"As VibeHub Technical Curator, design a multi-agent system for [your use case].
+"As BUNKER Technical Curator, design a multi-agent system for [your use case].
 
 Requirements:
 - Curator specialization and routing
@@ -505,6 +505,6 @@ Advanced techniques: [Multi-Agent Systems](cookbooks/agents/README.md)
 
 *"Good architecture is invisible. Great architecture makes the impossible easy."*
 
-**That's how VibeHub builds.** 🏗️
+**That's how BUNKER builds.** 🏗️
 
 [← Back to Welcome](../readme.md)

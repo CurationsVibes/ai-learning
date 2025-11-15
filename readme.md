@@ -1,12 +1,12 @@
-# Welcome to VibeHub
+# Welcome to BUNKER
 
 **A Human × AI Creative Agency built on greater good creativity**
 
 ---
 
-## What Is VibeHub?
+## What Is BUNKER?
 
-VibeHub is where human creativity and AI capability meet to build things that matter.
+BUNKER is where human creativity and AI capability meet to build things that matter.
 
 We're not a tech company. We're not a consultancy. We're a **creative agency** that believes AI should amplify human potential, not replace it. We build:
 
@@ -23,12 +23,12 @@ We're not a tech company. We're not a consultancy. We're a **creative agency** t
 
 ## The Three Branches
 
-VibeHub operates through three interconnected initiatives:
+BUNKER operates through three interconnected initiatives:
 
-### 1. **VibeHub** (The Creative Agency)
+### 1. **BUNKER** (The Creative Agency)
 Human × AI collaboration for design, content, research, and AI strategy. We work with brands, communities, and creators to build things that matter.
 
-🌐 **[vibehub.org](https://curations.org)**
+🌐 **[bunker.curations.org](https://curations.org)**
 
 **What we do:**
 - AI strategy and implementation
@@ -43,7 +43,7 @@ Human × AI collaboration for design, content, research, and AI strategy. We wor
 - Open learning and documentation
 - AI personas ("Curators") with specialized expertise
 
-[Learn more about VibeHub →](src/content/docs/about-vibehub.md) | [Explore Services →](https://curations.org)
+[Learn more about BUNKER →](src/content/docs/about-bunker.md) | [Explore Services →](https://curations.org)
 
 ### 2. **CurationsLA** (Hyperlocal Media)
 A sister project demonstrating Human × AI collaboration in action. CurationsLA is a **hyperlocal LA media platform** that's:
@@ -306,17 +306,120 @@ The Docs-as-Code workflow is defined in [`.github/workflows/openapi-spec-workflo
 
 ---
 
+## 🎨 Repository Origins and Enhancements
+
+### From Mintlify to BUNKER
+
+This repository represents a thoughtful evolution of documentation infrastructure, combining best practices from modern documentation platforms with CURATIONS' minimalistic and professional design philosophy.
+
+**Original Inspiration**: The [mintlify/starter](https://github.com/mintlify/starter) repository provided inspiration for creating beautiful, developer-friendly documentation. Mintlify offers excellent documentation features, but we chose to build on **Astro + Starlight** for greater flexibility and control over our documentation experience.
+
+### Why Astro + Starlight?
+
+Instead of forking Mintlify directly, we built BUNKER's documentation platform using:
+
+- **[Astro](https://astro.build)**: A modern static site generator focused on performance
+- **[Starlight](https://starlight.astro.build)**: Astro's documentation theme with built-in best practices
+- **Custom CURATIONS Branding**: Minimalistic, professional design aligned with our agency's visual identity
+
+This approach gives us:
+- ⚡ **Lightning-fast performance** with minimal JavaScript
+- 🎨 **Complete design control** with custom CSS and components
+- 📝 **Markdown/MDX content** for easy contribution
+- 🔍 **Built-in search** powered by Pagefind
+- 📱 **Responsive design** that works on all devices
+- ♿ **Accessibility-first** approach
+
+### BUNKER Branding
+
+The rebrand from the original concept to **BUNKER** includes:
+
+- **Visual Identity**: Left-aligned "BUNKER" title with "BY CURATIONS" subtitle
+- **Professional Aesthetic**: Minimalistic design with thoughtful color palette
+- **Consistent Naming**: All references updated across documentation and code
+- **CURATIONS Integration**: Clear connection to the CURATIONS ecosystem
+
+### Enhanced with Best-in-Class Tools
+
+BUNKER leverages modern development tools already integrated in this repository:
+
+1. **Astro + Starlight Documentation**
+   - Modern, fast, accessible documentation platform
+   - Built-in search, navigation, and responsive design
+   - Custom styling for BUNKER branding
+
+2. **Docs-as-Code Workflow** (OpenAPI Specifications)
+   - Automatic validation of API specifications
+   - Version control for all documentation
+   - Integration with [Stainless](https://stainless.com) for SDK generation
+   - See [specs/README.md](specs/README.md) for details
+
+3. **GitHub Pages Deployment**
+   - Automated builds and deployments via GitHub Actions
+   - Fast, reliable hosting at no cost
+   - Custom domain support (bunker.curations.org)
+
+4. **GitBook Integration** (Optional)
+   - Alternative documentation platform support
+   - See [GITBOOK_INTEGRATION.md](GITBOOK_INTEGRATION.md) for setup
+
+### Documentation Structure
+
+```
+ai-learning/
+├── src/
+│   ├── content/
+│   │   └── docs/          # All documentation content
+│   │       ├── about-bunker.md
+│   │       ├── cookbooks/ # AI development frameworks
+│   │       └── ...
+│   └── styles/
+│       └── custom.css     # BUNKER branding styles
+├── specs/                 # OpenAPI specifications
+├── astro.config.mjs       # Astro configuration
+└── package.json           # Dependencies and scripts
+```
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+### Contributing
+
+All documentation is written in Markdown/MDX and lives in `src/content/docs/`. To contribute:
+
+1. Edit or create `.md` files in `src/content/docs/`
+2. Follow existing documentation style and structure
+3. Test locally with `npm run dev`
+4. Submit a pull request
+
+See [How to Contribute](src/content/docs/get-involved.md) for detailed guidelines.
+
+---
+
 ## Contact
 
-**VibeHub**
+**BUNKER**
 Human × AI Creative Agency
 Los Angeles, CA
 
 Questions? Ideas? Collaborations?
-Reach out through our [Get Involved](docs/get-involved.md) page.
+Reach out through our [Get Involved](src/content/docs/get-involved.md) page.
 
 ---
 
 *"The future is built by those who believe in the beauty of greater good creativity."*
 
-**Welcome to VibeHub.** ✨
+**Welcome to BUNKER.** ✨
