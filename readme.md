@@ -207,6 +207,22 @@ CURATIONS is a living collaboration. Here's how you can participate:
 
 ---
 
+## 📖 About This Documentation
+
+This documentation is built with [GitBook](https://www.gitbook.com/) and hosted on GitHub Pages for easy access and collaboration.
+
+**For Repository Maintainers:**
+- 📘 [GitBook Integration Guide](GITBOOK_INTEGRATION.md) - Complete guide to the GitBook setup
+- 🚀 [GitHub Pages Setup](GITHUB_PAGES_SETUP.md) - Step-by-step instructions to enable hosting
+- ✅ [Validation Checklist](VALIDATION_CHECKLIST.md) - Verify the setup is correct
+
+**For Contributors:**
+- All documentation is written in Markdown
+- See [How to Contribute](docs/get-involved.md) for guidelines
+- Changes to the `main` branch automatically rebuild and deploy the site
+
+---
+
 ## Contact
 
 **CURATIONS**
