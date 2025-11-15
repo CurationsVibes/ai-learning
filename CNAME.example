@@ -1,0 +1,17 @@
+# CNAME File for Custom Domain
+# 
+# To use a custom domain for GitHub Pages:
+# 1. Rename this file to "CNAME" (remove .example extension)
+# 2. Replace the example domain below with your actual domain
+# 3. Commit and push the file
+# 4. Configure DNS settings with your domain provider:
+#    - For apex domain (example.com): Add A records pointing to GitHub Pages IPs
+#    - For subdomain (docs.example.com): Add CNAME record pointing to <username>.github.io
+#
+# Example for subdomain:
+# docs.curations.org
+#
+# Example for apex domain:
+# curations.org
+#
+# More info: https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site
