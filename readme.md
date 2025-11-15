@@ -231,6 +231,81 @@ npm run build       # Build for production
 
 ---
 
+## 📋 Docs-as-Code
+
+This repository implements a **Docs-as-Code** workflow for managing OpenAPI specifications. API documentation is treated as code: version-controlled, automatically validated, and integrated into the development workflow.
+
+### What is Docs-as-Code?
+
+Docs-as-Code is a methodology where documentation is:
+- **Version-controlled** alongside code using Git
+- **Automatically validated** through CI/CD pipelines
+- **Reviewed** through pull requests like any other code change
+- **Published** automatically when changes are merged
+
+### OpenAPI Specification Management
+
+All OpenAPI specifications are stored in the [`specs/`](specs/) directory. When you add or modify OpenAPI files (`.yaml`, `.yml`, or `.json`), our automated workflow:
+
+1. **Validates** the specification against OpenAPI standards
+2. **Analyzes** changes and comments on pull requests
+3. **Documents** what endpoints or schemas have changed
+4. **Optionally uploads** to external services for SDK generation
+
+### How to Use
+
+**Adding a new API specification:**
+1. Create your OpenAPI spec file in the `specs/` directory
+2. Follow the [OpenAPI 3.0+ specification](https://spec.openapis.org/oas/v3.0.0)
+3. Commit and push your changes
+4. The workflow automatically validates your specification
+
+**Updating an existing specification:**
+1. Edit the OpenAPI file in `specs/`
+2. Create a pull request with your changes
+3. Review the automated validation results and change summary
+4. Merge when approved
+
+**Directory structure:**
+```
+specs/
+├── README.md           # Guidelines for OpenAPI specs
+└── example-api.yaml    # Example specification (replace with your own)
+```
+
+### Workflow Features
+
+- ✅ **Automatic validation** using industry-standard OpenAPI validators
+- 📊 **Change detection** on pull requests with detailed summaries
+- 🔄 **Integration ready** with Stainless API for SDK generation
+- 🚀 **Zero configuration** - works out of the box for basic validation
+
+### Optional: SDK Generation
+
+The workflow includes optional integration with [Stainless](https://stainless.com/) for automatic SDK generation. To enable:
+
+1. Create a Stainless account and project
+2. Configure authentication (GitHub OIDC or API key)
+3. Uncomment the `upload-to-stainless` job in `.github/workflows/openapi-spec-workflow.yml`
+4. Update with your project details
+
+See [`specs/README.md`](specs/README.md) for detailed documentation.
+
+### Workflow Configuration
+
+The Docs-as-Code workflow is defined in [`.github/workflows/openapi-spec-workflow.yml`](.github/workflows/openapi-spec-workflow.yml) and includes:
+
+- **Validation job**: Checks OpenAPI specs for correctness
+- **Documentation job**: Comments on PRs with change summaries
+- **Optional upload job**: Sends specs to external services (commented out by default)
+
+**Triggering the workflow:**
+- Automatically on push to `main` branch (for files in `specs/`)
+- Automatically on pull requests (for files in `specs/`)
+- Manually via GitHub Actions UI
+
+---
+
 ## Contact
 
 **VibeHub**

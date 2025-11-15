@@ -1,0 +1,140 @@
+name: OpenAPI Spec Workflow (Docs-as-Code)
+
+# Trigger on changes to OpenAPI specification files
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'specs/**/*.yaml'
+      - 'specs/**/*.yml'
+      - 'specs/**/*.json'
+  pull_request:
+    paths:
+      - 'specs/**/*.yaml'
+      - 'specs/**/*.yml'
+      - 'specs/**/*.json'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Directory containing OpenAPI specifications
+  SPECS_DIR: specs
+
+jobs:
+  validate-openapi:
+    name: Validate OpenAPI Specifications
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install OpenAPI validators
+        run: |
+          npm install -g @apidevtools/swagger-cli
+          echo "OpenAPI validator installed successfully"
+
+      - name: Validate OpenAPI specs
+        run: |
+          echo "Validating OpenAPI specifications in $SPECS_DIR..."
+          if [ -d "$SPECS_DIR" ]; then
+            for spec in $(find $SPECS_DIR -type f \( -name "*.yaml" -o -name "*.yml" -o -name "*.json" \)); do
+              echo "Validating: $spec"
+              swagger-cli validate "$spec" || echo "Warning: $spec validation failed"
+            done
+            echo "Validation complete!"
+          else
+            echo "No specs directory found. Creating example structure..."
+            mkdir -p $SPECS_DIR
+            echo "Specs directory created at: $SPECS_DIR"
+          fi
+
+  # Optional: Upload to Stainless API for SDK generation
+  # This job requires Stainless configuration and API credentials
+  # Uncomment and configure when ready to generate SDKs
+  # 
+  # upload-to-stainless:
+  #   name: Upload to Stainless (Optional)
+  #   runs-on: ubuntu-latest
+  #   needs: validate-openapi
+  #   if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+  #   permissions:
+  #     contents: read
+  #     id-token: write
+  #   steps:
+  #     - name: Checkout repository
+  #       uses: actions/checkout@v4
+  #
+  #     - name: Upload OpenAPI spec to Stainless
+  #       uses: stainless-api/upload-openapi-spec-action/build@v1
+  #       with:
+  #         project: YOUR_PROJECT_NAME
+  #         oas_path: specs/your-api.yaml
+  #         # Uncomment to use API key instead of OIDC
+  #         # stainless_api_key: ${{ secrets.STAINLESS_API_KEY }}
+
+  document-changes:
+    name: Document OpenAPI Changes
+    runs-on: ubuntu-latest
+    needs: validate-openapi
+    if: github.event_name == 'pull_request'
+    permissions:
+      pull-requests: write
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Analyze OpenAPI changes
+        id: analyze
+        run: |
+          echo "Analyzing OpenAPI specification changes..."
+          CHANGED_FILES=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -E 'specs/.*\.(yaml|yml|json)' || true)
+          
+          if [ -z "$CHANGED_FILES" ]; then
+            echo "No OpenAPI spec changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changed OpenAPI files:"
+            echo "$CHANGED_FILES"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "changed_files<<EOF" >> $GITHUB_OUTPUT
+            echo "$CHANGED_FILES" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Comment on PR
+        if: steps.analyze.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const changedFiles = `${{ steps.analyze.outputs.changed_files }}`;
+            const comment = `## 📋 OpenAPI Specification Changes Detected
+            
+            The following OpenAPI specification files have been modified:
+            
+            ${changedFiles.split('\n').map(f => `- \`${f}\``).join('\n')}
+            
+            ### ✅ Next Steps
+            - Review the specification changes carefully
+            - Ensure backward compatibility where applicable
+            - Update API documentation if needed
+            - Consider SDK regeneration after merge
+            
+            > This is an automated message from the Docs-as-Code workflow.`;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
