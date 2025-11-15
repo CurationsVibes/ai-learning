@@ -187,6 +187,44 @@ Create a `book.js` file in the repository root for custom scripts.
 - Try clearing npm cache: `npm cache clean --force`
 - Check for errors in `book.json` syntax (must be valid JSON)
 
+### Node.js 20+ Compatibility Issue
+
+**Problem**: Build fails with graceful-fs errors under Node.js 20+
+
+**Error Example**:
+```
+/usr/local/lib/node_modules/gitbook-cli/node_modules/npm/node_modules/graceful-fs/polyfills.js:287
+      if (cb) cb.apply(this, arguments)
+                 ^
+TypeError: cb.apply is not a function
+```
+
+**Root Cause**: GitBook CLI 3.2.3 depends on an older version of graceful-fs that is not compatible with Node.js 20+. The graceful-fs polyfills for `fs.stat`, `fs.fstat`, and `fs.lstat` use deprecated features removed in Node.js 20.
+
+**Solution**: Use Node.js 16.x (LTS) instead of Node.js 20+
+
+- **For GitHub Actions**: The workflow in `.github/workflows/deploy-pages.yml` is configured to use Node.js 16.x explicitly
+- **For Local Development**: 
+  ```bash
+  # Using nvm (Node Version Manager)
+  nvm install 16
+  nvm use 16
+  
+  # Or using n
+  n 16
+  
+  # Verify version
+  node --version  # Should show v16.x.x
+  ```
+
+**Why Node.js 16**: 
+- GitBook CLI 3.2.3 is a legacy tool (last updated 2018)
+- Node.js 16.x is the latest LTS version fully compatible with GitBook CLI
+- Node.js 16 reached End-of-Life in September 2023 but remains the recommended version for GitBook CLI
+- Alternative: Consider migrating to modern static site generators in the future (MkDocs, Docusaurus, VitePress, etc.)
+
+**Automation**: The GitHub Actions workflow automatically validates configuration files before building to catch syntax errors early and fail fast with clear error messages.
+
 ### Plugins Not Working
 
 **Problem**: Plugins don't appear after installation

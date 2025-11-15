@@ -27,14 +27,35 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      # Use Node.js 16.x for GitBook CLI compatibility
+      # GitBook CLI 3.2.3 is not fully compatible with Node.js 20+ due to graceful-fs dependency issues
+      # See GITBOOK_INTEGRATION.md troubleshooting section for details
+      - name: Setup Node.js 16.x
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '16'
 
+      # Validate configuration files before build (fail fast if invalid)
+      - name: Validate configuration files
+        run: |
+          echo "Validating book.json syntax..."
+          python3 -c "import json; json.load(open('book.json')); print('✓ book.json is valid JSON')" || {
+            echo "❌ ERROR: book.json has invalid JSON syntax"
+            exit 1
+          }
+          
+          echo "Validating .gitbook.yaml syntax..."
+          python3 -c "import yaml; yaml.safe_load(open('.gitbook.yaml')); print('✓ .gitbook.yaml is valid YAML')" || {
+            echo "❌ ERROR: .gitbook.yaml has invalid YAML syntax"
+            exit 1
+          }
+          
+          echo "✅ All configuration files are valid"
+
+      # Install GitBook CLI version 3.2.3 explicitly
       - name: Install GitBook CLI
         run: |
-          npm install -g gitbook-cli
+          npm install -g gitbook-cli@2.3.2
           gitbook fetch 3.2.3
 
       - name: Install GitBook plugins
