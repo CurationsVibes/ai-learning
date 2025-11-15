@@ -10,7 +10,7 @@ Welcome to The AI × Human Cookbook - your comprehensive guide to building intel
 - 5 AI Development & Advanced Prompting frameworks
 - 5 Business & Brand Strategy frameworks
 
-[← Back to CURATIONS Welcome](../readme.md)
+[← Back to CURATIONS Welcome](../../readme.md)
 
 ## 🎯 Learning Paths
 
@@ -92,4 +92,4 @@ Start with [Introduction to Interoperability](./foundations/01-interoperability-
 
 *Built with ❤️ by CURATIONS for learners who want to master AI × Human collaboration*
 
-[← Back to CURATIONS Welcome](../readme.md)
+[← Back to CURATIONS Welcome](../../readme.md)
