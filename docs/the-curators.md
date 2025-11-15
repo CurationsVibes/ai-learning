@@ -2,6 +2,8 @@
 
 **Specialized AI personas powering CURATIONS**
 
+🤖 **[Meet the Live Team at curations.org/ai-curators](https://curations.org/ai-curators)**
+
 ---
 
 ## What Are "The Curators"?
@@ -16,6 +18,8 @@ Think of them not as tools, but as **creative collaborators**—each with:
 - The ability to work together (and with humans)
 
 **They're not chatbots. They're creative partners.**
+
+**The Production Team:** CURATIONS operates with 8 specialized AI Curators, each serving different industries and use cases. [View their full profiles →](https://curations.org/ai-curators)
 
 ---
 
@@ -45,6 +49,58 @@ CURATIONS has Curators who specialize and collaborate.
 ---
 
 ## Meet The Curators
+
+### The CURATIONS Production Team
+
+**8 specialized AI Curators currently in production:**
+
+1. **[Kai Synapse](https://curations.org/ai-curators)** - AI Chief Branding Officer
+   - Specialist in Branding
+   - Architects brand ecosystems across all touchpoints
+   - Works with: Tech startups, SaaS, Creative agencies, E-commerce
+
+2. **[Jim Flenderson](https://curations.org/ai-curators)** - AI Chief Ecosystems Officer
+   - Specialist in AI Discovery + Consulting
+   - Transforms AI ecosystems into brand ambassadors
+   - Works with: Enterprise software, AI/ML companies, Financial services
+
+3. **[Garrett Nova](https://curations.org/ai-curators)** - AI Chief Content Officer
+   - Specialist in Newsletters
+   - Leads editorial for Gibber and CurationsLA
+   - Works with: Media companies, SaaS platforms, B2B software
+
+4. **[Comet Scott](https://curations.org/ai-curators)** - AI Chief Marketing Officer
+   - Specialist in Creative Campaigns
+   - Transforms cultural signals into campaign strategies
+   - Works with: Consumer brands, Entertainment, Fashion, Food & beverage
+
+5. **[Lucy Mills](https://curations.org/ai-curators)** - AI Chief PR Officer
+   - Specialist in Public Relationships
+   - Ensures messages resonate with precision
+   - Works with: B2B SaaS, Professional services, Healthcare, Government
+
+6. **[Peter Melrose](https://curations.org/ai-curators)** - AI Chief Hospitality Officer
+   - Specialist in Restaurants + Hospitality
+   - Tests strategies through AI simulation
+   - Works with: Restaurants, Hotels, Event venues, Catering
+
+7. **[Taylor Hines](https://curations.org/ai-curators)** - AI Chief Discovery Officer
+   - Specialist in Discovery + Presence
+   - Architects digital presence for optimal discoverability
+   - Works with: Professional services, B2B software, Legal, Healthcare
+
+8. **[Molly Towns](https://curations.org/ai-curators)** - AI Chief Collaboration Officer
+   - Specialist in Influencers + Creators
+   - Connects creators with brands through strategic partnerships
+   - Works with: Creator economy, Social media, Fashion, Lifestyle
+
+**[View full profiles and contact each Curator →](https://curations.org/ai-curators)**
+
+---
+
+### Curator Framework Examples
+
+Below are framework examples for how Curators work. The production team above implements these patterns in real client work.
 
 ### 🎨 The Design Curator
 

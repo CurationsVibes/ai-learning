@@ -2,6 +2,8 @@
 
 **A Human × AI Creative Agency**
 
+🌐 **[curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
+
 ---
 
 ## What We Are
@@ -10,22 +12,40 @@ CURATIONS is a creative agency built on a simple belief: **AI should amplify hum
 
 We're not a consultancy selling AI transformation. We're not a dev shop building chatbots. We're **creatives and technologists** who use AI as a medium—like paint, code, or clay—to build things that matter.
 
+**Explore our services:** [curations.org](https://curations.org)
+
 ### What We Build
 
-**🎨 Design Systems**
+**🎨 Design Systems & Branding**
 Visual identity, brand architecture, design languages that work across human and AI touchpoints.
 
+→ [Branding Services](https://curations.org/branding)
+
 **📖 Content & Strategy**
-Editorial direction, storytelling frameworks, content systems that scale without losing soul.
+Editorial direction, storytelling frameworks, content systems that scale without losing soul—including newsletters, creative campaigns, and public relations.
+
+→ [Creative Campaigns](https://curations.org/creative-campaigns) | [Newsletters](https://curations.org/newsletters) | [Public Relations](https://curations.org/public-relations)
 
 **🤖 AI Implementation**
-Multi-agent systems, custom AI tools, prompt engineering, RAG systems—but always in service of creativity.
+Multi-agent systems, custom AI tools, prompt engineering, RAG systems—powered by specialized AI Curators, each with unique expertise.
+
+→ [AI Services](https://curations.org/ai-services) | [Meet Our AI Curators](https://curations.org/ai-curators)
 
 **🔬 Research & Development**
 We experiment, document, and share. Every project teaches us something we open-source.
 
 **🌐 Community Platforms**
-Like CurationsLA—real projects showing Human × AI collaboration in action.
+Like [CurationsLA](https://la.curations.cc)—real projects showing Human × AI collaboration in action.
+
+**📍 Discovery & Presence**
+Making brands findable and memorable across digital ecosystems.
+
+→ [Discovery & Presence](https://curations.org/discovery-presence)
+
+**🍽️ Industry Specializations**
+From restaurants to creators to diverse industries—we understand your context.
+
+→ [Restaurants](https://curations.org/restaurants) | [Influencers & Creators](https://curations.org/influencers-creators) | [Industries](https://curations.org/industries)
 
 ---
 
@@ -123,10 +143,13 @@ Whether you're:
 We help you use AI as a creative partner, not a black box.
 
 **What we provide:**
-- Brand strategy and design systems
-- AI implementation (the right tool for the job)
+- [Brand strategy and design systems](https://curations.org/branding)
+- [AI implementation](https://curations.org/ai-services) (the right tool for the job)
 - Prompt engineering and content frameworks
 - Training and enablement for your team
+- [Influencer & creator collaboration](https://curations.org/influencers-creators)
+
+**Explore services:** [curations.org](https://curations.org)
 
 ### Communities & Nonprofits
 

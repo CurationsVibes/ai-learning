@@ -1,6 +1,16 @@
-# 🧠 AI Learning Cookbook
+# 🧠 The AI × Human Cookbook
 
-Welcome to the AI Learning Cookbook - your comprehensive guide to building intelligent AI agents and systems. This repository takes you from essential concepts to top-tier creative development, providing workflows for advanced learning paths.
+**Comprehensive frameworks for building with AI - from CURATIONS**
+
+🌐 **[curations.org](https://curations.org)** | **Part of the CURATIONS ecosystem**
+
+Welcome to The AI × Human Cookbook - your comprehensive guide to building intelligent AI agents, advanced prompting techniques, and business strategies. This collection takes you from essential concepts to production-level implementation, all grounded in CURATIONS' philosophy of greater good creativity.
+
+**10 comprehensive frameworks:**
+- 5 AI Development & Advanced Prompting frameworks
+- 5 Business & Brand Strategy frameworks
+
+[← Back to CURATIONS Welcome](../readme.md)
 
 ## 🎯 Learning Paths
 
@@ -56,10 +66,13 @@ Throughout this cookbook, you'll encounter:
 
 ## 🤝 Human × AI Collaboration
 
-This cookbook celebrates the synergy between human creativity and AI capabilities. As you learn, remember:
+This cookbook celebrates the synergy between human creativity and AI capabilities, core to CURATIONS' mission. As you learn, remember:
 - AI agents augment human intelligence
 - Creativity comes from thoughtful design
 - Best results emerge from collaboration
+- Every framework should serve the greater good
+
+**Learn more about CURATIONS:** [About CURATIONS](../about-curations.md) | [Meet The Curators](../the-curators.md)
 
 ## 🚀 Getting Started
 
@@ -67,4 +80,16 @@ Start with [Introduction to Interoperability](./foundations/01-interoperability-
 
 ---
 
-*Built with ❤️ for learners who want to master AI agent development*
+## 📖 Additional Resources
+
+**Beyond the technical frameworks, explore:**
+- [Advanced Prompting Techniques](./advanced-prompting/README.md) - Meta-prompting, chain-of-thought, and more
+- [Business & Brand Frameworks](./business/README.md) - Quantum Brand, AI Discovery, Creator Engine
+- [CURATIONS Services](https://curations.org) - Professional implementation and collaboration
+- [The Curators](../the-curators.md) - Specialized AI personas for different domains
+
+---
+
+*Built with ❤️ by CURATIONS for learners who want to master AI × Human collaboration*
+
+[← Back to CURATIONS Welcome](../readme.md)

@@ -2,6 +2,8 @@
 
 **Join the CURATIONS community - learn, contribute, collaborate**
 
+🌐 **[curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
+
 ---
 
 ## How To Participate
@@ -51,6 +53,14 @@ We collaborate with brands and creators who:
 - Value ethical AI practices
 - Want to build transparently
 - Serve communities authentically
+
+**Explore our services:**
+- [Branding & Design Systems](https://curations.org/branding)
+- [AI Services & Implementation](https://curations.org/ai-services)
+- [Creative Campaigns](https://curations.org/creative-campaigns)
+- [Newsletters & Content](https://curations.org/newsletters)
+- [Influencer & Creator Partnerships](https://curations.org/influencers-creators)
+- [All Services](https://curations.org)
 
 **Reach out:** founders@curations.org *(coming soon)*
 
@@ -133,7 +143,7 @@ We collaborate with brands and creators who:
 - Free frameworks and tools
 - Technical guidance
 - Pro-bono support (capacity permitting)
-- Platform access (CurationsLA model)
+- Platform access ([CurationsLA model](https://la.curations.cc))
 
 **Interested?** community@curations.org *(coming soon)*
 

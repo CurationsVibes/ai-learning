@@ -28,6 +28,8 @@ CURATIONS operates through three interconnected initiatives:
 ### 1. **CURATIONS** (The Creative Agency)
 Human × AI collaboration for design, content, research, and AI strategy. We work with brands, communities, and creators to build things that matter.
 
+🌐 **[curations.org](https://curations.org)**
+
 **What we do:**
 - AI strategy and implementation
 - Design systems and brand architecture
@@ -41,7 +43,7 @@ Human × AI collaboration for design, content, research, and AI strategy. We wor
 - Open learning and documentation
 - AI personas ("Curators") with specialized expertise
 
-[Learn more about CURATIONS →](docs/about-curations.md)
+[Learn more about CURATIONS →](docs/about-curations.md) | [Explore Services →](https://curations.org)
 
 ### 2. **CurationsLA** (Hyperlocal Media)
 A sister project demonstrating Human × AI collaboration in action. CurationsLA is a **hyperlocal LA media platform** that's:
@@ -50,6 +52,8 @@ A sister project demonstrating Human × AI collaboration in action. CurationsLA 
 - Good vibes only, non-political
 - Human-curated with AI support
 - A living example of ethical AI in civic media
+
+🏙️ **[la.curations.cc](https://la.curations.cc)**
 
 [Learn more about CurationsLA →](docs/about-curationsla.md)
 
