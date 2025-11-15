@@ -1,0 +1,31 @@
+name: Mark stale issues and PRs
+
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily at 03:00 UTC
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          days-before-stale: 14
+          days-before-close: 7
+          stale-issue-message: >
+            This issue has been marked as stale due to inactivity. Please update or comment to keep it open.
+            It will be closed in 7 days if there is no further activity.
+          close-issue-message: >
+            Closing due to prolonged inactivity. Feel free to re-open when ready.
+          stale-pr-message: >
+            This PR has been marked as stale due to inactivity. Please update or comment to keep it open.
+            It will be closed in 7 days if there is no further activity.
+          close-pr-message: >
+            Closing due to prolonged inactivity. Feel free to re-open when ready.
+          exempt-pr-labels: "keep-open,blocked,WIP,do-not-merge"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}

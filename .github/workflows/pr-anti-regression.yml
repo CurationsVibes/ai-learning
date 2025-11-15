@@ -1,0 +1,34 @@
+name: PR anti-regression (up-to-date check)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+jobs:
+  up_to_date_with_base:
+    name: Ensure PR branch is up-to-date with base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fetch base branch
+        run: |
+          git fetch origin "${{ github.base_ref }}" --depth=1
+
+      - name: Verify PR branch is rebased on latest base
+        run: |
+          BASE_SHA=$(git rev-parse "origin/${{ github.base_ref }}")
+          echo "Base latest: $BASE_SHA"
+          echo "PR head: $GITHUB_SHA"
+          MERGE_BASE=$(git merge-base "$BASE_SHA" "$GITHUB_SHA")
+          if [ "$MERGE_BASE" != "$BASE_SHA" ]; then
+            echo "::error::PR branch is behind '${{ github.base_ref }}'. Please update your branch (merge or rebase) to include the latest changes."
+            exit 1
+          fi
+          echo "PR branch is up-to-date with base."
