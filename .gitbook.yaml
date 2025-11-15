@@ -1,8 +1,20 @@
+# GitBook configuration file
+# This file defines the structure and settings for the GitBook documentation
+
+# Root directory for the documentation
 root: ./
 
+# Define the structure of the book
 structure:
+  # Main landing page
   readme: readme.md
+  # Table of contents
   summary: SUMMARY.md
+  # Glossary (optional, can be added later)
+  # glossary: GLOSSARY.md
+  # Languages (optional, for multi-language support)
+  # languages: LANGS.md
 
+# URL redirects for moved pages
 redirects:
   previous/page: new-folder/page.md

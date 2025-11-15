@@ -1,0 +1,50 @@
+{
+  "title": "CURATIONS - Human × AI Creative Agency",
+  "description": "Open-source frameworks, guides, and resources for AI development, collaboration, and creativity",
+  "author": "CURATIONS",
+  "language": "en",
+  "gitbook": "3.2.3",
+  "root": ".",
+  "structure": {
+    "readme": "readme.md",
+    "summary": "SUMMARY.md"
+  },
+  "plugins": [
+    "search",
+    "fontsettings",
+    "sharing",
+    "page-toc",
+    "back-to-top-button",
+    "expandable-chapters",
+    "-lunr",
+    "-search",
+    "search-plus"
+  ],
+  "pluginsConfig": {
+    "fontsettings": {
+      "theme": "white",
+      "family": "sans",
+      "size": 2
+    },
+    "sharing": {
+      "facebook": false,
+      "twitter": true,
+      "google": false,
+      "weibo": false,
+      "instapaper": false,
+      "vk": false,
+      "all": ["twitter"]
+    },
+    "page-toc": {
+      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3",
+      "position": "before-first",
+      "showByDefault": true
+    }
+  },
+  "links": {
+    "sidebar": {
+      "CURATIONS Website": "https://curations.org",
+      "CurationsLA": "https://la.curations.cc"
+    }
+  }
+}
