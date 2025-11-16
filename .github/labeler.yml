@@ -1,0 +1,99 @@
+# Auto-labeler configuration for GitHub PRs
+# This file defines rules for automatically applying labels based on file changes
+# Used by: .github/workflows/auto-label-pr.yml
+# Documentation: https://github.com/actions/labeler
+
+# Content Type Labels
+
+'content: cookbook':
+  - changed-files:
+    - any-glob-to-any-file: 'docs/cookbook/**/*'
+
+'content: documentation':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'docs/**/*.md'
+      - '*.md'
+      - 'SUMMARY.md'
+      - 'readme.md'
+
+'content: ui-ux':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/styles/**/*'
+      - 'src/components/**/*'
+      - '**/*.css'
+      - 'astro.config.mjs'
+
+'content: infrastructure':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/**/*'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'tsconfig.json'
+      - '.gitignore'
+      - '.gitattributes'
+
+'content: community-features':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/*giscus*'
+      - '**/*comment*'
+      - '**/*upvote*'
+      - '**/*voting*'
+
+'content: branding':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'docs/welcome/design-systems.md'
+      - 'src/styles/custom.css'
+      - '**/branding/**/*'
+
+# Agent Labels
+
+'agent: tony':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/workflows/**/*'
+      - '.github/*.yml'
+      - '.github/*.yaml'
+
+'agent: stanley':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.agent-coordination/**/*'
+
+# Type Labels
+
+'type: docs':
+  - changed-files:
+    - any-glob-to-any-file: '**/*.md'
+    - all-globs-to-all-files: '!package*.json'
+
+'special: dependencies':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'package.json'
+      - 'package-lock.json'
+
+# OpenAPI / Specs
+
+'content: infrastructure':
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'specs/**/*.yaml'
+      - 'specs/**/*.yml'
+      - 'specs/**/*.json'
+
+# Configuration files
+
+'type: chore':
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.gitignore'
+      - '.gitattributes'
+      - '.editorconfig'
+      - '.prettierrc*'
+      - '.eslintrc*'
+      - 'tsconfig.json'

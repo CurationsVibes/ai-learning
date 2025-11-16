@@ -1,0 +1,124 @@
+---
+// Giscus Comments Component for BUNKER
+// Integrates GitHub Discussions for page-level commenting and reactions
+// Configuration generated from: https://giscus.app/
+
+interface Props {
+  /** Override default theme (optional) */
+  theme?: 'light' | 'dark' | 'preferred_color_scheme';
+  /** Override input position (optional) */
+  inputPosition?: 'top' | 'bottom';
+  /** Custom loading behavior (optional) */
+  loading?: 'lazy' | 'eager';
+}
+
+const {
+  theme = 'preferred_color_scheme',
+  inputPosition = 'bottom',
+  loading = 'lazy'
+} = Astro.props;
+
+// Giscus Configuration
+// Generated: 2025-11-16
+// Repository: CurationsLA/ai-learning
+const giscusConfig = {
+  repo: 'CurationsLA/ai-learning',
+  repoId: 'R_kgDOQV0Hxg',
+  category: 'Documentation Feedback',
+  categoryId: 'DIC_kwDOQV0Hxs4Cx1aS',
+  mapping: 'pathname',
+  strict: '0',
+  reactionsEnabled: '1',
+  emitMetadata: '0',
+  theme: theme,
+  lang: 'en',
+  inputPosition: inputPosition,
+  loading: loading
+};
+---
+
+<div class="giscus-wrapper">
+  <div class="giscus-container"></div>
+</div>
+
+<script
+  is:inline
+  define:vars={{ config: giscusConfig }}
+>
+  // Wait for DOM to be ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initGiscus);
+  } else {
+    initGiscus();
+  }
+
+  function initGiscus() {
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.setAttribute('data-repo', config.repo);
+    script.setAttribute('data-repo-id', config.repoId);
+    script.setAttribute('data-category', config.category);
+    script.setAttribute('data-category-id', config.categoryId);
+    script.setAttribute('data-mapping', config.mapping);
+    script.setAttribute('data-strict', config.strict);
+    script.setAttribute('data-reactions-enabled', config.reactionsEnabled);
+    script.setAttribute('data-emit-metadata', config.emitMetadata);
+    script.setAttribute('data-input-position', config.inputPosition);
+    script.setAttribute('data-theme', config.theme);
+    script.setAttribute('data-lang', config.lang);
+    script.setAttribute('data-loading', config.loading);
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
+
+    const container = document.querySelector('.giscus-container');
+    if (container) {
+      container.appendChild(script);
+    }
+  }
+
+  // Theme synchronization (if your site has theme toggle)
+  function updateGiscusTheme(newTheme) {
+    const iframe = document.querySelector('iframe.giscus-frame');
+    if (iframe && iframe.contentWindow) {
+      iframe.contentWindow.postMessage(
+        { giscus: { setConfig: { theme: newTheme } } },
+        'https://giscus.app'
+      );
+    }
+  }
+
+  // Listen for theme changes from your site
+  // Uncomment and adapt to your theme toggle implementation
+  /*
+  window.addEventListener('theme-change', (event) => {
+    const newTheme = event.detail.theme; // 'light' or 'dark'
+    updateGiscusTheme(newTheme);
+  });
+  */
+</script>
+
+<style>
+  .giscus-wrapper {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--sl-color-gray-5);
+  }
+
+  .giscus-container {
+    max-width: 100%;
+  }
+
+  /* Ensure giscus respects your site's theme */
+  :global(.giscus-frame) {
+    width: 100%;
+    border: none;
+  }
+
+  /* Optional: Add some breathing room on mobile */
+  @media (max-width: 768px) {
+    .giscus-wrapper {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+    }
+  }
+</style>

@@ -1,0 +1,101 @@
+name: 🤖 Agent Coordination Issue
+description: Report issues with multi-agent collaboration workflow
+title: "[Agent]: "
+labels: ["agent: multi-agent", "status: needs-decision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for reporting issues with agent collaboration (Stanley, Michael, Tony).
+
+  - type: dropdown
+    id: agents
+    attributes:
+      label: Which agent(s) are involved?
+      description: Select all that apply
+      multiple: true
+      options:
+        - Stanley (Claude Code)
+        - Michael (VS Code Copilot)
+        - Tony (GitHub Cloud Agent)
+        - Multiple agents
+    validations:
+      required: true
+
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Which phase is affected?
+      description: Where in the workflow did the issue occur?
+      options:
+        - Planning
+        - Implementation
+        - Review
+        - Testing
+        - Deployment
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Issue Description
+      description: What's happening with the agent workflow?
+      placeholder: "Describe the coordination issue..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen in the agent workflow?
+      placeholder: "The agents should..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What's actually happening?
+      placeholder: "Instead, the agents..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Blockers
+      description: What's blocked by this issue?
+      placeholder: "This is preventing..."
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Impact Severity
+      description: How severely does this affect the workflow?
+      options:
+        - Critical (workflow completely stopped)
+        - High (significant delays or confusion)
+        - Medium (workarounds exist)
+        - Low (minor inconvenience)
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & Links
+      description: Links to relevant PRs, commits, or documentation
+      placeholder: |
+        - Related PR: #123
+        - Agent docs: .agent-coordination/MICHAEL_INSTRUCTIONS.md
+        - Etc.
+
+  - type: textarea
+    id: proposed-fix
+    attributes:
+      label: Proposed Fix (Optional)
+      description: If you have ideas on how to resolve this, share them here
+      placeholder: "This could be fixed by..."
