@@ -1,0 +1,130 @@
+---
+// AlgoliaSearch.astro
+// Algolia DocSearch integration for BUNKER documentation
+// Uses official @docsearch/js package
+
+interface Props {
+  /** Override default theme (optional) */
+  theme?: 'light' | 'dark';
+}
+
+const { theme = 'light' } = Astro.props;
+
+// Algolia Configuration (from environment variables)
+const appId = import.meta.env.PUBLIC_ALGOLIA_APP_ID;
+const apiKey = import.meta.env.PUBLIC_ALGOLIA_API_KEY;
+const indexName = import.meta.env.PUBLIC_ALGOLIA_INDEX_NAME;
+
+// Verify configuration
+if (!appId || !apiKey || !indexName) {
+  console.error('Algolia configuration missing. Check .env file.');
+}
+---
+
+<div id="docsearch-container"></div>
+
+<script
+  is:inline
+  define:vars={{ appId, apiKey, indexName, theme }}
+>
+  // Dynamically import DocSearch
+  (async () => {
+    try {
+      const docsearchModule = await import('https://cdn.jsdelivr.net/npm/@docsearch/js@3');
+      const docsearch = docsearchModule.default;
+
+      docsearch({
+        appId: appId,
+        apiKey: apiKey,
+        indexName: indexName,
+        container: '#docsearch-container',
+
+        // Search parameters
+        searchParameters: {
+          facetFilters: ['language:en'],
+          hitsPerPage: 10,
+        },
+
+        // UI configuration
+        placeholder: 'Search BUNKER docs...',
+        translations: {
+          button: {
+            buttonText: 'Search',
+            buttonAriaLabel: 'Search documentation',
+          },
+        },
+
+        // Insights (analytics)
+        insights: true,
+
+        // Navigator (keyboard shortcuts)
+        navigator: {
+          navigate({ itemUrl }) {
+            window.location.href = itemUrl;
+          },
+        },
+      });
+
+      console.log('✅ Algolia DocSearch initialized');
+    } catch (error) {
+      console.error('❌ Failed to load DocSearch:', error);
+    }
+  })();
+</script>
+
+<!-- DocSearch CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+
+<style>
+  /* Override DocSearch theme to match BUNKER branding */
+  :root {
+    --docsearch-primary-color: #667eea; /* BUNKER purple */
+    --docsearch-text-color: #2c3e50;    /* BUNKER dark blue-gray */
+    --docsearch-highlight-color: #667eea;
+    --docsearch-muted-color: #6b7280;
+    --docsearch-container-background: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Modal positioning */
+  #docsearch-container {
+    position: relative;
+  }
+
+  /* Search button styling */
+  :global(.DocSearch-Button) {
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    background: var(--sl-color-bg-nav);
+    border: 1px solid var(--sl-color-gray-5);
+    transition: all 0.2s;
+  }
+
+  :global(.DocSearch-Button:hover) {
+    border-color: var(--docsearch-primary-color);
+    background: var(--sl-color-accent-low);
+  }
+
+  /* Keyboard shortcut hint */
+  :global(.DocSearch-Button-Keys) {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    :global(.DocSearch-Button-Keys) {
+      display: none;
+    }
+  }
+
+  /* Results modal */
+  :global(.DocSearch-Modal) {
+    max-width: 600px;
+  }
+
+  /* Ensure proper z-index */
+  :global(.DocSearch-Container) {
+    z-index: 100;
+  }
+</style>
