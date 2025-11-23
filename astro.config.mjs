@@ -7,7 +7,7 @@ export default defineConfig({
 	base: '/ai-learning',
 	integrations: [
 		starlight({
-			title: 'BUNKER',
+			title: 'Curator Hub',
 			description: 'Open-source frameworks, guides, and resources for AI development, collaboration, and creativity',
 			social: {
 				github: 'https://github.com/CurationsLA/ai-learning',
@@ -16,7 +16,7 @@ export default defineConfig({
 				{
 					label: '🏠 Welcome',
 					items: [
-						{ label: 'About BUNKER', link: '/about-bunker/' },
+						{ label: 'About Curator Hub', link: '/about-curator-hub/' },
 						{ label: 'Get Involved', link: '/get-involved/' },
 						{ label: 'Design Systems', link: '/design-systems/' },
 						{ label: 'Technical Architecture', link: '/technical-architecture/' },

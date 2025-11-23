@@ -1,21 +1,21 @@
 ---
-title: About BUNKER
+title: About Curator Hub
 description: A Human × AI Creative Agency
 ---
 
 **A Human × AI Creative Agency**
 
-🌐 **[bunker.curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
+🌐 **[hub.curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
 
 ---
 
 ## What We Are
 
-BUNKER is a creative agency built on a simple belief: **AI should amplify human creativity, not replace it.**
+Curator Hub is a creative agency built on a simple belief: **AI should amplify human creativity, not replace it.**
 
 We're not a consultancy selling AI transformation. We're not a dev shop building chatbots. We're **creatives and technologists** who use AI as a medium—like paint, code, or clay—to build things that matter.
 
-**Explore our services:** [bunker.curations.org](https://curations.org)
+**Explore our services:** [hub.curations.org](https://curations.org)
 
 ### What We Build
 
@@ -79,7 +79,7 @@ When used ethically, transparently, and with intention, AI can:
 - Free humans from repetitive tasks to focus on meaning
 - Create things neither human nor AI could build alone
 
-**This is what BUNKER is for.**
+**This is what Curator Hub is for.**
 
 ---
 
@@ -152,7 +152,7 @@ We help you use AI as a creative partner, not a black box.
 - Training and enablement for your team
 - [Influencer & creator collaboration](https://curations.org/influencers-creators)
 
-**Explore services:** [bunker.curations.org](https://curations.org)
+**Explore services:** [hub.curations.org](https://curations.org)
 
 ### Communities & Nonprofits
 
@@ -188,7 +188,7 @@ Through the [Youth Curator Movement](../youth-curator-movement/), we empower you
 
 ## The Curators: Our AI Personas
 
-BUNKER is powered by a network of specialized AI personas we call **"Curators."**
+Curator Hub is powered by a network of specialized AI personas we call **"Curators."**
 
 Each Curator has:
 - A specific domain of expertise
@@ -234,7 +234,7 @@ Some focus on design. Some on research. Some on strategy. Together, they form a 
 - Build transparent systems
 - Treat people as people
 
-### We're BUNKER
+### We're Curator Hub
 
 **Creative agency + Technical capability + Ethical foundation + Open learning**
 
@@ -292,7 +292,7 @@ All free. All open-source.
 
 ### Contribute
 
-BUNKER is a living collaboration. See something to improve? Have frameworks to share? We welcome contributions.
+Curator Hub is a living collaboration. See something to improve? Have frameworks to share? We welcome contributions.
 
 [How to contribute →](../get-involved/)
 
@@ -300,14 +300,14 @@ BUNKER is a living collaboration. See something to improve? Have frameworks to s
 
 ## Hidden Prompts
 
-*For someone starting to understand BUNKER and wanting to go deeper*
+*For someone starting to understand Curator Hub and wanting to go deeper*
 
 <details>
-<summary>🔍 Advanced Prompt: Understanding BUNKER</summary>
+<summary>🔍 Advanced Prompt: Understanding Curator Hub</summary>
 
 Copy this and paste into ChatGPT or Claude:
 
-"I just read about BUNKER. Help me understand:
+"I just read about Curator Hub. Help me understand:
 1. What makes their approach to AI different from typical tech companies?
 2. How do their AI Curators actually work?
 3. What does 'greater good creativity' mean in practice?
@@ -317,4 +317,4 @@ Copy this and paste into ChatGPT or Claude:
 
 ---
 
-**That's BUNKER.** ✨
+**That's Curator Hub.** ✨
