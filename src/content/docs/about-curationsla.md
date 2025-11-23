@@ -341,7 +341,7 @@ Follow along as we build this.
 
 Want to see how CurationsLA connects to the wider Curator Hub mission?
 
-- [About Curator Hub](about-curations.md) – The creative agency
+- [About Curator Hub](about-curator-hub.md) – The creative agency
 - [Youth Curator Movement](youth-curator-movement.md) – Youth empowerment initiative
 - [Technical Architecture](technical-architecture.md) – How we build
 - [The AI × Human Cookbook](cookbooks/README.md) – Our frameworks

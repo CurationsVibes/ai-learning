@@ -46,7 +46,7 @@ Human × AI collaboration for design, content, research, and AI strategy. We wor
 - Open learning and documentation
 - AI personas ("Curators") with specialized expertise
 
-[Learn more about Curator Hub →](src/content/docs/about-bunker.md) | [Explore Services →](https://curations.org)
+[Learn more about Curator Hub →](src/content/docs/about-curator-hub.md) | [Explore Services →](https://curations.org)
 
 ### 2. **CurationsLA** (Hyperlocal Media)
 A sister project demonstrating Human × AI collaboration in action. CurationsLA is a **hyperlocal LA media platform** that's:
@@ -373,7 +373,7 @@ ai-learning/
 ├── src/
 │   ├── content/
 │   │   └── docs/          # All documentation content
-│   │       ├── about-bunker.md
+│   │       ├── about-curator-hub.md
 │   │       ├── cookbooks/ # AI development frameworks
 │   │       └── ...
 │   └── styles/

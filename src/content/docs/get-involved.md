@@ -88,7 +88,7 @@ We collaborate with brands and creators who:
 4. Follow contribution guidelines
 
 **Contribution Guidelines:**
-- Code should align with [our principles](about-curations.md)
+- Code should align with [our principles](about-curator-hub.md)
 - Documentation for all new features
 - Tests where appropriate
 - Respectful collaboration

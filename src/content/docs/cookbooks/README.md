@@ -76,7 +76,7 @@ This cookbook celebrates the synergy between human creativity and AI capabilitie
 - Best results emerge from collaboration
 - Every framework should serve the greater good
 
-**Learn more about Curator Hub:** [About Curator Hub](../about-curations.md) | [Meet The Curators](../the-curators.md)
+**Learn more about Curator Hub:** [About Curator Hub](../about-curator-hub.md) | [Meet The Curators](../the-curators.md)
 
 ## 🚀 Getting Started
 
