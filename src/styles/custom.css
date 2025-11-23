@@ -1,4 +1,4 @@
-/* Custom styles for BUNKER - BY CURATIONS */
+/* Custom styles for Curator Hub - BY CURATIONS */
 
 :root {
   --sl-color-accent-low: #e0e7ff;
@@ -11,11 +11,11 @@
   --sl-color-gray-4: #cbd5e0;
   --sl-color-gray-5: #a0aec0;
   --sl-color-gray-6: #718096;
-  --bunker-primary: #2c3e50;
-  --bunker-secondary: #667eea;
+  --curator-hub-primary: #2c3e50;
+  --curator-hub-secondary: #667eea;
 }
 
-/* BUNKER Brand Header - Add subtitle below the main title */
+/* Curator Hub Brand Header - Add subtitle below the main title */
 .title-wrapper {
   flex-direction: column !important;
   align-items: flex-start !important;
