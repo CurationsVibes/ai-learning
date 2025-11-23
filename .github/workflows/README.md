@@ -35,7 +35,7 @@ See [MIGRATION.md](../../MIGRATION.md) for migration details.
    - Takes the built artifact from the build job
    - Deploys it to GitHub Pages
    - Reports deployment status and URL
-   - Publishes the site at: `https://curationsla.github.io/ai-learning/`
+   - Publishes the site at: `https://hub.curations.org/`
 
 ### Setup Requirements
 

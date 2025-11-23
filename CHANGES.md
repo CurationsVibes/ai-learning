@@ -191,7 +191,7 @@ To complete the setup and make the documentation live:
 
 4. **Verify Deployment**:
    - Check Actions tab for successful build
-   - Access site at: `https://curationsla.github.io/ai-learning/`
+   - Access site at: `https://hub.curations.org/`
 
 5. **Optional - Custom Domain**:
    - Rename `CNAME.example` to `CNAME`

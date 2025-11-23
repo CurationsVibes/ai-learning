@@ -5,7 +5,7 @@
 **Repository**: CurationsLA/ai-learning  
 **Project Name**: BUNKER (formerly CURATIONS)  
 **Purpose**: Open-source frameworks, guides, and resources for AI development, collaboration, and creativity  
-**Site**: https://curationsla.github.io/ai-learning  
+**Site**: https://hub.curations.org  
 **Migration Date**: November 15, 2025 (BookGen → Astro + Starlight)
 
 ### What is BUNKER?

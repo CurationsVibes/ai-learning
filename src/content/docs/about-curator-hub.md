@@ -1,11 +1,293 @@
 ---
-title: About Curator Hub
-description: A Human × AI Creative Agency
+title: About CURATOR HUB
+description: A comprehensive knowledge wiki maintained by CURATIONS, a Human × AI Creative Agency
 ---
 
-**A Human × AI Creative Agency**
+# About CURATOR HUB
 
-🌐 **[hub.curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
+**A Knowledge Wiki BY CURATIONS**
+
+CURATOR HUB is a comprehensive, open-source knowledge resource for AI development, creativity, and collaboration — created and maintained by [**CURATIONS**](https://curations.org), a Human × AI Creative Agency based in Los Angeles.
+
+🌐 **Agency Website:** [curations.org](https://curations.org)  
+📖 **This Wiki:** You're here!  
+🏙️ **Community Platform:** [CurationsLA](https://la.curations.cc)
+
+---
+
+## What Is CURATOR HUB?
+
+Think of **CURATOR HUB** as a **Wikipedia for AI creativity** — a living knowledge panel where theory meets practice, and human insight meets artificial intelligence.
+
+### This Is NOT:
+- ❌ A company or agency (that's CURATIONS)
+- ❌ A product you buy
+- ❌ A closed platform with paywalls
+- ❌ A marketing site
+
+### This IS:
+- ✅ A **free, open knowledge wiki**
+- ✅ **Documentation hub** for AI frameworks and cookbooks
+- ✅ **Learning resource** from beginner to legendary
+- ✅ **Community-maintained** resource for AI practitioners
+- ✅ **BY CURATIONS** — but for everyone
+
+---
+
+## Who Creates This?
+
+### CURATIONS: The Agency Behind the Wiki
+
+[**CURATIONS**](https://curations.org) is a **Human × AI Creative Agency** in Los Angeles that created and maintains CURATOR HUB.
+
+**What CURATIONS does:**
+- 🎨 Design systems & brand architecture
+- 🤖 AI strategy & multi-agent systems
+- 📖 Open learning resources (like this wiki!)
+- 🌟 AI personas (The Curators) with specialized expertise
+- 🏙️ Community platforms (CurationsLA)
+- 🌱 Youth empowerment (Youth Curator Movement)
+
+**Philosophy:** Greater good creativity — every project asks "Does this make the world better?"
+
+**Want to work with the agency?** Visit [curations.org](https://curations.org)  
+**Want to learn from this wiki?** Keep reading!
+
+---
+
+## What's Inside This Wiki?
+
+CURATOR HUB organizes AI knowledge into **progressive cookbooks** — from 🌱 Seedling concepts to 🌳 Forest-level mastery:
+
+### 📚 Core Knowledge Areas
+
+**[🌱 Foundations](../cookbooks/foundations/)**
+- Interoperability & model gardens
+- Memory management
+- Core AI concepts
+
+**[🔍 RAG (Retrieval Augmented Generation)](../cookbooks/rag/)**
+- RAG fundamentals
+- Agentic RAG patterns
+- Graph RAG architecture
+- Grounding techniques
+
+**[🤖 AI Agents](../cookbooks/agents/)**
+- Agent Development Kit (ADK) overview
+- Agent types and models
+- Defining LLM agents
+
+**[🔧 Tools & Ecosystems](../cookbooks/tools/)**
+- Model Context Protocol (MCP)
+- Agent-to-Agent (A2A) communication
+- Tool ecosystems
+- Agent engines
+
+**[💼 Business Applications](../cookbooks/business/)**
+- Brand archaeology
+- Creator engines
+- Quantum brand engines
+- Schema mastery
+- AI discovery & singularity
+
+**[⚡ Advanced Prompting](../cookbooks/advanced-prompting/)**
+- Meta-prompting techniques
+- Quantum prompting
+- Temporal debugging
+- Emoji protocols
+- Context manipulation
+
+**[🌳 Legendary Topics](../cookbooks/legendary/)**
+- Full-stack AI implementation
+- Production deployment
+- Scaling strategies
+- The future of AI
+
+---
+
+## Why Does This Wiki Exist?
+
+### The Problem
+
+AI knowledge is fragmented:
+- Locked behind paywalls
+- Scattered across platforms
+- Full of jargon without context
+- Missing practical implementation
+- Focused on hype, not help
+
+### Our Solution
+
+**CURATOR HUB makes AI knowledge:**
+- 🎓 **Accessible** — Free and ungated forever
+- 📖 **Organized** — Progressive learning paths
+- 🛠️ **Practical** — Copy-paste ready code
+- 🌱 **Progressive** — Seedling → Sprout → Forest
+- 🤝 **Community-driven** — Open to contributions
+- ✨ **Human-centered** — AI that serves people
+
+---
+
+## How This Wiki Works
+
+### Progressive Learning System
+
+We use a **plant growth metaphor** for learning levels:
+
+- **🌱 Seedling Concept** — Beginner-friendly overview
+- **🌿 Sprout Details** — Intermediate implementation
+- **🌳 Forest Knowledge** — Advanced production patterns
+- **💡 Insight** — Key "aha!" moments
+- **⚡ Quick Win** — Minimal viable implementation
+- **🔬 Deep Dive** — Research and experimentation
+
+### Content Philosophy
+
+1. **Theory + Practice** — Concepts with code examples
+2. **Progressive Disclosure** — Start simple, go deep
+3. **Copy-Paste Ready** — Real, working examples
+4. **No Gatekeeping** — No "request access" or "sign up"
+5. **Open Source** — Contribute back what you learn
+
+---
+
+## CURATIONS Projects Featured Here
+
+While **CURATOR HUB** is the knowledge wiki, it documents several projects created by **CURATIONS**:
+
+### 🏙️ [CurationsLA](../about-curationsla/)
+Hyperlocal LA media platform demonstrating Human × AI collaboration in action.
+- **What it is:** Community storytelling platform
+- **Where:** [la.curations.cc](https://la.curations.cc)
+- **Philosophy:** Free, community-focused, good vibes only
+
+### 🌱 [Youth Curator Movement](../youth-curator-movement/)
+Educational empowerment initiative for young people.
+- **What it is:** AI literacy & creativity program
+- **Focus:** Digital wellbeing, creative skills, future-ready thinking
+- **Cost:** 100% free, 100% open-source
+
+### 🌟 [The Curators](../the-curators/)
+Specialized AI personas with unique expertise.
+- **What they are:** Collaborative AI partners
+- **Purpose:** Different domains (design, research, strategy)
+- **Approach:** Ethical, transparent, human-centered
+
+---
+
+## What Makes This Different
+
+### Compared to Other Documentation
+
+**Typical AI docs:**
+- Focus on one tool/framework
+- Assume deep technical knowledge
+- Light on practical examples
+- Corporate-controlled
+
+**CURATOR HUB:**
+- Cross-framework interoperability
+- Progressive learning (beginner → legendary)
+- Heavy on working code
+- Community-maintained, agency-supported
+
+### Compared to Courses/Tutorials
+
+**Typical AI courses:**
+- Paywalled or gated
+- Linear, rigid structure
+- Outdated quickly
+- No community
+
+**CURATOR HUB:**
+- Free and open forever
+- Non-linear, choose your path
+- Living documentation (updated regularly)
+- Open to contributions
+
+---
+
+## Our Values
+
+These principles guide both **CURATOR HUB** (this wiki) and **CURATIONS** (the agency):
+
+✅ **Open Learning** — All resources free and ungated  
+✅ **Greater Good Creativity** — Does this make the world better?  
+✅ **Human × AI Partnership** — AI amplifies, doesn't replace  
+✅ **Emotional Safety** — AI should support wellbeing  
+✅ **Community-Centered** — Serve communities, not just corporations  
+✅ **Transparency** — Document everything openly
+
+---
+
+## Who This Wiki Serves
+
+### 🌱 Beginners
+New to AI? Start with [Foundations](../cookbooks/foundations/) or [Youth Curator Movement](../youth-curator-movement/)
+
+### 🎨 Creators & Brands  
+Building with AI? Check [Design Systems](../design-systems/) and [Business Applications](../cookbooks/business/)
+
+### 💻 Developers
+Want to go deep? Explore [Technical Architecture](../technical-architecture/) and [Advanced Prompting](../cookbooks/advanced-prompting/)
+
+### 🏘️ Community Builders
+Building platforms? See [CurationsLA](../about-curationsla/) case study
+
+### 🔬 Researchers
+Pushing boundaries? Dive into [Legendary Topics](../cookbooks/legendary/)
+
+---
+
+## Get Involved
+
+### Learn From This Wiki
+
+Everything is free and open:
+- [Start with Cookbooks](../cookbooks/)
+- [Explore Technical Architecture](../technical-architecture/)
+- [See Design Systems](../design-systems/)
+
+### Contribute to This Wiki
+
+CURATOR HUB is a living collaboration:
+- See something to improve? Open an issue
+- Have frameworks to share? Submit a PR
+- [Learn how to contribute](../get-involved/)
+
+### Work With CURATIONS
+
+Need agency services?
+- AI strategy & implementation
+- Design systems & branding
+- Content frameworks & campaigns
+- Community platforms
+
+**Visit [curations.org](https://curations.org) to learn about agency services**
+
+---
+
+## The Bigger Picture
+
+**CURATOR HUB** is part of CURATIONS' mission to make AI:
+- Accessible to everyone
+- Focused on greater good
+- Transparent and ethical
+- Human-centered, not extractive
+
+We believe knowledge should be a **public good** — that's why this wiki exists.
+
+**The agency** ([curations.org](https://curations.org)) does client work.  
+**The wiki** (right here) shares what we learn.  
+**The community** (you!) builds on and contributes back.
+
+This is Human × AI collaboration at its best.
+
+---
+
+**Welcome to CURATOR HUB.** 🌱→🌳
+
+Built with 💜 in Los Angeles by [CURATIONS](https://curations.org)
 
 ---
 

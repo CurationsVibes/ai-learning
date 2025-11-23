@@ -1,6 +1,8 @@
-/* Custom styles for Curator Hub - BY CURATIONS */
+/* 🎨 CURATOR HUB - Premium Knowledge Wiki BY CURATIONS */
+/* A Human × AI Creative Agency in Los Angeles */
 
 :root {
+  /* Brand Colors */
   --sl-color-accent-low: #e0e7ff;
   --sl-color-accent: #667eea;
   --sl-color-accent-high: #4c51bf;
@@ -11,40 +13,233 @@
   --sl-color-gray-4: #cbd5e0;
   --sl-color-gray-5: #a0aec0;
   --sl-color-gray-6: #718096;
+  
+  /* CURATOR HUB Brand System */
   --curator-hub-primary: #2c3e50;
   --curator-hub-secondary: #667eea;
+  --curator-hub-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --curator-hub-accent: #f59e0b;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-blur: blur(10px);
 }
 
-/* Curator Hub Brand Header - Add subtitle below the main title */
-.title-wrapper {
-  flex-direction: column !important;
-  align-items: flex-start !important;
+/* ============================================
+   NAVIGATION: CURATOR HUB with BY CURATIONS
+   ============================================ */
+
+/* Main site title - CURATOR HUB in bold uppercase */
+.site-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  padding: 0.5rem 0;
 }
 
-.title-wrapper::after {
+.site-title span {
+  font-weight: 900;
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: var(--curator-hub-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+/* Subtitle - BY CURATIONS */
+.site-title::after {
   content: 'BY CURATIONS';
   display: block;
-  font-size: 0.65rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   color: var(--sl-color-gray-5);
-  margin-top: 0.25rem;
-  margin-left: 0.1rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
-/* Make the site title more prominent */
-.site-title span {
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  font-size: 1.1rem;
+.site-title:hover::after {
+  opacity: 1;
+  color: var(--curator-hub-secondary);
 }
+
+/* ============================================
+   HERO SECTION ENHANCEMENTS
+   ============================================ */
 
 .hero {
   text-align: center;
+  position: relative;
+  padding: 4rem 2rem;
 }
 
 .hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  background: var(--curator-hub-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.hero .tagline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--sl-color-gray-6);
+  margin-bottom: 2rem;
+  font-weight: 500;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================
+   LEGENDARY DESIGN ENHANCEMENTS
+   ============================================ */
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+/* Enhanced link hover states */
+a:not(.action) {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+a:not(.action):hover {
+  color: var(--curator-hub-secondary);
+}
+
+/* Glassmorphism cards */
+.card,
+.sl-markdown-content > div {
+  backdrop-filter: var(--glass-blur);
+  border-radius: 0.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+}
+
+/* Code block enhancements */
+pre {
+  border-radius: 0.5rem;
+  border: 1px solid var(--sl-color-gray-4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Copy button styling */
+.copy-button {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+pre:hover .copy-button {
+  opacity: 1;
+}
+
+/* Enhanced headings with anchor links */
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  scroll-margin-top: 6rem;
+  position: relative;
+}
+
+.sl-markdown-content h2:hover .anchor-link,
+.sl-markdown-content h3:hover .anchor-link {
+  opacity: 1;
+}
+
+/* Reading progress indicator */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: var(--curator-hub-gradient);
+  z-index: 9999;
+  transition: width 0.1s ease;
+}
+
+/* Breadcrumb styling */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--sl-color-gray-6);
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--sl-color-gray-3);
+}
+
+.breadcrumbs a {
+  color: var(--curator-hub-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  color: var(--curator-hub-primary);
+  text-decoration: underline;
+}
+
+.breadcrumbs .separator {
+  color: var(--sl-color-gray-4);
+}
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 768px) {
+  .site-title span {
+    font-size: 1rem;
+  }
+  
+  .site-title::after {
+    font-size: 0.55rem;
+  }
+  
+  .hero {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Accessibility enhancements */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--curator-hub-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Print styles */
+@media print {
+  .site-title::after {
+    content: 'BY CURATIONS - curations.org';
+  }
+  
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+  }
 }

@@ -1,0 +1,97 @@
+---
+// Breadcrumb Component for CURATOR HUB
+// Provides navigation context and schema.org BreadcrumbList markup
+interface Props {
+  currentPage: string;
+  currentTitle?: string;
+}
+
+const { currentPage, currentTitle } = Astro.props;
+
+// Generate breadcrumb trail
+const pathParts = currentPage.split('/').filter(Boolean);
+const breadcrumbs = [
+  { title: 'Home', url: '/' }
+];
+
+let currentPath = '';
+pathParts.forEach((part, index) => {
+  currentPath += `/${part}`;
+  const title = index === pathParts.length - 1 && currentTitle
+    ? currentTitle
+    : part.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+  
+  breadcrumbs.push({
+    title,
+    url: index === pathParts.length - 1 ? '' : currentPath
+  });
+});
+
+// Generate schema.org BreadcrumbList
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((crumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: crumb.title,
+    ...(crumb.url && { item: `https://hub.curations.org${crumb.url}` })
+  }))
+};
+---
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  {breadcrumbs.map((crumb, index) => (
+    <span>
+      {crumb.url ? (
+        <a href={crumb.url}>{crumb.title}</a>
+      ) : (
+        <span class="current">{crumb.title}</span>
+      )}
+      {index < breadcrumbs.length - 1 && <span class="separator" aria-hidden="true">›</span>}
+    </span>
+  ))}
+</nav>
+
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+<style>
+  .breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--sl-color-gray-6);
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--sl-color-gray-3);
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs a {
+    color: var(--curator-hub-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .breadcrumbs a:hover {
+    color: var(--curator-hub-primary);
+    text-decoration: underline;
+  }
+
+  .breadcrumbs .current {
+    color: var(--sl-color-gray-6);
+    font-weight: 600;
+  }
+
+  .breadcrumbs .separator {
+    color: var(--sl-color-gray-4);
+    margin: 0 0.25rem;
+  }
+
+  @media (max-width: 768px) {
+    .breadcrumbs {
+      font-size: 0.8rem;
+    }
+  }
+</style>

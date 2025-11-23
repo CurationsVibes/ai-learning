@@ -1,7 +1,7 @@
 # Welcome to Curator Hub
 
 [![Deploy Status](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml)
-[![Site](https://img.shields.io/badge/site-live-success)](https://curationsla.github.io/ai-learning/)
+[![Site](https://img.shields.io/badge/site-live-success)](https://hub.curations.org/)
 
 **A Human × AI Creative Agency built on greater good creativity**
 
@@ -414,7 +414,7 @@ See [How to Contribute](src/content/docs/get-involved.md) for detailed guideline
 
 The site is automatically deployed to GitHub Pages when changes are pushed to the `main` branch:
 
-- **Live Site**: https://curationsla.github.io/ai-learning/
+- **Live Site**: https://hub.curations.org/
 - **Build Status**: Check the badge at the top of this README
 - **Deployment Time**: ~2-3 minutes from push to live
 

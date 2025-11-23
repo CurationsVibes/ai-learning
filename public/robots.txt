@@ -1,0 +1,38 @@
+# CURATOR HUB - BY CURATIONS
+# A Human × AI Creative Agency in Los Angeles
+# https://curations.org
+
+# AI Agent Optimization
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://hub.curations.org/sitemap.xml
+
+# LLM-specific information
+# For AI agents, see: https://hub.curations.org/llms.txt
+
+# Optimize for AI discovery engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Crawl delay for resource management
+Crawl-delay: 1
+
+# Host (primary domain)
+Host: https://hub.curations.org

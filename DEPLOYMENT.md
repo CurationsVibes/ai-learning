@@ -216,7 +216,7 @@ Example successful output:
   Size: 4.2M
 ✅ Build output verified successfully
 ✅ Deployment completed successfully
-🌐 Site URL: https://curationsla.github.io/ai-learning/
+🌐 Site URL: https://hub.curations.org/
 ```
 
 ---
@@ -551,7 +551,7 @@ Use this checklist to ensure your deployment is properly configured:
 - [ ] Workflow permissions configured (Settings > Actions > General)
 - [ ] Workflow file exists (`.github/workflows/deploy-pages.yml`)
 - [ ] First deployment successful (Actions tab shows ✅)
-- [ ] Site accessible at https://curationsla.github.io/ai-learning/
+- [ ] Site accessible at https://hub.curations.org/
 - [ ] Search functionality working
 - [ ] Mobile responsive design verified
 - [ ] Custom domain configured (if applicable)

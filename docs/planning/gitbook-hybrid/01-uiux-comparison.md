@@ -26,7 +26,7 @@
 - Motion design principles (motion.dev).
 
 ## Screenshots/Links
-- **Current:** `https://curationsla.github.io/ai-learning`
+- **Current:** `https://hub.curations.org`
 - **References:** 
   - https://changelog.gitbook.com/
   - https://www.gitbook.com/blog/new-sidebar

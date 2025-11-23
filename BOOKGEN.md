@@ -110,7 +110,7 @@ Every push to the `main` branch automatically:
 1. Validates configuration files
 2. Builds the site with BookGen
 3. Deploys to GitHub Pages
-4. Makes the site available at: `https://curationsla.github.io/ai-learning/`
+4. Makes the site available at: `https://hub.curations.org/`
 
 ## 🎨 Features
 

@@ -62,7 +62,7 @@ git push
 Once the deployment is complete (green checkmark):
 
 1. The site URL will be displayed in the workflow logs
-2. By default, it's: `https://curationsla.github.io/ai-learning/`
+2. By default, it's: `https://hub.curations.org/`
 3. You can also find it in **Settings** > **Pages** at the top
 
 ### 6. Custom Domain (Optional)
