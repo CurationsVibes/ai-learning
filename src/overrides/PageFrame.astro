@@ -4,5 +4,9 @@ import Default from '@astrojs/starlight/components/PageFrame.astro';
 import EnhanceCodeBlocks from '../components/EnhanceCodeBlocks.astro';
 ---
 
-<Default {...Astro.props}><slot /></Default>
+<Default {...Astro.props}>
+	<slot name="header" slot="header" />
+	<slot name="sidebar" slot="sidebar" />
+	<slot />
+</Default>
 <EnhanceCodeBlocks />
