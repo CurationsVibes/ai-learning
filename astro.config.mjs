@@ -13,8 +13,10 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/CurationsLA/ai-learning',
 			},
+			pagefind: true,
 			components: {
 				PageFrame: './src/overrides/PageFrame.astro',
+				Header: './src/overrides/Header.astro',
 			},
 			head: [
 				{
