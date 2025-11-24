@@ -1,0 +1,99 @@
+---
+title: 🌱 Foundations
+description: Essential building blocks for AI agent development - interoperability, model gardens, and memory management
+---
+
+import LearningPath from '../../../../components/LearningPath.astro';
+import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+
+# 🌱 Foundations
+
+**Essential building blocks for AI agent development**
+
+<UpvoteWidget itemId="foundations-cookbook" itemType="cookbook" />
+
+Welcome to the Foundations section - your starting point for understanding modern AI agent development. These guides cover the core concepts that every AI developer needs to master.
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/foundations"
+  technologies={["MCP", "A2A", "Memory Systems"]}
+  showCodePreview={false}
+/>
+
+## What You'll Learn
+
+This section covers three fundamental pillars of AI agent development:
+
+### 🔌 Interoperability
+Learn how AI agents communicate using standardized protocols like MCP (Model Context Protocol) and A2A (Agent-to-Agent). Understanding interoperability is crucial for building agents that work seamlessly across different platforms and services.
+
+### 🌐 Model Garden
+Discover the landscape of foundation models and learn how to select, deploy, and switch between different AI models. The Model Garden approach gives you flexibility and prevents vendor lock-in.
+
+### 🧠 Memory Management
+Master the art of building context-aware agents that remember conversations, learn from interactions, and maintain state across sessions. Memory is what transforms simple AI into intelligent assistants.
+
+## Learning Path
+
+<LearningPath 
+  pathId="foundations-path"
+  pathTitle="Foundations Learning Path"
+  pathDescription="Master the core concepts of AI agent development from protocols to memory systems"
+  steps={[
+    {
+      id: "step-interoperability",
+      title: "Introduction to Interoperability",
+      description: "Start here to understand how modern AI agents connect and communicate using MCP and A2A protocols",
+      link: "/cookbooks/foundations/01-interoperability-intro/",
+      estimatedTime: "15 min",
+      difficulty: "beginner"
+    },
+    {
+      id: "step-model-garden",
+      title: "Model Garden & Foundation Models",
+      description: "Learn about available models and how to work with them to prevent vendor lock-in",
+      link: "/cookbooks/foundations/02-model-garden/",
+      estimatedTime: "20 min",
+      difficulty: "intermediate",
+      prerequisites: ["Interoperability basics"]
+    },
+    {
+      id: "step-memory",
+      title: "Memory Management",
+      description: "Build agents that remember and learn from context across sessions",
+      link: "/cookbooks/foundations/03-memory-management/",
+      estimatedTime: "30 min",
+      difficulty: "intermediate",
+      prerequisites: ["Interoperability", "Model Garden"]
+    }
+  ]}
+/>
+
+## 🌱 → 🌿 → 🌳 Progressive Learning
+
+Each guide uses our creative learning labels:
+- 🌱 **Seedling** - Beginner-friendly introductions
+- 🌿 **Sprout** - Intermediate concepts with code examples
+- 🌳 **Forest** - Advanced patterns for production systems
+- 💡 **Insight** - Key takeaways and "aha!" moments
+- ⚡ **Quick Win** - Fast, actionable implementations
+- 🔬 **Deep Dive** - Research and experimental topics
+
+## Who This Is For
+
+**🆕 New to AI?** Start with Introduction to Interoperability - it assumes no prior AI knowledge
+
+**💻 Experienced Developer?** You can jump directly to Memory Management for advanced patterns
+
+**🎨 Building Products?** Focus on Model Garden to understand your options and make informed choices
+
+## Next Steps
+
+Ready to begin? Start with [Introduction to Interoperability](./01-interoperability-intro/) to build your foundation.
+
+---
+
+*Part of the CURATOR HUB Cookbooks by CURATIONS*
+
+[← Back to All Cookbooks](../)

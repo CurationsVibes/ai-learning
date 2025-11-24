@@ -4,9 +4,20 @@ interface Props {
   repoPath?: string;
   hasLiveDemo?: boolean;
   demoUrl?: string;
+  showCodePreview?: boolean;
+  previewCode?: string;
+  technologies?: string[];
 }
 
-const { githubUrl, repoPath, hasLiveDemo, demoUrl } = Astro.props;
+const { 
+  githubUrl, 
+  repoPath, 
+  hasLiveDemo, 
+  demoUrl, 
+  showCodePreview = false,
+  previewCode,
+  technologies = []
+} = Astro.props;
 
 // Generate GitHub URL if repo path provided
 const fullGithubUrl = githubUrl || (repoPath ? `https://github.com/CurationsLA/ai-learning/tree/main/${repoPath}` : null);
@@ -18,10 +29,30 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     <div class="cac-header">
       <span class="cac-icon">💻</span>
       <h4>Cookbook as Code</h4>
+      {technologies.length > 0 && (
+        <div class="cac-tech-tags">
+          {technologies.map(tech => (
+            <span class="tech-tag">{tech}</span>
+          ))}
+        </div>
+      )}
     </div>
     <p class="cac-description">
       This cookbook includes runnable code examples. Fork, experiment, and build!
     </p>
+    
+    {showCodePreview && previewCode && (
+      <details class="code-preview">
+        <summary class="preview-toggle">
+          <span class="toggle-icon">▶</span>
+          <span>Preview Code Snippet</span>
+        </summary>
+        <div class="preview-content">
+          <pre><code>{previewCode}</code></pre>
+        </div>
+      </details>
+    )}
+    
     <div class="cac-buttons">
       <a href={fullGithubUrl} class="cac-button view" target="_blank" rel="noopener noreferrer">
         <span class="button-icon">
@@ -43,9 +74,89 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
           <span>Live Demo</span>
         </a>
       )}
+      <button class="cac-button copy" data-copy-url={fullGithubUrl} title="Copy GitHub URL">
+        <span class="button-icon">📋</span>
+        <span class="copy-text">Copy URL</span>
+      </button>
     </div>
   </div>
 )}
+
+<script>
+  // Handle copy button with fallback
+  function copyToClipboard(text: string): Promise<void> {
+    // Modern clipboard API
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    
+    // Fallback for older browsers
+    return new Promise((resolve, reject) => {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        if (successful) {
+          resolve();
+        } else {
+          reject(new Error('Copy command failed'));
+        }
+      } catch (err) {
+        document.body.removeChild(textArea);
+        reject(err);
+      }
+    });
+  }
+
+  // Handle copy button
+  document.querySelectorAll('.cac-button.copy').forEach(button => {
+    button.addEventListener('click', async () => {
+      const url = button.getAttribute('data-copy-url');
+      if (!url) return;
+      
+      try {
+        await copyToClipboard(url);
+        const textSpan = button.querySelector('.copy-text');
+        if (textSpan) {
+          const originalText = textSpan.textContent;
+          textSpan.textContent = '✓ Copied!';
+          setTimeout(() => {
+            textSpan.textContent = originalText;
+          }, 2000);
+        }
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        // Show error feedback
+        const textSpan = button.querySelector('.copy-text');
+        if (textSpan) {
+          const originalText = textSpan.textContent;
+          textSpan.textContent = '✗ Failed';
+          setTimeout(() => {
+            textSpan.textContent = originalText;
+          }, 2000);
+        }
+      }
+    });
+  });
+
+  // Handle details toggle animation
+  document.querySelectorAll('.code-preview').forEach(details => {
+    details.addEventListener('toggle', (e) => {
+      const target = e.target as HTMLDetailsElement;
+      const icon = target.querySelector('.toggle-icon');
+      if (icon) {
+        icon.textContent = target.open ? '▼' : '▶';
+      }
+    });
+  });
+</script>
 
 <style>
   .cookbook-as-code {
@@ -54,6 +165,19 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     border-radius: 1rem;
     padding: 1.5rem;
     margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cookbook-as-code::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+    pointer-events: none;
   }
 
   .cac-header {
@@ -61,6 +185,8 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    position: relative;
   }
 
   .cac-icon {
@@ -74,9 +200,84 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     color: var(--sl-color-text);
   }
 
+  .cac-tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-left: auto;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 0.25rem;
+    font-weight: 600;
+    color: var(--sl-color-text);
+  }
+
   .cac-description {
     margin: 0 0 1.25rem 0;
     opacity: 0.9;
+    line-height: 1.6;
+    position: relative;
+  }
+
+  .code-preview {
+    margin: 1rem 0;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 0.5rem;
+    background: rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+  }
+
+  .preview-toggle {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    user-select: none;
+    background: rgba(99, 102, 241, 0.05);
+    transition: background 0.2s ease;
+  }
+
+  .preview-toggle:hover {
+    background: rgba(99, 102, 241, 0.1);
+  }
+
+  .toggle-icon {
+    transition: transform 0.2s ease;
+    font-size: 0.85rem;
+  }
+
+  .preview-content {
+    padding: 1rem;
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .preview-content pre {
+    margin: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 0.25rem;
+    overflow-x: auto;
+  }
+
+  .preview-content code {
+    font-size: 0.85rem;
     line-height: 1.6;
   }
 
@@ -99,6 +300,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     font-weight: 600;
     font-size: 0.9rem;
     transition: all 0.3s ease;
+    cursor: pointer;
   }
 
   .cac-button:hover {
@@ -128,6 +330,12 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     border-color: transparent;
   }
 
+  .cac-button.copy {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border-color: transparent;
+  }
+
   .button-icon {
     display: inline-flex;
     align-items: center;
@@ -136,6 +344,11 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
   }
 
   @media (max-width: 640px) {
+    .cac-tech-tags {
+      margin-left: 0;
+      width: 100%;
+    }
+
     .cac-buttons {
       flex-direction: column;
     }

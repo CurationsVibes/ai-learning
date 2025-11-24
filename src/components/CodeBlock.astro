@@ -1,0 +1,66 @@
+---
+import TryWithAI from './TryWithAI.astro';
+
+interface Props {
+  code: string;
+  language?: string;
+  title?: string;
+  showTryAI?: boolean;
+}
+
+const { code, language = 'plaintext', title, showTryAI = true } = Astro.props;
+---
+
+<div class="code-block-wrapper">
+  {title && <div class="code-title">{title}</div>}
+  <div class="code-container">
+    <pre><code class={`language-${language}`}>{code}</code></pre>
+    {showTryAI && <TryWithAI code={code} language={language} />}
+  </div>
+</div>
+
+<style>
+  .code-block-wrapper {
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+  }
+
+  .code-title {
+    padding: 0.5rem 1rem;
+    background: #e9ecef;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .code-container {
+    position: relative;
+    background: white;
+  }
+
+  .code-container pre {
+    margin: 0;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .code-container code {
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .code-container pre {
+      padding: 0.75rem;
+    }
+    
+    .code-container code {
+      font-size: 0.85rem;
+    }
+  }
+</style>

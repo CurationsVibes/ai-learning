@@ -1,0 +1,196 @@
+---
+// This component enhances code blocks with Try with AI buttons
+---
+
+<script>
+  // This script runs on the client side to enhance code blocks
+  document.addEventListener('DOMContentLoaded', () => {
+    // Find all code blocks
+    const codeBlocks = document.querySelectorAll('pre:has(code)');
+    
+    codeBlocks.forEach((pre) => {
+      // Skip if already enhanced
+      if (pre.parentElement?.classList.contains('enhanced-code-block')) {
+        return;
+      }
+      
+      const code = pre.querySelector('code');
+      if (!code) return;
+      
+      // Get the code content
+      const codeContent = code.textContent || '';
+      
+      // Create wrapper
+      const wrapper = document.createElement('div');
+      wrapper.className = 'enhanced-code-block';
+      
+      // Wrap the pre element
+      pre.parentNode?.insertBefore(wrapper, pre);
+      wrapper.appendChild(pre);
+      
+      // Create Try with AI buttons
+      const tryWithAI = document.createElement('div');
+      tryWithAI.className = 'try-with-ai';
+      tryWithAI.innerHTML = `
+        <span class="try-label">Try with AI:</span>
+        <a href="https://claude.ai/new" target="_blank" rel="noopener noreferrer" class="ai-link claude" title="Try this code with Claude" data-code="${encodeURIComponent(codeContent)}">
+          <svg class="ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          Claude
+        </a>
+        <a href="https://chat.openai.com" target="_blank" rel="noopener noreferrer" class="ai-link openai" title="Try this code with ChatGPT" data-code="${encodeURIComponent(codeContent)}">
+          <svg class="ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          ChatGPT
+        </a>
+      `;
+      
+      wrapper.appendChild(tryWithAI);
+      
+      // Add click handlers to copy code and open AI chat
+      tryWithAI.querySelectorAll('.ai-link').forEach((link) => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Copy code to clipboard with fallback
+          const copyToClipboard = (text: string) => {
+            if (navigator.clipboard && window.isSecureContext) {
+              return navigator.clipboard.writeText(text);
+            }
+            
+            // Fallback for older browsers
+            return new Promise<void>((resolve, reject) => {
+              const textArea = document.createElement('textarea');
+              textArea.value = text;
+              textArea.style.position = 'fixed';
+              textArea.style.left = '-999999px';
+              document.body.appendChild(textArea);
+              textArea.focus();
+              textArea.select();
+              
+              try {
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                if (successful) {
+                  resolve();
+                } else {
+                  reject(new Error('Copy failed'));
+                }
+              } catch (err) {
+                document.body.removeChild(textArea);
+                reject(err);
+              }
+            });
+          };
+          
+          copyToClipboard(codeContent).then(() => {
+            // Open AI chat in new window
+            const target = link as HTMLAnchorElement;
+            window.open(target.href, '_blank');
+            
+            // Show feedback
+            const linkContent = link.querySelector('svg')?.nextSibling;
+            if (linkContent && linkContent.nodeType === Node.TEXT_NODE) {
+              const originalText = linkContent.textContent;
+              linkContent.textContent = ' ✓ Copied!';
+              setTimeout(() => {
+                linkContent.textContent = originalText;
+              }, 2000);
+            }
+          }).catch(err => {
+            console.error('Failed to copy code:', err);
+            // Still open the AI chat
+            const target = link as HTMLAnchorElement;
+            window.open(target.href, '_blank');
+          });
+        });
+      });
+    });
+  });
+</script>
+
+<style is:global>
+  .enhanced-code-block {
+    margin: 1.5rem 0;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: white;
+    position: relative;
+  }
+
+  .enhanced-code-block pre {
+    margin: 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
+  }
+
+  .enhanced-code-block .try-with-ai {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
+    color: #666;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: #f8f9fa;
+  }
+
+  .enhanced-code-block .try-label {
+    font-weight: 500;
+    color: #888;
+  }
+
+  .enhanced-code-block .ai-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    color: #666;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  .enhanced-code-block .ai-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .enhanced-code-block .ai-link.claude:hover {
+    color: #cc785c;
+    border-color: #cc785c;
+  }
+
+  .enhanced-code-block .ai-link.openai:hover {
+    color: #10a37f;
+    border-color: #10a37f;
+  }
+
+  .enhanced-code-block .ai-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  @media (max-width: 640px) {
+    .enhanced-code-block .try-with-ai {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+    }
+    
+    .enhanced-code-block .try-label {
+      width: 100%;
+      margin-bottom: -0.25rem;
+    }
+  }
+</style>
