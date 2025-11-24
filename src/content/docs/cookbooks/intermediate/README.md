@@ -7,8 +7,6 @@ import LearningPath from '../../../../components/LearningPath.astro';
 import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
 import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
 
-# 🌿 Intermediate AI Mastery
-
 **Level up from beginner to power user - advanced techniques and best practices**
 
 <UpvoteWidget itemId="intermediate-cookbook" itemType="cookbook" />

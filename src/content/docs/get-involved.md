@@ -64,7 +64,7 @@ We collaborate with brands and creators who:
 - [Influencer & Creator Partnerships](https://curations.org/influencers-creators)
 - [All Services](https://curations.org)
 
-**Reach out:** founders@curations.org *(coming soon)*
+**Reach out:** curate@curations.org *(coming soon)*
 
 ---
 
@@ -127,7 +127,7 @@ We collaborate with brands and creators who:
 - Contribute project ideas
 - Report what didn't work (so we can fix it)
 
-**Contact:** education@curations.org *(coming soon)*
+**Contact:** curate@curations.org *(coming soon)*
 
 ---
 
@@ -147,7 +147,7 @@ We collaborate with brands and creators who:
 - Pro-bono support (capacity permitting)
 - Platform access ([CurationsLA model](https://la.curations.cc))
 
-**Interested?** community@curations.org *(coming soon)*
+**Interested?** curate@curations.org *(coming soon)*
 
 ### Partner With Us
 
@@ -164,7 +164,7 @@ We collaborate with brands and creators who:
 - Technical implementation
 - Training and capacity building
 
-**Let's talk:** partnerships@curations.org *(coming soon)*
+**Let's talk:** curate@curations.org *(coming soon)*
 
 ---
 
@@ -190,7 +190,7 @@ We collaborate with brands and creators who:
 - Academic publications
 - Conference presentations
 
-**Contact:** research@curations.org *(coming soon)*
+**Contact:** curate@curations.org *(coming soon)*
 
 ---
 
@@ -320,13 +320,13 @@ We maintain a **good vibes only** environment:
 ### Contact
 
 **General inquiries:**
-hello@curations.org *(coming soon)*
+curate@curations.org *(coming soon)*
 
 **Collaborations:**
-partnerships@curations.org *(coming soon)*
+curate@curations.org *(coming soon)*
 
 **Education:**
-education@curations.org *(coming soon)*
+curate@curations.org *(coming soon)*
 
 **Technical/GitHub:**
 Open issues on [GitHub](https://github.com/curationsla/ai-learning)
