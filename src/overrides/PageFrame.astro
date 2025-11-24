@@ -1,0 +1,8 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Default from '@astrojs/starlight/components/PageFrame.astro';
+import EnhanceCodeBlocks from '../components/EnhanceCodeBlocks.astro';
+---
+
+<Default {...Astro.props}><slot /></Default>
+<EnhanceCodeBlocks />

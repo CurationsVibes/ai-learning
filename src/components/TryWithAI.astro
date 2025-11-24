@@ -1,0 +1,106 @@
+---
+interface Props {
+  code?: string;
+  language?: string;
+}
+
+const { code } = Astro.props;
+
+// Encode code for URL
+const encodedCode = code ? encodeURIComponent(code) : '';
+---
+
+<div class="try-with-ai">
+  <span class="try-label">Try with AI:</span>
+  <a 
+    href={`https://claude.ai/new?q=${encodedCode}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="ai-link claude"
+    title="Try this code with Claude"
+  >
+    <svg class="ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+      <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2"/>
+      <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2"/>
+    </svg>
+    Claude
+  </a>
+  <a 
+    href={`https://chat.openai.com/?q=${encodedCode}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="ai-link openai"
+    title="Try this code with ChatGPT"
+  >
+    <svg class="ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M22 12C22 17.52 17.52 22 12 22C6.48 22 2 17.52 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12Z" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    ChatGPT
+  </a>
+</div>
+
+<style>
+  .try-with-ai {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+    color: #666;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .try-label {
+    font-weight: 500;
+    color: #888;
+  }
+
+  .ai-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    color: #666;
+    border-radius: 0.25rem;
+    transition: all 0.2s ease;
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid transparent;
+  }
+
+  .ai-link:hover {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .ai-link.claude:hover {
+    color: #cc785c;
+    border-color: #cc785c;
+  }
+
+  .ai-link.openai:hover {
+    color: #10a37f;
+    border-color: #10a37f;
+  }
+
+  .ai-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  @media (max-width: 640px) {
+    .try-with-ai {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+    .try-label {
+      width: 100%;
+      margin-bottom: -0.25rem;
+    }
+  }
+</style>

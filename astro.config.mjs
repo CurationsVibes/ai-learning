@@ -13,6 +13,9 @@ export default defineConfig({
 			social: {
 				github: 'https://github.com/CurationsLA/ai-learning',
 			},
+			components: {
+				PageFrame: './src/overrides/PageFrame.astro',
+			},
 			head: [
 				{
 					tag: 'meta',
