@@ -3,8 +3,6 @@ title: 🔍 RAG & Knowledge Systems
 description: Retrieval Augmented Generation - from fundamentals to graph-based knowledge systems
 ---
 
-# 🔍 RAG & Knowledge Systems
-
 **Grounding AI agents with intelligent retrieval**
 
 Welcome to the RAG (Retrieval Augmented Generation) section - where you'll learn to build AI systems that combine the power of large language models with the precision of knowledge retrieval.

@@ -3,8 +3,6 @@ title: 🛠️ Tools & Ecosystems
 description: Connecting AI agents to the world - MCP, A2A, tool ecosystems, and agent engines
 ---
 
-# 🛠️ Tools & Ecosystems
-
 **Connecting AI agents to the world**
 
 Welcome to the Tools & Ecosystems section - your guide to the protocols, frameworks, and platforms that enable AI agents to interact with systems, data, and other agents.

@@ -3,8 +3,6 @@ title: 🤖 AI Agents
 description: Building sophisticated AI agents - from ADK fundamentals to defining custom LLM agents
 ---
 
-# 🤖 AI Agents
-
 **Building sophisticated AI agent systems**
 
 Welcome to the AI Agents section - your comprehensive guide to building intelligent, autonomous agents that can reason, plan, and execute complex tasks.
