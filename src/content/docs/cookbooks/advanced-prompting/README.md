@@ -2,8 +2,6 @@
 title: 🧠 Advanced Prompting
 ---
 
-# 🧠 Advanced Prompting
-
 **Where good AI users become legendary**
 
 ---

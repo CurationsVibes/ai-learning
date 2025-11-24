@@ -2,8 +2,6 @@
 title: "🔌 Model Context Protocol (MCP): Standardized Content Delivery"
 ---
 
-# 🔌 Model Context Protocol (MCP): Standardized Content Delivery
-
 ## 🌱 Seedling Concept
 
 **Label**: Universal Language for AI Context

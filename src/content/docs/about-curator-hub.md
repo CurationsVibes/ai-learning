@@ -3,8 +3,6 @@ title: About CURATOR HUB
 description: A comprehensive knowledge wiki maintained by CURATIONS, a Human × AI Creative Agency
 ---
 
-# About CURATOR HUB
-
 **A Knowledge Wiki BY CURATIONS**
 
 CURATOR HUB is a comprehensive, open-source knowledge resource for AI development, creativity, and collaboration — created and maintained by [**CURATIONS**](https://curations.org), a Human × AI Creative Agency based in Los Angeles.

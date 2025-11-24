@@ -2,8 +2,6 @@
 title: "🧠 Memory Management: Building Context-Aware Agents"
 ---
 
-# 🧠 Memory Management: Building Context-Aware Agents
-
 ## 🌱 Seedling Concept
 
 **Label**: Giving Your Agents a Memory

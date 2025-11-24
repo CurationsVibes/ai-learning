@@ -2,8 +2,6 @@
 title: ⚛️ Quantum Prompting
 ---
 
-# ⚛️ Quantum Prompting
-
 **Solutions in superposition - generate across multiple states simultaneously**
 
 ---

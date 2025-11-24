@@ -2,8 +2,6 @@
 title: 🌌 The Future We're Building
 ---
 
-# 🌌 The Future We're Building
-
 **Where we go from here**
 
 Coming soon: Vision for the future of Human × AI collaboration

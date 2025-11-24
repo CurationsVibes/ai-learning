@@ -2,8 +2,6 @@
 title: 🕰️ Temporal Debugging
 ---
 
-# 🕰️ Temporal Debugging
-
 **Debug across timelines - past, present, and future**
 
 ---

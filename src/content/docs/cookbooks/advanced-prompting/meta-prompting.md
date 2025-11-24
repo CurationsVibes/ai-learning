@@ -2,8 +2,6 @@
 title: 🔮 Meta-Prompting
 ---
 
-# 🔮 Meta-Prompting
-
 **Prompts that write prompts - exponential capability multiplication**
 
 ---

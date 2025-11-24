@@ -2,8 +2,6 @@
 title: 🎭 Emoji Protocol
 ---
 
-# 🎭 Emoji Protocol
-
 **Semantic compression using emoji - 75-95% token reduction**
 
 ---

@@ -2,8 +2,6 @@
 title: 🌐 Introduction to Interoperability
 ---
 
-# 🌐 Introduction to Interoperability
-
 ## 🌱 Seedling Concept
 
 **Label**: Foundation of Modern AI Systems

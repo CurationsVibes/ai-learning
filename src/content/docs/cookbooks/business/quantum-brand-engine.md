@@ -2,8 +2,6 @@
 title: ⚛️ Quantum Brand Engine
 ---
 
-# ⚛️ Quantum Brand Engine
-
 **Creating brands that exist in superposition across multiple market realities**
 
 ---

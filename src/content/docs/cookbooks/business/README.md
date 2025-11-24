@@ -2,8 +2,6 @@
 title: "🎨 Business: Branding & Growth"
 ---
 
-# 🎨 Business: Branding & Growth
-
 **Where AI meets business strategy**
 
 ---

@@ -2,8 +2,6 @@
 title: Youth Curator Movement
 ---
 
-# Youth Curator Movement
-
 **Empowering young people to create, curate, and thrive in the AI era**
 
 ---

@@ -2,8 +2,6 @@
 title: 🤖 Agent Development Kits (ADK) Overview
 ---
 
-# 🤖 Agent Development Kits (ADK) Overview
-
 ## 🌿 Growing Concept
 
 **Label**: Your Toolkit for Building AI Agents

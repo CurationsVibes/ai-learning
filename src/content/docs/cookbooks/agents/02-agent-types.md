@@ -2,8 +2,6 @@
 title: "🎭 Agent Types: Choosing Your Architecture"
 ---
 
-# 🎭 Agent Types: Choosing Your Architecture
-
 ## 🌿 Growing Concept
 
 **Label**: Matching Agent Design to Task Structure

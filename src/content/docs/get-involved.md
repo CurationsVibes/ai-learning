@@ -2,8 +2,6 @@
 title: Get Involved
 ---
 
-# Get Involved
-
 **Join the Curator Hub community - learn, contribute, collaborate**
 
 🌐 **[curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**

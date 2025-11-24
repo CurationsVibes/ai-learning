@@ -2,8 +2,6 @@
 title: "🎓 Defining LLM Agents: A Step-by-Step Guide"
 ---
 
-# 🎓 Defining LLM Agents: A Step-by-Step Guide
-
 ## 🌳 Flourishing Concept
 
 **Label**: Bringing It All Together

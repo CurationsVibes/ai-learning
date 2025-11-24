@@ -2,8 +2,6 @@
 title: "⚓ Grounding: Keeping AI Agents Accurate and Reliable"
 ---
 
-# ⚓ Grounding: Keeping AI Agents Accurate and Reliable
-
 ## 🌳 Flourishing Concept
 
 **Label**: Anchoring AI in Reality

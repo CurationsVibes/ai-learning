@@ -2,8 +2,6 @@
 title: The Curators
 ---
 
-# The Curators
-
 **Specialized AI personas powering Curator Hub**
 
 🤖 **[Meet the Live Team at curations.org/ai-curators](https://curations.org/ai-curators)**

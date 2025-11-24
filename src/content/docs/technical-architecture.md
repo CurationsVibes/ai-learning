@@ -2,8 +2,6 @@
 title: Technical Architecture
 ---
 
-# Technical Architecture
-
 **How Curator Hub builds: systems, protocols, and philosophy**
 
 ---

@@ -2,8 +2,6 @@
 title: 📋 Agent Models & API Contracts
 ---
 
-# 📋 Agent Models & API Contracts
-
 ## 🌳 Flourishing Concept
 
 **Label**: Designing Reliable Agent Interfaces

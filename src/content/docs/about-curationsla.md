@@ -2,8 +2,6 @@
 title: About CurationsLA
 ---
 
-# About CurationsLA
-
 **Hyperlocal LA media. Human-curated. AI-supported. Good vibes only.**
 
 ---

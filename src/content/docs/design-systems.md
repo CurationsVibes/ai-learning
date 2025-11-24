@@ -2,8 +2,6 @@
 title: Design Systems
 ---
 
-# Design Systems
-
 **The visual language and design philosophy of Curator Hub**
 
 ---

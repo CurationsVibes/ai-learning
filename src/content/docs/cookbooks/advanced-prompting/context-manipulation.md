@@ -2,8 +2,6 @@
 title: 🗂️ Context Manipulation
 ---
 
-# 🗂️ Context Manipulation
-
 **Achieving infinite memory in finite context windows**
 
 ---

@@ -2,8 +2,6 @@
 title: "🕸️ GraphRAG: Knowledge Graphs for AI Agents"
 ---
 
-# 🕸️ GraphRAG: Knowledge Graphs for AI Agents
-
 ## 🌳 Flourishing Concept
 
 **Label**: Understanding Relationships, Not Just Documents

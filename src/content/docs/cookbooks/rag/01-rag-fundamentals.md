@@ -2,8 +2,6 @@
 title: "🔍 RAG Fundamentals: Retrieval-Augmented Generation"
 ---
 
-# 🔍 RAG Fundamentals: Retrieval-Augmented Generation
-
 ## 🌱 Seedling Concept
 
 **Label**: Grounding AI in Real Data

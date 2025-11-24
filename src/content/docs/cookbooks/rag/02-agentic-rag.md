@@ -2,8 +2,6 @@
 title: "🎯 Agentic RAG: Active Reasoning in Knowledge Search"
 ---
 
-# 🎯 Agentic RAG: Active Reasoning in Knowledge Search
-
 ## 🌿 Growing Concept
 
 **Label**: From Passive Retrieval to Active Reasoning

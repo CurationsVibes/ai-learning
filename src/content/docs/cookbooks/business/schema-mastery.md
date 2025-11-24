@@ -2,8 +2,6 @@
 title: 🗺️ Schema.org Mastery
 ---
 
-# 🗺️ Schema.org Mastery
-
 **Your machine-readable DNA - make AI systems understand you perfectly**
 
 ---

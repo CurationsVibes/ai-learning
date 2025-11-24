@@ -2,8 +2,6 @@
 title: "🛠️ Tool Ecosystems: LangChain, LlamaIndex, and CrewAI"
 ---
 
-# 🛠️ Tool Ecosystems: LangChain, LlamaIndex, and CrewAI
-
 ## 🌳 Flourishing Concept
 
 **Label**: Leveraging Existing Frameworks

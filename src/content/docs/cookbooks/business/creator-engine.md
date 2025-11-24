@@ -2,8 +2,6 @@
 title: 🌟 Creator Singularity Engine
 ---
 
-# 🌟 Creator Singularity Engine
-
 **Distributed brand consciousness - your brand, amplified through authentic creators**
 
 ---

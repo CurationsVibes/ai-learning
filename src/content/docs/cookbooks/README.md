@@ -2,8 +2,6 @@
 title: 🧠 The AI × Human Cookbook
 ---
 
-# 🧠 The AI × Human Cookbook
-
 **Comprehensive frameworks for building with AI - from Curator Hub**
 
 🌐 **[curations.org](https://curations.org)** | **Part of the Curator Hub ecosystem**

@@ -2,8 +2,6 @@
 title: 🔍 Brand Archaeology
 ---
 
-# 🔍 Brand Archaeology
-
 **Excavating your authentic brand DNA from the layers of your actual history**
 
 ---

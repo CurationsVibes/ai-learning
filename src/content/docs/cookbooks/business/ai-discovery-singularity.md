@@ -2,8 +2,6 @@
 title: 🎯 AI Discovery Singularity (AAO)
 ---
 
-# 🎯 AI Discovery Singularity (AAO)
-
 **AI Agent Optimization - making your brand un-ignorable to AI systems**
 
 ---

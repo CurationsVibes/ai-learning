@@ -2,8 +2,6 @@
 title: 🎨 Model Garden & Foundation Models
 ---
 
-# 🎨 Model Garden & Foundation Models
-
 ## 🌱 Seedling Concept
 
 **Label**: Your Gateway to AI Model Diversity
