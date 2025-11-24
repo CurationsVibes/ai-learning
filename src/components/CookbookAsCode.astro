@@ -83,6 +83,38 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
 )}
 
 <script>
+  // Handle copy button with fallback
+  function copyToClipboard(text: string): Promise<void> {
+    // Modern clipboard API
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    
+    // Fallback for older browsers
+    return new Promise((resolve, reject) => {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-999999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      
+      try {
+        const successful = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        if (successful) {
+          resolve();
+        } else {
+          reject(new Error('Copy command failed'));
+        }
+      } catch (err) {
+        document.body.removeChild(textArea);
+        reject(err);
+      }
+    });
+  }
+
   // Handle copy button
   document.querySelectorAll('.cac-button.copy').forEach(button => {
     button.addEventListener('click', async () => {
@@ -90,7 +122,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
       if (!url) return;
       
       try {
-        await navigator.clipboard.writeText(url);
+        await copyToClipboard(url);
         const textSpan = button.querySelector('.copy-text');
         if (textSpan) {
           const originalText = textSpan.textContent;
@@ -101,6 +133,15 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
         }
       } catch (err) {
         console.error('Failed to copy:', err);
+        // Show error feedback
+        const textSpan = button.querySelector('.copy-text');
+        if (textSpan) {
+          const originalText = textSpan.textContent;
+          textSpan.textContent = '✗ Failed';
+          setTimeout(() => {
+            textSpan.textContent = originalText;
+          }, 2000);
+        }
       }
     });
   });

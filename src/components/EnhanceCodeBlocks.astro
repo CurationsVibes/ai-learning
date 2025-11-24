@@ -56,18 +56,52 @@
       tryWithAI.querySelectorAll('.ai-link').forEach((link) => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
-          // Copy code to clipboard
-          navigator.clipboard.writeText(codeContent).then(() => {
+          
+          // Copy code to clipboard with fallback
+          const copyToClipboard = (text: string) => {
+            if (navigator.clipboard && window.isSecureContext) {
+              return navigator.clipboard.writeText(text);
+            }
+            
+            // Fallback for older browsers
+            return new Promise<void>((resolve, reject) => {
+              const textArea = document.createElement('textarea');
+              textArea.value = text;
+              textArea.style.position = 'fixed';
+              textArea.style.left = '-999999px';
+              document.body.appendChild(textArea);
+              textArea.focus();
+              textArea.select();
+              
+              try {
+                const successful = document.execCommand('copy');
+                document.body.removeChild(textArea);
+                if (successful) {
+                  resolve();
+                } else {
+                  reject(new Error('Copy failed'));
+                }
+              } catch (err) {
+                document.body.removeChild(textArea);
+                reject(err);
+              }
+            });
+          };
+          
+          copyToClipboard(codeContent).then(() => {
             // Open AI chat in new window
             const target = link as HTMLAnchorElement;
             window.open(target.href, '_blank');
             
             // Show feedback
-            const originalText = link.textContent;
-            link.innerHTML = '✓ Copied!';
-            setTimeout(() => {
-              link.innerHTML = originalText || '';
-            }, 2000);
+            const linkContent = link.querySelector('svg')?.nextSibling;
+            if (linkContent && linkContent.nodeType === Node.TEXT_NODE) {
+              const originalText = linkContent.textContent;
+              linkContent.textContent = ' ✓ Copied!';
+              setTimeout(() => {
+                linkContent.textContent = originalText;
+              }, 2000);
+            }
           }).catch(err => {
             console.error('Failed to copy code:', err);
             // Still open the AI chat

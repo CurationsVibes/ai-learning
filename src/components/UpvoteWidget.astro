@@ -50,9 +50,15 @@ const { itemId, itemType = 'topic', showUsageCheck = true } = Astro.props;
   
   function getItemData(itemId: string): ItemData {
     const key = `${STORAGE_KEY_PREFIX}${itemId}`;
-    const stored = localStorage.getItem(key);
-    if (stored) {
-      return JSON.parse(stored);
+    try {
+      const stored = localStorage.getItem(key);
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (error) {
+      console.error('Failed to parse stored data:', error);
+      // Clear corrupted data
+      localStorage.removeItem(key);
     }
     return {
       upvotes: 0,

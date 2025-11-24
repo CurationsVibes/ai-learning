@@ -342,7 +342,10 @@ button:not(.copy-button):hover {
   }
 }
 
-.sl-markdown-content > * {
+/* Apply fade-in animation only to major content sections */
+.sl-markdown-content > h2,
+.sl-markdown-content > h3,
+.sl-markdown-content > p:first-of-type {
   animation: fadeIn 0.3s ease;
 }
 

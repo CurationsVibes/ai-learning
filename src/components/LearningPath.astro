@@ -115,9 +115,15 @@ const { pathId, pathTitle, pathDescription, steps, showProgress = true } = Astro
   
   function getPathProgress(pathId: string): PathProgress {
     const key = `${STORAGE_KEY_PREFIX}${pathId}`;
-    const stored = localStorage.getItem(key);
-    if (stored) {
-      return JSON.parse(stored);
+    try {
+      const stored = localStorage.getItem(key);
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (error) {
+      console.error('Failed to parse stored progress:', error);
+      // Clear corrupted data
+      localStorage.removeItem(key);
     }
     return { completedSteps: [] };
   }
@@ -202,13 +208,40 @@ const { pathId, pathTitle, pathDescription, steps, showProgress = true } = Astro
         });
       });
       
-      // Handle reset button
+      // Handle reset button with double-click protection
       const resetButton = path.querySelector('[data-action="reset"]');
+      let resetClickCount = 0;
+      let resetTimeout: number;
+      
       resetButton?.addEventListener('click', () => {
         const pathId = path.getAttribute('data-path-id');
-        if (pathId && confirm('Are you sure you want to reset your progress on this learning path?')) {
+        if (!pathId) return;
+        
+        resetClickCount++;
+        
+        if (resetClickCount === 1) {
+          // First click - show confirmation
+          const originalText = resetButton.textContent;
+          resetButton.textContent = '⚠️ Click again to confirm reset';
+          resetButton.classList.add('confirm-mode');
+          
+          // Reset after 3 seconds if not confirmed
+          resetTimeout = window.setTimeout(() => {
+            resetClickCount = 0;
+            resetButton.textContent = originalText;
+            resetButton.classList.remove('confirm-mode');
+          }, 3000);
+        } else {
+          // Second click - actually reset
+          clearTimeout(resetTimeout);
           setPathProgress(pathId, { completedSteps: [] });
           updatePathUI(path as HTMLElement);
+          
+          // Reset UI
+          resetClickCount = 0;
+          const originalText = '🔄 Reset Progress';
+          resetButton.textContent = originalText;
+          resetButton.classList.remove('confirm-mode');
         }
       });
     });
@@ -521,6 +554,13 @@ const { pathId, pathTitle, pathDescription, steps, showProgress = true } = Astro
 
   .reset-progress:hover {
     background: rgba(0, 0, 0, 0.08);
+  }
+
+  .reset-progress.confirm-mode {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border-color: transparent;
+    animation: pulse 0.5s ease infinite;
   }
 
   .completion-message {
