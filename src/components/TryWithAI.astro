@@ -39,6 +39,18 @@ const encodedCode = code ? encodeURIComponent(code) : '';
     </svg>
     ChatGPT
   </a>
+  <a 
+    href={`https://gemini.google.com/app?q=${encodedCode}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="ai-link gemini"
+    title="Try this code with Gemini"
+  >
+    <svg class="ai-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z" fill="currentColor"/>
+    </svg>
+    Gemini
+  </a>
 </div>
 
 <style>
@@ -85,6 +97,11 @@ const encodedCode = code ? encodeURIComponent(code) : '';
   .ai-link.openai:hover {
     color: #10a37f;
     border-color: #10a37f;
+  }
+
+  .ai-link.gemini:hover {
+    color: #4285f4;
+    border-color: #4285f4;
   }
 
   .ai-icon {
