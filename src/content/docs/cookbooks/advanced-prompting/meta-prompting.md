@@ -2,6 +2,33 @@
 title: 🔮 Meta-Prompting
 ---
 
+import ContributionButtons from '../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+
+<GreaterGoodBadge 
+  score="medium"
+  category="Advanced Prompting"
+  description="Meta-prompting empowers developers and creators to build better AI interactions, making advanced techniques accessible to all skill levels."
+/>
+
+<AuthorshipBadge 
+  type="ai-assisted"
+  details="Experimental patterns researched and tested collaboratively. AI helped structure documentation, humans validated effectiveness."
+/>
+
+<UsageTracker 
+  cookbookId="advanced-meta-prompting"
+  title="Meta-Prompting"
+/>
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/advanced-prompting"
+  githubUrl="https://github.com/CurationsLA/ai-learning/blob/main/src/content/docs/cookbooks/advanced-prompting/meta-prompting.md"
+/>
+
 **Prompts that write prompts - exponential capability multiplication**
 
 ---
@@ -655,6 +682,11 @@ AI can iterate rapidly. Manual iteration is slow.
 
 **Master meta-prompting. Multiply your AI capabilities exponentially.** ⚡
 
+<ContributionButtons 
+  pageTitle="Meta-Prompting"
+  pageUrl="https://hub.curations.org/cookbooks/advanced-prompting/meta-prompting/"
+/>
+
 ---
 
-[← Back to Advanced Prompting](./README.md)
+[← Back to Advanced Prompting](../advanced-prompting/)

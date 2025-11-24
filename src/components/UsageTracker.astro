@@ -1,0 +1,192 @@
+---
+interface Props {
+  cookbookId: string;
+  title: string;
+}
+
+const { cookbookId, title } = Astro.props;
+---
+
+<div class="usage-tracker" data-cookbook-id={cookbookId}>
+  <button class="used-button" id="markUsedButton">
+    <span class="button-icon">✓</span>
+    <span class="button-text">I've Used This</span>
+    <span class="usage-count" id="usageCount">—</span>
+  </button>
+  <div class="usage-message" id="usageMessage"></div>
+</div>
+
+<script define:vars={{ cookbookId, title }}>
+  // Usage tracking implementation
+  const STORAGE_KEY = 'curations_used';
+  const API_ENDPOINT = 'https://plausible.io/api/event'; // Optional analytics endpoint
+
+  function getUsageData() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch {
+      return {};
+    }
+  }
+
+  function saveUsageData(data) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+      console.warn('Could not save usage data:', e);
+    }
+  }
+
+  function markAsUsed(cookbookId) {
+    const usageData = getUsageData();
+    
+    if (!usageData[cookbookId]) {
+      usageData[cookbookId] = {
+        firstUsed: Date.now(),
+        count: 0,
+        lastUsed: null
+      };
+    }
+
+    usageData[cookbookId].count += 1;
+    usageData[cookbookId].lastUsed = Date.now();
+    
+    saveUsageData(usageData);
+    
+    // Send anonymous ping (optional - uncomment to enable)
+    // trackUsage(cookbookId);
+    
+    return usageData[cookbookId].count;
+  }
+
+  function trackUsage(cookbookId) {
+    // Optional: Send anonymous analytics
+    // Uses navigator.sendBeacon for reliability
+    if (typeof navigator !== 'undefined' && navigator.sendBeacon) {
+      const data = JSON.stringify({
+        name: 'cookbook_used',
+        url: window.location.href,
+        domain: window.location.hostname,
+        props: { cookbook: cookbookId }
+      });
+      
+      // Uncomment to enable analytics
+      // navigator.sendBeacon(API_ENDPOINT, data);
+    }
+  }
+
+  function getUsageCount(cookbookId) {
+    const usageData = getUsageData();
+    return usageData[cookbookId]?.count || 0;
+  }
+
+  function isMarkedAsUsed(cookbookId) {
+    const usageData = getUsageData();
+    return !!usageData[cookbookId];
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('markUsedButton');
+    const countElement = document.getElementById('usageCount');
+    const messageElement = document.getElementById('usageMessage');
+    
+    if (!button || !countElement || !messageElement) return;
+
+    // Show current count
+    const currentCount = getUsageCount(cookbookId);
+    if (currentCount > 0) {
+      countElement.textContent = currentCount;
+    }
+
+    // Check if already marked
+    if (isMarkedAsUsed(cookbookId)) {
+      button.classList.add('marked');
+      button.querySelector('.button-text').textContent = 'Used ✓';
+    }
+
+    // Handle click
+    button.addEventListener('click', () => {
+      const newCount = markAsUsed(cookbookId);
+      
+      countElement.textContent = newCount;
+      button.classList.add('marked');
+      button.querySelector('.button-text').textContent = 'Used ✓';
+      
+      // Show thank you message
+      messageElement.textContent = '🎉 Thanks for tracking your learning!';
+      messageElement.style.display = 'block';
+      
+      setTimeout(() => {
+        messageElement.style.display = 'none';
+      }, 3000);
+    });
+  });
+</script>
+
+<style>
+  .usage-tracker {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .used-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    max-width: fit-content;
+  }
+
+  .used-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+  }
+
+  .used-button.marked {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  }
+
+  .button-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+  }
+
+  .usage-count {
+    padding: 0.25rem 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    min-width: 2rem;
+    text-align: center;
+  }
+
+  .usage-message {
+    display: none;
+    color: #10b981;
+    font-weight: 600;
+    font-size: 0.9rem;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

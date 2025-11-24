@@ -3,15 +3,63 @@ title: Welcome to CURATOR HUB
 description: A comprehensive knowledge wiki by CURATIONS — a Human × AI Creative Agency in Los Angeles
 ---
 
+import QuickStartCard from '../../components/QuickStartCard.astro';
+
 **A knowledge wiki for AI development, creativity, and collaboration — BY CURATIONS**
 
-<div style="display: flex; gap: 1rem; margin: 2rem 0; flex-wrap: wrap;">
-  <a href="/about-curator-hub/" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: transform 0.2s;">
-    Get Started →
+<div style="display: flex; gap: 1rem; margin: 2rem 0 3rem 0; flex-wrap: wrap;">
+  <a href="/cookbooks/" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 0.5rem; font-weight: 600; transition: transform 0.2s;">
+    Browse Cookbooks →
   </a>
   <a href="https://github.com/CurationsLA/ai-learning" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: transparent; color: #667eea; text-decoration: none; border-radius: 0.5rem; border: 2px solid #667eea; font-weight: 600; transition: all 0.2s;">
     View on GitHub ↗
   </a>
+</div>
+
+---
+
+## 🚀 Jump Right In
+
+**Find what you need fast** — Direct access to our most popular cookbooks:
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+  <QuickStartCard 
+    icon="🌱" 
+    title="New to AI?" 
+    description="Start with foundational concepts and build your way up"
+    link="/cookbooks/foundations/"
+    popular={["Memory Management", "Model Garden", "Interoperability"]}
+    gradient="linear-gradient(135deg, #10b981 0%, #059669 100%)"
+  />
+  <QuickStartCard 
+    icon="🎨" 
+    title="Building Brands?" 
+    description="AI-powered strategies for creative and business applications"
+    link="/cookbooks/business/"
+    popular={["Brand Archaeology", "Creator Engine", "Schema Mastery"]}
+    gradient="linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+  />
+  <QuickStartCard 
+    icon="💻" 
+    title="Developer?" 
+    description="Advanced patterns for production AI systems"
+    link="/cookbooks/agents/"
+    popular={["ADK Overview", "Agent Types", "MCP Protocol"]}
+    gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+  />
+  <QuickStartCard 
+    icon="🔥" 
+    title="Advanced User?" 
+    description="Meta-prompting, quantum techniques, and legendary patterns"
+    link="/cookbooks/advanced-prompting/"
+    popular={["Meta-Prompting", "Temporal Debugging", "Quantum Prompting"]}
+    gradient="linear-gradient(135deg, #ef4444 0%, #dc2626 100%)"
+  />
+</div>
+
+<div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%); border-radius: 1rem; border: 1px solid rgba(102, 126, 234, 0.2);">
+  <p style="margin: 0 0 1rem 0; font-size: 1.1rem;"><strong>💡 Pro Tip:</strong> Use <kbd style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.25rem; font-family: monospace;">Cmd+K</kbd> or <kbd style="padding: 0.25rem 0.5rem; background: rgba(255,255,255,0.1); border-radius: 0.25rem; font-family: monospace;">Ctrl+K</kbd> to search instantly</p>
+  <p style="margin: 0; opacity: 0.8; font-size: 0.95rem;">Try searching: <em>RAG, Memory, Agents, Prompting, Brand</em></p>
 </div>
 
 ---

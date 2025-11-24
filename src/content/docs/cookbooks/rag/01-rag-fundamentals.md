@@ -2,6 +2,33 @@
 title: "🔍 RAG Fundamentals: Retrieval-Augmented Generation"
 ---
 
+import ContributionButtons from '../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+
+<GreaterGoodBadge 
+  score="high"
+  category="RAG Systems"
+  description="RAG democratizes access to knowledge by making AI systems grounded in real information, not hallucinations. This benefits everyone seeking trustworthy AI."
+/>
+
+<AuthorshipBadge 
+  type="human-led"
+  details="Technical patterns documented by CURATIONS team based on production implementations and industry best practices."
+/>
+
+<UsageTracker 
+  cookbookId="rag-fundamentals"
+  title="RAG Fundamentals"
+/>
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/rag"
+  githubUrl="https://github.com/CurationsLA/ai-learning/blob/main/src/content/docs/cookbooks/rag/01-rag-fundamentals.md"
+/>
+
 ## 🌱 Seedling Concept
 
 **Label**: Grounding AI in Real Data
@@ -428,8 +455,13 @@ filtered = [r for r in results if r['score'] > 0.7]
 
 ## Next Steps
 
-Continue to [Agentic RAG](./02-agentic-rag.md) to learn how to make your RAG system more intelligent and autonomous.
+Continue to [Agentic RAG](./02-agentic-rag/) to learn how to make your RAG system more intelligent and autonomous.
 
 ---
 
 💡 **Pro Tip**: Start with simple RAG, then optimize based on your specific retrieval quality needs.
+
+<ContributionButtons 
+  pageTitle="RAG Fundamentals"
+  pageUrl="https://hub.curations.org/cookbooks/rag/01-rag-fundamentals/"
+/>

@@ -499,4 +499,4 @@ Use them strategically and your communication becomes:
 
 ---
 
-[← Back to Advanced Prompting](./README.md)
+[← Back to Advanced Prompting](../advanced-prompting/)

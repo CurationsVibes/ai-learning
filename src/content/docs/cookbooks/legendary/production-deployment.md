@@ -6,4 +6,4 @@ title: ⚙️ Production Deployment
 
 Coming soon: Complete deployment strategies
 
-[← Back to Legendary](../README.md)
+[← Back to Legendary Topics](../legendary/)

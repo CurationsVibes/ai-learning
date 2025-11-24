@@ -12,7 +12,7 @@ Welcome to The AI × Human Cookbook - your comprehensive guide to building intel
 - 5 AI Development & Advanced Prompting frameworks
 - 5 Business & Brand Strategy frameworks
 
-[← Back to Curator Hub Welcome](../readme.md)
+[← Back to CURATOR HUB Welcome](/)
 
 ## 🎯 Learning Paths
 
@@ -94,4 +94,4 @@ Start with [Introduction to Interoperability](./foundations/01-interoperability-
 
 *Built with ❤️ by Curator Hub for learners who want to master AI × Human collaboration*
 
-[← Back to Curator Hub Welcome](../readme.md)
+[← Back to CURATOR HUB Welcome](/)

@@ -2,6 +2,33 @@
 title: "🧠 Memory Management: Building Context-Aware Agents"
 ---
 
+import ContributionButtons from '../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+
+<GreaterGoodBadge 
+  score="high"
+  category="Foundations"
+  description="Memory management is foundational for ethical AI that respects user privacy while providing personalized experiences. This cookbook prioritizes user control and data transparency."
+/>
+
+<AuthorshipBadge 
+  type="collaborative"
+  details="Core concepts developed by CURATIONS team, examples refined through community feedback and AI collaboration."
+/>
+
+<UsageTracker 
+  cookbookId="foundations-memory-management"
+  title="Memory Management"
+/>
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/foundations"
+  githubUrl="https://github.com/CurationsLA/ai-learning/blob/main/src/content/docs/cookbooks/foundations/03-memory-management.md"
+/>
+
 ## 🌱 Seedling Concept
 
 **Label**: Giving Your Agents a Memory
@@ -463,8 +490,13 @@ def resolve_conflicts(old_memory, new_memory):
 
 ## Next Steps
 
-Continue to [RAG Fundamentals](../rag/01-rag-fundamentals.md) to learn how to combine memory with retrieval-augmented generation for even more powerful agents.
+Continue to [RAG Fundamentals](../rag/01-rag-fundamentals/) to learn how to combine memory with retrieval-augmented generation for even more powerful agents.
 
 ---
 
 💡 **Remember**: Good memory management is about storing what matters and retrieving it when relevant—just like human memory!
+
+<ContributionButtons 
+  pageTitle="Memory Management"
+  pageUrl="https://hub.curations.org/cookbooks/foundations/03-memory-management/"
+/>

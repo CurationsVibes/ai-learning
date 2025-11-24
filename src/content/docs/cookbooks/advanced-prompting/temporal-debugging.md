@@ -671,4 +671,4 @@ That's the hack. 🕰️
 
 ---
 
-[← Back to Advanced Prompting](./README.md)
+[← Back to Advanced Prompting](../advanced-prompting/)

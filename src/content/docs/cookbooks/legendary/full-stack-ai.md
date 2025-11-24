@@ -6,4 +6,4 @@ title: 🚀 Full-Stack AI Applications
 
 Coming soon: Complete guide to building full-stack AI apps
 
-[← Back to Legendary](../README.md)
+[← Back to Legendary Topics](../legendary/)

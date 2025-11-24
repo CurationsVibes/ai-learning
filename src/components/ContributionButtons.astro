@@ -1,0 +1,139 @@
+---
+interface Props {
+  pageTitle: string;
+  pageUrl: string;
+}
+
+const { pageTitle, pageUrl } = Astro.props;
+const encodedTitle = encodeURIComponent(`Correction: ${pageTitle}`);
+const encodedBody = encodeURIComponent(`**Page:** ${pageUrl}\n\n**Issue/Suggestion:**\n\n[Describe the problem or your suggestion here]\n\n**Proposed Fix:**\n\n[If applicable, what should be changed?]`);
+const githubIssueUrl = `https://github.com/CurationsLA/ai-learning/issues/new?title=${encodedTitle}&body=${encodedBody}`;
+---
+
+<div class="contribution-footer">
+  <div class="contribution-header">
+    <h4>💡 Help Improve This Page</h4>
+    <p>Found an error or have a suggestion? We welcome your input!</p>
+  </div>
+  <div class="contribution-buttons">
+    <a href={githubIssueUrl} class="contribution-button report" target="_blank" rel="noopener noreferrer">
+      <span class="button-icon">🐛</span>
+      <span class="button-content">
+        <span class="button-title">Report Issue</span>
+        <span class="button-description">Something wrong? Let us know</span>
+      </span>
+    </a>
+    <a href="https://github.com/CurationsLA/ai-learning/stargazers" class="contribution-button star" target="_blank" rel="noopener noreferrer">
+      <span class="button-icon">⭐</span>
+      <span class="button-content">
+        <span class="button-title">Star on GitHub</span>
+        <span class="button-description">Show this helped you</span>
+      </span>
+    </a>
+    <a href="https://github.com/CurationsLA/ai-learning/discussions" class="contribution-button discuss" target="_blank" rel="noopener noreferrer">
+      <span class="button-icon">💬</span>
+      <span class="button-content">
+        <span class="button-title">Start Discussion</span>
+        <span class="button-description">Share your experience</span>
+      </span>
+    </a>
+  </div>
+</div>
+
+<style>
+  .contribution-footer {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 1rem;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+  }
+
+  .contribution-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .contribution-header h4 {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    color: var(--sl-color-text);
+  }
+
+  .contribution-header p {
+    margin: 0;
+    opacity: 0.8;
+    font-size: 0.95rem;
+  }
+
+  .contribution-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+
+  .contribution-button {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    color: var(--sl-color-text);
+    transition: all 0.3s ease;
+  }
+
+  .contribution-button:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(102, 126, 234, 0.4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .button-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .button-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .button-title {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+
+  .button-description {
+    font-size: 0.85rem;
+    opacity: 0.7;
+  }
+
+  .contribution-button.report:hover {
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+
+  .contribution-button.star:hover {
+    border-color: rgba(251, 191, 36, 0.4);
+  }
+
+  .contribution-button.discuss:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+  }
+
+  @media (max-width: 768px) {
+    .contribution-buttons {
+      grid-template-columns: 1fr;
+    }
+
+    .contribution-footer {
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+  }
+</style>

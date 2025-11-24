@@ -1,0 +1,115 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  link: string;
+  popular?: string[];
+  gradient: string;
+}
+
+const { icon, title, description, link, popular, gradient } = Astro.props;
+---
+
+<a href={link} class="quick-start-card" style={`background: ${gradient}`}>
+  <div class="card-icon">{icon}</div>
+  <h3>{title}</h3>
+  <p>{description}</p>
+  {popular && popular.length > 0 && (
+    <div class="popular-items">
+      <span class="popular-label">🔥 Popular:</span>
+      {popular.map((item, index) => (
+        <span class="popular-item">
+          {item}{index < popular.length - 1 ? ", " : ""}
+        </span>
+      ))}
+    </div>
+  )}
+  <div class="card-arrow">→</div>
+</a>
+
+<style>
+  .quick-start-card {
+    display: block;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+    backdrop-filter: blur(10px);
+  }
+
+  .quick-start-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .quick-start-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: white;
+  }
+
+  .quick-start-card p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin: 0 0 1rem 0;
+    line-height: 1.5;
+  }
+
+  .popular-items {
+    font-size: 0.85rem;
+    opacity: 0.95;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .popular-label {
+    font-weight: 600;
+    margin-right: 0.5rem;
+  }
+
+  .popular-item {
+    opacity: 0.9;
+  }
+
+  .card-arrow {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+  }
+
+  .quick-start-card:hover .card-arrow {
+    transform: translateX(4px);
+    opacity: 1;
+  }
+
+  @media (max-width: 768px) {
+    .quick-start-card {
+      min-height: 160px;
+      padding: 1.5rem;
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+    }
+
+    .quick-start-card h3 {
+      font-size: 1.25rem;
+    }
+  }
+</style>

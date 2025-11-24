@@ -6,4 +6,4 @@ title: 🌌 The Future We're Building
 
 Coming soon: Vision for the future of Human × AI collaboration
 
-[← Back to Legendary](../README.md)
+[← Back to Legendary Topics](../legendary/)

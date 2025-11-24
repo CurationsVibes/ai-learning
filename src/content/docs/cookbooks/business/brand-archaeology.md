@@ -2,6 +2,33 @@
 title: 🔍 Brand Archaeology
 ---
 
+import ContributionButtons from '../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+
+<GreaterGoodBadge 
+  score="high"
+  category="Business & Branding"
+  description="Brand Archaeology helps organizations discover their authentic voice, ensuring brands serve communities meaningfully rather than manipulatively."
+/>
+
+<AuthorshipBadge 
+  type="collaborative"
+  details="Framework developed through CURATIONS client work, documented with AI assistance to share with the community."
+/>
+
+<UsageTracker 
+  cookbookId="business-brand-archaeology"
+  title="Brand Archaeology"
+/>
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/business"
+  githubUrl="https://github.com/CurationsLA/ai-learning/blob/main/src/content/docs/cookbooks/business/brand-archaeology.md"
+/>
+
 **Excavating your authentic brand DNA from the layers of your actual history**
 
 ---
@@ -829,6 +856,11 @@ Your brand already exists:
 
 **Master brand archaeology. Build from truth.** ⚛️
 
+<ContributionButtons 
+  pageTitle="Brand Archaeology"
+  pageUrl="https://hub.curations.org/cookbooks/business/brand-archaeology/"
+/>
+
 ---
 
-[← Back to Business](./README.md)
+[← Back to Business Applications](../business/)

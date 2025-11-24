@@ -1,0 +1,85 @@
+---
+interface Props {
+  type: 'human-led' | 'ai-assisted' | 'collaborative';
+  details?: string;
+}
+
+const { type, details } = Astro.props;
+
+const badges = {
+  'human-led': {
+    icon: '✍️',
+    label: 'Human-Led',
+    description: 'Written primarily by humans, AI-assisted for research and formatting',
+    color: '#667eea'
+  },
+  'ai-assisted': {
+    icon: '🤖',
+    label: 'AI-Assisted',
+    description: 'AI-generated with extensive human review and editing',
+    color: '#764ba2'
+  },
+  'collaborative': {
+    icon: '💫',
+    label: 'Collaborative',
+    description: 'True Human × AI partnership in content creation',
+    color: '#10b981'
+  }
+};
+
+const badge = badges[type];
+---
+
+<div class="authorship-badge" style={`--badge-color: ${badge.color}`}>
+  <div class="badge-icon">{badge.icon}</div>
+  <div class="badge-content">
+    <div class="badge-label">{badge.label}</div>
+    <div class="badge-description">{badge.description}</div>
+    {details && <div class="badge-details">{details}</div>}
+  </div>
+</div>
+
+<style>
+  .authorship-badge {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: linear-gradient(135deg, rgba(var(--badge-color), 0.1) 0%, rgba(var(--badge-color), 0.05) 100%);
+    border-left: 4px solid var(--badge-color);
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  .badge-icon {
+    font-size: 2rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .badge-content {
+    flex: 1;
+  }
+
+  .badge-label {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: var(--sl-color-text);
+  }
+
+  .badge-description {
+    opacity: 0.8;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .badge-details {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    font-style: italic;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+</style>

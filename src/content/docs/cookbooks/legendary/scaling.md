@@ -6,4 +6,4 @@ title: 📈 Scaling Strategies
 
 Coming soon: Complete scaling playbook
 
-[← Back to Legendary](../README.md)
+[← Back to Legendary Topics](../legendary/)
