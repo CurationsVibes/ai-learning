@@ -16,7 +16,7 @@ export default defineConfig({
 			pagefind: true,
 			components: {
 				PageFrame: './src/overrides/PageFrame.astro',
-				Header: './src/overrides/Header.astro',
+				// Header: './src/overrides/Header.astro',
 			},
 			head: [
 				{
