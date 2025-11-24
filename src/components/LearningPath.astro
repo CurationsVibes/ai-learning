@@ -1,0 +1,573 @@
+---
+interface PathStep {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  estimatedTime?: string;
+  difficulty?: 'beginner' | 'intermediate' | 'advanced';
+  prerequisites?: string[];
+}
+
+interface Props {
+  pathId: string;
+  pathTitle: string;
+  pathDescription: string;
+  steps: PathStep[];
+  showProgress?: boolean;
+}
+
+const { pathId, pathTitle, pathDescription, steps, showProgress = true } = Astro.props;
+---
+
+<div class="learning-path" data-path-id={pathId}>
+  <div class="path-header">
+    <div class="path-icon">🎯</div>
+    <div class="path-info">
+      <h3 class="path-title">{pathTitle}</h3>
+      <p class="path-description">{pathDescription}</p>
+    </div>
+    {showProgress && (
+      <div class="path-progress">
+        <div class="progress-circle">
+          <svg viewBox="0 0 36 36" class="circular-chart">
+            <path class="circle-bg"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+            <path class="circle-progress"
+              stroke-dasharray="0, 100"
+              d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+            />
+          </svg>
+          <div class="progress-text">
+            <span class="progress-percentage">0%</span>
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+
+  <div class="path-steps">
+    {steps.map((step, index) => (
+      <div class="step-item" data-step-id={step.id}>
+        <div class="step-marker">
+          <div class="step-number">{index + 1}</div>
+          <div class="step-line"></div>
+        </div>
+        <div class="step-content">
+          <div class="step-header">
+            <h4 class="step-title">
+              <a href={step.link}>{step.title}</a>
+            </h4>
+            <div class="step-meta">
+              {step.difficulty && (
+                <span class={`difficulty-badge ${step.difficulty}`}>
+                  {step.difficulty === 'beginner' ? '🌱' : step.difficulty === 'intermediate' ? '🌿' : '🌳'}
+                  {step.difficulty}
+                </span>
+              )}
+              {step.estimatedTime && (
+                <span class="time-badge">⏱️ {step.estimatedTime}</span>
+              )}
+            </div>
+          </div>
+          <p class="step-description">{step.description}</p>
+          {step.prerequisites && step.prerequisites.length > 0 && (
+            <div class="step-prerequisites">
+              <strong>Prerequisites:</strong> {step.prerequisites.join(', ')}
+            </div>
+          )}
+          <div class="step-actions">
+            <a href={step.link} class="step-button start">Start Learning</a>
+            <button class="step-button complete" data-action="complete">
+              <span class="check-icon">✓</span>
+              Mark Complete
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div class="path-footer">
+    <button class="reset-progress" data-action="reset">
+      <span>🔄 Reset Progress</span>
+    </button>
+    <div class="completion-message" style="display: none;">
+      <span class="celebration-icon">🎉</span>
+      <strong>Congratulations!</strong> You've completed this learning path!
+    </div>
+  </div>
+</div>
+
+<script>
+  const STORAGE_KEY_PREFIX = 'learning-path-';
+  
+  interface PathProgress {
+    completedSteps: string[];
+    startedDate?: string;
+    completedDate?: string;
+  }
+  
+  function getPathProgress(pathId: string): PathProgress {
+    const key = `${STORAGE_KEY_PREFIX}${pathId}`;
+    const stored = localStorage.getItem(key);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+    return { completedSteps: [] };
+  }
+  
+  function setPathProgress(pathId: string, progress: PathProgress): void {
+    const key = `${STORAGE_KEY_PREFIX}${pathId}`;
+    localStorage.setItem(key, JSON.stringify(progress));
+  }
+  
+  function updatePathUI(pathElement: HTMLElement): void {
+    const pathId = pathElement.getAttribute('data-path-id');
+    if (!pathId) return;
+    
+    const progress = getPathProgress(pathId);
+    const steps = pathElement.querySelectorAll('.step-item');
+    const totalSteps = steps.length;
+    const completedCount = progress.completedSteps.length;
+    const percentage = Math.round((completedCount / totalSteps) * 100);
+    
+    // Update progress circle
+    const progressCircle = pathElement.querySelector('.circle-progress') as SVGPathElement;
+    const progressText = pathElement.querySelector('.progress-percentage');
+    if (progressCircle && progressText) {
+      progressCircle.setAttribute('stroke-dasharray', `${percentage}, 100`);
+      progressText.textContent = `${percentage}%`;
+    }
+    
+    // Update step items
+    steps.forEach((step) => {
+      const stepId = step.getAttribute('data-step-id');
+      if (stepId && progress.completedSteps.includes(stepId)) {
+        step.classList.add('completed');
+      } else {
+        step.classList.remove('completed');
+      }
+    });
+    
+    // Show completion message
+    const completionMessage = pathElement.querySelector('.completion-message') as HTMLElement;
+    if (completionMessage) {
+      completionMessage.style.display = percentage === 100 ? 'flex' : 'none';
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.learning-path').forEach((path) => {
+      updatePathUI(path as HTMLElement);
+      
+      // Handle complete buttons
+      path.querySelectorAll('[data-action="complete"]').forEach((button) => {
+        button.addEventListener('click', () => {
+          const stepItem = button.closest('.step-item');
+          const stepId = stepItem?.getAttribute('data-step-id');
+          const pathId = path.getAttribute('data-path-id');
+          
+          if (stepId && pathId) {
+            const progress = getPathProgress(pathId);
+            if (!progress.startedDate) {
+              progress.startedDate = new Date().toISOString();
+            }
+            
+            const index = progress.completedSteps.indexOf(stepId);
+            if (index > -1) {
+              progress.completedSteps.splice(index, 1);
+            } else {
+              progress.completedSteps.push(stepId);
+            }
+            
+            // Check if all steps completed
+            const totalSteps = path.querySelectorAll('.step-item').length;
+            if (progress.completedSteps.length === totalSteps) {
+              progress.completedDate = new Date().toISOString();
+            }
+            
+            setPathProgress(pathId, progress);
+            updatePathUI(path as HTMLElement);
+            
+            // Animation
+            button.classList.add('pulse');
+            setTimeout(() => button.classList.remove('pulse'), 300);
+          }
+        });
+      });
+      
+      // Handle reset button
+      const resetButton = path.querySelector('[data-action="reset"]');
+      resetButton?.addEventListener('click', () => {
+        const pathId = path.getAttribute('data-path-id');
+        if (pathId && confirm('Are you sure you want to reset your progress on this learning path?')) {
+          setPathProgress(pathId, { completedSteps: [] });
+          updatePathUI(path as HTMLElement);
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .learning-path {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0.05) 100%);
+    border: 2px solid rgba(16, 185, 129, 0.2);
+    border-radius: 1rem;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+
+  .path-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(16, 185, 129, 0.2);
+  }
+
+  .path-icon {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .path-info {
+    flex: 1;
+  }
+
+  .path-title {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.75rem;
+    color: var(--sl-color-text);
+  }
+
+  .path-description {
+    margin: 0;
+    opacity: 0.9;
+    line-height: 1.6;
+  }
+
+  .path-progress {
+    flex-shrink: 0;
+  }
+
+  .progress-circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .circular-chart {
+    width: 100%;
+    height: 100%;
+  }
+
+  .circle-bg {
+    fill: none;
+    stroke: rgba(16, 185, 129, 0.1);
+    stroke-width: 2;
+  }
+
+  .circle-progress {
+    fill: none;
+    stroke: #10b981;
+    stroke-width: 2;
+    stroke-linecap: round;
+    transition: stroke-dasharray 0.5s ease;
+  }
+
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .progress-percentage {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #10b981;
+  }
+
+  .path-steps {
+    margin: 2rem 0;
+  }
+
+  .step-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+  }
+
+  .step-item:hover {
+    opacity: 1;
+  }
+
+  .step-item.completed {
+    opacity: 1;
+  }
+
+  .step-item.completed .step-marker .step-number {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+  }
+
+  .step-item.completed .step-content {
+    opacity: 0.7;
+  }
+
+  .step-marker {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 2px solid rgba(16, 185, 129, 0.3);
+    border-radius: 50%;
+    font-weight: 700;
+    color: #10b981;
+    transition: all 0.3s ease;
+  }
+
+  .step-line {
+    flex: 1;
+    width: 2px;
+    min-height: 60px;
+    background: linear-gradient(to bottom, rgba(16, 185, 129, 0.3), transparent);
+  }
+
+  .step-item:last-child .step-line {
+    display: none;
+  }
+
+  .step-content {
+    flex: 1;
+    background: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .step-content:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .step-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step-title {
+    margin: 0;
+    font-size: 1.25rem;
+  }
+
+  .step-title a {
+    color: var(--sl-color-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .step-title a:hover {
+    color: #10b981;
+  }
+
+  .step-meta {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .difficulty-badge,
+  .time-badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .difficulty-badge.beginner {
+    background: rgba(16, 185, 129, 0.1);
+    color: #059669;
+  }
+
+  .difficulty-badge.intermediate {
+    background: rgba(245, 158, 11, 0.1);
+    color: #d97706;
+  }
+
+  .difficulty-badge.advanced {
+    background: rgba(239, 68, 68, 0.1);
+    color: #dc2626;
+  }
+
+  .time-badge {
+    background: rgba(0, 0, 0, 0.05);
+    color: #666;
+  }
+
+  .step-description {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+  }
+
+  .step-prerequisites {
+    font-size: 0.875rem;
+    padding: 0.75rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-left: 3px solid #10b981;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+  }
+
+  .step-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .step-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid;
+  }
+
+  .step-button.start {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border-color: transparent;
+  }
+
+  .step-button.start:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+
+  .step-button.complete {
+    background: white;
+    color: #10b981;
+    border-color: #10b981;
+  }
+
+  .step-button.complete:hover {
+    background: rgba(16, 185, 129, 0.05);
+  }
+
+  .step-item.completed .step-button.complete {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border-color: transparent;
+  }
+
+  .step-button.pulse {
+    animation: pulse 0.3s ease;
+  }
+
+  .check-icon {
+    font-size: 1rem;
+  }
+
+  .path-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(16, 185, 129, 0.2);
+    gap: 1rem;
+  }
+
+  .reset-progress {
+    padding: 0.5rem 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    color: #666;
+  }
+
+  .reset-progress:hover {
+    background: rgba(0, 0, 0, 0.08);
+  }
+
+  .completion-message {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .celebration-icon {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .path-header {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .path-progress {
+      align-self: center;
+    }
+
+    .step-item {
+      gap: 1rem;
+    }
+
+    .step-header {
+      flex-direction: column;
+    }
+
+    .step-actions {
+      flex-direction: column;
+    }
+
+    .step-button {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .path-footer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+</style>
