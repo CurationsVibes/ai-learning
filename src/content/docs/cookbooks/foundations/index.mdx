@@ -3,11 +3,23 @@ title: 🌱 Foundations
 description: Essential building blocks for AI agent development - interoperability, model gardens, and memory management
 ---
 
+import LearningPath from '../../../../components/LearningPath.astro';
+import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+
 # 🌱 Foundations
 
 **Essential building blocks for AI agent development**
 
+<UpvoteWidget itemId="foundations-cookbook" itemType="cookbook" />
+
 Welcome to the Foundations section - your starting point for understanding modern AI agent development. These guides cover the core concepts that every AI developer needs to master.
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/foundations"
+  technologies={["MCP", "A2A", "Memory Systems"]}
+  showCodePreview={false}
+/>
 
 ## What You'll Learn
 
@@ -24,11 +36,39 @@ Master the art of building context-aware agents that remember conversations, lea
 
 ## Learning Path
 
-We recommend following these guides in order:
-
-1. **[Introduction to Interoperability](./01-interoperability-intro/)** - Start here to understand how modern AI agents connect and communicate
-2. **[Model Garden & Foundation Models](./02-model-garden/)** - Learn about available models and how to work with them
-3. **[Memory Management](./03-memory-management/)** - Build agents that remember and learn from context
+<LearningPath 
+  pathId="foundations-path"
+  pathTitle="Foundations Learning Path"
+  pathDescription="Master the core concepts of AI agent development from protocols to memory systems"
+  steps={[
+    {
+      id: "step-interoperability",
+      title: "Introduction to Interoperability",
+      description: "Start here to understand how modern AI agents connect and communicate using MCP and A2A protocols",
+      link: "/cookbooks/foundations/01-interoperability-intro/",
+      estimatedTime: "15 min",
+      difficulty: "beginner"
+    },
+    {
+      id: "step-model-garden",
+      title: "Model Garden & Foundation Models",
+      description: "Learn about available models and how to work with them to prevent vendor lock-in",
+      link: "/cookbooks/foundations/02-model-garden/",
+      estimatedTime: "20 min",
+      difficulty: "intermediate",
+      prerequisites: ["Interoperability basics"]
+    },
+    {
+      id: "step-memory",
+      title: "Memory Management",
+      description: "Build agents that remember and learn from context across sessions",
+      link: "/cookbooks/foundations/03-memory-management/",
+      estimatedTime: "30 min",
+      difficulty: "intermediate",
+      prerequisites: ["Interoperability", "Model Garden"]
+    }
+  ]}
+/>
 
 ## 🌱 → 🌿 → 🌳 Progressive Learning
 
