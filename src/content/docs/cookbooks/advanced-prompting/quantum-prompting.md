@@ -459,9 +459,9 @@ IF (global_users)
 ## Combining Techniques
 
 Use with:
-- [Context Manipulation](./context-manipulation.md) - Context in superposition
-- [Meta-Prompting](./meta-prompting.md) - Generate quantum prompts
-- [Temporal Debugging](./temporal-debugging.md) - Debug across dimensions
+- [Context Manipulation](./context-manipulation/) - Context in superposition
+- [Meta-Prompting](./meta-prompting/) - Generate quantum prompts
+- [Temporal Debugging](./temporal-debugging/) - Debug across dimensions
 
 ---
 

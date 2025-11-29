@@ -679,7 +679,7 @@ class HybridAgent:
 
 ## Next Steps
 
-Continue to [Agent Models & Contracts](./03-agent-models.md) to learn how to properly define agent APIs and interfaces.
+Continue to [Agent Models & Contracts](./03-agent-models/) to learn how to properly define agent APIs and interfaces.
 
 ---
 

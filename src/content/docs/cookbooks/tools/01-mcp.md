@@ -667,7 +667,7 @@ class APIWrapperMCPServer(MCPServer):
 
 ## Next Steps
 
-Continue to [Agent2Agent Protocol (A2A)](./02-a2a.md) to learn about inter-agent communication.
+Continue to [Agent2Agent Protocol (A2A)](./02-a2a/) to learn about inter-agent communication.
 
 ---
 

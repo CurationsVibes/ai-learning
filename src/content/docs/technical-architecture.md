@@ -77,7 +77,7 @@ Each Curator is defined by a specialized system prompt that includes:
 - Output formats
 
 **Context Management:**
-Using techniques from [Context Manipulation](cookbooks/advanced-prompting/context-manipulation.md):
+Using techniques from [Context Manipulation](cookbooks/advanced-prompting/context-manipulation/):
 - Hierarchical context compression
 - Semantic anchoring
 - Cross-Curator state sharing
@@ -185,7 +185,7 @@ A protocol for AI models to access external context and tools.
 - Integration with specialized tools
 - Consistent context across model providers
 
-[Learn more in the Cookbook →](cookbooks/tools/01-mcp.md)
+[Learn more in the Cookbook →](cookbooks/tools/01-mcp/)
 
 ### Agent-to-Agent Protocol (A2A)
 
@@ -197,7 +197,7 @@ A protocol for AI agents to communicate and collaborate.
 - Collaborative workflows
 - Distributed intelligence
 
-[Learn more in the Cookbook →](cookbooks/tools/02-a2a.md)
+[Learn more in the Cookbook →](cookbooks/tools/02-a2a/)
 
 ---
 
@@ -280,7 +280,7 @@ try {
 - Sensitive configurations and keys
 
 **How to contribute:**
-[Get Involved →](get-involved.md)
+[Get Involved →](get-involved/)
 
 ### Version Control
 
@@ -498,11 +498,11 @@ Try in:
 - ChatGPT: https://chat.openai.com
 - Claude: https://claude.ai
 
-Advanced techniques: [Multi-Agent Systems](cookbooks/agents/README.md)
+Advanced techniques: [Multi-Agent Systems](cookbooks/agents/)
 -->
 
 *"Good architecture is invisible. Great architecture makes the impossible easy."*
 
 **That's how HUB builds.** 🏗️
 
-[← Back to Welcome](../readme.md)
+[← Back to Welcome](/)

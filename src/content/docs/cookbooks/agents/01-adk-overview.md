@@ -532,7 +532,7 @@ class CustomADK:
 
 ## Next Steps
 
-Continue to [Agent Types](./02-agent-types.md) to learn about different agent architectures and when to use each.
+Continue to [Agent Types](./02-agent-types/) to learn about different agent architectures and when to use each.
 
 ---
 

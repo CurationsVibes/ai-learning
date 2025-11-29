@@ -587,7 +587,7 @@ research_graph.add_edge(Edge("paper_new", "concept_transformer", "DISCUSSES"))
 
 ## Next Steps
 
-Continue to [Grounding Techniques](./04-grounding.md) to learn advanced methods for keeping your agents accurate and reliable.
+Continue to [Grounding Techniques](./04-grounding/) to learn advanced methods for keeping your agents accurate and reliable.
 
 ---
 

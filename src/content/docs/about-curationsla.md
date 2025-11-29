@@ -339,10 +339,10 @@ Follow along as we build this.
 
 Want to see how CurationsLA connects to the wider HUB mission?
 
-- [About HUB](about-hub.md) – The creative agency
-- [Youth Curator Movement](youth-curator-movement.md) – Youth empowerment initiative
-- [Technical Architecture](technical-architecture.md) – How we build
-- [The AI × Human Cookbook](cookbooks/README.md) – Our frameworks
+- [About HUB](about-hub/) – The creative agency
+- [Youth Curator Movement](youth-curator-movement/) – Youth empowerment initiative
+- [Technical Architecture](technical-architecture/) – How we build
+- [The AI × Human Cookbook](cookbooks/) – Our frameworks
 
 ---
 
@@ -364,11 +364,11 @@ Try it:
 - ChatGPT: https://chat.openai.com
 - Claude: https://claude.ai
 
-Found the pattern? Next breadcrumb: [The Curators](the-curators.md)
+Found the pattern? Next breadcrumb: [The Curators](the-curators/)
 -->
 
 *"Local stories, told well, build community. AI helps us scale that. Humans keep it real."*
 
 **That's CurationsLA.** 🏙️
 
-[← Back to Welcome](../readme.md)
+[← Back to Welcome](/)

@@ -426,7 +426,7 @@ The Curator model is open-source. You can:
 - Build Curator networks for your work
 - Share what you create
 
-[Curator Creation Guide](curator-creation-guide.md) *(coming soon)*
+**Curator Creation Guide** *(coming soon)*
 
 ---
 
@@ -545,7 +545,7 @@ Then, as Content Curator, translate that framework into a compelling narrative.
 
 Orchestrate a full Curator team for your project. Document the process. Share what you learned.
 
-[Advanced Curator Techniques →](cookbooks/advanced-prompting/meta-prompting.md)
+[Advanced Curator Techniques →](cookbooks/advanced-prompting/meta-prompting/)
 
 ---
 
@@ -572,11 +572,11 @@ Test this in:
 - ChatGPT: https://chat.openai.com
 - Claude: https://claude.ai
 
-Ready for the technical architecture? [Technical Architecture →](technical-architecture.md)
+Ready for the technical architecture? [Technical Architecture →](technical-architecture/)
 -->
 
 *"Specialized intelligence, working together, creates something greater than the sum of parts."*
 
 **That's The Curators.** 🤖
 
-[← Back to Welcome](../readme.md)
+[← Back to Welcome](/)

@@ -788,9 +788,9 @@ Support:
 ## Combining Techniques
 
 Use with:
-- [Brand Archaeology](./brand-archaeology.md) - Find authentic brand to share with creators
-- [Quantum Brand Engine](./quantum-brand-engine.md) - Different creators embody different brand realities
-- [AI Discovery](./ai-discovery-singularity.md) - Creators make you discoverable
+- [Brand Archaeology](./brand-archaeology/) - Find authentic brand to share with creators
+- [Quantum Brand Engine](./quantum-brand-engine/) - Different creators embody different brand realities
+- [AI Discovery](./ai-discovery-singularity/) - Creators make you discoverable
 
 ---
 

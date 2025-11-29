@@ -24,7 +24,7 @@ Learn to:
 - Implement diff-based updates
 - Build persistent memory systems
 
-→ [Learn Context Manipulation](./context-manipulation.md)
+→ [Learn Context Manipulation](./context-manipulation/)
 
 ### 🎭 **Emoji Protocol**
 **The problem:** Tokens are expensive, context is limited
@@ -36,7 +36,7 @@ Learn to:
 - Build scannable documentation
 - Communicate across language barriers
 
-→ [Learn Emoji Protocol](./emoji-protocol.md)
+→ [Learn Emoji Protocol](./emoji-protocol/)
 
 ### 🔮 **Meta-Prompting**
 **The problem:** You don't know the optimal way to ask
@@ -48,7 +48,7 @@ Learn to:
 - Iterate prompts to perfection
 - Create domain-expert prompts
 
-→ [Learn Meta-Prompting](./meta-prompting.md)
+→ [Learn Meta-Prompting](./meta-prompting/)
 
 ### ⚛️ **Quantum Prompting**
 **The problem:** AI gives you ONE solution
@@ -60,7 +60,7 @@ Learn to:
 - Create runtime-collapsing architectures
 - Think in probabilities, not absolutes
 
-→ [Learn Quantum Prompting](./quantum-prompting.md)
+→ [Learn Quantum Prompting](./quantum-prompting/)
 
 ### 🕰️ **Temporal Debugging**
 **The problem:** Bugs are stuck in the present
@@ -72,7 +72,7 @@ Learn to:
 - Find divergence points
 - Think in cause-and-effect chains
 
-→ [Learn Temporal Debugging](./temporal-debugging.md)
+→ [Learn Temporal Debugging](./temporal-debugging/)
 
 ---
 
@@ -86,7 +86,7 @@ Learn to:
 - ✅ You want to think like an AI engineer
 
 **Skip this if:**
-- ❌ You're brand new to AI (start with [Foundations](../foundations/01-interoperability-intro.md))
+- ❌ You're brand new to AI (start with [Foundations](../foundations/01-interoperability-intro/))
 - ❌ You just need simple answers
 - ❌ You're not ready for complexity
 
@@ -175,11 +175,11 @@ This section evolves through shared discoveries. Add your insights.
 
 Pick your starting point:
 
-- 🗂️ [Context Manipulation](./context-manipulation.md) - Infinite memory
-- 🎭 [Emoji Protocol](./emoji-protocol.md) - Semantic compression
-- 🔮 [Meta-Prompting](./meta-prompting.md) - Self-optimizing prompts
-- ⚛️ [Quantum Prompting](./quantum-prompting.md) - Superposition solutions
-- 🕰️ [Temporal Debugging](./temporal-debugging.md) - Timeline thinking
+- 🗂️ [Context Manipulation](./context-manipulation/) - Infinite memory
+- 🎭 [Emoji Protocol](./emoji-protocol/) - Semantic compression
+- 🔮 [Meta-Prompting](./meta-prompting/) - Self-optimizing prompts
+- ⚛️ [Quantum Prompting](./quantum-prompting/) - Superposition solutions
+- 🕰️ [Temporal Debugging](./temporal-debugging/) - Timeline thinking
 
 ---
 

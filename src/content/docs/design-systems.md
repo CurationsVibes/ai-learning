@@ -339,7 +339,7 @@ You can:
 - **Learn from it:** See how we think about design
 - **Contribute back:** Improvements welcome
 
-[Design System Repository](design-system-repo.md) *(coming soon)*
+**Design System Repository** *(coming soon)*
 
 ---
 
@@ -415,11 +415,11 @@ Test in:
 - ChatGPT: https://chat.openai.com
 - Claude: https://claude.ai
 
-Advanced techniques: [Context Manipulation](cookbooks/advanced-prompting/context-manipulation.md)
+Advanced techniques: [Context Manipulation](cookbooks/advanced-prompting/context-manipulation/)
 -->
 
 *"Good design makes the complex simple. Great design makes the simple obvious."*
 
 **That's our design system.** 🎨
 
-[← Back to Welcome](../readme.md)
+[← Back to Welcome](/)

@@ -636,9 +636,9 @@ Then: [give rough prompt]
 ## Combining Techniques
 
 Use with:
-- [Context Manipulation](./context-manipulation.md) - Optimize context structure
-- [Emoji Protocol](./emoji-protocol.md) - Compress meta-prompts
-- [Quantum Prompting](./quantum-prompting.md) - Generate prompts in superposition
+- [Context Manipulation](./context-manipulation/) - Optimize context structure
+- [Emoji Protocol](./emoji-protocol/) - Compress meta-prompts
+- [Quantum Prompting](./quantum-prompting/) - Generate prompts in superposition
 
 ---
 

@@ -447,9 +447,9 @@ jkl012 ♻️ Refactor DB connection
 ## Combining Techniques
 
 Use with:
-- [Context Manipulation](./context-manipulation.md) - Compress context even more
-- [Meta-Prompting](./meta-prompting.md) - Generate emoji-rich prompts
-- [Quantum Prompting](./quantum-prompting.md) - Emoji state indicators
+- [Context Manipulation](./context-manipulation/) - Compress context even more
+- [Meta-Prompting](./meta-prompting/) - Generate emoji-rich prompts
+- [Quantum Prompting](./quantum-prompting/) - Emoji state indicators
 
 ---
 

@@ -280,9 +280,9 @@ Try this exercise:
 
 ## Next Steps
 
-- [Brand Archaeology](./brand-archaeology.md) - Find your authentic core first
-- [AI Discovery](./ai-discovery-singularity.md) - Make all versions discoverable
-- [Creator Engine](./creator-engine.md) - Distribute your brand across creators
+- [Brand Archaeology](./brand-archaeology/) - Find your authentic core first
+- [AI Discovery](./ai-discovery-singularity/) - Make all versions discoverable
+- [Creator Engine](./creator-engine/) - Distribute your brand across creators
 
 ---
 

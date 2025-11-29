@@ -504,7 +504,7 @@ class ChainOfThoughtRAG:
 
 ## Next Steps
 
-Continue to [GraphRAG](./03-graph-rag.md) to learn how to leverage relationship graphs for even more sophisticated knowledge retrieval.
+Continue to [GraphRAG](./03-graph-rag/) to learn how to leverage relationship graphs for even more sophisticated knowledge retrieval.
 
 ---
 

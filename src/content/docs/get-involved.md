@@ -25,7 +25,7 @@ HUB is a living collaboration. Here's how you can be part of it:
 - Document your community's stories
 
 **Get Started:**
-1. Visit [Youth Curator Movement](youth-curator-movement.md)
+1. Visit [Youth Curator Movement](youth-curator-movement/)
 2. Try your first AI prompt (it's in there!)
 3. Pick a project that interests you
 4. Share what you create
@@ -39,10 +39,10 @@ HUB is a living collaboration. Here's how you can be part of it:
 ### Learn Our Frameworks
 
 **Explore the open-source tools:**
-- [Quantum Brand Engine](cookbooks/business/quantum-brand-engine.md)
-- [AI Discovery (AAO)](cookbooks/business/ai-discovery-singularity.md)
-- [Creator Singularity Engine](cookbooks/business/creator-engine.md)
-- [Schema.org Mastery](cookbooks/business/schema-mastery.md)
+- [Quantum Brand Engine](cookbooks/business/quantum-brand-engine/)
+- [AI Discovery (AAO)](cookbooks/business/ai-discovery-singularity/)
+- [Creator Singularity Engine](cookbooks/business/creator-engine/)
+- [Schema.org Mastery](cookbooks/business/schema-mastery/)
 
 **Use them. Adapt them. Build with them.**
 
@@ -86,7 +86,7 @@ We collaborate with brands and creators who:
 4. Follow contribution guidelines
 
 **Contribution Guidelines:**
-- Code should align with [our principles](about-hub.md)
+- Code should align with [our principles](about-hub/)
 - Documentation for all new features
 - Tests where appropriate
 - Respectful collaboration
@@ -112,7 +112,7 @@ We collaborate with brands and creators who:
 - Professional development resources
 
 **How to start:**
-1. Review the [Youth Curator Movement](youth-curator-movement.md)
+1. Review the [Youth Curator Movement](youth-curator-movement/)
 2. Download curriculum materials *(coming soon)*
 3. Adapt for your classroom
 4. Share feedback and improvements
@@ -371,13 +371,13 @@ We're a small operation. We don't have formal hiring, but we collaborate with ta
 Pick one thing to do right now:
 
 **If you're a learner:**
-→ [Try the Youth Curator Movement](youth-curator-movement.md)
+→ [Try the Youth Curator Movement](youth-curator-movement/)
 
 **If you're a builder:**
-→ [Explore the Cookbook](cookbooks/README.md) and build something
+→ [Explore the Cookbook](cookbooks/) and build something
 
 **If you're an educator:**
-→ [Review the curriculum](youth-curator-movement.md) and adapt for your students
+→ [Review the curriculum](youth-curator-movement/) and adapt for your students
 
 **If you're a developer:**
 → [Check the GitHub repo](https://github.com/curationsla/ai-learning) and open an issue or PR
@@ -424,4 +424,4 @@ When ready, submit a PR to: https://github.com/curationsla/ai-learning
 
 **Let's build.** 🤝
 
-[← Back to Welcome](../readme.md)
+[← Back to Welcome](/)

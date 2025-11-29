@@ -609,9 +609,9 @@ Document: "ID reuse implications for caching"
 ## Combining Techniques
 
 Use with:
-- [Context Manipulation](./context-manipulation.md) - Efficient context across timelines
-- [Quantum Prompting](./quantum-prompting.md) - Debug across dimensional splits
-- [Meta-Prompting](./meta-prompting.md) - Generate optimal temporal prompts
+- [Context Manipulation](./context-manipulation/) - Efficient context across timelines
+- [Quantum Prompting](./quantum-prompting/) - Debug across dimensional splits
+- [Meta-Prompting](./meta-prompting/) - Generate optimal temporal prompts
 
 ---
 

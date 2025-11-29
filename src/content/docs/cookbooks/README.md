@@ -18,36 +18,36 @@ Welcome to The AI × Human Cookbook - your comprehensive guide to building intel
 
 ### 🌟 Foundations
 Essential building blocks for AI agent development
-- [Introduction to Interoperability](./foundations/01-interoperability-intro.md) - MCP & A2A protocols
-- [Model Garden & Foundation Models](./foundations/02-model-garden.md) - Discover and deploy AI models
-- [Memory Management](./foundations/03-memory-management.md) - Building context-aware agents
+- [Introduction to Interoperability](./foundations/01-interoperability-intro/) - MCP & A2A protocols
+- [Model Garden & Foundation Models](./foundations/02-model-garden/) - Discover and deploy AI models
+- [Memory Management](./foundations/03-memory-management/) - Building context-aware agents
 
 ### 🔍 RAG & Knowledge Systems
 Grounding agents with intelligent retrieval
-- [RAG Fundamentals](./rag/01-rag-fundamentals.md) - Retrieval-Augmented Generation basics
-- [Agentic RAG](./rag/02-agentic-rag.md) - Active reasoning in knowledge search
-- [GraphRAG](./rag/03-graph-rag.md) - Relationship-based knowledge graphs
-- [Grounding Techniques](./rag/04-grounding.md) - Advanced grounding strategies
+- [RAG Fundamentals](./rag/01-rag-fundamentals/) - Retrieval-Augmented Generation basics
+- [Agentic RAG](./rag/02-agentic-rag/) - Active reasoning in knowledge search
+- [GraphRAG](./rag/03-graph-rag/) - Relationship-based knowledge graphs
+- [Grounding Techniques](./rag/04-grounding/) - Advanced grounding strategies
 
 ### 🤖 Agent Development
 Building sophisticated AI agents
-- [Agent Development Kits (ADK)](./agents/01-adk-overview.md) - Toolkit fundamentals
-- [Agent Types](./agents/02-agent-types.md) - Sequential, Parallel, Loop, and Custom
-- [Agent Models & Contracts](./agents/03-agent-models.md) - API design patterns
-- [Defining LLM Agents](./agents/04-defining-llm-agents.md) - Step-by-step guide
+- [Agent Development Kits (ADK)](./agents/01-adk-overview/) - Toolkit fundamentals
+- [Agent Types](./agents/02-agent-types/) - Sequential, Parallel, Loop, and Custom
+- [Agent Models & Contracts](./agents/03-agent-models/) - API design patterns
+- [Defining LLM Agents](./agents/04-defining-llm-agents/) - Step-by-step guide
 
 ### 🛠️ Tools & Integration
 Connecting agents to the world
-- [Model Context Protocol (MCP)](./tools/01-mcp.md) - Standardized content delivery
-- [Agent2Agent Protocol (A2A)](./tools/02-a2a.md) - Inter-agent communication
-- [Tool Ecosystems](./tools/03-tool-ecosystems.md) - LangChain, LlamaIndex, CrewAI
-- [AI Agent Engines](./tools/04-agent-engines.md) - Production deployment
+- [Model Context Protocol (MCP)](./tools/01-mcp/) - Standardized content delivery
+- [Agent2Agent Protocol (A2A)](./tools/02-a2a/) - Inter-agent communication
+- [Tool Ecosystems](./tools/03-tool-ecosystems/) - LangChain, LlamaIndex, CrewAI
+- [AI Agent Engines](./tools/04-agent-engines/) - Production deployment
 
 ### 🚀 Advanced Topics
 Taking your agents to the next level
-- [Multi-Agent Systems](./advanced/01-multi-agent-systems.md) - Orchestration patterns
-- [Evaluation & Testing](./advanced/02-evaluation.md) - Agent quality assurance
-- [Production Deployment](./advanced/03-deployment.md) - Scaling in production
+- [Multi-Agent Systems](./advanced/01-multi-agent-systems/) - Orchestration patterns
+- [Evaluation & Testing](./advanced/02-evaluation/) - Agent quality assurance
+- [Production Deployment](./advanced/03-deployment/) - Scaling in production
 
 ## 📚 How to Use This Cookbook
 
@@ -74,21 +74,21 @@ This cookbook celebrates the synergy between human creativity and AI capabilitie
 - Best results emerge from collaboration
 - Every framework should serve the greater good
 
-**Learn more about HUB:** [About HUB](../about-hub.md) | [Meet The Curators](../the-curators.md)
+**Learn more about HUB:** [About HUB](../about-hub/) | [Meet The Curators](../the-curators/)
 
 ## 🚀 Getting Started
 
-Start with [Introduction to Interoperability](./foundations/01-interoperability-intro.md) to understand the foundation of modern AI agent systems.
+Start with [Introduction to Interoperability](./foundations/01-interoperability-intro/) to understand the foundation of modern AI agent systems.
 
 ---
 
 ## 📖 Additional Resources
 
 **Beyond the technical frameworks, explore:**
-- [Advanced Prompting Techniques](./advanced-prompting/README.md) - Meta-prompting, chain-of-thought, and more
-- [Business & Brand Frameworks](./business/README.md) - Quantum Brand, AI Discovery, Creator Engine
+- [Advanced Prompting Techniques](./advanced-prompting/) - Meta-prompting, chain-of-thought, and more
+- [Business & Brand Frameworks](./business/) - Quantum Brand, AI Discovery, Creator Engine
 - [HUB Services](https://curations.org) - Professional implementation and collaboration
-- [The Curators](../the-curators.md) - Specialized AI personas for different domains
+- [The Curators](../the-curators/) - Specialized AI personas for different domains
 
 ---
 

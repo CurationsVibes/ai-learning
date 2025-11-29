@@ -24,7 +24,7 @@ Learn to:
 - Build hybrid identities that span demographics
 - Future-proof your positioning
 
-→ [Learn Quantum Brand Engine](./quantum-brand-engine.md)
+→ [Learn Quantum Brand Engine](./quantum-brand-engine/)
 
 ### 🔍 **Brand Archaeology**
 **The problem:** You don't know your authentic essence
@@ -36,7 +36,7 @@ Learn to:
 - Identify misalignments
 - Build authentic positioning
 
-→ [Learn Brand Archaeology](./brand-archaeology.md)
+→ [Learn Brand Archaeology](./brand-archaeology/)
 
 ### 🎯 **AI Discovery Singularity (AAO)**
 **Old SEO:** Optimize for Google
@@ -48,7 +48,7 @@ Learn to:
 - Schema.org mastery
 - Become the default recommendation
 
-→ [Learn AI Discovery (AAO)](./ai-discovery-singularity.md)
+→ [Learn AI Discovery (AAO)](./ai-discovery-singularity/)
 
 ### 🗺️ **Schema.org Mastery**
 **The foundation:** AI-readable knowledge graphs
@@ -59,7 +59,7 @@ Learn to:
 - Structure data for discovery
 - Validate and monitor
 
-→ [Learn Schema.org](./schema-mastery.md)
+→ [Learn Schema.org](./schema-mastery/)
 
 ### 🌟 **Creator Singularity Engine**
 **Old influencer marketing:** Pay for posts
@@ -71,7 +71,7 @@ Learn to:
 - Build authentic collaborations
 - Create self-sustaining networks
 
-→ [Learn Creator Engine](./creator-engine.md)
+→ [Learn Creator Engine](./creator-engine/)
 
 ---
 
@@ -178,11 +178,11 @@ Get ahead now. Or catch up later.
 
 Pick your starting point:
 
-- ⚛️ [Quantum Brand Engine](./quantum-brand-engine.md) - Adaptive positioning
-- 🔍 [Brand Archaeology](./brand-archaeology.md) - Find your truth
-- 🎯 [AI Discovery (AAO)](./ai-discovery-singularity.md) - Be un-ignorable
-- 🗺️ [Schema.org Mastery](./schema-mastery.md) - AI-readable data
-- 🌟 [Creator Engine](./creator-engine.md) - Build movements
+- ⚛️ [Quantum Brand Engine](./quantum-brand-engine/) - Adaptive positioning
+- 🔍 [Brand Archaeology](./brand-archaeology/) - Find your truth
+- 🎯 [AI Discovery (AAO)](./ai-discovery-singularity/) - Be un-ignorable
+- 🗺️ [Schema.org Mastery](./schema-mastery/) - AI-readable data
+- 🌟 [Creator Engine](./creator-engine/) - Build movements
 
 ---
 
