@@ -472,6 +472,6 @@ Output: 7-day posting schedule with copy
 
 ---
 
-*Part of the Intermediate AI Mastery Cookbook - CURATOR HUB by CURATIONS*
+*Part of the Intermediate AI Mastery Cookbook - HUB by CURATIONS*
 
 [← Back to Intermediate](./)

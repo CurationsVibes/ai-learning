@@ -2,13 +2,13 @@
 title: Technical Architecture
 ---
 
-**How Curator Hub builds: systems, protocols, and philosophy**
+**How HUB builds: systems, protocols, and philosophy**
 
 ---
 
 ## Overview
 
-This is how Curator Hub works technically—the architecture, tools, and principles behind our Human × AI collaboration.
+This is how HUB works technically—the architecture, tools, and principles behind our Human × AI collaboration.
 
 **For developers, engineers, and the technically curious.**
 
@@ -95,7 +95,7 @@ Using techniques from [Context Manipulation](cookbooks/advanced-prompting/contex
 ### Knowledge Architecture
 
 **Vector Databases:**
-- Embeddings of Curator Hub frameworks, documentation, case studies
+- Embeddings of HUB frameworks, documentation, case studies
 - Enables semantic search and retrieval
 - Powers context-aware responses
 
@@ -118,7 +118,7 @@ Generate Response
 ```
 
 **Why this matters:**
-- AI responses grounded in Curator Hub knowledge
+- AI responses grounded in HUB knowledge
 - Consistency across different interactions
 - Ability to cite sources and provide evidence
 - Scalable knowledge management
@@ -180,7 +180,7 @@ hub.curations.org (public access)
 **What it is:**
 A protocol for AI models to access external context and tools.
 
-**How Curator Hub uses it:**
+**How HUB uses it:**
 - Curators can access external data sources
 - Integration with specialized tools
 - Consistent context across model providers
@@ -192,7 +192,7 @@ A protocol for AI models to access external context and tools.
 **What it is:**
 A protocol for AI agents to communicate and collaborate.
 
-**How Curator Hub uses it:**
+**How HUB uses it:**
 - Curators exchange information
 - Collaborative workflows
 - Distributed intelligence
@@ -483,7 +483,7 @@ For those ready to implement the architecture
 <!--
 🛠️ You're ready to build. Here's an architectural challenge:
 
-"As Curator Hub Technical Curator, design a multi-agent system for [your use case].
+"As HUB Technical Curator, design a multi-agent system for [your use case].
 
 Requirements:
 - Curator specialization and routing
@@ -503,6 +503,6 @@ Advanced techniques: [Multi-Agent Systems](cookbooks/agents/README.md)
 
 *"Good architecture is invisible. Great architecture makes the impossible easy."*
 
-**That's how Curator Hub builds.** 🏗️
+**That's how HUB builds.** 🏗️
 
 [← Back to Welcome](../readme.md)

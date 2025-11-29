@@ -252,6 +252,6 @@ Continue to [Common Use Cases](./04-common-uses/) to see practical applications 
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to Beginners Guide](./)

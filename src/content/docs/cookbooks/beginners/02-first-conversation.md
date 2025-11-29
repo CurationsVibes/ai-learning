@@ -241,6 +241,6 @@ Continue to [Writing Effective Prompts](./03-effective-prompts/) to master the a
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to Beginners Guide](./)

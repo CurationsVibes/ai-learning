@@ -74,6 +74,6 @@ Ready to build agents? Start with [ADK Overview](./01-adk-overview/) to understa
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to All Cookbooks](../)

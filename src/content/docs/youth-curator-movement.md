@@ -152,7 +152,7 @@ We position youth as:
 - **Project-based learning** – Build real things
 - **Prompt libraries** – Ready-to-use AI prompts
 - **Community** – Connect with other youth curators
-- **Mentorship** – Guidance from Curator Hub team (when available)
+- **Mentorship** – Guidance from HUB team (when available)
 - **Portfolio building** – Document your work
 
 #### What You'll Learn:
@@ -378,7 +378,7 @@ Emotional safety and digital wellbeing are central.
 - CapCut (free)
 - Descript (limited free)
 
-### Curator Hub Resources
+### HUB Resources
 
 **All free:**
 - [The AI × Human Cookbook](cookbooks/README.md) – Advanced techniques
@@ -528,13 +528,13 @@ For youth or educators who've completed initial projects
 🔍 You've completed a project. You're ready for deeper patterns.
 
 Notice how the Youth Curator Movement connects to:
-- Curator Hub (the creative method)
+- HUB (the creative method)
 - CurationsLA (the practical example)
 - The Cookbook (the technical depth)
 
 Try this meta-prompt:
 
-"I'm working on [describe your project]. Using the Curator Hub
+"I'm working on [describe your project]. Using the HUB
 approach, help me take it to the next level by:
 1. Identifying the underlying pattern in my work
 2. Suggesting how to scale it

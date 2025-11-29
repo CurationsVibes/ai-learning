@@ -2,7 +2,7 @@
 title: The Curators
 ---
 
-**Specialized AI personas powering Curator Hub**
+**Specialized AI personas powering HUB**
 
 🤖 **[Meet the Live Team at curations.org/ai-curators](https://curations.org/ai-curators)**
 
@@ -10,7 +10,7 @@ title: The Curators
 
 ## What Are "The Curators"?
 
-The Curators are **specialized AI personas** that form the intelligent core of Curator Hub.
+The Curators are **specialized AI personas** that form the intelligent core of HUB.
 
 Think of them not as tools, but as **creative collaborators**—each with:
 - A specific domain of expertise
@@ -21,7 +21,7 @@ Think of them not as tools, but as **creative collaborators**—each with:
 
 **They're not chatbots. They're creative partners.**
 
-**The Production Team:** Curator Hub operates with 8 specialized AI Curators, each serving different industries and use cases. [View their full profiles →](https://curations.org/ai-curators)
+**The Production Team:** HUB operates with 8 specialized AI Curators, each serving different industries and use cases. [View their full profiles →](https://curations.org/ai-curators)
 
 ---
 
@@ -46,13 +46,13 @@ Just like a creative agency has:
 - Researchers
 - Developers
 
-Curator Hub has Curators who specialize and collaborate.
+HUB has Curators who specialize and collaborate.
 
 ---
 
 ## Meet The Curators
 
-### The Curator Hub Production Team
+### The HUB Production Team
 
 **8 specialized AI Curators currently in production:**
 
@@ -125,7 +125,7 @@ Below are framework examples for how Curators work. The production team above im
 
 **Example prompt:**
 ```
-As Curator Hub Design Curator, help me build a visual identity for
+As HUB Design Curator, help me build a visual identity for
 [project name]. Consider: audience, values, differentiation, and
 how the design reflects the mission.
 ```
@@ -153,7 +153,7 @@ how the design reflects the mission.
 
 **Example prompt:**
 ```
-As Curator Hub Content Curator, help me develop a content strategy for
+As HUB Content Curator, help me develop a content strategy for
 [project]. Focus on: authentic voice, audience connection, and
 storytelling that serves the greater good.
 ```
@@ -181,7 +181,7 @@ storytelling that serves the greater good.
 
 **Example prompt:**
 ```
-As Curator Hub Research Curator, help me research [topic].
+As HUB Research Curator, help me research [topic].
 Provide: key findings, credible sources, data/trends, and
 synthesize insights that inform strategy.
 ```
@@ -209,7 +209,7 @@ synthesize insights that inform strategy.
 
 **Example prompt:**
 ```
-As Curator Hub Strategy Curator, help me develop a strategic framework
+As HUB Strategy Curator, help me develop a strategic framework
 for [initiative]. Consider: ecosystem, positioning, sustainability,
 and alignment with greater good principles.
 ```
@@ -237,7 +237,7 @@ and alignment with greater good principles.
 
 **Example prompt:**
 ```
-As Curator Hub Technical Curator, help me architect a multi-agent system
+As HUB Technical Curator, help me architect a multi-agent system
 for [use case]. Design for: scalability, ethical operation, human
 oversight, and technical excellence.
 ```
@@ -265,7 +265,7 @@ oversight, and technical excellence.
 
 **Example prompt:**
 ```
-As Curator Hub Youth Curator, help me design a learning module on [topic]
+As HUB Youth Curator, help me design a learning module on [topic]
 for ages [X-Y]. Ensure: age-appropriate language, emotional safety,
 creativity focus, and empowerment over hype.
 ```
@@ -293,7 +293,7 @@ creativity focus, and empowerment over hype.
 
 **Example prompt:**
 ```
-As Curator Hub Community Curator, help me tell the story of [community/neighborhood].
+As HUB Community Curator, help me tell the story of [community/neighborhood].
 Focus on: authentic voices, cultural context, good vibes, and uplifting narratives.
 ```
 
@@ -320,7 +320,7 @@ Focus on: authentic voices, cultural context, good vibes, and uplifting narrativ
 
 **Example prompt:**
 ```
-As Curator Hub Ethics Curator, audit [project/system] for ethical concerns.
+As HUB Ethics Curator, audit [project/system] for ethical concerns.
 Evaluate: bias, transparency, human dignity, consent, and potential harms.
 Provide recommendations aligned with greater good principles.
 ```
@@ -367,7 +367,7 @@ Example: Building a community storytelling platform
 Invoke a specific Curator in your prompts:
 
 ```
-As Curator Hub [Curator Name], help me with [task].
+As HUB [Curator Name], help me with [task].
 ```
 
 This frames the AI's response through that Curator's expertise and perspective.
@@ -377,7 +377,7 @@ This frames the AI's response through that Curator's expertise and perspective.
 Have one Curator hand off to another:
 
 ```
-As Curator Hub Strategy Curator, develop a framework for [project].
+As HUB Strategy Curator, develop a framework for [project].
 Then hand off to Design Curator to create visual identity.
 ```
 
@@ -386,7 +386,7 @@ Then hand off to Design Curator to create visual identity.
 Have multiple Curators work together:
 
 ```
-Convene Curator Hub Strategy, Design, and Ethics Curators to collaborate on [project].
+Convene HUB Strategy, Design, and Ethics Curators to collaborate on [project].
 Each contribute your expertise, then synthesize into a unified approach.
 ```
 
@@ -415,7 +415,7 @@ Want to create your own Curator? Here's the framework:
 - [Use case 2]
 
 **Example prompt:**
-"As Curator Hub [Name] Curator, [sample task]."
+"As HUB [Name] Curator, [sample task]."
 ```
 
 ### Create Your Own
@@ -457,7 +457,7 @@ Generic Prompt:
 → Generic, unfocused response
 
 Curator Prompt:
-"As Curator Hub Design Curator, help me design a website for [purpose].
+"As HUB Design Curator, help me design a website for [purpose].
 Consider: visual hierarchy, brand coherence, accessibility, and how
 design serves the mission."
 → Focused, expert-level, values-aligned response
@@ -525,7 +525,7 @@ Pick one Curator and try a simple prompt:
 
 **Design Curator:**
 ```
-As Curator Hub Design Curator, help me choose a color palette for a
+As HUB Design Curator, help me choose a color palette for a
 youth-focused community project. Consider: approachability, energy,
 and cultural relevance.
 ```
@@ -537,7 +537,7 @@ Try it in [ChatGPT](https://chat.openai.com) or [Claude](https://claude.ai)
 Have two Curators collaborate:
 
 ```
-As Curator Hub Strategy Curator, develop a framework for [your project].
+As HUB Strategy Curator, develop a framework for [your project].
 Then, as Content Curator, translate that framework into a compelling narrative.
 ```
 
@@ -559,14 +559,14 @@ For those analyzing the Curator system itself
 
 Here's a research prompt to go deeper:
 
-"Analyze the Curator Hub Curator system as a framework for AI collaboration.
+"Analyze the HUB Curator system as a framework for AI collaboration.
 Evaluate:
 1. How persona specialization improves output quality
 2. The role of personality in AI collaboration
 3. How multi-Curator orchestration enables complex projects
 4. Ethical implications of persona-based AI systems
 
-Then: design your own Curator for a domain Curator Hub hasn't covered yet."
+Then: design your own Curator for a domain HUB hasn't covered yet."
 
 Test this in:
 - ChatGPT: https://chat.openai.com

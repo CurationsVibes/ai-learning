@@ -113,6 +113,6 @@ Ready to connect your agents? Start with [Model Context Protocol (MCP)](./01-mcp
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to All Cookbooks](../)

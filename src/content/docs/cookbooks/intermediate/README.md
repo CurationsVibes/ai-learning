@@ -43,6 +43,6 @@ Implement reliable, scalable patterns for using AI in professional and productio
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to All Cookbooks](../)

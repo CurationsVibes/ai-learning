@@ -435,6 +435,6 @@ Design a JSON schema for book recommendations that includes:
 
 ---
 
-*Part of the Intermediate AI Mastery Cookbook - CURATOR HUB by CURATIONS*
+*Part of the Intermediate AI Mastery Cookbook - HUB by CURATIONS*
 
 [← Back to Intermediate](./)
