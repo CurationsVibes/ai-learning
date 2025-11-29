@@ -347,7 +347,7 @@ Direct different request types to specialist models
 
 ## Next Steps
 
-Continue to [Memory Management](./03-memory-management.md) to learn how to give your agents context and personalization capabilities.
+Continue to [Memory Management](./03-memory-management/) to learn how to give your agents context and personalization capabilities.
 
 ---
 

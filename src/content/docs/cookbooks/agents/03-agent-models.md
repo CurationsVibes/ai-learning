@@ -656,7 +656,7 @@ def fragile_tool(id: str) -> dict:
 
 ## Next Steps
 
-Continue to [Defining LLM Agents](./04-defining-llm-agents.md) to learn how to put these contracts together into complete agent definitions.
+Continue to [Defining LLM Agents](./04-defining-llm-agents/) to learn how to put these contracts together into complete agent definitions.
 
 ---
 

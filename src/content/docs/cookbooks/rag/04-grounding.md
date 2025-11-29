@@ -640,9 +640,9 @@ class TechnicalDocGrounding:
 ## Next Steps
 
 You've completed the RAG section! Continue to:
-- [Agent Development Kits](../agents/01-adk-overview.md) for agent implementation
-- [Tool Ecosystems](../tools/03-tool-ecosystems.md) for integration patterns
-- [Production Deployment](../advanced/03-deployment.md) for scaling
+- [Agent Development Kits](../agents/01-adk-overview/) for agent implementation
+- [Tool Ecosystems](../tools/03-tool-ecosystems/) for integration patterns
+- [Production Deployment](../advanced/03-deployment/) for scaling
 
 ---
 

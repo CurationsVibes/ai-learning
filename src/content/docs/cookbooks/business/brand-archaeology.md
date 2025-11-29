@@ -801,9 +801,9 @@ Across all 5 layers, the consistent thread is:
 ## Combining Techniques
 
 Use with:
-- [Quantum Brand Engine](./quantum-brand-engine.md) - After excavating core, build quantum expressions
-- [AI Discovery](./ai-discovery-singularity.md) - Make authentic brand discoverable
-- [Context Manipulation](../advanced-prompting/context-manipulation.md) - Compress brand DNA for AI prompts
+- [Quantum Brand Engine](./quantum-brand-engine/) - After excavating core, build quantum expressions
+- [AI Discovery](./ai-discovery-singularity/) - Make authentic brand discoverable
+- [Context Manipulation](../advanced-prompting/context-manipulation/) - Compress brand DNA for AI prompts
 
 ---
 

@@ -648,8 +648,8 @@ deploy_new_version(rollout='immediate', traffic=100)
 ## Next Steps
 
 You've completed the Tools section! Head to:
-- [Multi-Agent Systems](../advanced/01-multi-agent-systems.md) for advanced orchestration
-- Review [Agent Development Kits](../agents/01-adk-overview.md) for development patterns
+- [Multi-Agent Systems](../advanced/01-multi-agent-systems/) for advanced orchestration
+- Review [Agent Development Kits](../agents/01-adk-overview/) for development patterns
 
 ---
 

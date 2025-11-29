@@ -642,7 +642,7 @@ def your_agent_to_crew(your_agent):
 
 ## Next Steps
 
-Continue to [AI Agent Engines](./04-agent-engines.md) to learn about production deployment platforms.
+Continue to [AI Agent Engines](./04-agent-engines/) to learn about production deployment platforms.
 
 ---
 

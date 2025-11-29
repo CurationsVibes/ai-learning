@@ -171,7 +171,7 @@ We position youth as:
 - A creative writing portfolio
 - A visual art series
 
-**Start here:** [Youth Getting Started Guide](youth-getting-started.md) *(coming soon)*
+**Start here:** **Youth Getting Started Guide** *(coming soon)*
 
 ### For Educators
 
@@ -193,7 +193,7 @@ We position youth as:
 - **Unit 5:** Community Storytelling (Local journalism, oral history)
 - **Unit 6:** AI Ethics (Bias, responsibility, future of AI)
 
-**Start here:** [Educator Resources](educator-resources.md) *(coming soon)*
+**Start here:** **Educator Resources** *(coming soon)*
 
 ### For Parents & Guardians
 
@@ -212,7 +212,7 @@ We position youth as:
 - Model healthy technology habits yourself
 - Stay curious and open
 
-**Start here:** [Parent Guide](parent-guide.md) *(coming soon)*
+**Start here:** **Parent Guide** *(coming soon)*
 
 ---
 
@@ -381,10 +381,10 @@ Emotional safety and digital wellbeing are central.
 ### HUB Resources
 
 **All free:**
-- [The AI × Human Cookbook](cookbooks/README.md) – Advanced techniques
-- [Prompt Libraries](prompt-libraries.md) *(coming soon)*
-- [Project Templates](project-templates.md) *(coming soon)*
-- [Youth Community Forum](community.md) *(coming soon)*
+- [The AI × Human Cookbook](cookbooks/) – Advanced techniques
+- **Prompt Libraries** *(coming soon)*
+- **Project Templates** *(coming soon)*
+- **Youth Community Forum** *(coming soon)*
 
 ---
 
@@ -455,20 +455,20 @@ Then tell me one creative thing I could try with AI today.
 - You can ask it to explain things in ways that make sense to you
 - You can have a conversation, not just ask one question
 
-**Next step:** Try the [Getting Started Guide](youth-getting-started.md)
+**Next step:** Try the **Getting Started Guide** *(coming soon)*
 
 </details>
 
 **Already familiar with AI?**
-Jump to: [Project Ideas](youth-projects.md) | [Advanced Techniques](cookbooks/advanced-prompting/README.md)
+Jump to: **Project Ideas** *(coming soon)* | [Advanced Techniques](cookbooks/advanced-prompting/)
 
 ### For Educators
 
-[Download Curriculum](educator-curriculum.md) | [Training Resources](educator-training.md) | [Get Support](get-involved.md)
+**Download Curriculum** *(coming soon)* | **Training Resources** *(coming soon)* | [Get Support](get-involved/)
 
 ### For Parents
 
-[Parent Guide](parent-guide.md) | [FAQ](parent-faq.md) | [Community](community.md)
+**Parent Guide** *(coming soon)* | **FAQ** *(coming soon)* | **Community** *(coming soon)*
 
 ---
 
@@ -491,7 +491,7 @@ Join the community. Learn from each other. Build together.
 **🌟 Lead**
 Mentor younger curators. Share your knowledge. Shape the future.
 
-[Get Involved →](get-involved.md)
+[Get Involved →](get-involved/)
 
 ---
 
@@ -544,11 +544,11 @@ Try it in:
 - ChatGPT: https://chat.openai.com
 - Claude: https://claude.ai
 
-Ready for advanced techniques? [Advanced Prompting →](cookbooks/advanced-prompting/README.md)
+Ready for advanced techniques? [Advanced Prompting →](cookbooks/advanced-prompting/)
 -->
 
 *"Young people aren't the future. They're the present. Give them tools that empower, not extract."*
 
 **That's the Youth Curator Movement.** 🌱
 
-[← Back to Welcome](../readme.md)
+[← Back to Welcome](/)

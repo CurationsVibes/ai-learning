@@ -1138,9 +1138,9 @@ function ProductPage({ product }) {
 ## Combining Techniques
 
 Use with:
-- [AI Discovery Singularity (AAO)](./ai-discovery-singularity.md) - Why schema matters
-- [Brand Archaeology](./brand-archaeology.md) - What to put in your schema
-- [Quantum Brand Engine](./quantum-brand-engine.md) - Schema for multiple brand realities
+- [AI Discovery Singularity (AAO)](./ai-discovery-singularity/) - Why schema matters
+- [Brand Archaeology](./brand-archaeology/) - What to put in your schema
+- [Quantum Brand Engine](./quantum-brand-engine/) - Schema for multiple brand realities
 
 ---
 

@@ -407,9 +407,9 @@ Help me debug and fix.
 ## Next Level
 
 Combine with:
-- [Emoji Protocol](./emoji-protocol.md) - Compress even further
-- [Meta-Prompting](./meta-prompting.md) - Generate optimal context structures
-- [Quantum Prompting](./quantum-prompting.md) - Context in superposition
+- [Emoji Protocol](./emoji-protocol/) - Compress even further
+- [Meta-Prompting](./meta-prompting/) - Generate optimal context structures
+- [Quantum Prompting](./quantum-prompting/) - Context in superposition
 
 ---
 

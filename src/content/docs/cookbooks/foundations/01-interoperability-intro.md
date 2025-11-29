@@ -178,7 +178,7 @@ class InteroperableAgent:
 
 ## Next Steps
 
-Continue to [Model Garden & Foundation Models](../foundations/02-model-garden.md) to learn how to leverage diverse AI models in your interoperable agent systems.
+Continue to [Model Garden & Foundation Models](../foundations/02-model-garden/) to learn how to leverage diverse AI models in your interoperable agent systems.
 
 ---
 

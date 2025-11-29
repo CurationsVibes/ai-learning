@@ -787,9 +787,9 @@ Before deploying your agent:
 ## Next Steps
 
 Now that you understand how to define agents, explore:
-- [RAG Fundamentals](../rag/01-rag-fundamentals.md) for knowledge grounding
-- [Tool Ecosystems](../tools/03-tool-ecosystems.md) for advanced integrations
-- [Multi-Agent Systems](../advanced/01-multi-agent-systems.md) for orchestration
+- [RAG Fundamentals](../rag/01-rag-fundamentals/) for knowledge grounding
+- [Tool Ecosystems](../tools/03-tool-ecosystems/) for advanced integrations
+- [Multi-Agent Systems](../advanced/01-multi-agent-systems/) for orchestration
 
 ---
 

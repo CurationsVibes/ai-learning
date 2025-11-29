@@ -142,7 +142,7 @@ without meetings. Used by 100,000+ companies.</p>
 
 **AI reads this instantly. Understands completely. Can cite confidently.**
 
-(More on this in [Schema.org Mastery](./schema-mastery.md))
+(More on this in [Schema.org Mastery](./schema-mastery/))
 
 ---
 
@@ -790,9 +790,9 @@ Do AI systems trust citing you?
 ## Combining Techniques
 
 Use with:
-- [Schema.org Mastery](./schema-mastery.md) - Deep dive into structured data
-- [Brand Archaeology](./brand-archaeology.md) - Find your clear positioning
-- [Quantum Brand Engine](./quantum-brand-engine.md) - Optimize multiple brand realities for AI
+- [Schema.org Mastery](./schema-mastery/) - Deep dive into structured data
+- [Brand Archaeology](./brand-archaeology/) - Find your clear positioning
+- [Quantum Brand Engine](./quantum-brand-engine/) - Optimize multiple brand realities for AI
 
 ---
 
