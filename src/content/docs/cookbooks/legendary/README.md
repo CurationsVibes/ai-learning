@@ -61,7 +61,7 @@ Coming soon: Vision for the future of Human × AI collaboration — emerging pat
 
 ## 💡 Philosophy
 
-These patterns follow CURATOR HUB's **Greater Good Creativity** principle:
+These patterns follow HUB's **Greater Good Creativity** principle:
 - Build systems that serve communities, not just metrics
 - Prioritize human wellbeing alongside technical excellence
 - Make AI accessible, not exploitative
@@ -73,7 +73,7 @@ These patterns follow CURATOR HUB's **Greater Good Creativity** principle:
 
 These legendary guides are currently in development. Want to contribute or get notified when they launch?
 
-- [Get Involved](/get-involved/) - Contribute to CURATOR HUB
+- [Get Involved](/get-involved/) - Contribute to HUB
 - [Join the Community](/about-curationsla/) - Connect with other builders
 - [Follow Updates](https://curations.org) - Stay in the loop
 

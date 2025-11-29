@@ -2,13 +2,13 @@
 title: Design Systems
 ---
 
-**The visual language and design philosophy of Curator Hub**
+**The visual language and design philosophy of HUB**
 
 ---
 
 ## What Is This?
 
-This is Curator Hub' **design system**—the visual identity, brand language, and design principles that guide everything we build.
+This is HUB' **design system**—the visual identity, brand language, and design principles that guide everything we build.
 
 **Open and documented.** Use it, remix it, learn from it.
 
@@ -324,9 +324,9 @@ Our design system is:
 
 ## Using This System
 
-### For Curator Hub Projects
+### For HUB Projects
 
-All Curator Hub projects should use this system as a foundation, but:
+All HUB projects should use this system as a foundation, but:
 - Adapt for specific project needs
 - Maintain core principles
 - Document deviations (and why)
@@ -334,7 +334,7 @@ All Curator Hub projects should use this system as a foundation, but:
 ### For Your Own Projects
 
 You can:
-- **Use it as-is:** Especially if building with Curator Hub
+- **Use it as-is:** Especially if building with HUB
 - **Remix it:** Take what works, adapt what doesn't
 - **Learn from it:** See how we think about design
 - **Contribute back:** Improvements welcome
@@ -371,7 +371,7 @@ You can:
 
 ## Examples in the Wild
 
-### Curator Hub Website
+### HUB Website
 *Coming soon*
 
 ### CurationsLA
@@ -400,7 +400,7 @@ For those ready to combine design + AI techniques
 
 Try this advanced prompt:
 
-"As Curator Hub Design Curator, using the design system principles,
+"As HUB Design Curator, using the design system principles,
 help me design [your project].
 
 Apply:

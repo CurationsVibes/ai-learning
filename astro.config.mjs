@@ -7,7 +7,7 @@ export default defineConfig({
 	base: '/',
 	integrations: [
 		starlight({
-			title: 'CURATOR HUB',
+			title: 'HUB',
 			description: 'A comprehensive knowledge wiki and AI learning resource by CURATIONS — a Human × AI Creative Agency in Los Angeles. Explore frameworks, guides, and open-source resources for AI development, collaboration, and creativity.',
 			tagline: 'BY CURATIONS',
 			social: {
@@ -25,7 +25,7 @@ export default defineConfig({
 				},
 				{
 					tag: 'meta',
-					attrs: { property: 'og:site_name', content: 'CURATOR HUB by CURATIONS' },
+					attrs: { property: 'og:site_name', content: 'HUB by CURATIONS' },
 				},
 				{
 					tag: 'meta',
@@ -45,8 +45,8 @@ export default defineConfig({
 					content: JSON.stringify({
 						'@context': 'https://schema.org',
 						'@type': 'WebSite',
-						name: 'CURATOR HUB',
-						alternateName: 'Curator Hub by CURATIONS',
+						name: 'HUB',
+						alternateName: 'HUB by CURATIONS',
 						url: 'https://hub.curations.org/',
 						description: 'A comprehensive knowledge wiki and AI learning resource by CURATIONS',
 						publisher: {
@@ -74,7 +74,7 @@ export default defineConfig({
 				{
 					label: '🏠 Welcome',
 					items: [
-						{ label: 'About CURATOR HUB', link: '/about-curator-hub/' },
+						{ label: 'About HUB', link: '/about-hub/' },
 						{ label: 'Get Involved', link: '/get-involved/' },
 						{ label: 'Design Systems', link: '/design-systems/' },
 						{ label: 'Technical Architecture', link: '/technical-architecture/' },
@@ -95,6 +95,7 @@ export default defineConfig({
 				},
 			],
 			customCss: [
+				'./src/styles/curations-brand.css',
 				'./src/styles/custom.css',
 			],
 		}),

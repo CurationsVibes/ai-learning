@@ -2,7 +2,7 @@
 title: Get Involved
 ---
 
-**Join the Curator Hub community - learn, contribute, collaborate**
+**Join the HUB community - learn, contribute, collaborate**
 
 🌐 **[curations.org](https://curations.org)** | **[CurationsLA](https://la.curations.cc)**
 
@@ -10,7 +10,7 @@ title: Get Involved
 
 ## How To Participate
 
-Curator Hub is a living collaboration. Here's how you can be part of it:
+HUB is a living collaboration. Here's how you can be part of it:
 
 ---
 
@@ -86,12 +86,12 @@ We collaborate with brands and creators who:
 4. Follow contribution guidelines
 
 **Contribution Guidelines:**
-- Code should align with [our principles](about-curator-hub.md)
+- Code should align with [our principles](about-hub.md)
 - Documentation for all new features
 - Tests where appropriate
 - Respectful collaboration
 
-### Build With Curator Hub
+### Build With HUB
 
 **Use our frameworks in your projects:**
 - All frameworks are open-source
@@ -199,7 +199,7 @@ We collaborate with brands and creators who:
 ### 1. **Share Knowledge**
 
 **What helps:**
-- Write about your experience using Curator Hub frameworks
+- Write about your experience using HUB frameworks
 - Create tutorials or guides
 - Share case studies
 - Document your process
@@ -241,7 +241,7 @@ We collaborate with brands and creators who:
 
 ### 4. **Spread the Word**
 
-**Help others find Curator Hub:**
+**Help others find HUB:**
 - Share on social media
 - Tell colleagues and friends
 - Link from your projects
@@ -273,7 +273,7 @@ We collaborate with brands and creators who:
 
 ### Our Values
 
-When participating in Curator Hub community:
+When participating in HUB community:
 
 **✅ DO:**
 - Be respectful and kind
@@ -335,7 +335,7 @@ Open issues on [GitHub](https://github.com/curationsla/ai-learning)
 
 ## Frequently Asked Questions
 
-### Can I use Curator Hub frameworks commercially?
+### Can I use HUB frameworks commercially?
 
 Yes. All frameworks are open-source. Attribution appreciated but not required.
 
@@ -360,7 +360,7 @@ For everything else: Start a discussion or send an email
 
 Yes. All contributors acknowledged in project documentation and release notes.
 
-### Can I get hired by Curator Hub?
+### Can I get hired by HUB?
 
 We're a small operation. We don't have formal hiring, but we collaborate with talented people aligned with our mission. Reach out if you're interested.
 
@@ -400,7 +400,7 @@ For those ready to contribute to core frameworks
 
 Here's your architect-level challenge:
 
-"Using Curator Hub principles (ethical AI, human-first design, open learning),
+"Using HUB principles (ethical AI, human-first design, open learning),
 design a new framework or Curator that we haven't covered yet.
 
 Your proposal should include:
@@ -411,7 +411,7 @@ Your proposal should include:
 5. How it integrates with existing Curators
 6. Ethical considerations
 
-Document it using the Curator Hub style."
+Document it using the HUB style."
 
 Build it in:
 - ChatGPT: https://chat.openai.com

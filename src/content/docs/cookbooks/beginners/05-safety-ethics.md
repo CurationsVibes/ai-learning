@@ -348,6 +348,6 @@ Congratulations! You've completed the Beginners Guide to AI. You now have:
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to Beginners Guide](./)

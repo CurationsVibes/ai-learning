@@ -1,4 +1,4 @@
-# Welcome to Curator Hub
+# Welcome to HUB
 
 [![Deploy Status](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml)
 [![Site](https://img.shields.io/badge/site-live-success)](https://hub.curations.org/)
@@ -7,9 +7,9 @@
 
 ---
 
-## What Is Curator Hub?
+## What Is HUB?
 
-Curator Hub is where human creativity and AI capability meet to build things that matter.
+HUB is where human creativity and AI capability meet to build things that matter.
 
 We're not a tech company. We're not a consultancy. We're a **creative agency** that believes AI should amplify human potential, not replace it. We build:
 
@@ -26,9 +26,9 @@ We're not a tech company. We're not a consultancy. We're a **creative agency** t
 
 ## The Three Branches
 
-Curator Hub operates through three interconnected initiatives:
+HUB operates through three interconnected initiatives:
 
-### 1. **Curator Hub** (The Creative Agency)
+### 1. **HUB** (The Creative Agency)
 Human × AI collaboration for design, content, research, and AI strategy. We work with brands, communities, and creators to build things that matter.
 
 🌐 **[hub.curations.org](https://curations.org)**
@@ -46,7 +46,7 @@ Human × AI collaboration for design, content, research, and AI strategy. We wor
 - Open learning and documentation
 - AI personas ("Curators") with specialized expertise
 
-[Learn more about Curator Hub →](src/content/docs/about-curator-hub.md) | [Explore Services →](https://curations.org)
+[Learn more about HUB →](src/content/docs/about-hub.md) | [Explore Services →](https://curations.org)
 
 ### 2. **CurationsLA** (Hyperlocal Media)
 A sister project demonstrating Human × AI collaboration in action. CurationsLA is a **hyperlocal LA media platform** that's:
@@ -311,7 +311,7 @@ The Docs-as-Code workflow is defined in [`.github/workflows/openapi-spec-workflo
 
 ## 🎨 Repository Origins and Enhancements
 
-### From Mintlify to Curator Hub
+### From Mintlify to HUB
 
 This repository represents a thoughtful evolution of documentation infrastructure, combining best practices from modern documentation platforms with CURATIONS' minimalistic and professional design philosophy.
 
@@ -319,7 +319,7 @@ This repository represents a thoughtful evolution of documentation infrastructur
 
 ### Why Astro + Starlight?
 
-Instead of forking Mintlify directly, we built Curator Hub's documentation platform using:
+Instead of forking Mintlify directly, we built HUB's documentation platform using:
 
 - **[Astro](https://astro.build)**: A modern static site generator focused on performance
 - **[Starlight](https://starlight.astro.build)**: Astro's documentation theme with built-in best practices
@@ -333,23 +333,23 @@ This approach gives us:
 - 📱 **Responsive design** that works on all devices
 - ♿ **Accessibility-first** approach
 
-### Curator Hub Branding
+### HUB Branding
 
-The rebrand from the original concept to **Curator Hub** includes:
+The rebrand from the original concept to **HUB** includes:
 
-- **Visual Identity**: Left-aligned "Curator Hub" title with "BY CURATIONS" subtitle
+- **Visual Identity**: Left-aligned "HUB" title with "BY CURATIONS" subtitle
 - **Professional Aesthetic**: Minimalistic design with thoughtful color palette
 - **Consistent Naming**: All references updated across documentation and code
 - **CURATIONS Integration**: Clear connection to the CURATIONS ecosystem
 
 ### Enhanced with Best-in-Class Tools
 
-Curator Hub leverages modern development tools already integrated in this repository:
+HUB leverages modern development tools already integrated in this repository:
 
 1. **Astro + Starlight Documentation**
    - Modern, fast, accessible documentation platform
    - Built-in search, navigation, and responsive design
-   - Custom styling for Curator Hub branding
+   - Custom styling for HUB branding
 
 2. **Docs-as-Code Workflow** (OpenAPI Specifications)
    - Automatic validation of API specifications
@@ -373,11 +373,11 @@ ai-learning/
 ├── src/
 │   ├── content/
 │   │   └── docs/          # All documentation content
-│   │       ├── about-curator-hub.md
+│   │       ├── about-hub.md
 │   │       ├── cookbooks/ # AI development frameworks
 │   │       └── ...
 │   └── styles/
-│       └── custom.css     # Curator Hub branding styles
+│       └── custom.css     # HUB branding styles
 ├── specs/                 # OpenAPI specifications
 ├── astro.config.mjs       # Astro configuration
 └── package.json           # Dependencies and scripts
@@ -424,7 +424,7 @@ For detailed deployment setup and troubleshooting, see [DEPLOYMENT.md](DEPLOYMEN
 
 ## Contact
 
-**Curator Hub**
+**HUB**
 Human × AI Creative Agency
 Los Angeles, CA
 
@@ -435,4 +435,4 @@ Reach out through our [Get Involved](src/content/docs/get-involved.md) page.
 
 *"The future is built by those who believe in the beauty of greater good creativity."*
 
-**Welcome to Curator Hub.** ✨
+**Welcome to HUB.** ✨

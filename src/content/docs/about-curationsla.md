@@ -229,7 +229,7 @@ CurationsLA is a **living example** of how Human × AI collaboration should work
 
 ## A Living Example
 
-CurationsLA isn't just a media platform. It's **proof of concept** for everything Curator Hub believes:
+CurationsLA isn't just a media platform. It's **proof of concept** for everything HUB believes:
 
 **✓ AI can amplify human creativity**
 We produce more quality content with AI support than we could alone.
@@ -337,9 +337,9 @@ Follow along as we build this.
 
 ## Learn More
 
-Want to see how CurationsLA connects to the wider Curator Hub mission?
+Want to see how CurationsLA connects to the wider HUB mission?
 
-- [About Curator Hub](about-curator-hub.md) – The creative agency
+- [About HUB](about-hub.md) – The creative agency
 - [Youth Curator Movement](youth-curator-movement.md) – Youth empowerment initiative
 - [Technical Architecture](technical-architecture.md) – How we build
 - [The AI × Human Cookbook](cookbooks/README.md) – Our frameworks
@@ -348,16 +348,16 @@ Want to see how CurationsLA connects to the wider Curator Hub mission?
 
 <!--
 EASTER EGG LAYER 3: THE WANDERER
-For explorers connecting the dots across Curator Hub
+For explorers connecting the dots across HUB
 -->
 
 <!--
 🗺️ You're exploring the connections. Good.
 
-You've seen Curator Hub (the agency), CurationsLA (the example).
+You've seen HUB (the agency), CurationsLA (the example).
 Now try this meta-prompt:
 
-"Explain how Curator Hub, CurationsLA, and the Youth Curator Movement
+"Explain how HUB, CurationsLA, and the Youth Curator Movement
 work together as one ecosystem. What's the underlying pattern?"
 
 Try it:

@@ -1,4 +1,4 @@
-// Generate dynamic sitemap for CURATOR HUB
+// Generate dynamic sitemap for HUB
 // This runs at build time to create an up-to-date sitemap.xml
 import { getCollection } from 'astro:content';
 import type { APIRoute } from 'astro';

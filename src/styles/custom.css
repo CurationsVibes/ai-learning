@@ -1,46 +1,55 @@
-/* 🎨 CURATOR HUB - Premium Knowledge Wiki BY CURATIONS */
+/* 🎨 HUB - Premium Knowledge Wiki BY CURATIONS */
 /* A Human × AI Creative Agency in Los Angeles */
+/* Uses CURATIONS Design System (curations-brand.css) */
 
 :root {
-  /* Brand Colors */
-  --sl-color-accent-low: #e0e7ff;
-  --sl-color-accent: #667eea;
-  --sl-color-accent-high: #4c51bf;
+  /* ============================================
+     STARLIGHT THEME OVERRIDES
+     Mapped from CURATIONS Design System
+     ============================================ */
+  
+  /* Brand Colors - Using CURATIONS Purple System */
+  --sl-color-accent-low: var(--curations-purple-100);
+  --sl-color-accent: var(--curations-accent-primary);
+  --sl-color-accent-high: var(--curations-purple-700);
   --sl-color-white: #ffffff;
-  --sl-color-gray-1: #f7fafc;
-  --sl-color-gray-2: #edf2f7;
-  --sl-color-gray-3: #e2e8f0;
-  --sl-color-gray-4: #cbd5e0;
-  --sl-color-gray-5: #a0aec0;
-  --sl-color-gray-6: #718096;
+  --sl-color-gray-1: var(--curations-neutral-50);
+  --sl-color-gray-2: var(--curations-neutral-100);
+  --sl-color-gray-3: var(--curations-neutral-200);
+  --sl-color-gray-4: var(--curations-neutral-300);
+  --sl-color-gray-5: var(--curations-neutral-400);
+  --sl-color-gray-6: var(--curations-neutral-500);
   
-  /* CURATOR HUB Brand System */
-  --curator-hub-primary: #2c3e50;
-  --curator-hub-secondary: #667eea;
-  --curator-hub-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --curator-hub-accent: #f59e0b;
+  /* HUB Brand System - Aliases to CURATIONS tokens */
+  --hub-primary: var(--curations-neutral-800);
+  --hub-secondary: var(--curations-accent-primary);
+  --hub-gradient: var(--curations-gradient-primary);
+  --hub-accent: var(--curations-accent-warm);
   
-  /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-blur: blur(10px);
+  /* Glassmorphism - From CURATIONS */
+  --glass-bg: var(--curations-glass-bg);
+  --glass-border: var(--curations-glass-border);
+  --glass-blur: var(--curations-glass-blur);
   
-  /* Spacing & Layout */
-  --content-max-width: 1200px;
-  --sidebar-width: 280px;
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
+  /* Spacing & Layout - From CURATIONS */
+  --content-max-width: var(--curations-content-max-width);
+  --sidebar-width: var(--curations-sidebar-width);
+  --spacing-xs: var(--curations-space-1);
+  --spacing-sm: var(--curations-space-2);
+  --spacing-md: var(--curations-space-4);
+  --spacing-lg: var(--curations-space-6);
+  --spacing-xl: var(--curations-space-8);
+  --spacing-2xl: var(--curations-space-12);
+  
+  /* Typography - From CURATIONS */
+  font-family: var(--curations-font-sans);
 }
 
 /* ============================================
-   NAVIGATION: CURATOR HUB with BY CURATIONS
+   NAVIGATION: HUB with BY CURATIONS
    ============================================ */
 
-/* Main site title - CURATOR HUB in bold uppercase */
+/* Main site title - HUB in bold uppercase */
 .site-title {
   display: flex;
   flex-direction: column;
@@ -54,7 +63,7 @@
   font-size: 1.15rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: var(--curator-hub-gradient);
+  background: var(--hub-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -76,7 +85,7 @@
 
 .site-title:hover::after {
   opacity: 1;
-  color: var(--curator-hub-secondary);
+  color: var(--hub-secondary);
 }
 
 /* ============================================
@@ -93,7 +102,7 @@
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: var(--curator-hub-gradient);
+  background: var(--hub-gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -128,7 +137,7 @@ a:not(.action) {
 }
 
 a:not(.action):hover {
-  color: var(--curator-hub-secondary);
+  color: var(--hub-secondary);
 }
 
 /* Content container improvements */
@@ -152,7 +161,7 @@ a:not(.action):hover {
   margin-bottom: var(--spacing-lg);
   font-size: 1.75rem;
   font-weight: 700;
-  color: var(--curator-hub-primary);
+  color: var(--hub-primary);
 }
 
 .sl-markdown-content h3 {
@@ -227,7 +236,7 @@ pre:hover .copy-button {
   left: 0;
   width: 0%;
   height: 3px;
-  background: var(--curator-hub-gradient);
+  background: var(--hub-gradient);
   z-index: 9999;
   transition: width 0.1s ease;
 }
@@ -245,13 +254,13 @@ pre:hover .copy-button {
 }
 
 .breadcrumbs a {
-  color: var(--curator-hub-secondary);
+  color: var(--hub-secondary);
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 .breadcrumbs a:hover {
-  color: var(--curator-hub-primary);
+  color: var(--hub-primary);
   text-decoration: underline;
 }
 
@@ -278,7 +287,7 @@ pre:hover .copy-button {
 }
 
 .sidebar nav a[aria-current="page"] {
-  background: var(--curator-hub-gradient);
+  background: var(--hub-gradient);
   color: white;
   font-weight: 600;
 }
@@ -302,7 +311,7 @@ pre:hover .copy-button {
 
 /* Callout boxes */
 .sl-markdown-content blockquote {
-  border-left: 4px solid var(--curator-hub-secondary);
+  border-left: 4px solid var(--hub-secondary);
   background: var(--sl-color-accent-low);
   padding: var(--spacing-md) var(--spacing-lg);
   margin: var(--spacing-lg) 0;
@@ -325,7 +334,7 @@ button:not(.copy-button):hover {
 
 /* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--curator-hub-secondary);
+  outline: 2px solid var(--hub-secondary);
   outline-offset: 2px;
   border-radius: 0.25rem;
 }
@@ -385,7 +394,7 @@ button:not(.copy-button):hover {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--curator-hub-primary);
+  background: var(--hub-primary);
   color: white;
   padding: 8px;
   text-decoration: none;
@@ -423,5 +432,163 @@ button:not(.copy-button):hover {
   
   .sl-container {
     max-width: 100%;
+  }
+}
+
+/* ============================================
+   CURATIONS GRID BACKGROUND SYSTEM
+   Subtle grid patterns for educational content
+   ============================================ */
+
+/* Main content area with subtle grid */
+.main-frame {
+  background-image: 
+    linear-gradient(rgba(102, 126, 234, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(102, 126, 234, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: -1px -1px;
+}
+
+/* Sidebar with accent grid */
+.sidebar-pane {
+  background-image: 
+    linear-gradient(rgba(118, 75, 162, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(118, 75, 162, 0.02) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ============================================
+   ENHANCED TYPOGRAPHY HIERARCHY
+   For educational/cookbook content
+   ============================================ */
+
+/* Primary heading with gradient accent */
+.sl-markdown-content h1 {
+  font-size: var(--curations-text-4xl);
+  font-weight: var(--curations-font-black);
+  line-height: var(--curations-leading-tight);
+  letter-spacing: var(--curations-tracking-tight);
+  margin-bottom: var(--curations-space-6);
+}
+
+/* Section headings with purple gradient */
+.sl-markdown-content h2 {
+  font-size: var(--curations-text-2xl);
+  font-weight: var(--curations-font-bold);
+  line-height: var(--curations-leading-tight);
+  letter-spacing: var(--curations-tracking-tight);
+  margin-top: var(--curations-space-12);
+  margin-bottom: var(--curations-space-6);
+  padding-bottom: var(--curations-space-3);
+  border-bottom: 2px solid var(--curations-purple-200);
+  color: var(--curations-neutral-800);
+}
+
+/* Subsection headings */
+.sl-markdown-content h3 {
+  font-size: var(--curations-text-xl);
+  font-weight: var(--curations-font-semibold);
+  line-height: var(--curations-leading-snug);
+  margin-top: var(--curations-space-8);
+  margin-bottom: var(--curations-space-4);
+  color: var(--curations-neutral-700);
+}
+
+/* Minor headings */
+.sl-markdown-content h4 {
+  font-size: var(--curations-text-lg);
+  font-weight: var(--curations-font-semibold);
+  line-height: var(--curations-leading-snug);
+  margin-top: var(--curations-space-6);
+  margin-bottom: var(--curations-space-3);
+  color: var(--curations-neutral-700);
+}
+
+/* Emphasis headings (h5/h6 for sub-sections) */
+.sl-markdown-content h5 {
+  font-size: var(--curations-text-base);
+  font-weight: var(--curations-font-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--curations-tracking-wide);
+  margin-top: var(--curations-space-4);
+  margin-bottom: var(--curations-space-2);
+  color: var(--curations-accent-primary);
+}
+
+.sl-markdown-content h6 {
+  font-size: var(--curations-text-sm);
+  font-weight: var(--curations-font-semibold);
+  text-transform: uppercase;
+  letter-spacing: var(--curations-tracking-wider);
+  margin-top: var(--curations-space-4);
+  margin-bottom: var(--curations-space-2);
+  color: var(--curations-neutral-500);
+}
+
+/* Body text readability optimizations */
+.sl-markdown-content p {
+  font-size: var(--curations-text-base);
+  line-height: var(--curations-leading-relaxed);
+  color: var(--curations-neutral-600);
+}
+
+/* Enhanced code blocks for Cookbooks */
+.sl-markdown-content pre {
+  font-family: var(--curations-font-mono);
+  font-size: var(--curations-text-sm);
+  line-height: var(--curations-leading-relaxed);
+  border-radius: var(--curations-radius-xl);
+  border: 1px solid var(--curations-neutral-200);
+  box-shadow: var(--curations-shadow-md);
+  overflow-x: auto;
+}
+
+.sl-markdown-content code:not(pre code) {
+  font-family: var(--curations-font-mono);
+  font-size: 0.9em;
+  background: var(--curations-purple-50);
+  color: var(--curations-purple-700);
+  padding: 0.15em 0.4em;
+  border-radius: var(--curations-radius-md);
+  border: 1px solid var(--curations-purple-100);
+}
+
+/* ============================================
+   DARK MODE ENHANCEMENTS
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sl-color-gray-1: var(--curations-neutral-900);
+    --sl-color-gray-2: var(--curations-neutral-800);
+    --sl-color-gray-3: var(--curations-neutral-700);
+    --hub-primary: var(--curations-neutral-100);
+  }
+  
+  .main-frame,
+  .sidebar-pane {
+    background-image: 
+      linear-gradient(rgba(102, 126, 234, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(102, 126, 234, 0.03) 1px, transparent 1px);
+  }
+  
+  .sl-markdown-content h2 {
+    color: var(--curations-neutral-100);
+    border-bottom-color: var(--curations-purple-800);
+  }
+  
+  .sl-markdown-content h3,
+  .sl-markdown-content h4 {
+    color: var(--curations-neutral-200);
+  }
+  
+  .sl-markdown-content p {
+    color: var(--curations-neutral-300);
+  }
+  
+  .sl-markdown-content code:not(pre code) {
+    background: var(--curations-purple-900);
+    color: var(--curations-purple-200);
+    border-color: var(--curations-purple-800);
   }
 }

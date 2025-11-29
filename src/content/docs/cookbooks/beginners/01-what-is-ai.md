@@ -246,6 +246,6 @@ Continue to [Your First AI Conversation](./02-first-conversation/) to learn how 
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to Beginners Guide](./)

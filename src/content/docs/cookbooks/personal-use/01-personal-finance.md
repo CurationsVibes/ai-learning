@@ -329,6 +329,6 @@ Make it motivating, not overwhelming.
 
 ---
 
-*Part of the Personal Use Cookbook - CURATOR HUB by CURATIONS*
+*Part of the Personal Use Cookbook - HUB by CURATIONS*
 
 [← Back to Personal Use](./)

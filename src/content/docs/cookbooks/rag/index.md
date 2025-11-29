@@ -84,6 +84,6 @@ Ready to build smarter AI? Start with [RAG Fundamentals](./01-rag-fundamentals/)
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to All Cookbooks](../)

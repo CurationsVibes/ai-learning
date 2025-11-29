@@ -1,11 +1,11 @@
 ---
-title: About CURATOR HUB
+title: About HUB
 description: A comprehensive knowledge wiki maintained by CURATIONS, a Human × AI Creative Agency
 ---
 
 **A Knowledge Wiki BY CURATIONS**
 
-CURATOR HUB is a comprehensive, open-source knowledge resource for AI development, creativity, and collaboration — created and maintained by [**CURATIONS**](https://curations.org), a Human × AI Creative Agency based in Los Angeles.
+HUB is a comprehensive, open-source knowledge resource for AI development, creativity, and collaboration — created and maintained by [**CURATIONS**](https://curations.org), a Human × AI Creative Agency based in Los Angeles.
 
 🌐 **Agency Website:** [curations.org](https://curations.org)  
 📖 **This Wiki:** You're here!  
@@ -13,9 +13,9 @@ CURATOR HUB is a comprehensive, open-source knowledge resource for AI developmen
 
 ---
 
-## What Is CURATOR HUB?
+## What Is HUB?
 
-Think of **CURATOR HUB** as a **Wikipedia for AI creativity** — a living knowledge panel where theory meets practice, and human insight meets artificial intelligence.
+Think of **HUB** as a **Wikipedia for AI creativity** — a living knowledge panel where theory meets practice, and human insight meets artificial intelligence.
 
 ### This Is NOT:
 - ❌ A company or agency (that's CURATIONS)
@@ -36,7 +36,7 @@ Think of **CURATOR HUB** as a **Wikipedia for AI creativity** — a living knowl
 
 ### CURATIONS: The Agency Behind the Wiki
 
-[**CURATIONS**](https://curations.org) is a **Human × AI Creative Agency** in Los Angeles that created and maintains CURATOR HUB.
+[**CURATIONS**](https://curations.org) is a **Human × AI Creative Agency** in Los Angeles that created and maintains HUB.
 
 **What CURATIONS does:**
 - 🎨 Design systems & brand architecture
@@ -55,7 +55,7 @@ Think of **CURATOR HUB** as a **Wikipedia for AI creativity** — a living knowl
 
 ## What's Inside This Wiki?
 
-CURATOR HUB organizes AI knowledge into **progressive cookbooks** — from 🌱 Seedling concepts to 🌳 Forest-level mastery:
+HUB organizes AI knowledge into **progressive cookbooks** — from 🌱 Seedling concepts to 🌳 Forest-level mastery:
 
 ### 📚 Core Knowledge Areas
 
@@ -116,7 +116,7 @@ AI knowledge is fragmented:
 
 ### Our Solution
 
-**CURATOR HUB makes AI knowledge:**
+**HUB makes AI knowledge:**
 - 🎓 **Accessible** — Free and ungated forever
 - 📖 **Organized** — Progressive learning paths
 - 🛠️ **Practical** — Copy-paste ready code
@@ -151,7 +151,7 @@ We use a **plant growth metaphor** for learning levels:
 
 ## CURATIONS Projects Featured Here
 
-While **CURATOR HUB** is the knowledge wiki, it documents several projects created by **CURATIONS**:
+While **HUB** is the knowledge wiki, it documents several projects created by **CURATIONS**:
 
 ### 🏙️ [CurationsLA](../about-curationsla/)
 Hyperlocal LA media platform demonstrating Human × AI collaboration in action.
@@ -183,7 +183,7 @@ Specialized AI personas with unique expertise.
 - Light on practical examples
 - Corporate-controlled
 
-**CURATOR HUB:**
+**HUB:**
 - Cross-framework interoperability
 - Progressive learning (beginner → legendary)
 - Heavy on working code
@@ -197,7 +197,7 @@ Specialized AI personas with unique expertise.
 - Outdated quickly
 - No community
 
-**CURATOR HUB:**
+**HUB:**
 - Free and open forever
 - Non-linear, choose your path
 - Living documentation (updated regularly)
@@ -207,7 +207,7 @@ Specialized AI personas with unique expertise.
 
 ## Our Values
 
-These principles guide both **CURATOR HUB** (this wiki) and **CURATIONS** (the agency):
+These principles guide both **HUB** (this wiki) and **CURATIONS** (the agency):
 
 ✅ **Open Learning** — All resources free and ungated  
 ✅ **Greater Good Creativity** — Does this make the world better?  
@@ -248,7 +248,7 @@ Everything is free and open:
 
 ### Contribute to This Wiki
 
-CURATOR HUB is a living collaboration:
+HUB is a living collaboration:
 - See something to improve? Open an issue
 - Have frameworks to share? Submit a PR
 - [Learn how to contribute](../get-involved/)
@@ -267,7 +267,7 @@ Need agency services?
 
 ## The Bigger Picture
 
-**CURATOR HUB** is part of CURATIONS' mission to make AI:
+**HUB** is part of CURATIONS' mission to make AI:
 - Accessible to everyone
 - Focused on greater good
 - Transparent and ethical
@@ -283,7 +283,7 @@ This is Human × AI collaboration at its best.
 
 ---
 
-**Welcome to CURATOR HUB.** 🌱→🌳
+**Welcome to HUB.** 🌱→🌳
 
 Built with 💜 in Los Angeles by [CURATIONS](https://curations.org)
 
@@ -291,7 +291,7 @@ Built with 💜 in Los Angeles by [CURATIONS](https://curations.org)
 
 ## What We Are
 
-Curator Hub is a creative agency built on a simple belief: **AI should amplify human creativity, not replace it.**
+HUB is a creative agency built on a simple belief: **AI should amplify human creativity, not replace it.**
 
 We're not a consultancy selling AI transformation. We're not a dev shop building chatbots. We're **creatives and technologists** who use AI as a medium—like paint, code, or clay—to build things that matter.
 
@@ -359,7 +359,7 @@ When used ethically, transparently, and with intention, AI can:
 - Free humans from repetitive tasks to focus on meaning
 - Create things neither human nor AI could build alone
 
-**This is what Curator Hub is for.**
+**This is what HUB is for.**
 
 ---
 
@@ -468,7 +468,7 @@ Through the [Youth Curator Movement](../youth-curator-movement/), we empower you
 
 ## The Curators: Our AI Personas
 
-Curator Hub is powered by a network of specialized AI personas we call **"Curators."**
+HUB is powered by a network of specialized AI personas we call **"Curators."**
 
 Each Curator has:
 - A specific domain of expertise
@@ -514,7 +514,7 @@ Some focus on design. Some on research. Some on strategy. Together, they form a 
 - Build transparent systems
 - Treat people as people
 
-### We're Curator Hub
+### We're HUB
 
 **Creative agency + Technical capability + Ethical foundation + Open learning**
 
@@ -572,7 +572,7 @@ All free. All open-source.
 
 ### Contribute
 
-Curator Hub is a living collaboration. See something to improve? Have frameworks to share? We welcome contributions.
+HUB is a living collaboration. See something to improve? Have frameworks to share? We welcome contributions.
 
 [How to contribute →](../get-involved/)
 
@@ -580,14 +580,14 @@ Curator Hub is a living collaboration. See something to improve? Have frameworks
 
 ## Hidden Prompts
 
-*For someone starting to understand Curator Hub and wanting to go deeper*
+*For someone starting to understand HUB and wanting to go deeper*
 
 <details>
-<summary>🔍 Advanced Prompt: Understanding Curator Hub</summary>
+<summary>🔍 Advanced Prompt: Understanding HUB</summary>
 
 Copy this and paste into ChatGPT or Claude:
 
-"I just read about Curator Hub. Help me understand:
+"I just read about HUB. Help me understand:
 1. What makes their approach to AI different from typical tech companies?
 2. How do their AI Curators actually work?
 3. What does 'greater good creativity' mean in practice?
@@ -597,4 +597,4 @@ Copy this and paste into ChatGPT or Claude:
 
 ---
 
-**That's Curator Hub.** ✨
+**That's HUB.** ✨

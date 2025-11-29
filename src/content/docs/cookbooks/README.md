@@ -2,17 +2,17 @@
 title: 🧠 The AI × Human Cookbook
 ---
 
-**Comprehensive frameworks for building with AI - from Curator Hub**
+**Comprehensive frameworks for building with AI - from HUB**
 
-🌐 **[curations.org](https://curations.org)** | **Part of the Curator Hub ecosystem**
+🌐 **[curations.org](https://curations.org)** | **Part of the HUB ecosystem**
 
-Welcome to The AI × Human Cookbook - your comprehensive guide to building intelligent AI agents, advanced prompting techniques, and business strategies. This collection takes you from essential concepts to production-level implementation, all grounded in Curator Hub' philosophy of greater good creativity.
+Welcome to The AI × Human Cookbook - your comprehensive guide to building intelligent AI agents, advanced prompting techniques, and business strategies. This collection takes you from essential concepts to production-level implementation, all grounded in HUB' philosophy of greater good creativity.
 
 **10 comprehensive frameworks:**
 - 5 AI Development & Advanced Prompting frameworks
 - 5 Business & Brand Strategy frameworks
 
-[← Back to CURATOR HUB Welcome](/)
+[← Back to HUB Welcome](/)
 
 ## 🎯 Learning Paths
 
@@ -68,13 +68,13 @@ Throughout this cookbook, you'll encounter:
 
 ## 🤝 Human × AI Collaboration
 
-This cookbook celebrates the synergy between human creativity and AI capabilities, core to Curator Hub' mission. As you learn, remember:
+This cookbook celebrates the synergy between human creativity and AI capabilities, core to HUB' mission. As you learn, remember:
 - AI agents augment human intelligence
 - Creativity comes from thoughtful design
 - Best results emerge from collaboration
 - Every framework should serve the greater good
 
-**Learn more about Curator Hub:** [About Curator Hub](../about-curator-hub.md) | [Meet The Curators](../the-curators.md)
+**Learn more about HUB:** [About HUB](../about-hub.md) | [Meet The Curators](../the-curators.md)
 
 ## 🚀 Getting Started
 
@@ -87,11 +87,11 @@ Start with [Introduction to Interoperability](./foundations/01-interoperability-
 **Beyond the technical frameworks, explore:**
 - [Advanced Prompting Techniques](./advanced-prompting/README.md) - Meta-prompting, chain-of-thought, and more
 - [Business & Brand Frameworks](./business/README.md) - Quantum Brand, AI Discovery, Creator Engine
-- [Curator Hub Services](https://curations.org) - Professional implementation and collaboration
+- [HUB Services](https://curations.org) - Professional implementation and collaboration
 - [The Curators](../the-curators.md) - Specialized AI personas for different domains
 
 ---
 
-*Built with ❤️ by Curator Hub for learners who want to master AI × Human collaboration*
+*Built with ❤️ by HUB for learners who want to master AI × Human collaboration*
 
-[← Back to CURATOR HUB Welcome](/)
+[← Back to HUB Welcome](/)

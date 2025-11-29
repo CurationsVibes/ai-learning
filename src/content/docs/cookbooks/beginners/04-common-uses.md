@@ -390,6 +390,6 @@ Continue to [Using AI Safely & Responsibly](./05-safety-ethics/) to learn about 
 
 ---
 
-*Part of the CURATOR HUB Cookbooks by CURATIONS*
+*Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to Beginners Guide](./)
