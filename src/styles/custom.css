@@ -40,8 +40,10 @@
   --spacing-lg: var(--curations-space-6);
   --spacing-xl: var(--curations-space-8);
   --spacing-2xl: var(--curations-space-12);
-  
-  /* Typography - From CURATIONS */
+}
+
+/* Typography - Apply font family to body */
+body {
   font-family: var(--curations-font-sans);
 }
 
