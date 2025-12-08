@@ -1,93 +1,316 @@
 ---
 // Enhanced SEO Component for HUB
-// Adds rich meta tags, Open Graph, Twitter Cards, and schema.org markup
+// Adds rich meta tags, Open Graph, Twitter Cards, and comprehensive schema.org markup
+// Optimized for AI Discovery (AAO) and traditional SEO
 interface Props {
   title: string;
   description?: string;
-  type?: 'website' | 'article';
+  type?: "website" | "article" | "course";
   image?: string;
   author?: string;
   publishedTime?: string;
   modifiedTime?: string;
   keywords?: string[];
   section?: string;
+  courseLevel?: "Beginner" | "Intermediate" | "Advanced";
+  estimatedTime?: string;
 }
 
 const {
   title,
-  description = 'A comprehensive knowledge wiki by CURATIONS — a Human × AI Creative Agency in Los Angeles',
-  type = 'website',
-  image = 'https://hub.curations.org/og-image.png',
-  author = 'CURATIONS',
+  description = "A comprehensive knowledge wiki by CURATIONS — a Human × AI Creative Agency in Los Angeles. Free AI learning resources, cookbooks, and guides.",
+  type = "website",
+  image = "https://hub.curations.org/og-image.png",
+  author = "CURATIONS",
   publishedTime,
   modifiedTime,
-  keywords = ['AI learning', 'AI frameworks', 'Human AI collaboration', 'AI development', 'creative AI'],
-  section
+  keywords = [
+    "AI learning",
+    "AI frameworks",
+    "Human AI collaboration",
+    "AI development",
+    "creative AI",
+    "prompt engineering",
+    "AI agents",
+    "LLM tutorials",
+  ],
+  section,
+  courseLevel,
+  estimatedTime,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const fullTitle = title === 'HUB' ? title : `${title} | HUB by CURATIONS`;
+const fullTitle =
+  title === "HUB"
+    ? "HUB by CURATIONS - AI Learning Resources"
+    : `${title} | HUB by CURATIONS`;
 
-// Generate Article schema for content pages
-const articleSchema = type === 'article' ? {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  headline: title,
-  description: description,
-  image: image,
-  author: {
-    '@type': 'Organization',
-    name: 'CURATIONS',
-    url: 'https://curations.org'
+// Organization Schema - Core brand identity for AI discovery
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://curations.org/#organization",
+  name: "CURATIONS",
+  alternateName: ["BUNKER", "Curations LA", "HUB by CURATIONS"],
+  url: "https://curations.org",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://hub.curations.org/logo.png",
+    width: 512,
+    height: 512,
   },
-  publisher: {
-    '@type': 'Organization',
-    name: 'CURATIONS',
-    url: 'https://curations.org',
-    description: 'A Human × AI Creative Agency in Los Angeles'
+  description:
+    "A Human × AI Creative Agency in Los Angeles specializing in AI strategy, brand development, and open learning resources.",
+  foundingDate: "2024",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Los Angeles",
+    addressRegion: "CA",
+    addressCountry: "US",
   },
-  mainEntityOfPage: {
-    '@type': 'WebPage',
-    '@id': canonicalURL.href
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    url: "https://curations.org/contact",
   },
-  ...(publishedTime && { datePublished: publishedTime }),
-  ...(modifiedTime && { dateModified: modifiedTime }),
-  inLanguage: 'en-US',
-  isAccessibleForFree: true,
-  ...(section && { articleSection: section })
-} : null;
+  sameAs: [
+    "https://twitter.com/CURATIONS",
+    "https://github.com/CurationsLA",
+    "https://hub.curations.org",
+  ],
+  knowsAbout: [
+    "Artificial Intelligence",
+    "Prompt Engineering",
+    "AI Agents",
+    "Brand Strategy",
+    "Schema.org Implementation",
+    "Multi-Agent Systems",
+    "LLM Applications",
+    "AI Discovery Optimization",
+  ],
+  areaServed: "Worldwide",
+  serviceType: [
+    "AI Consulting",
+    "Brand Strategy",
+    "Educational Resources",
+    "Open Source Development",
+  ],
+};
+
+// WebSite Schema with SearchAction for site-wide discovery
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://hub.curations.org/#website",
+  name: "HUB by CURATIONS",
+  alternateName: "Curations HUB",
+  description:
+    "Free, open-source AI learning resources including cookbooks, guides, and tutorials for beginners to advanced practitioners.",
+  url: "https://hub.curations.org/",
+  publisher: { "@id": "https://curations.org/#organization" },
+  inLanguage: "en-US",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://hub.curations.org/?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+  copyrightHolder: { "@id": "https://curations.org/#organization" },
+  copyrightYear: 2024,
+  license: "https://creativecommons.org/licenses/by/4.0/",
+};
+
+// Educational Organization Schema - For course/learning context
+const educationalOrgSchema = {
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://hub.curations.org/#eduorg",
+  name: "HUB Learning Platform",
+  description:
+    "Open-source AI education platform offering free courses, tutorials, and cookbooks for AI practitioners at all levels.",
+  url: "https://hub.curations.org/",
+  parentOrganization: { "@id": "https://curations.org/#organization" },
+  educationalCredentialAwarded: "Completion Certificate (Self-Paced)",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "AI Learning Cookbooks",
+    itemListElement: [
+      {
+        "@type": "Course",
+        name: "Beginners Guide to AI",
+        description: "Your first steps into AI - from zero to confident user",
+        url: "https://hub.curations.org/cookbooks/beginners/",
+        provider: { "@id": "https://hub.curations.org/#eduorg" },
+        educationalLevel: "Beginner",
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "Course",
+        name: "Intermediate AI Mastery",
+        description:
+          "Level up with advanced techniques and production patterns",
+        url: "https://hub.curations.org/cookbooks/intermediate/",
+        provider: { "@id": "https://hub.curations.org/#eduorg" },
+        educationalLevel: "Intermediate",
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "Course",
+        name: "AI-Powered Business Strategy",
+        description: "Build brands that AI systems recommend",
+        url: "https://hub.curations.org/cookbooks/business/",
+        provider: { "@id": "https://hub.curations.org/#eduorg" },
+        educationalLevel: "Intermediate",
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "Course",
+        name: "AI Agent Development",
+        description: "Build sophisticated autonomous AI systems",
+        url: "https://hub.curations.org/cookbooks/agents/",
+        provider: { "@id": "https://hub.curations.org/#eduorg" },
+        educationalLevel: "Advanced",
+        isAccessibleForFree: true,
+      },
+      {
+        "@type": "Course",
+        name: "Advanced Prompting Techniques",
+        description: "Master cutting-edge prompting for 10x productivity",
+        url: "https://hub.curations.org/cookbooks/advanced-prompting/",
+        provider: { "@id": "https://hub.curations.org/#eduorg" },
+        educationalLevel: "Advanced",
+        isAccessibleForFree: true,
+      },
+    ],
+  },
+};
+
+// BreadcrumbList Schema - Dynamic based on URL path
+const pathParts = Astro.url.pathname.split("/").filter(Boolean);
+const breadcrumbItems = pathParts.map((part, index) => ({
+  "@type": "ListItem",
+  position: index + 1,
+  name: part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, " "),
+  item: `https://hub.curations.org/${pathParts.slice(0, index + 1).join("/")}/`,
+}));
+
+const breadcrumbSchema =
+  breadcrumbItems.length > 0
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+            item: "https://hub.curations.org/",
+          },
+          ...breadcrumbItems.map((item, i) => ({ ...item, position: i + 2 })),
+        ],
+      }
+    : null;
+
+// Article schema for content pages
+const articleSchema =
+  type === "article"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title,
+        description: description,
+        image: image,
+        author: {
+          "@type": "Organization",
+          name: "CURATIONS",
+          url: "https://curations.org",
+        },
+        publisher: { "@id": "https://curations.org/#organization" },
+        mainEntityOfPage: {
+          "@type": "WebPage",
+          "@id": canonicalURL.href,
+        },
+        ...(publishedTime && { datePublished: publishedTime }),
+        ...(modifiedTime && { dateModified: modifiedTime }),
+        inLanguage: "en-US",
+        isAccessibleForFree: true,
+        ...(section && { articleSection: section }),
+      }
+    : null;
+
+// Course schema for educational content
+const courseSchema =
+  type === "course" || courseLevel
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        name: title,
+        description: description,
+        provider: { "@id": "https://hub.curations.org/#eduorg" },
+        ...(courseLevel && { educationalLevel: courseLevel }),
+        isAccessibleForFree: true,
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD",
+          availability: "https://schema.org/InStock",
+        },
+        ...(estimatedTime && {
+          hasCourseInstance: {
+            "@type": "CourseInstance",
+            courseMode: "online",
+            courseWorkload: estimatedTime,
+          },
+        }),
+        teaches: keywords.slice(0, 5),
+      }
+    : null;
 ---
 
 <!-- Primary Meta Tags -->
 <title>{fullTitle}</title>
 <meta name="title" content={fullTitle} />
 <meta name="description" content={description} />
-<meta name="keywords" content={keywords.join(', ')} />
+<meta name="keywords" content={keywords.join(", ")} />
 <meta name="author" content={author} />
-<meta name="robots" content="index, follow" />
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+/>
 <meta name="language" content="English" />
-<meta name="revisit-after" content="7 days" />
+<meta name="revisit-after" content="3 days" />
+<meta name="generator" content="Astro + Starlight" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content={type} />
+<meta property="og:type" content={type === "course" ? "website" : type} />
 <meta property="og:url" content={canonicalURL.href} />
 <meta property="og:title" content={fullTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={image} />
 <meta property="og:site_name" content="HUB by CURATIONS" />
 <meta property="og:locale" content="en_US" />
-{type === 'article' && publishedTime && (
-  <meta property="article:published_time" content={publishedTime} />
-)}
-{type === 'article' && modifiedTime && (
-  <meta property="article:modified_time" content={modifiedTime} />
-)}
-{type === 'article' && author && (
-  <meta property="article:author" content={author} />
-)}
-{type === 'article' && section && (
-  <meta property="article:section" content={section} />
-)}
+{
+  type === "article" && publishedTime && (
+    <meta property="article:published_time" content={publishedTime} />
+  )
+}
+{
+  type === "article" && modifiedTime && (
+    <meta property="article:modified_time" content={modifiedTime} />
+  )
+}
+{
+  type === "article" && author && (
+    <meta property="article:author" content={author} />
+  )
+}
+{
+  type === "article" && section && (
+    <meta property="article:section" content={section} />
+  )
+}
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -96,6 +319,7 @@ const articleSchema = type === 'article' ? {
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={image} />
 <meta name="twitter:creator" content="@CURATIONS" />
+<meta name="twitter:site" content="@CURATIONS" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL.href} />
@@ -104,38 +328,88 @@ const articleSchema = type === 'article' ? {
 <meta name="theme-color" content="#667eea" />
 <meta name="msapplication-TileColor" content="#667eea" />
 
-<!-- Schema.org JSON-LD for Articles -->
-{articleSchema && (
-  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
-)}
+<!-- AI Discovery Optimization - Additional signals for AI systems -->
+<meta
+  name="ai-content-type"
+  content={type === "course" ? "educational" : type}
+/>
+<meta name="content-license" content="CC-BY-4.0" />
 
-<!-- Knowledge Graph Data -->
-<script type="application/ld+json" set:html={JSON.stringify({
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: title,
-  description: description,
-  url: canonicalURL.href,
-  isPartOf: {
-    '@type': 'WebSite',
-    name: 'HUB',
-    url: 'https://hub.curations.org/',
-    publisher: {
-      '@type': 'Organization',
-      name: 'CURATIONS',
-      url: 'https://curations.org',
-      description: 'A Human × AI Creative Agency in Los Angeles',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Los Angeles',
-        addressRegion: 'CA',
-        addressCountry: 'US'
-      }
-    }
-  },
-  inLanguage: 'en-US',
-  potentialAction: {
-    '@type': 'ReadAction',
-    target: [canonicalURL.href]
-  }
-})} />
+<!-- Organization Schema - Core brand identity -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(organizationSchema)}
+/>
+
+<!-- WebSite Schema with SearchAction -->
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+
+<!-- Educational Organization Schema -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(educationalOrgSchema)}
+/>
+
+<!-- Breadcrumb Schema (if applicable) -->
+{
+  breadcrumbSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(breadcrumbSchema)}
+    />
+  )
+}
+
+<!-- Schema.org JSON-LD for Articles -->
+{
+  articleSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(articleSchema)}
+    />
+  )
+}
+
+<!-- Course Schema (for educational content) -->
+{
+  courseSchema && (
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(courseSchema)}
+    />
+  )
+}
+
+<!-- WebPage Schema with rich metadata -->
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": canonicalURL.href,
+    name: title,
+    description: description,
+    url: canonicalURL.href,
+    isPartOf: { "@id": "https://hub.curations.org/#website" },
+    about: {
+      "@type": "Thing",
+      name: "Artificial Intelligence Education",
+      description: "Learning resources for AI practitioners",
+    },
+    audience: {
+      "@type": "EducationalAudience",
+      educationalRole: "learner",
+    },
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    potentialAction: {
+      "@type": "ReadAction",
+      target: [canonicalURL.href],
+    },
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", "h2", ".sl-markdown-content p:first-of-type"],
+    },
+  })}
+/>

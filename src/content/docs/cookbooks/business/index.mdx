@@ -1,0 +1,372 @@
+---
+title: "🎨 Business: Branding & Growth"
+description: AI-powered brand building, discovery optimization, and growth strategies for modern businesses
+---
+
+import LearningPath from '../../../../components/LearningPath.astro';
+import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+
+export const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "AI-Powered Business & Brand Strategy",
+  "description": "Learn to leverage AI for brand building, discovery optimization (AAO), and exponential growth strategies. From Quantum Brand Engine to Schema Mastery.",
+  "provider": {
+    "@type": "Organization",
+    "name": "CURATIONS",
+    "url": "https://curations.org"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "category": "Free"
+  },
+  "educationalLevel": "Intermediate to Advanced",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "learner",
+    "audienceType": "Entrepreneurs, Marketers, Brand Strategists, Founders"
+  },
+  "teaches": [
+    "Quantum Brand Positioning",
+    "AI Discovery Optimization (AAO)",
+    "Schema.org Implementation",
+    "Brand Archaeology",
+    "Creator Ecosystem Development"
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT6H"
+  },
+  "about": {
+    "@type": "Thing",
+    "name": "AI Marketing Strategy"
+  }
+};
+
+export const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "CURATIONS",
+  "alternateName": "BUNKER",
+  "url": "https://curations.org",
+  "description": "A Human × AI Creative Agency in Los Angeles",
+  "knowsAbout": [
+    "Brand Strategy",
+    "AI Development",
+    "Schema.org Implementation",
+    "Content Marketing",
+    "Multi-Agent Systems"
+  ],
+  "areaServed": "Worldwide",
+  "serviceType": ["Brand Strategy", "AI Consulting", "Educational Resources"]
+};
+
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI Discovery Optimization (AAO)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AAO (AI Agent Optimization) is the evolution beyond SEO. While SEO optimizes for search engines like Google, AAO optimizes your brand to be recommended by AI assistants like ChatGPT, Claude, and Perplexity. It involves structured data, semantic richness, and AI-readable content architecture."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Quantum Brand positioning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quantum Brand positioning is a strategy where your brand exists in 'superposition' — capable of presenting different facets to different audiences while maintaining core authenticity. Instead of picking ONE position, you create adaptive brand architecture that collapses to exactly what each audience segment needs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Schema.org help with AI discovery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Schema.org provides structured vocabulary that AI systems understand natively. By implementing comprehensive schema markup, you make your brand's information machine-readable, enabling AI assistants to accurately represent and recommend your products, services, and content."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need technical skills to implement these strategies?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Basic HTML understanding helps for schema implementation, but most concepts are strategic rather than technical. We provide copy-paste code snippets and tools that simplify implementation. Non-technical founders can learn the strategy and work with developers for implementation."
+      }
+    }
+  ]
+};
+
+<script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+**Where AI meets business strategy — build brands that dominate the AI era**
+
+<UpvoteWidget itemId="business-cookbook" itemType="cookbook" />
+
+You can build AI agents. You can write advanced prompts. But can you build a **brand** that AI recommends? That exists everywhere your customers are? That grows itself?
+
+This section teaches you the frameworks that separate forgettable brands from category-defining movements.
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/business"
+  technologies={["Brand Strategy", "Schema.org", "AAO", "AI Discovery", "Growth Hacking"]}
+  showCodePreview={false}
+/>
+
+---
+
+## 🎯 Learning Path
+
+<LearningPath 
+  pathId="business-path"
+  pathTitle="AI-Powered Business Mastery"
+  pathDescription="Build brands that AI systems recommend — from strategy to implementation"
+  steps={[
+    {
+      id: "step-quantum-brand",
+      title: "Quantum Brand Engine",
+      description: "Learn to position your brand in superposition — adaptive identity that resonates with every audience segment",
+      link: "/cookbooks/business/quantum-brand-engine/",
+      estimatedTime: "45 min",
+      difficulty: "intermediate"
+    },
+    {
+      id: "step-brand-archaeology",
+      title: "Brand Archaeology",
+      description: "Excavate your authentic brand essence through deep analysis of behavioral vs stated values",
+      link: "/cookbooks/business/brand-archaeology/",
+      estimatedTime: "40 min",
+      difficulty: "intermediate",
+      prerequisites: ["Quantum Brand fundamentals"]
+    },
+    {
+      id: "step-ai-discovery",
+      title: "AI Discovery Singularity (AAO)",
+      description: "Optimize your brand to be recommended by ChatGPT, Claude, Perplexity and every AI assistant",
+      link: "/cookbooks/business/ai-discovery-singularity/",
+      estimatedTime: "60 min",
+      difficulty: "advanced",
+      prerequisites: ["Brand Archaeology"]
+    },
+    {
+      id: "step-schema-mastery",
+      title: "Schema.org Mastery",
+      description: "Implement comprehensive structured data that makes your brand AI-readable and recommendation-worthy",
+      link: "/cookbooks/business/schema-mastery/",
+      estimatedTime: "55 min",
+      difficulty: "advanced",
+      prerequisites: ["AI Discovery fundamentals"]
+    },
+    {
+      id: "step-creator-engine",
+      title: "Creator Singularity Engine",
+      description: "Build distributed brand consciousness through authentic creator partnerships and community ecosystems",
+      link: "/cookbooks/business/creator-engine/",
+      estimatedTime: "45 min",
+      difficulty: "advanced",
+      prerequisites: ["Schema Mastery"]
+    }
+  ]}
+/>
+
+---
+
+## 🌟 The Frameworks
+
+### ⚛️ Quantum Brand Engine
+
+**Old way:** Pick ONE brand position and stick to it forever.
+**New way:** Exist in SUPERPOSITION across markets.
+
+Traditional branding forces a single identity. But modern audiences are fragmented. A 22-year-old creator and a 45-year-old executive need different messages — yet authentic brands serve both.
+
+**You'll learn to:**
+- Create brands that adapt to each audience without losing authenticity
+- Design "collapse strategies" — when and how to specialize
+- Build hybrid identities that span demographics
+- Future-proof your positioning for market evolution
+
+→ [Learn Quantum Brand Engine](./quantum-brand-engine/)
+
+---
+
+### 🔍 Brand Archaeology
+
+**The problem:** You think you know your brand. You're probably wrong.
+**The solution:** Excavate what's actually true.
+
+Most brands describe who they *wish* they were. Brand Archaeology uncovers who you *actually* are — based on behavior, not aspiration.
+
+**You'll learn to:**
+- Dig beneath surface claims to find authentic truths
+- Analyze behavioral patterns vs. stated values
+- Identify misalignments killing your credibility
+- Build positioning rooted in reality
+
+→ [Learn Brand Archaeology](./brand-archaeology/)
+
+---
+
+### 🎯 AI Discovery Singularity (AAO)
+
+**Old SEO:** Optimize for Google's algorithm
+**New AAO:** Optimize for AI systems' understanding
+
+When someone asks ChatGPT "What's the best [product] for [use case]?", will your brand be recommended? If you haven't optimized for AI discovery, the answer is probably no.
+
+**You'll learn to:**
+- Make your brand un-ignorable by AI assistants
+- Structure data for ChatGPT, Claude, Perplexity, and future systems
+- Become the default recommendation in your category
+- Build AI-readable knowledge graphs around your brand
+
+→ [Learn AI Discovery (AAO)](./ai-discovery-singularity/)
+
+---
+
+### 🗺️ Schema.org Mastery
+
+**The foundation:** AI systems speak structured data fluently.
+
+Schema.org isn't just for rich snippets anymore. It's how AI systems understand what your brand *is*, what you *offer*, and who you're *for*. Without it, you're invisible to the most important new discovery channel.
+
+**You'll learn to:**
+- Implement comprehensive Organization, Product, and Service schema
+- Create LocalBusiness and FAQPage markup that AI systems love
+- Build knowledge graphs that connect your entire brand ecosystem
+- Validate, test, and monitor your structured data
+
+→ [Learn Schema.org Mastery](./schema-mastery/)
+
+---
+
+### 🌟 Creator Singularity Engine
+
+**Old influencer marketing:** Pay for posts, pray for results
+**New creator engine:** Build distributed brand consciousness
+
+The best brands don't market. They create ecosystems where creators naturally want to participate. This isn't about influencer budgets — it's about architecture.
+
+**You'll learn to:**
+- Treat creators as brand extensions, not billboards
+- Design partnership models that scale authentically
+- Build community-driven growth engines
+- Create self-sustaining creator networks
+
+→ [Learn Creator Engine](./creator-engine/)
+
+---
+
+## 💡 Key Insights
+
+:::tip[The AI Recommendation Economy]
+By 2026, an estimated 40% of product discoveries will involve AI assistance. If your brand isn't optimized for AI recommendation, you're competing for a shrinking slice of traditional discovery channels.
+:::
+
+:::note[Authenticity at Scale]
+The quantum brand approach isn't about being fake to different audiences. It's about being authentically multi-faceted — like how you're genuinely different at work vs. with friends, but still yourself.
+:::
+
+---
+
+## 🎓 Who This Is For
+
+<div class="audience-grid">
+
+**✅ Building Something**
+- Founders and entrepreneurs
+- Brand strategists and marketers
+- Agencies serving clients
+- Anyone launching products
+
+**✅ Seeking Unfair Advantages**
+- Tired of traditional marketing
+- Want AI to recommend you
+- Ready to think differently
+- Building for the future
+
+**❌ Skip This If:**
+- Not building anything public-facing
+- Just want technical AI skills
+- Not ready for strategic thinking
+- Looking for quick hacks without depth
+
+</div>
+
+---
+
+## 📋 Prerequisites
+
+For maximum value from this track:
+
+- ✓ Basic familiarity with marketing concepts
+- ✓ A brand, product, or service to apply learnings to
+- ✓ Willingness to question traditional branding assumptions
+- ✓ Basic HTML knowledge helpful for schema implementation
+
+---
+
+## 🚀 What's Next?
+
+After mastering Business strategies, explore:
+
+- **[Advanced Prompting](/cookbooks/advanced-prompting/)** — Technical depth for implementation
+- **[AI Agents](/cookbooks/agents/)** — Build autonomous systems for your business
+- **[Legendary](/cookbooks/legendary/)** — Scale to enterprise-level AI operations
+
+---
+
+## ❓ Frequently Asked Questions
+
+<details>
+<summary><strong>I'm not technical. Can I implement Schema.org myself?</strong></summary>
+
+Yes! We provide copy-paste code snippets. If you can edit HTML, you can implement basic schema. For complex implementations, the Schema Mastery guide helps you communicate requirements to developers.
+
+</details>
+
+<details>
+<summary><strong>How quickly will AI Discovery optimization show results?</strong></summary>
+
+Unlike SEO (months to years), AAO can show results faster because AI models update more frequently. However, building genuine authority that AI systems recognize takes consistent effort over 3-6 months.
+
+</details>
+
+<details>
+<summary><strong>Does Quantum Branding mean being inauthentic?</strong></summary>
+
+The opposite! Quantum Branding reveals your brand's authentic multi-dimensional nature. Instead of forcing a single persona, you express genuine facets that resonate with different audiences. It's about being fully yourself, not a flattened version.
+
+</details>
+
+<details>
+<summary><strong>What's the ROI of AAO vs traditional SEO?</strong></summary>
+
+They're complementary, not competitive. SEO serves search intent; AAO serves conversational discovery. As AI assistants grow, AAO ROI increases. Smart brands invest in both while recognizing AAO's growing importance.
+
+</details>
+
+---
+
+## 🧠 The Philosophy
+
+**Traditional branding:** Rigid, one-dimensional, ages poorly
+**AI-powered branding:** Adaptive, multi-dimensional, future-proof
+
+The best brands exist in superposition until measured by their audience — then they collapse to exactly what that person needs them to be. That's not deception. That's evolution.
+
+---
+
+*Part of the HUB Cookbooks by CURATIONS — A Human × AI Creative Agency in Los Angeles*
+
+[← Back to All Cookbooks](../) | [Start with Quantum Brand Engine →](./quantum-brand-engine/)

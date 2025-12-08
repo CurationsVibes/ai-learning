@@ -1,11 +1,141 @@
 ---
 title: 🌱 Beginners Guide to AI
-description: Your first steps into the world of AI - from zero to confident user
+description: Your first steps into the world of AI - from zero to confident user. Free beginner-friendly tutorials for ChatGPT, Claude, and Gemini.
 ---
 
 import LearningPath from '../../../../components/LearningPath.astro';
 import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
 import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+
+export const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Beginners Guide to AI",
+  "description": "Your first steps into the world of AI - from zero to confident user. Learn to use ChatGPT, Claude, Gemini and other AI assistants effectively.",
+  "provider": {
+    "@type": "Organization",
+    "name": "CURATIONS",
+    "url": "https://curations.org"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "category": "Free"
+  },
+  "educationalLevel": "Beginner",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "learner",
+    "audienceType": "Complete Beginners, New AI Users, Curious Learners"
+  },
+  "teaches": [
+    "What AI is and how it works",
+    "Having effective AI conversations",
+    "Writing clear prompts",
+    "Practical AI applications",
+    "AI safety and ethics"
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT1H15M"
+  },
+  "numberOfCredits": 0,
+  "occupationalCredentialAwarded": "None - Self-paced learning"
+};
+
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is AI and how does it work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI (Artificial Intelligence) refers to computer systems designed to perform tasks that typically require human intelligence. Modern AI assistants like ChatGPT, Claude, and Gemini use Large Language Models (LLMs) trained on vast amounts of text to understand and generate human-like responses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which AI assistant should I start with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All major AI assistants (ChatGPT, Claude, Gemini) are great for beginners. ChatGPT is widely popular and easy to access. Claude excels at thoughtful, nuanced responses. Gemini integrates well with Google services. Start with whichever is most accessible to you - the core skills transfer between platforms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to learn AI basics?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can have your first productive AI conversation in minutes. This beginner's course takes approximately 75 minutes to complete, covering fundamentals from 'What is AI?' to safety and ethics. Most users feel comfortable with basic AI interaction within a few days of regular use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is AI safe to use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AI assistants are generally safe when used responsibly. Key considerations include: don't share sensitive personal information, verify important facts independently, understand AI can make mistakes, and be aware of potential biases. Our safety module covers best practices in detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need technical skills to use AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No! Modern AI assistants are designed for everyone. If you can have a text conversation, you can use AI. This guide assumes zero prior knowledge and teaches you everything from the ground up. No coding or technical background required."
+      }
+    }
+  ]
+};
+
+export const howToSchema = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Start Using AI Assistants",
+  "description": "A step-by-step guide to getting started with AI assistants like ChatGPT, Claude, or Gemini",
+  "totalTime": "PT75M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Understand What AI Is",
+      "text": "Learn the fundamentals of artificial intelligence and how modern AI assistants work",
+      "url": "https://hub.curations.org/cookbooks/beginners/01-what-is-ai/"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Have Your First Conversation",
+      "text": "Start using an AI assistant and learn the basics of interaction",
+      "url": "https://hub.curations.org/cookbooks/beginners/02-first-conversation/"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Write Effective Prompts",
+      "text": "Master clear communication with AI to get better results",
+      "url": "https://hub.curations.org/cookbooks/beginners/03-effective-prompts/"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Explore Common Use Cases",
+      "text": "Discover practical applications for AI in work, learning, and creativity",
+      "url": "https://hub.curations.org/cookbooks/beginners/04-common-uses/"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Learn Safety and Ethics",
+      "text": "Understand responsible AI use, privacy, and ethical considerations",
+      "url": "https://hub.curations.org/cookbooks/beginners/05-safety-ethics/"
+    }
+  ]
+};
+
+<script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(howToSchema)} />
 
 **Your first steps into the world of AI - from zero to confident user**
 
@@ -91,29 +221,113 @@ Understand important considerations for using AI responsibly and safely.
 
 ## 🎓 Who This Is For
 
-**Complete Beginners** - Never used AI before? Start here! We assume zero prior knowledge.
+<div class="audience-grid">
 
-**New Users** - Just signed up for ChatGPT, Claude, or Gemini? This guide will help you get the most out of it.
+**✅ Complete Beginners**
+- Never used AI before
+- Don't know where to start
+- Feel overwhelmed by AI hype
+- We assume zero prior knowledge
 
-**Curious Learners** - Want to understand what all the AI hype is about? We'll explain it clearly.
+**✅ New Users**
+- Just signed up for ChatGPT, Claude, or Gemini
+- Had a few conversations but want more
+- Want to get better results
+- Ready for guided learning
 
-## Quick Start Tips
+**✅ Curious Learners**
+- Want to understand the AI hype
+- Exploring for personal or professional reasons
+- Looking for clear, jargon-free explanations
+- Prefer learning at your own pace
 
-Before diving into the full guide, here are some immediate tips:
-
-1. **Start Simple** - Don't try to do everything at once. Start with simple questions.
-2. **Be Specific** - The more specific your question, the better the answer you'll get.
-3. **Experiment** - Try different ways of asking the same question.
-4. **Learn Iteratively** - Each conversation teaches you something about how AI works.
-
-## Next Steps
-
-Ready to begin? Start with [What is AI?](./01-what-is-ai/) to build your foundation.
-
-Already comfortable with basics? Move on to [Foundations](/cookbooks/foundations/) for intermediate concepts.
+</div>
 
 ---
 
-*Part of the HUB Cookbooks by CURATIONS*
+## 💡 Key Insights
 
-[← Back to All Cookbooks](../)
+:::tip[AI is a Tool, Not Magic]
+AI assistants are incredibly capable, but they're tools — not replacement brains. Understanding what AI can and cannot do helps you use it more effectively and avoid frustration.
+:::
+
+:::note[Everyone Starts Here]
+Even AI experts started as beginners. The skills you learn here — clear communication, iterative refinement, critical thinking — are the foundation of all advanced AI work.
+:::
+
+---
+
+## ⚡ Quick Start Tips
+
+Before diving into the full guide, here are immediate wins:
+
+### 1. **Start Simple**
+Don't try complex tasks first. Begin with simple questions like "Explain [topic] to me like I'm new to this."
+
+### 2. **Be Specific**
+The more specific your question, the better the answer. "Help me write an email to my manager about taking Friday off" beats "Help me write."
+
+### 3. **Experiment Freely**
+AI won't judge you for "bad" questions. Try different approaches. Ask the same thing three ways. Learn what works.
+
+### 4. **Verify Important Facts**
+AI can be confidently wrong. For anything important (health, legal, financial), always verify with authoritative sources.
+
+### 5. **Iterate and Refine**
+Your first response isn't final. Ask "Can you improve this?" or "Make it shorter" or "What's missing?"
+
+---
+
+## ❓ Frequently Asked Questions
+
+<details>
+<summary><strong>Which AI should I use — ChatGPT, Claude, or Gemini?</strong></summary>
+
+They're all excellent for beginners! **ChatGPT** is the most popular and widely accessible. **Claude** excels at nuanced, thoughtful responses. **Gemini** integrates well with Google services. Start with whichever is easiest to access — the core skills transfer between all platforms.
+
+</details>
+
+<details>
+<summary><strong>Is AI safe to use?</strong></summary>
+
+Yes, when used responsibly. Don't share sensitive personal information (social security numbers, passwords, private health details). Remember AI can make mistakes — verify important information. Be aware of potential biases. Our Safety & Ethics module covers this in detail.
+
+</details>
+
+<details>
+<summary><strong>How much does AI cost?</strong></summary>
+
+Many AI assistants offer free tiers! ChatGPT, Claude, and Gemini all have free versions that are perfect for beginners. Paid tiers ($20/month typically) offer faster responses and access to more capable models, but free versions are more than sufficient for learning.
+
+</details>
+
+<details>
+<summary><strong>Can AI replace my job?</strong></summary>
+
+AI is best viewed as a productivity multiplier, not a replacement. People who learn to work effectively with AI will likely be more valuable, not less. This guide teaches you to harness AI as a powerful tool for whatever you do.
+
+</details>
+
+<details>
+<summary><strong>How long until I'm "good" at using AI?</strong></summary>
+
+You can have productive AI conversations within minutes of starting. Basic proficiency comes within a few days of regular use. This course (about 75 minutes) covers the fundamentals. True mastery is ongoing — you'll keep discovering new capabilities and techniques.
+
+</details>
+
+---
+
+## 🚀 Next Steps
+
+Ready to begin? Start with [What is AI?](./01-what-is-ai/) to build your foundation.
+
+Already comfortable with basics? Level up:
+- **[Intermediate Mastery](/cookbooks/intermediate/)** — Advanced techniques for power users
+- **[Foundations](/cookbooks/foundations/)** — Technical fundamentals
+- **[Business Applications](/cookbooks/business/)** — AI for branding and growth
+
+---
+
+*Part of the HUB Cookbooks by CURATIONS — A Human × AI Creative Agency*
+
+[← Back to All Cookbooks](../) | [Start with What is AI? →](./01-what-is-ai/)
