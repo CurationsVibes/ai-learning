@@ -1,0 +1,305 @@
+---
+title: 🌿 Intermediate AI Mastery
+description: Level up your AI skills with advanced techniques, best practices, and production patterns - from confident beginner to power user
+---
+
+import LearningPath from '../../../../components/LearningPath.astro';
+import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+
+export const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Intermediate AI Mastery",
+  "description": "Level up your AI skills with advanced techniques, best practices, and production patterns - comprehensive training for power users",
+  "provider": {
+    "@type": "Organization",
+    "name": "CURATIONS",
+    "url": "https://curations.org"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "category": "Free"
+  },
+  "educationalLevel": "Intermediate",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "learner",
+    "audienceType": "Power Users, Professionals, Content Creators"
+  },
+  "teaches": [
+    "Advanced Prompting Techniques",
+    "Chain-of-Thought Reasoning",
+    "Workflow Integration",
+    "Context Window Optimization",
+    "Production Patterns"
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT4H"
+  }
+};
+
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between beginner and intermediate AI usage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Beginner usage focuses on basic conversations and simple prompts. Intermediate mastery involves understanding prompt engineering, chain-of-thought reasoning, context optimization, and integrating AI into professional workflows for 10x productivity gains."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to become an intermediate AI user?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With focused practice, most users can reach intermediate proficiency in 2-4 weeks. This course provides approximately 4 hours of structured learning plus hands-on exercises."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI tools does this course cover?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These techniques work across all major AI assistants including ChatGPT, Claude, Gemini, and others. The principles are universal and model-agnostic."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need programming experience?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No programming experience is required. While some advanced topics touch on technical concepts, the core curriculum is designed for non-technical professionals."
+      }
+    }
+  ]
+};
+
+<script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+**Level up from confident beginner to AI power user — unlock 10x productivity**
+
+<UpvoteWidget itemId="intermediate-cookbook" itemType="cookbook" />
+
+You've mastered the basics. You can hold conversations with AI and get useful answers. But there's a massive gap between "functional" and "phenomenal." This intermediate track bridges that gap with advanced techniques that separate casual users from power users.
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/intermediate"
+  technologies={["Advanced Prompting", "Workflow Optimization", "Production Patterns", "Chain-of-Thought"]}
+  showCodePreview={false}
+/>
+
+---
+
+## 🎯 Learning Path
+
+<LearningPath 
+  pathId="intermediate-path"
+  pathTitle="Intermediate Mastery Journey"
+  pathDescription="Transform from beginner to power user — master advanced techniques and production patterns"
+  steps={[
+    {
+      id: "step-advanced-prompting",
+      title: "Advanced Prompting Techniques",
+      description: "Master chain-of-thought reasoning, few-shot learning, structured outputs, and the prompt patterns that 10x your results",
+      link: "/cookbooks/intermediate/01-advanced-prompting/",
+      estimatedTime: "45 min",
+      difficulty: "intermediate"
+    },
+    {
+      id: "step-workflow-integration",
+      title: "Workflow Integration Mastery",
+      description: "Learn to seamlessly integrate AI into your daily workflows, from email to research to content creation",
+      link: "/cookbooks/intermediate/02-workflow-integration/",
+      estimatedTime: "40 min",
+      difficulty: "intermediate",
+      prerequisites: ["Advanced prompting fundamentals"]
+    },
+    {
+      id: "step-context-mastery",
+      title: "Context Window Optimization",
+      description: "Understand and optimize context windows — the key to longer, more coherent AI interactions",
+      link: "/cookbooks/foundations/03-memory-management/",
+      estimatedTime: "35 min",
+      difficulty: "intermediate",
+      prerequisites: ["Workflow integration"]
+    },
+    {
+      id: "step-model-selection",
+      title: "Model Selection & Optimization",
+      description: "Learn when to use different AI models — GPT-4, Claude, Gemini — and how to optimize for each",
+      link: "/cookbooks/foundations/02-model-garden/",
+      estimatedTime: "30 min",
+      difficulty: "intermediate",
+      prerequisites: ["Context optimization"]
+    },
+    {
+      id: "step-production-patterns",
+      title: "Production-Ready Patterns",
+      description: "Implement reliable, repeatable patterns for professional AI usage that scale with your needs",
+      link: "/cookbooks/legendary/production-deployment/",
+      estimatedTime: "50 min",
+      difficulty: "intermediate",
+      prerequisites: ["Model selection"]
+    }
+  ]}
+/>
+
+---
+
+## 🌿 What You'll Master
+
+### 🎯 Advanced Prompting Techniques
+
+Move beyond simple questions to sophisticated prompt engineering:
+
+- **Chain-of-Thought (CoT)**: Guide AI through step-by-step reasoning
+- **Few-Shot Learning**: Teach AI patterns with examples
+- **Structured Outputs**: Get consistent, parseable responses
+- **Role-Based Prompting**: Unlock expert-level responses
+- **Meta-Prompting**: Let AI help you write better prompts
+
+### 🔄 Workflow Integration
+
+Transform how you work with AI-augmented workflows:
+
+- **Email & Communication**: Draft, refine, and optimize all written communication
+- **Research & Analysis**: Deep dive into topics with AI as your research partner
+- **Content Creation**: From ideation to polished output in record time
+- **Decision Support**: Use AI for analysis without surrendering judgment
+- **Meeting Prep & Follow-up**: Maximize the value of every meeting
+
+### 🧠 Context Management
+
+Master the art of AI memory and context:
+
+- **Context Window Limits**: Understand what AI can "remember"
+- **Strategic Summarization**: Keep conversations coherent over time
+- **Knowledge Injection**: Provide relevant background efficiently
+- **Session Continuity**: Pick up where you left off across conversations
+
+### 🏗️ Production Patterns
+
+Build reliable, repeatable AI workflows:
+
+- **Prompt Templates**: Reusable patterns for common tasks
+- **Quality Assurance**: Verify and validate AI outputs
+- **Error Handling**: Gracefully manage AI limitations
+- **Version Control**: Track and improve your prompts over time
+
+---
+
+## 💡 Key Insights
+
+:::tip[The 10x Multiplier]
+The difference between beginner and intermediate AI users isn't just knowing more commands — it's understanding *how AI thinks*. When you align your communication style with AI's processing patterns, results improve dramatically.
+:::
+
+:::note[Quality Over Quantity]
+Intermediate users learn that one well-crafted prompt often beats ten mediocre ones. The time invested in prompt engineering pays dividends across every future interaction.
+:::
+
+---
+
+## ⚡ Quick Wins
+
+Before diving into the full curriculum, here are immediate upgrades:
+
+### 1. **The "Let's think step by step" Upgrade**
+Add "Let's think through this step by step" to any complex question. This simple phrase activates chain-of-thought reasoning.
+
+### 2. **The Role Assignment**
+Start prompts with "You are an expert [profession] with 20 years of experience..." to unlock domain-specific knowledge.
+
+### 3. **The Output Format**
+End prompts with "Format your response as..." to get structured, usable outputs every time.
+
+### 4. **The Iterative Refinement**
+Never accept the first response. Ask "What's missing?" or "How could this be improved?" to trigger self-critique.
+
+---
+
+## 🎓 Who This Is For
+
+<div class="audience-grid">
+
+**✅ Ready to Level Up**
+- Used AI regularly for 2+ weeks
+- Comfortable with basic conversations
+- Want to maximize AI productivity
+- Ready to invest time in mastery
+
+**✅ Power User Track**
+- Use AI daily for work
+- Creating content or doing research
+- Need reliable, repeatable results
+- Building AI into your workflow
+
+**✅ Professional Growth**
+- Integrating AI into your career
+- Leading teams adopting AI
+- Building competitive advantage
+- Future-proofing your skills
+
+</div>
+
+---
+
+## 📋 Prerequisites
+
+Before starting this track, you should:
+
+- ✓ Complete the [Beginners Guide](/cookbooks/beginners/) or have equivalent experience
+- ✓ Have regular access to an AI assistant (ChatGPT, Claude, or Gemini)
+- ✓ Be comfortable writing multi-paragraph prompts
+- ✓ Understand that AI can make mistakes and require verification
+
+---
+
+## 🚀 What's Next?
+
+After completing the Intermediate track, you'll be ready for:
+
+- **[Advanced Prompting](/cookbooks/advanced-prompting/)** — Cutting-edge techniques for power users
+- **[AI Agents](/cookbooks/agents/)** — Build autonomous AI systems
+- **[Business Applications](/cookbooks/business/)** — Apply AI to branding and growth
+
+---
+
+## ❓ Frequently Asked Questions
+
+<details>
+<summary><strong>How is this different from the Beginners guide?</strong></summary>
+
+The Beginners guide teaches you *what* AI is and basic interaction. The Intermediate track teaches you *how to think* about AI collaboration, advanced prompt engineering, and workflow integration. It's the difference between driving a car and understanding the engine.
+
+</details>
+
+<details>
+<summary><strong>Can I skip straight to Advanced Prompting?</strong></summary>
+
+We recommend completing at least the first two modules of Intermediate before jumping to Advanced. The Advanced track assumes familiarity with chain-of-thought reasoning, context management, and structured outputs.
+
+</details>
+
+<details>
+<summary><strong>How long should each module take?</strong></summary>
+
+Time estimates assume focused study plus practice exercises. You may complete readings faster, but the real learning happens through hands-on application. Budget 2x the reading time for exercises.
+
+</details>
+
+---
+
+*Part of the HUB Cookbooks by CURATIONS — A Human × AI Creative Agency*
+
+[← Back to All Cookbooks](../) | [Start with Advanced Prompting →](./01-advanced-prompting/)

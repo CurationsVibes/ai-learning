@@ -10,9 +10,9 @@ export default defineConfig({
 			title: 'HUB',
 			description: 'A comprehensive knowledge wiki and AI learning resource by CURATIONS — a Human × AI Creative Agency in Los Angeles. Explore frameworks, guides, and open-source resources for AI development, collaboration, and creativity.',
 			tagline: 'BY CURATIONS',
-			social: {
-				github: 'https://github.com/CurationsLA/ai-learning',
-			},
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/CurationsLA/ai-learning' },
+			],
 			pagefind: true,
 			components: {
 				PageFrame: './src/overrides/PageFrame.astro',

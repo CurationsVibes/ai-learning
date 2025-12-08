@@ -7,7 +7,7 @@
      STARLIGHT THEME OVERRIDES
      Mapped from CURATIONS Design System
      ============================================ */
-  
+
   /* Brand Colors - Using CURATIONS Purple System */
   --sl-color-accent-low: var(--curations-purple-100);
   --sl-color-accent: var(--curations-accent-primary);
@@ -17,20 +17,39 @@
   --sl-color-gray-2: var(--curations-neutral-100);
   --sl-color-gray-3: var(--curations-neutral-200);
   --sl-color-gray-4: var(--curations-neutral-300);
-  --sl-color-gray-5: var(--curations-neutral-400);
-  --sl-color-gray-6: var(--curations-neutral-500);
-  
+  --sl-color-gray-5: var(--curations-neutral-600);
+  /* Darker for better contrast */
+  --sl-color-gray-6: var(--curations-neutral-800);
+  /* Sharp black */
+
+  /* Text Colors - Sharp Black for Accessibility */
+  --sl-color-text: #1a1a1a;
+  /* Near-black for maximum readability */
+  --sl-color-text-accent: #000000;
+  /* Pure black for emphasis */
+  --sl-color-text-invert: #ffffff;
+
+  /* Starlight specific text overrides */
+  --sl-color-hairline-light: var(--curations-neutral-200);
+  --sl-color-hairline: var(--curations-neutral-300);
+  --sl-color-hairline-shade: var(--curations-neutral-400);
+
   /* HUB Brand System - Aliases to CURATIONS tokens */
-  --hub-primary: var(--curations-neutral-800);
+  --hub-primary: #1a1a1a;
+  /* Near-black */
   --hub-secondary: var(--curations-accent-primary);
   --hub-gradient: var(--curations-gradient-primary);
   --hub-accent: var(--curations-accent-warm);
-  
+  --hub-text: #1a1a1a;
+  /* Near-black */
+  --hub-text-muted: #404040;
+  /* Dark gray, not light */
+
   /* Glassmorphism - From CURATIONS */
   --glass-bg: var(--curations-glass-bg);
   --glass-border: var(--curations-glass-border);
   --glass-blur: var(--curations-glass-blur);
-  
+
   /* Spacing & Layout - From CURATIONS */
   --content-max-width: var(--curations-content-max-width);
   --sidebar-width: var(--curations-sidebar-width);
@@ -45,6 +64,56 @@
 /* Typography - Apply font family to body */
 body {
   font-family: var(--curations-font-sans);
+  color: #1a1a1a;
+  /* Sharp near-black */
+}
+
+/* ============================================
+   GLOBAL TEXT COLOR ENFORCEMENT
+   Ensure all text is sharp black, not light gray
+   ============================================ */
+
+/* Universal text color reset */
+*,
+*::before,
+*::after {
+  --sl-color-text: #1a1a1a;
+}
+
+/* Main content text */
+main,
+article,
+section {
+  color: #1a1a1a;
+}
+
+/* Paragraphs everywhere */
+p {
+  color: #1a1a1a;
+}
+
+/* All links should be visible */
+a {
+  color: var(--curations-purple-700);
+}
+
+a:hover {
+  color: var(--curations-purple-900);
+}
+
+/* Ensure spans and other inline elements inherit */
+span,
+em,
+strong,
+b,
+i {
+  color: inherit;
+}
+
+strong,
+b {
+  color: #000000;
+  font-weight: 600;
 }
 
 /* ============================================
@@ -154,7 +223,7 @@ a:not(.action):hover {
   font-size: 1.05rem;
 }
 
-.sl-markdown-content > * + * {
+.sl-markdown-content>*+* {
   margin-top: var(--spacing-lg);
 }
 
@@ -189,7 +258,7 @@ a:not(.action):hover {
 
 /* Glassmorphism cards */
 .card,
-.sl-markdown-content > div {
+.sl-markdown-content>div {
   backdrop-filter: var(--glass-blur);
   border-radius: 0.75rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -281,16 +350,82 @@ pre:hover .copy-button {
   border-radius: 0.375rem;
   padding: 0.5rem 0.75rem;
   margin: 0.125rem 0;
+  color: var(--curations-neutral-800);
+  font-weight: 500;
 }
 
 .sidebar nav a:hover {
   background: var(--sl-color-accent-low);
   transform: translateX(4px);
+  color: var(--curations-neutral-900);
 }
 
 .sidebar nav a[aria-current="page"] {
   background: var(--hub-gradient);
   color: white;
+  font-weight: 600;
+}
+
+/* Starlight sidebar text color overrides - SHARP BLACK */
+starlight-menu-button,
+.sidebar-content,
+.sidebar-pane,
+[data-sidebar],
+nav[aria-label="Main"] {
+  color: var(--curations-neutral-800);
+}
+
+/* Sidebar group labels */
+.sidebar .group-label,
+.sidebar summary,
+.sidebar details summary,
+nav summary,
+.sl-sidebar summary {
+  color: var(--curations-neutral-900);
+  font-weight: 600;
+}
+
+/* Sidebar links - ensure sharp black text */
+.sidebar a,
+.sidebar-content a,
+nav[aria-label="Main"] a,
+.sl-sidebar a,
+[data-sidebar] a {
+  color: var(--curations-neutral-800);
+}
+
+.sidebar a:hover,
+.sidebar-content a:hover,
+nav[aria-label="Main"] a:hover,
+.sl-sidebar a:hover,
+[data-sidebar] a:hover {
+  color: var(--curations-neutral-900);
+}
+
+/* Table of contents (right sidebar) */
+.right-sidebar,
+.right-sidebar-panel,
+[data-right-sidebar] {
+  color: var(--curations-neutral-800);
+}
+
+.right-sidebar a,
+.right-sidebar-panel a,
+[data-right-sidebar] a {
+  color: var(--curations-neutral-700);
+}
+
+.right-sidebar a:hover,
+.right-sidebar-panel a:hover,
+[data-right-sidebar] a:hover {
+  color: var(--curations-neutral-900);
+}
+
+/* Table of contents heading */
+.right-sidebar h2,
+.right-sidebar-panel h2,
+[data-right-sidebar] h2 {
+  color: var(--curations-neutral-900);
   font-weight: 600;
 }
 
@@ -347,6 +482,7 @@ button:not(.copy-button):hover {
     opacity: 0;
     transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -354,9 +490,9 @@ button:not(.copy-button):hover {
 }
 
 /* Apply fade-in animation only to major content sections */
-.sl-markdown-content > h2,
-.sl-markdown-content > h3,
-.sl-markdown-content > p:first-of-type {
+.sl-markdown-content>h2,
+.sl-markdown-content>h3,
+.sl-markdown-content>p:first-of-type {
   animation: fadeIn 0.3s ease;
 }
 
@@ -365,27 +501,27 @@ button:not(.copy-button):hover {
   .site-title span {
     font-size: 1rem;
   }
-  
+
   .site-title::after {
     font-size: 0.55rem;
   }
-  
+
   .hero {
     padding: 2rem 1rem;
   }
-  
+
   .sl-container {
     padding: var(--spacing-md);
   }
-  
+
   .sl-markdown-content {
     font-size: 1rem;
   }
-  
+
   .sl-markdown-content h2 {
     font-size: 1.5rem;
   }
-  
+
   .sl-markdown-content h3 {
     font-size: 1.25rem;
   }
@@ -421,17 +557,17 @@ button:not(.copy-button):hover {
   .site-title::after {
     content: 'BY CURATIONS - curations.org';
   }
-  
+
   a[href^="http"]:after {
     content: " (" attr(href) ")";
   }
-  
+
   .sidebar,
   .right-sidebar,
   nav {
     display: none;
   }
-  
+
   .sl-container {
     max-width: 100%;
   }
@@ -444,7 +580,7 @@ button:not(.copy-button):hover {
 
 /* Main content area with subtle grid */
 .main-frame {
-  background-image: 
+  background-image:
     linear-gradient(rgba(102, 126, 234, 0.015) 1px, transparent 1px),
     linear-gradient(90deg, rgba(102, 126, 234, 0.015) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -453,7 +589,7 @@ button:not(.copy-button):hover {
 
 /* Sidebar with accent grid */
 .sidebar-pane {
-  background-image: 
+  background-image:
     linear-gradient(rgba(118, 75, 162, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(118, 75, 162, 0.02) 1px, transparent 1px);
   background-size: 24px 24px;
@@ -471,6 +607,7 @@ button:not(.copy-button):hover {
   line-height: var(--curations-leading-tight);
   letter-spacing: var(--curations-tracking-tight);
   margin-bottom: var(--curations-space-6);
+  color: #000000;
 }
 
 /* Section headings with purple gradient */
@@ -483,7 +620,7 @@ button:not(.copy-button):hover {
   margin-bottom: var(--curations-space-6);
   padding-bottom: var(--curations-space-3);
   border-bottom: 2px solid var(--curations-purple-200);
-  color: var(--curations-neutral-800);
+  color: #000000;
 }
 
 /* Subsection headings */
@@ -493,7 +630,7 @@ button:not(.copy-button):hover {
   line-height: var(--curations-leading-snug);
   margin-top: var(--curations-space-8);
   margin-bottom: var(--curations-space-4);
-  color: var(--curations-neutral-700);
+  color: #1a1a1a;
 }
 
 /* Minor headings */
@@ -503,7 +640,7 @@ button:not(.copy-button):hover {
   line-height: var(--curations-leading-snug);
   margin-top: var(--curations-space-6);
   margin-bottom: var(--curations-space-3);
-  color: var(--curations-neutral-700);
+  color: #1a1a1a;
 }
 
 /* Emphasis headings (h5/h6 for sub-sections) */
@@ -524,14 +661,37 @@ button:not(.copy-button):hover {
   letter-spacing: var(--curations-tracking-wider);
   margin-top: var(--curations-space-4);
   margin-bottom: var(--curations-space-2);
-  color: var(--curations-neutral-500);
+  color: #404040;
 }
 
-/* Body text readability optimizations */
+/* Body text readability optimizations - Sharp black for accessibility */
 .sl-markdown-content p {
   font-size: var(--curations-text-base);
   line-height: var(--curations-leading-relaxed);
-  color: var(--curations-neutral-600);
+  color: #1a1a1a;
+}
+
+/* Ensure all text elements have proper contrast */
+.sl-markdown-content,
+.sl-markdown-content li,
+.sl-markdown-content td,
+.sl-markdown-content th,
+.sl-markdown-content blockquote {
+  color: #1a1a1a;
+}
+
+/* Strong/Bold text should be darker */
+.sl-markdown-content strong,
+.sl-markdown-content b {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Ensure description text is readable */
+.path-description,
+.step-description,
+.card-description {
+  color: #1a1a1a;
 }
 
 /* Enhanced code blocks for Cookbooks */
@@ -556,6 +716,210 @@ button:not(.copy-button):hover {
 }
 
 /* ============================================
+   ACCESSIBILITY: HIGH CONTRAST TEXT
+   Ensures all text is readable on light backgrounds
+   ============================================ */
+
+/* Global text color enforcement */
+.sl-markdown-content,
+.content-panel,
+.main-pane,
+article {
+  color: #1a1a1a;
+}
+
+/* ============================================
+   STARLIGHT SIDEBAR OVERRIDES - SHARP BLACK TEXT
+   ============================================ */
+
+/* Left sidebar - all text should be dark */
+.sidebar,
+.sidebar *,
+[data-pagefind-ignore] .sidebar,
+nav.sidebar,
+aside.sidebar {
+  color: #1a1a1a;
+}
+
+/* Sidebar links */
+.sidebar a,
+.sidebar-content a,
+.sl-sidebar a,
+aside a,
+nav.sidebar a {
+  color: #1a1a1a !important;
+  font-weight: 500;
+}
+
+.sidebar a:hover,
+.sidebar-content a:hover,
+.sl-sidebar a:hover {
+  color: #000000 !important;
+}
+
+/* Sidebar group titles/labels */
+.sidebar .top-level>li>details>summary,
+.sidebar .group-label,
+.sidebar summary,
+.sidebar details>summary,
+.sl-sidebar summary,
+nav summary span,
+.sidebar summary span {
+  color: #000000 !important;
+  font-weight: 700;
+}
+
+/* Starlight sidebar link text */
+[data-sl-sidebar] a,
+[data-sl-sidebar] span,
+starlight-sidebar a,
+starlight-sidebar span {
+  color: #1a1a1a !important;
+}
+
+/* Active/current page in sidebar */
+.sidebar a[aria-current="page"],
+[data-sl-sidebar] a[aria-current="page"] {
+  color: #ffffff !important;
+  background: var(--hub-gradient);
+}
+
+/* Right sidebar / Table of Contents */
+.right-sidebar,
+.right-sidebar *,
+aside.right-sidebar,
+[data-right-sidebar] {
+  color: #1a1a1a;
+}
+
+.right-sidebar a,
+aside.right-sidebar a,
+[data-right-sidebar] a {
+  color: #404040 !important;
+}
+
+.right-sidebar a:hover,
+aside.right-sidebar a:hover,
+[data-right-sidebar] a:hover {
+  color: #000000 !important;
+}
+
+/* Right sidebar heading */
+.right-sidebar h2,
+aside.right-sidebar h2,
+[data-right-sidebar] h2,
+.toc-heading {
+  color: #000000 !important;
+  font-weight: 700;
+}
+
+/* Mobile menu */
+starlight-menu-button,
+[data-open-modal],
+.mobile-menu-toggle {
+  color: #1a1a1a;
+}
+
+/* Sidebar and navigation text - enhanced */
+.sidebar a,
+.sidebar-content,
+nav a {
+  color: #1a1a1a;
+}
+
+.sidebar a:hover,
+nav a:hover {
+  color: var(--curations-neutral-900);
+}
+
+/* Table text */
+.sl-markdown-content table {
+  color: #1a1a1a;
+}
+
+.sl-markdown-content th {
+  color: #000000;
+  font-weight: 600;
+}
+
+.sl-markdown-content td {
+  color: #1a1a1a;
+}
+
+/* List items */
+.sl-markdown-content li {
+  color: #1a1a1a;
+}
+
+/* Links - ensure accessible contrast */
+.sl-markdown-content a {
+  color: var(--curations-purple-700);
+}
+
+.sl-markdown-content a:hover {
+  color: var(--curations-purple-900);
+}
+
+/* Details/Summary elements */
+.sl-markdown-content details {
+  color: #1a1a1a;
+}
+
+.sl-markdown-content summary {
+  color: #000000;
+  font-weight: 600;
+}
+
+/* Blockquote text */
+.sl-markdown-content blockquote {
+  color: #1a1a1a;
+}
+
+.sl-markdown-content blockquote strong {
+  color: #000000;
+}
+
+/* Card components */
+.card-title,
+.feature-title {
+  color: #000000;
+}
+
+.card-description,
+.feature-description {
+  color: #1a1a1a;
+}
+
+/* Badge text */
+.badge,
+.tag {
+  color: #1a1a1a;
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  color: #1a1a1a;
+}
+
+::placeholder {
+  color: #666666;
+}
+
+/* Ensure footer text is readable */
+footer,
+.footer-content {
+  color: var(--curations-neutral-700);
+}
+
+/* Starlight-specific overrides for light mode text */
+[data-theme="light"] .sl-markdown-content,
+[data-theme="light"] .content-panel {
+  color: var(--curations-neutral-800);
+}
+
+/* ============================================
    DARK MODE ENHANCEMENTS
    ============================================ */
 
@@ -566,28 +930,28 @@ button:not(.copy-button):hover {
     --sl-color-gray-3: var(--curations-neutral-700);
     --hub-primary: var(--curations-neutral-100);
   }
-  
+
   .main-frame,
   .sidebar-pane {
-    background-image: 
+    background-image:
       linear-gradient(rgba(102, 126, 234, 0.03) 1px, transparent 1px),
       linear-gradient(90deg, rgba(102, 126, 234, 0.03) 1px, transparent 1px);
   }
-  
+
   .sl-markdown-content h2 {
     color: var(--curations-neutral-100);
     border-bottom-color: var(--curations-purple-800);
   }
-  
+
   .sl-markdown-content h3,
   .sl-markdown-content h4 {
     color: var(--curations-neutral-200);
   }
-  
+
   .sl-markdown-content p {
     color: var(--curations-neutral-300);
   }
-  
+
   .sl-markdown-content code:not(pre code) {
     background: var(--curations-purple-900);
     color: var(--curations-purple-200);

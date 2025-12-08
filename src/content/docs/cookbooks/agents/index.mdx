@@ -1,0 +1,483 @@
+---
+title: 🤖 AI Agents
+description: Building sophisticated AI agent systems - from ADK fundamentals to multi-agent architectures for developers
+---
+
+import LearningPath from '../../../../components/LearningPath.astro';
+import UpvoteWidget from '../../../../components/UpvoteWidget.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+
+export const courseSchema = {
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "AI Agent Development Masterclass",
+  "description": "Learn to build sophisticated AI agents from foundations to production. Covers Agent Development Kits, agent architectures, multi-agent systems, and deployment patterns.",
+  "provider": {
+    "@type": "Organization",
+    "name": "CURATIONS",
+    "url": "https://curations.org"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "category": "Free"
+  },
+  "educationalLevel": "Intermediate to Advanced",
+  "audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "learner",
+    "audienceType": "Developers, Software Engineers, AI Practitioners, Technical Leaders"
+  },
+  "teaches": [
+    "Agent Development Kits (ADK)",
+    "Agent Architecture Patterns",
+    "Sequential and Parallel Agents",
+    "Multi-Agent Orchestration",
+    "LLM Agent Implementation",
+    "Tool Use and Function Calling"
+  ],
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT8H"
+  },
+  "coursePrerequisites": [
+    "Python programming fundamentals",
+    "Basic understanding of APIs",
+    "Familiarity with LLMs"
+  ],
+  "programmingLanguage": "Python"
+};
+
+export const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "AI Agent Examples",
+  "codeRepository": "https://github.com/CurationsLA/ai-learning",
+  "programmingLanguage": ["Python", "TypeScript"],
+  "runtimePlatform": "Node.js, Python 3.10+",
+  "abstract": "Production-ready AI agent implementations and patterns"
+};
+
+export const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is an AI agent?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An AI agent is an autonomous system that can perceive its environment, make decisions, and take actions to achieve specific goals. Unlike simple chatbots, agents can use tools, maintain state, plan multi-step actions, and operate with varying degrees of autonomy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What programming language do I need for AI agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Python is the most common language for AI agent development due to its rich ecosystem of LLM libraries (LangChain, LlamaIndex, OpenAI SDK). TypeScript/JavaScript is also popular for web-integrated agents. This course primarily uses Python with TypeScript examples where relevant."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between agent types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sequential agents execute tasks in order (A→B→C). Parallel agents handle multiple tasks simultaneously. Loop agents iterate until a condition is met. Custom agents combine these patterns for complex workflows. Each type suits different use cases."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I deploy AI agents to production?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Production deployment involves containerization (Docker), orchestration (Kubernetes), monitoring (observability tools), rate limiting, error handling, and cost management. Our Legendary section covers production deployment patterns in depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the costs of running AI agents?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Costs depend on the LLM provider (OpenAI, Anthropic, etc.), token usage, and frequency. A simple agent might cost $0.01-0.10 per interaction. Complex multi-step agents can cost $0.50-5.00 per task. Optimization techniques can reduce costs by 50-90%."
+      }
+    }
+  ]
+};
+
+<script type="application/ld+json" set:html={JSON.stringify(courseSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(softwareSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+
+**Build intelligent autonomous systems that reason, plan, and execute**
+
+<UpvoteWidget itemId="agents-cookbook" itemType="cookbook" />
+
+Welcome to the AI Agents section — your comprehensive guide to building intelligent systems that can perceive, decide, and act. This isn't about chatbots. This is about autonomous agents that accomplish real work.
+
+<CookbookAsCode 
+  repoPath="src/content/docs/cookbooks/agents"
+  technologies={["Python", "LangChain", "OpenAI", "Anthropic", "Agent Frameworks"]}
+  showCodePreview={true}
+/>
+
+---
+
+## 🎯 Learning Path
+
+<LearningPath 
+  pathId="agents-path"
+  pathTitle="AI Agent Developer Journey"
+  pathDescription="From understanding agent fundamentals to building production-ready autonomous systems"
+  steps={[
+    {
+      id: "step-adk-overview",
+      title: "Agent Development Kits (ADK)",
+      description: "Understand the toolkit fundamentals and frameworks that power modern agent development — LangChain, AutoGPT, CrewAI, and more",
+      link: "/cookbooks/agents/01-adk-overview/",
+      estimatedTime: "40 min",
+      difficulty: "intermediate"
+    },
+    {
+      id: "step-agent-types",
+      title: "Agent Architectures & Types",
+      description: "Master Sequential, Parallel, Loop, and Custom agent patterns — learn when to use each architecture",
+      link: "/cookbooks/agents/02-agent-types/",
+      estimatedTime: "50 min",
+      difficulty: "intermediate",
+      prerequisites: ["ADK fundamentals"]
+    },
+    {
+      id: "step-agent-models",
+      title: "Agent Models & Contracts",
+      description: "Design robust agent APIs and communication protocols — the contracts that enable multi-agent systems",
+      link: "/cookbooks/agents/03-agent-models/",
+      estimatedTime: "45 min",
+      difficulty: "advanced",
+      prerequisites: ["Agent types"]
+    },
+    {
+      id: "step-defining-agents",
+      title: "Defining LLM Agents",
+      description: "Step-by-step implementation guide — turn concepts into working code with tool use, memory, and reasoning",
+      link: "/cookbooks/agents/04-defining-llm-agents/",
+      estimatedTime: "60 min",
+      difficulty: "advanced",
+      prerequisites: ["Agent models"]
+    },
+    {
+      id: "step-tools-ecosystem",
+      title: "Tool Ecosystems & MCP",
+      description: "Connect agents to the real world — APIs, databases, browsers, and the Model Context Protocol",
+      link: "/cookbooks/tools/01-mcp/",
+      estimatedTime: "50 min",
+      difficulty: "advanced",
+      prerequisites: ["Defining agents"]
+    },
+    {
+      id: "step-multi-agent",
+      title: "Multi-Agent Orchestration",
+      description: "Build systems where multiple agents collaborate — delegation, communication, and collective intelligence",
+      link: "/cookbooks/tools/04-agent-engines/",
+      estimatedTime: "55 min",
+      difficulty: "advanced",
+      prerequisites: ["Tool ecosystems"]
+    }
+  ]}
+/>
+
+---
+
+## 🔧 What You'll Build
+
+### 🛠️ Foundation: Agent Development Kits (ADK)
+
+Before building agents, understand the ecosystem:
+
+- **LangChain** — The Swiss Army knife of agent development
+- **LlamaIndex** — Data-centric agent architecture
+- **AutoGPT/BabyAGI** — Autonomous agent pioneers
+- **CrewAI** — Multi-agent role-based systems
+- **Semantic Kernel** — Microsoft's enterprise agent framework
+- **Custom Implementations** — When frameworks aren't enough
+
+→ [Start with ADK Overview](./01-adk-overview/)
+
+---
+
+### 🔄 Agent Types & Architectures
+
+Different problems require different agent architectures:
+
+| Architecture | Pattern | Best For |
+|-------------|---------|----------|
+| **Sequential** | A → B → C | Linear workflows, pipelines |
+| **Parallel** | A + B + C | Independent subtasks, speed |
+| **Loop** | A → B → A... | Iteration, refinement |
+| **Hierarchical** | Manager → Workers | Complex delegation |
+| **Reactive** | Event → Response | Real-time systems |
+| **Hybrid** | Custom composition | Complex workflows |
+
+→ [Master Agent Types](./02-agent-types/)
+
+---
+
+### 📋 Agent Models & Contracts
+
+Production agents need clear interfaces:
+
+```python
+# Example Agent Contract
+class AgentContract:
+    """Define what an agent can do and how to interact with it."""
+    
+    name: str                    # Unique identifier
+    description: str             # What this agent does
+    input_schema: Schema         # Expected input format
+    output_schema: Schema        # Guaranteed output format
+    tools: list[Tool]            # Available capabilities
+    max_iterations: int          # Safety limit
+    timeout_seconds: float       # Maximum execution time
+```
+
+→ [Design Agent Contracts](./03-agent-models/)
+
+---
+
+### 🧬 Defining LLM Agents
+
+The core of agent development — from concept to code:
+
+```python
+# Simplified Agent Definition
+from langchain.agents import Agent, Tool
+
+researcher = Agent(
+    name="Researcher",
+    goal="Find accurate information on any topic",
+    tools=[
+        Tool(name="search", func=web_search),
+        Tool(name="read", func=read_webpage),
+        Tool(name="summarize", func=summarize_text)
+    ],
+    llm=ChatOpenAI(model="gpt-4"),
+    memory=ConversationBufferMemory()
+)
+
+# The agent can now autonomously research any topic
+result = researcher.run("What are the latest advances in AI agents?")
+```
+
+→ [Build Your First Agent](./04-defining-llm-agents/)
+
+---
+
+## 💡 Key Insights
+
+:::tip[The Agent Mindset Shift]
+Agents aren't chatbots with extra steps. They're autonomous systems that plan, execute, observe, and adapt. The key shift is from "prompt engineering" to "goal engineering" — you define objectives, not steps.
+:::
+
+:::note[Start Simple, Scale Carefully]
+The most common mistake is over-engineering. Start with a simple sequential agent. Add complexity only when you've validated the simple version works. Multi-agent systems are powerful but dramatically harder to debug.
+:::
+
+:::caution[Cost Awareness]
+Agents can run up significant LLM costs through iteration loops. Always implement:
+- Maximum iteration limits
+- Timeout boundaries
+- Cost monitoring
+- Graceful degradation
+:::
+
+---
+
+## 🌱 → 🌿 → 🌳 Progressive Learning
+
+Each guide follows our growth taxonomy:
+
+| Level | Symbol | Focus |
+|-------|--------|-------|
+| **Seedling** | 🌱 | Core concepts explained simply |
+| **Sprout** | 🌿 | Practical implementation with examples |
+| **Forest** | 🌳 | Production-ready patterns |
+| **Insight** | 💡 | Critical understanding points |
+| **Quick Win** | ⚡ | Ready-to-use code snippets |
+| **Deep Dive** | 🔬 | Advanced research topics |
+
+---
+
+## ⚡ Quick Wins
+
+Get started immediately with these copy-paste examples:
+
+### Minimal Research Agent
+
+```python
+from openai import OpenAI
+
+client = OpenAI()
+
+def simple_agent(task: str) -> str:
+    """Minimal viable agent using GPT-4."""
+    response = client.chat.completions.create(
+        model="gpt-4",
+        messages=[
+            {"role": "system", "content": """You are a research agent. 
+            For any task:
+            1. Break it into steps
+            2. Think through each step
+            3. Provide a comprehensive answer"""},
+            {"role": "user", "content": task}
+        ]
+    )
+    return response.choices[0].message.content
+
+# Usage
+result = simple_agent("Explain the key differences between LangChain and LlamaIndex")
+```
+
+### Tool-Using Agent (LangChain)
+
+```python
+from langchain.agents import initialize_agent, Tool
+from langchain.llms import OpenAI
+from langchain.tools import DuckDuckGoSearchRun
+
+# Define tools
+search = DuckDuckGoSearchRun()
+tools = [
+    Tool(
+        name="Search",
+        func=search.run,
+        description="Useful for searching the web for current information"
+    )
+]
+
+# Create agent
+agent = initialize_agent(
+    tools,
+    OpenAI(temperature=0),
+    agent="zero-shot-react-description",
+    verbose=True
+)
+
+# Run agent
+agent.run("What is the current price of Bitcoin?")
+```
+
+---
+
+## 🎓 Who This Is For
+
+<div class="audience-grid">
+
+**💻 Developers**
+- Python or TypeScript experience
+- Familiar with APIs and async programming
+- Want to build AI-powered applications
+- Ready for production challenges
+
+**🏗️ Architects**
+- Designing AI systems at scale
+- Multi-agent orchestration needs
+- Enterprise integration requirements
+- Performance and cost optimization
+
+**🔬 Researchers**
+- Exploring agent capabilities
+- Experimenting with architectures
+- Pushing boundaries of what's possible
+- Publishing and sharing findings
+
+**🚀 Builders**
+- Startup founders with AI products
+- SaaS developers adding AI features
+- Automation engineers
+- Anyone shipping AI to production
+
+</div>
+
+---
+
+## 📋 Prerequisites
+
+To get the most from this section:
+
+- ✓ **Python 3.10+** — Primary language for examples
+- ✓ **API Fundamentals** — REST, async/await, error handling
+- ✓ **LLM Basics** — Understanding of prompts and completions
+- ✓ **Git** — Clone and run example repositories
+- ✓ **OpenAI API Key** (or equivalent) — For running examples
+
+**Recommended but not required:**
+- Docker for containerized deployments
+- Basic understanding of vector databases
+- Familiarity with one agent framework
+
+---
+
+## 🚀 Real-World Applications
+
+Agents you'll learn to build:
+
+| Agent Type | Example Use Case | Complexity |
+|------------|------------------|------------|
+| **Research Agent** | Automated market analysis | 🌱 Beginner |
+| **Writing Agent** | Content generation pipeline | 🌱 Beginner |
+| **Code Agent** | Automated PR reviews | 🌿 Intermediate |
+| **Data Agent** | ETL and analysis automation | 🌿 Intermediate |
+| **Customer Service** | Intelligent ticket routing | 🌳 Advanced |
+| **Multi-Agent System** | Full business process automation | 🌳 Advanced |
+
+---
+
+## 🔗 Related Sections
+
+After mastering Agent basics:
+
+- **[Tools & MCP](/cookbooks/tools/)** — Extend agent capabilities
+- **[RAG](/cookbooks/rag/)** — Give agents knowledge bases
+- **[Advanced Prompting](/cookbooks/advanced-prompting/)** — Optimize agent instructions
+- **[Legendary](/cookbooks/legendary/)** — Production deployment at scale
+
+---
+
+## ❓ Frequently Asked Questions
+
+<details>
+<summary><strong>Do I need expensive GPT-4 for agents?</strong></summary>
+
+Not necessarily. Start with GPT-3.5-turbo for development and testing (10x cheaper). Use GPT-4 for production where reasoning quality matters. For cost-sensitive applications, explore open-source models via Ollama or together.ai.
+
+</details>
+
+<details>
+<summary><strong>How do I prevent agents from running forever?</strong></summary>
+
+Implement three safeguards: (1) Maximum iteration count, (2) Timeout limits, (3) Cost caps. Most frameworks support these out of the box. Our guides cover implementation in detail.
+
+</details>
+
+<details>
+<summary><strong>Can agents access the internet safely?</strong></summary>
+
+Yes, with proper sandboxing. Never give agents unrestricted system access. Use tool abstractions that limit scope. Our Tool Ecosystems guide covers safe patterns for web access.
+
+</details>
+
+<details>
+<summary><strong>What's the difference between agents and chains?</strong></summary>
+
+Chains are predetermined sequences (A→B→C). Agents decide their own actions based on goals and observations. Chains are predictable but inflexible. Agents are adaptive but harder to control. Use chains when you know the exact workflow; use agents when you know the goal but not the path.
+
+</details>
+
+---
+
+*Part of the HUB Cookbooks by CURATIONS — A Human × AI Creative Agency*
+
+[← Back to All Cookbooks](../) | [Start with ADK Overview →](./01-adk-overview/)
