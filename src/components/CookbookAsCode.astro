@@ -162,7 +162,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
   .cookbook-as-code {
     background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
     border: 1px solid rgba(99, 102, 241, 0.2);
-    border-radius: 1rem;
+    border-radius: 0;
     padding: 1.5rem;
     margin: 2rem 0;
     position: relative;
@@ -211,7 +211,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     font-size: 0.75rem;
     padding: 0.25rem 0.5rem;
     background: rgba(99, 102, 241, 0.2);
-    border-radius: 0.25rem;
+    border-radius: 0;
     font-weight: 600;
     color: var(--sl-color-text);
   }
@@ -226,7 +226,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
   .code-preview {
     margin: 1rem 0;
     border: 1px solid rgba(99, 102, 241, 0.2);
-    border-radius: 0.5rem;
+    border-radius: 0;
     background: rgba(0, 0, 0, 0.02);
     overflow: hidden;
   }
@@ -241,6 +241,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     user-select: none;
     background: rgba(99, 102, 241, 0.05);
     transition: background 0.2s ease;
+    border-radius: 0;
   }
 
   .preview-toggle:hover {
@@ -272,7 +273,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     margin: 0;
     padding: 1rem;
     background: rgba(0, 0, 0, 0.05);
-    border-radius: 0.25rem;
+    border-radius: 0;
     overflow-x: auto;
   }
 
@@ -294,7 +295,7 @@ const forkUrl = fullGithubUrl ? `${fullGithubUrl.split('/tree/')[0]}/fork` : nul
     padding: 0.625rem 1.25rem;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.5rem;
+    border-radius: 0;
     text-decoration: none;
     color: var(--sl-color-text);
     font-weight: 600;
