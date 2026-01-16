@@ -16,7 +16,7 @@ const { cookbookId, title } = Astro.props;
   <div class="usage-message" id="usageMessage"></div>
 </div>
 
-<script define:vars={{ cookbookId, title }}>
+<script is:inline define:vars={{ cookbookId, title }}>
   // Usage tracking implementation
   const STORAGE_KEY = 'curations_used';
   const API_ENDPOINT = 'https://plausible.io/api/event'; // Optional analytics endpoint

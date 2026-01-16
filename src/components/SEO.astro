@@ -336,16 +336,16 @@ const courseSchema =
 <meta name="content-license" content="CC-BY-4.0" />
 
 <!-- Organization Schema - Core brand identity -->
-<script
+  is:inline
   type="application/ld+json"
   set:html={JSON.stringify(organizationSchema)}
 />
 
 <!-- WebSite Schema with SearchAction -->
-<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+<script is:inline type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
 
 <!-- Educational Organization Schema -->
-<script
+  is:inline
   type="application/ld+json"
   set:html={JSON.stringify(educationalOrgSchema)}
 />
@@ -354,6 +354,7 @@ const courseSchema =
 {
   breadcrumbSchema && (
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify(breadcrumbSchema)}
     />
@@ -364,6 +365,7 @@ const courseSchema =
 {
   articleSchema && (
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify(articleSchema)}
     />
@@ -374,6 +376,7 @@ const courseSchema =
 {
   courseSchema && (
     <script
+      is:inline
       type="application/ld+json"
       set:html={JSON.stringify(courseSchema)}
     />
@@ -382,6 +385,7 @@ const courseSchema =
 
 <!-- WebPage Schema with rich metadata -->
 <script
+  is:inline
   type="application/ld+json"
   set:html={JSON.stringify({
     "@context": "https://schema.org",

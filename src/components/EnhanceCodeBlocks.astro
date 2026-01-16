@@ -86,7 +86,8 @@
               textArea.select();
               
               try {
-                const successful = document.execCommand('copy');
+                // @ts-ignore - document.execCommand('copy') is deprecated but used as fallback
+                const successful = (document as any).execCommand('copy');
                 document.body.removeChild(textArea);
                 if (successful) {
                   resolve();

@@ -42,7 +42,7 @@ const { question, options, correctAnswer, explanation, quizId } = Astro.props;
       const quizId = quiz.getAttribute('data-quiz-id');
       const correctIndex = parseInt(quiz.getAttribute('data-correct') || '0');
       const options = quiz.querySelectorAll('.quiz-option');
-      const feedback = quiz.querySelector('.quiz-feedback') as HTMLElement;
+      quiz.querySelector('.quiz-feedback') as HTMLElement;
       const skipBtn = quiz.querySelector('.skip-quiz');
       
       // Load progress
@@ -70,7 +70,7 @@ const { question, options, correctAnswer, explanation, quizId } = Astro.props;
             showFeedback(quiz, true);
           } else {
             option.classList.add('incorrect');
-            options[correctIndex].classList.add('correct');
+            options[correctIndex]?.classList.add('correct');
             showFeedback(quiz, false);
           }
         });
