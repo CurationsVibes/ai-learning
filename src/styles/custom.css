@@ -596,9 +596,60 @@ button:not(.copy-button):hover {
 }
 
 /* ============================================
+   ZERO CORNER RADIUS - CONSISTENT SQUARE EDGES
+   All UI components use sharp, square borders
+   ============================================ */
+
+/* Global override - all elements default to sharp corners */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+}
+
+/* Cards, buttons, and interactive elements */
+.card,
+button,
+.cac-button,
+.ai-link,
+input,
+textarea,
+select,
+.preview-toggle,
+.code-preview,
+pre,
+code:not(pre code),
+.enhanced-code-block,
+.cookbook-as-code,
+.try-with-ai,
+.breadcrumbs,
+nav a,
+.sidebar nav a,
+.action,
+blockquote,
+.sl-markdown-content > div,
+.learning-path-card,
+.quick-start-card,
+details,
+summary {
+  border-radius: 0 !important;
+}
+
+/* ============================================
    ENHANCED TYPOGRAPHY HIERARCHY
    For educational/cookbook content
    ============================================ */
+
+/* Page Title - Main H1 (direct child of main, not in markdown content) */
+main > h1,
+main h1:first-child {
+  font-size: var(--curations-text-4xl);
+  font-weight: var(--curations-font-black);
+  line-height: var(--curations-leading-tight);
+  letter-spacing: var(--curations-tracking-tight);
+  margin-bottom: var(--curations-space-6);
+  color: #000000 !important;
+}
 
 /* Primary heading with gradient accent */
 .sl-markdown-content h1 {

@@ -1,6 +1,17 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+/**
+ * Capitalize directory names for sidebar display
+ * Transforms: "advanced-prompting" → "Advanced Prompting"
+ */
+function capitalizeSidebarLabel(label) {
+	return label
+		.split('-')
+		.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ');
+}
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://hub.curations.org',
@@ -91,7 +102,64 @@ export default defineConfig({
 				{
 					label: '📚 Cookbooks',
 					collapsed: true,
-					autogenerate: { directory: 'cookbooks' },
+					items: [
+						{
+							label: 'Advanced',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/advanced' },
+						},
+						{
+							label: 'Advanced Prompting',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/advanced-prompting' },
+						},
+						{
+							label: 'Agents',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/agents' },
+						},
+						{
+							label: 'Beginners',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/beginners' },
+						},
+						{
+							label: 'Business',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/business' },
+						},
+						{
+							label: 'Foundations',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/foundations' },
+						},
+						{
+							label: 'Intermediate',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/intermediate' },
+						},
+						{
+							label: 'Legendary',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/legendary' },
+						},
+						{
+							label: 'Personal Use',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/personal-use' },
+						},
+						{
+							label: 'RAG',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/rag' },
+						},
+						{ label: '🧠 The AI × Human Cookbook', link: '/cookbooks/readme/' },
+						{
+							label: 'Tools',
+							collapsed: true,
+							autogenerate: { directory: 'cookbooks/tools' },
+						},
+					],
 				},
 			],
 			customCss: [
