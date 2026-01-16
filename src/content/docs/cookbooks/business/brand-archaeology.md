@@ -2,11 +2,14 @@
 title: 🔍 Brand Archaeology
 ---
 
-import ContributionButtons from '../../../components/ContributionButtons.astro';
-import UsageTracker from '../../../components/UsageTracker.astro';
-import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
-import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
-import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+import ContributionButtons from '../../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+import InteractiveQuiz from '../../../../components/InteractiveQuiz.astro';
+import UnderstandingButton from '../../../../components/UnderstandingButton.astro';
+import LearningPath from '../../../../components/LearningPath.astro';
 
 <GreaterGoodBadge 
   score="high"
@@ -856,10 +859,29 @@ Your brand already exists:
 
 **Master brand archaeology. Build from truth.** ⚛️
 
-<ContributionButtons 
-  pageTitle="Brand Archaeology"
-  pageUrl="https://hub.curations.org/cookbooks/business/brand-archaeology/"
+#### 🎓 Knowledge Check
+
+<InteractiveQuiz
+  quizId="brand-arch-dna"
+  question="In Brand Archaeology, what constitutes the 'DNA' of a brand?"
+  options={[
+    "The current marketing budget",
+    "The foundational values, historical intent, and core differentiators that remain constant",
+    "The list of all temporary social media campaigns",
+    "The names of all current employees"
+  ]}
+  correctAnswer={1}
+  explanation="Brand Archaeology focuses on uncovering the immutable core (DNA) that defines the brand's identity through time."
 />
+
+<UnderstandingButton id="brand-arch-mastery" label="I understand Brand Archaeology" />
+
+<LearningPath
+  currentStep="Brand Archaeology"
+  nextStep="AI Discovery Singularity"
+/>
+
+<ContributionButtons />
 
 ---
 

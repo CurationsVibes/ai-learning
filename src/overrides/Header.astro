@@ -1,0 +1,68 @@
+---
+import type { Props } from '@astrojs/starlight/props';
+import Search from '@astrojs/starlight/components/Search.astro';
+import SiteTitle from '@astrojs/starlight/components/SiteTitle.astro';
+import SocialIcons from '@astrojs/starlight/components/SocialIcons.astro';
+import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
+
+/**
+ * Header override for CURATIONS branding
+ * Integrates Heart/Atom logo and lime-green styling
+ */
+---
+
+<div class="header sl-flex">
+	<div class="title-wrapper sl-flex">
+		<a href="/" class="logo-link">
+			<img src="/favicon.png" alt="CURATIONS Logo" class="brand-logo" />
+		</a>
+		<SiteTitle {...Astro.props} />
+	</div>
+	<div class="sl-flex h-gap">
+		<Search {...Astro.props} />
+		<SocialIcons {...Astro.props} />
+		<ThemeSelect {...Astro.props} />
+	</div>
+</div>
+
+<style>
+	.header {
+		gap: var(--sl-nav-gap);
+		justify-content: space-between;
+		align-items: center;
+		height: 100%;
+	}
+
+	.title-wrapper {
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.logo-link {
+		display: flex;
+		align-items: center;
+		transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+	}
+
+	.logo-link:hover {
+		transform: scale(1.1) rotate(5deg);
+	}
+
+	.brand-logo {
+		width: 32px;
+		height: 32px;
+		object-fit: contain;
+	}
+
+	.h-gap {
+		gap: 1rem;
+		align-items: center;
+	}
+
+	@media (max-width: 50rem) {
+		.brand-logo {
+			width: 24px;
+			height: 24px;
+		}
+	}
+</style>

@@ -263,7 +263,7 @@ researcher = Agent(
         Tool(name="read", func=read_webpage),
         Tool(name="summarize", func=summarize_text)
     ],
-    llm=ChatOpenAI(model="gpt-4"),
+    llm=ChatOpenAI(model="gpt-4o"),
     memory=ConversationBufferMemory()
 )
 
@@ -324,7 +324,7 @@ client = OpenAI()
 def simple_agent(task: str) -> str:
     """Minimal viable agent using GPT-4."""
     response = client.chat.completions.create(
-        model="gpt-4",
+        model="gpt-4o",
         messages=[
             {"role": "system", "content": """You are a research agent. 
             For any task:
@@ -451,7 +451,7 @@ After mastering Agent basics:
 <details>
 <summary><strong>Do I need expensive GPT-4 for agents?</strong></summary>
 
-Not necessarily. Start with GPT-3.5-turbo for development and testing (10x cheaper). Use GPT-4 for production where reasoning quality matters. For cost-sensitive applications, explore open-source models via Ollama or together.ai.
+Not necessarily. Start with GPT-4o-mini or Claude 3.5 Haiku for development and testing (extremely cost-effective). Use GPT-4o, Claude 3.5 Sonnet, or Gemini 2.0 Pro for production where reasoning quality and reliability matter. For specific workflows, explore open-source models via Ollama or Together.ai.
 
 </details>
 

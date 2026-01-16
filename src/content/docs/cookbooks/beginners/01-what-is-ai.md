@@ -6,6 +6,10 @@ description: Understanding artificial intelligence - from history to modern day
 import TryWithAI from '../../../../components/TryWithAI.astro';
 import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
 import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
+import InteractiveQuiz from '../../../../components/InteractiveQuiz.astro';
+import UnderstandingButton from '../../../../components/UnderstandingButton.astro';
+import LearningPath from '../../../../components/LearningPath.astro';
+import UsageTracker from '../../../../components/UsageTracker.astro';
 
 <GreaterGoodBadge 
   score="high"
@@ -227,6 +231,23 @@ People were stunned by the quality, coherence, and creativity!
 5. **Experimentation is key** - The more you use it, the better you get
 6. **Privacy first** - Don't share sensitive or private information
 
+#### 🎓 Knowledge Check
+
+<InteractiveQuiz
+  quizId="ai-basics-def"
+  question="Which of the following is the most accurate simple definition of Artificial Intelligence?"
+  options={[
+    "A machine that is alive and has feelings",
+    "Technology that enables computers to perform tasks typically requiring human intelligence",
+    "A computer that never makes mistakes",
+    "A website that shows you news"
+  ]}
+  correctAnswer={1}
+  explanation="AI is defined by its ability to emulate cognitive tasks like reasoning, learning, and pattern recognition, but it is not sentient."
+/>
+
+<UnderstandingButton id="ai-foundations" label="I understand the core of AI" />
+
 ## ⚡ Quick Win: Your First AI Interaction
 
 Try asking your AI assistant:
@@ -243,6 +264,11 @@ Try asking your AI assistant:
 Now that you understand what AI is and its history, you're ready to start using it!
 
 Continue to [Your First AI Conversation](./02-first-conversation/) to learn how to interact effectively with AI assistants.
+
+<LearningPath
+  currentStep="What is AI?"
+  nextStep="First Conversation"
+/>
 
 ---
 

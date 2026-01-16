@@ -8,9 +8,10 @@
      Mapped from CURATIONS Design System
      ============================================ */
 
-  /* Brand Colors - Using CURATIONS Purple System */
-  --sl-color-accent-low: var(--curations-purple-100);
-  --sl-color-accent: var(--curations-accent-primary);
+  /* Brand Colors - Using CURATIONS Lime/Purple System */
+  --sl-color-accent-low: #f7fee7;
+  /* Lime-50 equivalent */
+  --sl-color-accent: var(--curations-accent-lime-bold);
   --sl-color-accent-high: var(--curations-purple-700);
   --sl-color-white: #ffffff;
   --sl-color-gray-1: var(--curations-neutral-50);
@@ -36,10 +37,9 @@
 
   /* HUB Brand System - Aliases to CURATIONS tokens */
   --hub-primary: #1a1a1a;
-  /* Near-black */
-  --hub-secondary: var(--curations-accent-primary);
-  --hub-gradient: var(--curations-gradient-primary);
-  --hub-accent: var(--curations-accent-warm);
+  --hub-secondary: var(--curations-accent-lime-bold);
+  --hub-gradient: var(--curations-gradient-lime);
+  --hub-accent: var(--curations-accent-lime);
   --hub-text: #1a1a1a;
   /* Near-black */
   --hub-text-muted: #404040;
@@ -94,11 +94,12 @@ p {
 
 /* All links should be visible */
 a {
-  color: var(--curations-purple-700);
+  color: var(--curations-accent-lime-bold);
 }
 
 a:hover {
-  color: var(--curations-purple-900);
+  color: var(--curations-neutral-900);
+  background: var(--curations-accent-lime);
 }
 
 /* Ensure spans and other inline elements inherit */
@@ -139,6 +140,7 @@ b {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(101, 163, 13, 0.1));
 }
 
 /* Subtitle - BY CURATIONS */
@@ -179,6 +181,7 @@ b {
   background-clip: text;
   line-height: 1.2;
   letter-spacing: -0.02em;
+  text-shadow: 0 4px 12px rgba(101, 163, 13, 0.1);
 }
 
 .hero .tagline {
@@ -202,13 +205,22 @@ html {
 }
 
 /* Enhanced link hover states */
-a:not(.action) {
-  transition: all 0.2s ease;
-  position: relative;
-}
-
 a:not(.action):hover {
   color: var(--hub-secondary);
+}
+
+/* State Choreography: Animated Underline */
+a:not(.action, .logo-link) {
+  text-decoration: none;
+  background-image: linear-gradient(var(--hub-secondary), var(--hub-secondary));
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+a:not(.action, .logo-link):hover {
+  background-size: 100% 2px;
 }
 
 /* Content container improvements */
@@ -256,17 +268,44 @@ a:not(.action):hover {
   margin: var(--spacing-sm) 0;
 }
 
-/* Glassmorphism cards */
+/* Glassmorphism cards with Spatial Depth */
 .card,
-.sl-markdown-content>div {
+.sl-markdown-content>div:not([class]) {
   backdrop-filter: var(--glass-blur);
-  border-radius: 0.75rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--curations-glass-bg);
+  border: 1px solid rgba(101, 163, 13, 0.1);
+  padding: var(--spacing-lg);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: var(--z-layer-content);
+}
+
+/* Museum Shimmer Overlay */
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent,
+      rgba(190, 242, 100, 0.05),
+      transparent);
+  transform: skewX(-25deg);
+  transition: 0.7s;
+}
+
+.card:hover::after {
+  left: 150%;
 }
 
 .card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.15);
+  transform: translateY(-4px);
+  border-color: var(--curations-accent-lime);
+  box-shadow: 0 12px 40px rgba(101, 163, 13, 0.15);
+  z-index: var(--z-layer-interactive);
 }
 
 /* Code block enhancements */
@@ -364,6 +403,7 @@ pre:hover .copy-button {
   background: var(--hub-gradient);
   color: white;
   font-weight: 600;
+  box-shadow: 0 4px 12px rgba(101, 163, 13, 0.2);
 }
 
 /* Starlight sidebar text color overrides - SHARP BLACK */
@@ -627,7 +667,7 @@ nav a,
 .sidebar nav a,
 .action,
 blockquote,
-.sl-markdown-content > div,
+.sl-markdown-content>div,
 .learning-path-card,
 .quick-start-card,
 details,
@@ -641,7 +681,7 @@ summary {
    ============================================ */
 
 /* Page Title - Main H1 (direct child of main, not in markdown content) */
-main > h1,
+main>h1,
 main h1:first-child {
   font-size: var(--curations-text-4xl);
   font-weight: var(--curations-font-black);
@@ -661,27 +701,36 @@ main h1:first-child {
   color: #000000;
 }
 
-/* Section headings with purple gradient */
+/* Section headings with lime-green accent */
 .sl-markdown-content h2 {
   font-size: var(--curations-text-2xl);
-  font-weight: var(--curations-font-bold);
+  font-weight: var(--curations-font-black);
   line-height: var(--curations-leading-tight);
-  letter-spacing: var(--curations-tracking-tight);
-  margin-top: var(--curations-space-12);
-  margin-bottom: var(--curations-space-6);
-  padding-bottom: var(--curations-space-3);
-  border-bottom: 2px solid var(--curations-purple-200);
+  letter-spacing: var(--curations-tracking-tighter);
+  margin-top: var(--curations-space-16);
+  margin-bottom: var(--curations-space-8);
+  padding-bottom: var(--curations-space-4);
+  border-bottom: 2px solid var(--curations-accent-lime);
   color: #000000;
 }
 
 /* Subsection headings */
 .sl-markdown-content h3 {
   font-size: var(--curations-text-xl);
-  font-weight: var(--curations-font-semibold);
+  font-weight: var(--curations-font-bold);
   line-height: var(--curations-leading-snug);
-  margin-top: var(--curations-space-8);
-  margin-bottom: var(--curations-space-4);
+  margin-top: var(--curations-space-10);
+  margin-bottom: var(--curations-space-5);
   color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sl-markdown-content h3::before {
+  content: "→";
+  color: var(--curations-accent-lime-bold);
+  font-weight: 900;
 }
 
 /* Minor headings */
@@ -1008,4 +1057,47 @@ footer,
     color: var(--curations-purple-200);
     border-color: var(--curations-purple-800);
   }
+}
+/* ============================================
+   MUSEUM-GRADE CRAFT: SCROLL ANIMATIONS
+   CSS-Only Viewport Reveal System
+   ============================================ */
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Scroll-Driven Application */
+.sl-markdown-content > h2,
+.sl-markdown-content > h3,
+.card,
+.interactive-quiz,
+.understanding-check {
+  view-timeline-name: --item-reveal;
+  view-timeline-axis: block;
+  animation-timeline: --item-reveal;
+  animation-name: reveal-up;
+  animation-range: entry 10% cover 30%;
+  animation-fill-mode: both;
+}
+
+/* Sidebar Refinement - Visual Depth */
+.sidebar nav a[aria-current="page"] {
+  border-right: 4px solid var(--curations-accent-lime-bold);
+  box-shadow: inset 4px 0 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar nav a:not([aria-current="page"]):hover {
+  background: var(--curations-accent-lime);
+  color: var(--curations-accent-lime-bold);
+  border-right: 4px solid rgba(101, 163, 13, 0.3);
 }

@@ -291,7 +291,7 @@ class IntelligentRouter:
     def __init__(self):
         self.models = {
             "creative": "claude-3-opus",
-            "analytical": "gpt-4",
+            "analytical": "gpt-4o",
             "code": "llama-3-70b",
             "vision": "gemini-pro-vision",
             "fast": "mistral-7b"

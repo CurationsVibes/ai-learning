@@ -41,6 +41,8 @@
   --curations-accent-warm: #f59e0b;
   --curations-accent-success: #10b981;
   --curations-accent-info: #06b6d4;
+  --curations-accent-lime: #bef264;
+  --curations-accent-lime-bold: #65a30d;
   
   /* Neutral Palette */
   --curations-neutral-50: #fafafa;
@@ -78,6 +80,9 @@
   
   /* Text Gradient (for headings) */
   --curations-gradient-text: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  
+  /* Lime-Green Brand Gradient */
+  --curations-gradient-lime: linear-gradient(135deg, #bef264 0%, #65a30d 100%);
   
   /* ============================================
      TYPOGRAPHY

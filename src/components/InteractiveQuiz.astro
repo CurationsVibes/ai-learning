@@ -1,0 +1,231 @@
+---
+interface Props {
+  question: string;
+  options: string[];
+  correctAnswer: number;
+  explanation?: string;
+  quizId: string;
+}
+
+const { question, options, correctAnswer, explanation, quizId } = Astro.props;
+---
+
+<div class="interactive-quiz" data-quiz-id={quizId} data-correct={correctAnswer}>
+  <div class="quiz-header">
+    <span class="quiz-badge">🎓 KNOWLEDGE CHECK</span>
+    <button class="skip-quiz" data-action="skip">Skip Quiz</button>
+  </div>
+  
+  <h4 class="quiz-question">{question}</h4>
+  
+  <div class="quiz-options">
+    {options.map((option, index) => (
+      <button class="quiz-option" data-index={index}>
+        <span class="option-marker">{String.fromCharCode(65 + index)}</span>
+        <span class="option-text">{option}</span>
+      </button>
+    ))}
+  </div>
+  
+  <div class="quiz-feedback" style="display: none;">
+    <div class="feedback-icon"></div>
+    <div class="feedback-content">
+      <p class="feedback-message"></p>
+      {explanation && <p class="feedback-explanation">{explanation}</p>}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.interactive-quiz').forEach((quiz) => {
+      const quizId = quiz.getAttribute('data-quiz-id');
+      const correctIndex = parseInt(quiz.getAttribute('data-correct') || '0');
+      const options = quiz.querySelectorAll('.quiz-option');
+      const feedback = quiz.querySelector('.quiz-feedback') as HTMLElement;
+      const skipBtn = quiz.querySelector('.skip-quiz');
+      
+      // Load progress
+      const saved = localStorage.getItem(`quiz-${quizId}`);
+      if (saved) {
+        quiz.classList.add('completed');
+        if (saved === 'skipped') {
+          quiz.classList.add('skipped');
+        } else {
+          const selectedIndex = parseInt(saved);
+          const selectedOption = options[selectedIndex] as HTMLElement;
+          selectedOption.classList.add(selectedIndex === correctIndex ? 'correct' : 'incorrect');
+        }
+      }
+
+      options.forEach((option, index) => {
+        option.addEventListener('click', () => {
+          if (quiz.classList.contains('completed')) return;
+          
+          quiz.classList.add('completed');
+          localStorage.setItem(`quiz-${quizId}`, index.toString());
+          
+          if (index === correctIndex) {
+            option.classList.add('correct');
+            showFeedback(quiz, true);
+          } else {
+            option.classList.add('incorrect');
+            options[correctIndex].classList.add('correct');
+            showFeedback(quiz, false);
+          }
+        });
+      });
+
+      skipBtn?.addEventListener('click', () => {
+        quiz.classList.add('completed', 'skipped');
+        localStorage.setItem(`quiz-${quizId}`, 'skipped');
+      });
+    });
+
+    function showFeedback(quiz: Element, isCorrect: boolean) {
+      const feedback = quiz.querySelector('.quiz-feedback') as HTMLElement;
+      const message = quiz.querySelector('.feedback-message') as HTMLElement;
+      if (!feedback || !message) return;
+      
+      feedback.style.display = 'flex';
+      feedback.className = `quiz-feedback ${isCorrect ? 'positive' : 'negative'}`;
+      message.textContent = isCorrect ? '✨ Correct! Excellent reasoning.' : '⚡ Not quite. See the explanation below.';
+    }
+  });
+</script>
+
+<style>
+  .interactive-quiz {
+    background: var(--sl-color-bg-nav);
+    border: 1px solid rgba(101, 163, 13, 0.1);
+    padding: 2.5rem;
+    margin: 3.5rem 0;
+    border-radius: 0;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: var(--sl-shadow-sm);
+  }
+
+  .interactive-quiz:hover {
+    border-color: var(--curations-accent-lime);
+    box-shadow: 0 12px 40px rgba(101, 163, 13, 0.08);
+  }
+
+  .interactive-quiz.completed.skipped {
+    opacity: 0.7;
+    filter: grayscale(0.5);
+  }
+
+  .quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .quiz-badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.75rem;
+    background: var(--curations-accent-lime);
+    color: var(--curations-accent-lime-bold);
+    border-radius: 0;
+  }
+
+  .skip-quiz {
+    font-size: 0.75rem;
+    background: none;
+    border: none;
+    color: var(--sl-color-text-muted);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .quiz-question {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.4;
+  }
+
+  .quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .quiz-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.2s ease;
+  }
+
+  .quiz-option:hover:not(.completed *) {
+    border-color: var(--curations-accent-lime-bold);
+    background: #f7fee7; /* Lime-50 */
+    transform: translateX(8px);
+  }
+
+  .quiz-option.correct {
+    background: rgba(101, 163, 13, 0.1);
+    border-color: var(--curations-accent-lime-bold);
+    color: var(--curations-accent-lime-bold);
+  }
+
+  .quiz-option.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+    color: #ef4444;
+  }
+
+  .option-marker {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sl-color-hairline);
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .quiz-feedback {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    animation: slideIn 0.3s ease;
+  }
+
+  .quiz-feedback.positive {
+    background: rgba(16, 185, 129, 0.05);
+    border-left: 4px solid #10b981;
+  }
+
+  .quiz-feedback.negative {
+    background: rgba(239, 68, 68, 0.05);
+    border-left: 4px solid #ef4444;
+  }
+
+  .feedback-message {
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+
+  .feedback-explanation {
+    font-size: 0.9rem;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  @keyframes slideIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>

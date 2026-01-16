@@ -2,11 +2,11 @@
 title: "🧠 Memory Management: Building Context-Aware Agents"
 ---
 
-import ContributionButtons from '../../../components/ContributionButtons.astro';
-import UsageTracker from '../../../components/UsageTracker.astro';
-import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
-import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
-import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+import ContributionButtons from '../../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
 
 <GreaterGoodBadge 
   score="high"

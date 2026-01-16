@@ -70,7 +70,7 @@ class Config:
         return cls(
             environment=env,
             llm_api_key=os.environ["LLM_API_KEY"],
-            llm_model=os.getenv("LLM_MODEL", "gpt-4"),
+            llm_model=os.getenv("LLM_MODEL", "gpt-4o"),
             max_retries=int(os.getenv("MAX_RETRIES", "3")),
             timeout_seconds=int(os.getenv("TIMEOUT_SECONDS", "30")),
             cache_enabled=os.getenv("CACHE_ENABLED", "true").lower() == "true",
@@ -586,9 +586,10 @@ class CostTracker:
     """Track LLM usage costs"""
     
     PRICING = {
-        "gpt-4": {"input": 0.03, "output": 0.06},
-        "gpt-3.5-turbo": {"input": 0.001, "output": 0.002},
-        "claude-3-opus": {"input": 0.015, "output": 0.075},
+        "gpt-4o": {"input": 0.0025, "output": 0.01},
+        "gpt-4o-mini": {"input": 0.00015, "output": 0.0006},
+        "claude-3-5-sonnet": {"input": 0.003, "output": 0.015},
+        "gemini-2.0-flash": {"input": 0.0001, "output": 0.0004},
     }
     
     def __init__(self):
@@ -614,8 +615,8 @@ class CostTracker:
     def get_cost(self, user_id: str = "default") -> float:
         """Calculate cost for user"""
         usage = self.usage[user_id]
-        model = usage.get("model", "gpt-4")
-        prices = self.PRICING.get(model, self.PRICING["gpt-4"])
+        model = usage.get("model", "gpt-4o")
+        prices = self.PRICING.get(model, self.PRICING["gpt-4o"])
         
         input_cost = (usage["input_tokens"] / 1000) * prices["input"]
         output_cost = (usage["output_tokens"] / 1000) * prices["output"]

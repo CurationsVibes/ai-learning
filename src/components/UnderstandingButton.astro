@@ -1,0 +1,95 @@
+---
+interface Props {
+  id: string;
+  label?: string;
+}
+
+const { id, label = "I understand this concept" } = Astro.props;
+---
+
+<div class="understanding-check" data-id={id}>
+  <button class="understand-btn">
+    <span class="btn-icon">👁️</span>
+    <span class="btn-text">{label}</span>
+    <span class="btn-check" style="display: none;">✓</span>
+  </button>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.understanding-check').forEach((container) => {
+      const id = container.getAttribute('data-id');
+      const btn = container.querySelector('.understand-btn') as HTMLButtonElement;
+      const check = container.querySelector('.btn-check') as HTMLElement;
+      const text = container.querySelector('.btn-text') as HTMLElement;
+
+      const saved = localStorage.getItem(`understand-${id}`);
+      if (saved) {
+        btn.classList.add('confirmed');
+        check.style.display = 'inline';
+        text.textContent = 'Concept verified';
+      }
+
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('confirmed')) return;
+        
+        btn.classList.add('confirmed');
+        check.style.display = 'inline';
+        text.textContent = 'Concept verified';
+        localStorage.setItem(`understand-${id}`, 'true');
+        
+        // Visual feedback
+        btn.classList.add('pulse');
+        setTimeout(() => btn.classList.remove('pulse'), 300);
+      });
+    });
+  });
+</script>
+
+<style>
+  .understanding-check {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .understand-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 3rem;
+    background: var(--sl-color-bg);
+    border: 1px solid var(--curations-accent-lime-bold);
+    color: var(--curations-accent-lime-bold);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8125rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .understand-btn:hover:not(.confirmed) {
+    background: var(--curations-accent-lime);
+    color: var(--curations-accent-lime-bold);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(101, 163, 13, 0.15);
+  }
+
+  .understand-btn.confirmed {
+    border-color: var(--curations-accent-lime);
+    color: var(--curations-accent-lime-bold);
+    background: #f7fee7;
+    cursor: default;
+  }
+
+  .btn-icon {
+    font-size: 1.25rem;
+  }
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+</style>

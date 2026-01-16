@@ -429,11 +429,11 @@ test_id = ab_test.create_ab_test(
     agent_id="agent_123",
     variant_a={
         'description': 'GPT-4 with temperature 0.7',
-        'config': {'model': 'gpt-4', 'temperature': 0.7}
+        'config': {'model': 'gpt-4o', 'temperature': 0.7}
     },
     variant_b={
         'description': 'GPT-4 with temperature 0.3',
-        'config': {'model': 'gpt-4', 'temperature': 0.3}
+        'config': {'model': 'gpt-4o', 'temperature': 0.3}
     },
     duration='7d'
 )

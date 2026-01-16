@@ -2,11 +2,14 @@
 title: "🔍 RAG Fundamentals: Retrieval-Augmented Generation"
 ---
 
-import ContributionButtons from '../../../components/ContributionButtons.astro';
-import UsageTracker from '../../../components/UsageTracker.astro';
-import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
-import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
-import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+import ContributionButtons from '../../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+import InteractiveQuiz from '../../../../components/InteractiveQuiz.astro';
+import UnderstandingButton from '../../../../components/UnderstandingButton.astro';
+import LearningPath from '../../../../components/LearningPath.astro';
 
 <GreaterGoodBadge 
   score="high"
@@ -416,11 +419,19 @@ class HybridRAG:
 
 ## 🎯 Key Takeaways
 
-- **RAG grounds LLM responses** in factual, retrieved data
-- **Three stages**: Indexing, Retrieval, Generation
-- **Vector embeddings** enable semantic similarity search
-- **Chunking strategy** affects retrieval quality
 - **Context window** limits how much you can retrieve
+
+#### 🎓 Knowledge Check
+
+<InteractiveQuiz
+  quizId="rag-indexing"
+  question="In the RAG pipeline, which stage is responsible for converting documents into vector embeddings and storing them?"
+  options={["Retrieval", "Generation", "Indexing", "Augmentation"]}
+  correctAnswer={2}
+  explanation="Indexing is the foundational stage where documents are chunked and embedded into a vector space for later search."
+/>
+
+<UnderstandingButton id="rag-basics" label="I understand RAG foundations" />
 
 ## Common Pitfalls
 
@@ -456,6 +467,11 @@ filtered = [r for r in results if r['score'] > 0.7]
 ## Next Steps
 
 Continue to [Agentic RAG](./02-agentic-rag/) to learn how to make your RAG system more intelligent and autonomous.
+
+<LearningPath
+  currentStep="RAG Fundamentals"
+  nextStep="Agentic RAG"
+/>
 
 ---
 

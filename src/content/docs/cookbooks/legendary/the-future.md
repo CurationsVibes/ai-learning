@@ -5,6 +5,10 @@ description: Vision for the future of Human × AI collaboration and what comes n
 
 import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
 import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
+import InteractiveQuiz from '../../../../components/InteractiveQuiz.astro';
+import UnderstandingButton from '../../../../components/UnderstandingButton.astro';
+import LearningPath from '../../../../components/LearningPath.astro';
+import ContributionButtons from '../../../../components/ContributionButtons.astro';
 
 <GreaterGoodBadge 
   score="high"
@@ -261,6 +265,23 @@ The future of AI is not predetermined. It's being shaped right now by the choice
 ✅ **Always collaborative** - Community-driven  
 ✅ **Always learning** - Adapting and growing  
 
+#### 🎓 Knowledge Check
+
+<InteractiveQuiz
+  quizId="future-vision"
+  question="What is the primary core principle of HUB's vision for the future of AI?"
+  options={[
+    "Replacing human employees with more efficient AI agents",
+    "Maintaining AI as an augmentation tool that amplifies human potential",
+    "Developing AI that operates independently of human oversight",
+    "Focusing exclusively on corporate AI profitability"
+  ]}
+  correctAnswer={1}
+  explanation="The Human × AI Hub is founded on the principle that technology should enhance, not replace, human agency and creativity."
+/>
+
+<UnderstandingButton id="future-principles" label="I embrace the Human × AI future" />
+
 ## 🌱 How You Can Shape the Future
 
 ### As an Individual
@@ -343,3 +364,10 @@ The future we're building needs diverse voices, perspectives, and contributions.
 *Part of the HUB Cookbooks by CURATIONS*
 
 [← Back to Legendary Topics](./) | [Explore All Cookbooks](../)
+
+<ContributionButtons />
+
+<LearningPath 
+  currentPath="legendary"
+  currentStep="the-future" 
+/>

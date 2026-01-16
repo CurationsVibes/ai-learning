@@ -2,6 +2,20 @@
 title: "🎓 Defining LLM Agents: A Step-by-Step Guide"
 ---
 
+import ContributionButtons from '../../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+import InteractiveQuiz from '../../../../components/InteractiveQuiz.astro';
+import UnderstandingButton from '../../../../components/UnderstandingButton.astro';
+import LearningPath from '../../../../components/LearningPath.astro';
+
+<AuthorshipBadge author="CURATIONS" date="2025-01-16" />
+<GreaterGoodBadge />
+
+<UsageTracker cookbookId="defining-agents" title="Defining LLM Agents" />
+
 ## 🌳 Flourishing Concept
 
 **Label**: Bringing It All Together
@@ -45,7 +59,7 @@ from adk import Agent
 agent = Agent(
     name="CustomerSupportAgent",           # Required: Clear, descriptive name
     description="Handles customer inquiries", # Recommended: High-level purpose
-    model="gpt-4"                          # Required: LLM to use
+    model="gpt-4o"                          # Required: LLM to use
 )
 ```
 
@@ -57,28 +71,28 @@ agent = Agent(
 # Simple, fast responses
 quick_agent = Agent(
     name="GreetingBot",
-    model="gpt-3.5-turbo",  # Fast and cost-effective
+    model="gpt-4o-mini",  # Fast and cost-effective
     temperature=0.7
 )
 
 # Complex reasoning required
 expert_agent = Agent(
     name="TechnicalAdvisor",
-    model="gpt-4-turbo",     # More capable reasoning
+    model="gpt-4o",     # More capable reasoning
     temperature=0.3          # Lower temperature for consistency
 )
 
 # Code-specific tasks
 code_agent = Agent(
     name="CodeReviewer",
-    model="gpt-4",
+    model="gpt-4o",
     temperature=0.2          # Very deterministic for code
 )
 
 # Creative tasks
 creative_agent = Agent(
     name="ContentWriter",
-    model="claude-3-opus",
+    model="claude-3-5-sonnet-20241022",
     temperature=0.9          # Higher temperature for creativity
 )
 ```
@@ -93,7 +107,7 @@ bug_triage_agent = Agent(
     classifies severity, identifies affected components,
     and assigns to appropriate team members.
     """,
-    model="gpt-4",
+    model="gpt-4o",
     temperature=0.2,  # Consistent, deterministic behavior needed
     max_tokens=2000,
     timeout=30  # seconds
@@ -241,7 +255,7 @@ research_agent = Agent(
 ```python
 bug_reporter_agent = Agent(
     name="BugReportAssistant",
-    model="gpt-4",
+    model="gpt-4o",
     instructions="""
     ## Your Role
     
@@ -458,7 +472,7 @@ def report_bug(
 # Equip agent with tools
 bug_agent = Agent(
     name="BugReportAssistant",
-    model="gpt-4",
+    model="gpt-4o",
     instructions="...",  # From previous example
     tools=[
         get_user_details,
@@ -553,7 +567,7 @@ def assign_to_team(bug_id: str, component: str) -> Dict:
 bug_triage_agent = Agent(
     name="BugTriageAssistant",
     description="Intelligent assistant for comprehensive bug reporting and triage",
-    model="gpt-4",
+    model="gpt-4o",
     temperature=0.2,
     
     instructions="""
@@ -760,12 +774,19 @@ coordinator = Agent(
 
 ## 🎯 Key Takeaways
 
-- **Step 1**: Define role with name, description, and model
-- **Step 2**: Write comprehensive instructions covering task, persona, constraints, and tool usage
-- **Step 3**: Equip with well-designed tools that have clear contracts
-- **Be specific**: Vague instructions lead to unpredictable behavior
-- **Provide examples**: Show the agent what good looks like
 - **Test iteratively**: Refine instructions based on actual performance
+
+#### 🎓 Knowledge Check
+
+<InteractiveQuiz
+  quizId="agent-temp"
+  question="For an agent tasked with 'Code Review', what is the recommended temperature setting?"
+  options={["0.2 (High Determinism)", "0.8 (High Creativity)", "1.0 (Maximum Variety)", "0.5 (Balanced)"]}
+  correctAnswer={0}
+  explanation="Code tasks require high precision and determinism, so a lower temperature (e.g. 0.2) is preferred."
+/>
+
+<UnderstandingButton id="agent-definitions" label="I can define production agents" />
 
 ## Production Checklist
 
@@ -787,9 +808,14 @@ Before deploying your agent:
 ## Next Steps
 
 Now that you understand how to define agents, explore:
-- [RAG Fundamentals](../rag/01-rag-fundamentals/) for knowledge grounding
-- [Tool Ecosystems](../tools/03-tool-ecosystems/) for advanced integrations
 - [Multi-Agent Systems](../advanced/01-multi-agent-systems/) for orchestration
+
+<LearningPath
+  currentStep="Defining Agents"
+  nextStep="Multi-Agent Systems"
+/>
+
+<ContributionButtons />
 
 ---
 

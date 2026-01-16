@@ -2,11 +2,14 @@
 title: 🔮 Meta-Prompting
 ---
 
-import ContributionButtons from '../../../components/ContributionButtons.astro';
-import UsageTracker from '../../../components/UsageTracker.astro';
-import AuthorshipBadge from '../../../components/AuthorshipBadge.astro';
-import GreaterGoodBadge from '../../../components/GreaterGoodBadge.astro';
-import CookbookAsCode from '../../../components/CookbookAsCode.astro';
+import ContributionButtons from '../../../../components/ContributionButtons.astro';
+import UsageTracker from '../../../../components/UsageTracker.astro';
+import AuthorshipBadge from '../../../../components/AuthorshipBadge.astro';
+import GreaterGoodBadge from '../../../../components/GreaterGoodBadge.astro';
+import CookbookAsCode from '../../../../components/CookbookAsCode.astro';
+import InteractiveQuiz from '../../../../components/InteractiveQuiz.astro';
+import UnderstandingButton from '../../../../components/UnderstandingButton.astro';
+import LearningPath from '../../../../components/LearningPath.astro';
 
 <GreaterGoodBadge 
   score="medium"
@@ -602,6 +605,23 @@ Fix and explain root cause.
 - Result: 10x better output
 - **ROI: Massive**
 
+#### 🎓 Knowledge Check
+
+<InteractiveQuiz
+  quizId="meta-prompt-logic"
+  question="Why is Meta-Prompting often more effective than traditional prompting?"
+  options={[
+    "It uses more 🤖 emojis which machines prefer",
+    "AI is better than most humans at identifying the specific context and parameters it needs to excel",
+    "It bypasses the model's safety filters",
+    "It only works with GPT-4o but not other models"
+  ]}
+  correctAnswer={1}
+  explanation="Meta-prompting leverages the model's own understanding of its operating parameters to optimize the instructional context."
+/>
+
+<UnderstandingButton id="meta-prompting-mastery" label="I master the art of meta-prompting" />
+
 ---
 
 ## The Meta-Meta-Prompt
@@ -690,3 +710,8 @@ AI can iterate rapidly. Manual iteration is slow.
 ---
 
 [← Back to Advanced Prompting](../advanced-prompting/)
+
+<LearningPath
+  currentStep="Meta-Prompting"
+  nextStep="Quantum Prompting"
+/>
