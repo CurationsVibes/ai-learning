@@ -3,7 +3,7 @@
 [![Deploy Status](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/CurationsLA/ai-learning/actions/workflows/deploy-pages.yml)
 [![Site](https://img.shields.io/badge/site-live-success)](https://hub.curations.org/)
 
-**A Human × AI Creative Agency built on greater good creativity**
+**A Human × AI Creative Agency built on greater good creativity.**
 
 ---
 
