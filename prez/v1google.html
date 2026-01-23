@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Curator Program - Google for Education Partnership</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #202124;
+            background: #ffffff;
+        }
+        
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 60px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            page-break-after: always;
+            border-bottom: 8px solid #a8d5e2;
+        }
+        
+        .page:last-child {
+            page-break-after: auto;
+            border-bottom: none;
+        }
+        
+        /* Title Page */
+        .title-page {
+            text-align: center;
+            justify-content: center;
+            background: #f8fafb;
+            border-bottom: 8px solid #6fa8dc;
+        }
+        
+        .title-page h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+        
+        .title-page .subtitle {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 48px;
+            color: #3c4043;
+        }
+        
+        .title-page .meta {
+            font-size: 18px;
+            font-weight: 400;
+            color: #5f6368;
+        }
+        
+        /* Section Dividers */
+        .section-divider {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #a8d5e2, #6fa8dc);
+            margin: 32px 0;
+        }
+        
+        /* Section Headers */
+        h2 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: #6fa8dc;
+            padding-bottom: 16px;
+            border-bottom: 3px solid #a8d5e2;
+        }
+        
+        h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #5f6368;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 16px;
+            color: #3c4043;
+        }
+        
+        /* Feature Boxes */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin: 40px 0;
+        }
+        
+        .feature {
+            background: #f0f7fa;
+            padding: 32px;
+            border-radius: 12px;
+            border-left: 6px solid #6fa8dc;
+        }
+        
+        .feature h4 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #202124;
+        }
+        
+        .feature p {
+            font-size: 16px;
+            color: #5f6368;
+            margin: 0;
+        }
+        
+        /* Lists */
+        .bullet-list {
+            list-style: none;
+            margin: 24px 0;
+            padding: 0;
+        }
+        
+        .bullet-list li {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+            color: #3c4043;
+        }
+        
+        .bullet-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6fa8dc;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        
+        /* Check Lists */
+        .check-list {
+            list-style: none;
+            margin: 24px 0;
+            padding: 0;
+        }
+        
+        .check-list li {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-left: 40px;
+            position: relative;
+            color: #3c4043;
+        }
+        
+        .check-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #76c7c0;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        
+        /* Phases */
+        .phase {
+            background: #f0f7fa;
+            padding: 32px;
+            margin: 24px 0;
+            border-radius: 12px;
+            border-left: 6px solid #76c7c0;
+        }
+        
+        .phase h4 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #202124;
+        }
+        
+        .phase .status {
+            display: inline-block;
+            background: #76c7c0;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        /* Two Column Layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            margin: 40px 0;
+        }
+        
+        .col h4 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #202124;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background: #6fa8dc;
+            color: white;
+            padding: 48px;
+            border-radius: 12px;
+            margin-top: 48px;
+            text-align: center;
+        }
+        
+        .contact h3 {
+            color: white;
+            margin-top: 0;
+        }
+        
+        .contact p {
+            color: white;
+            font-size: 20px;
+            margin: 8px 0;
+        }
+        
+        /* Highlight Box */
+        .highlight {
+            background: #e8f4f8;
+            border-left: 6px solid #6fa8dc;
+            padding: 24px 32px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight p {
+            margin: 0;
+            font-size: 18px;
+            font-style: italic;
+            color: #3c4043;
+            font-weight: 500;
+        }
+        
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .page {
+                padding: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Title Page -->
+    <div class="page title-page">
+        <h1>Youth Curator Program</h1>
+        <p class="subtitle">Ethical AI Education Built on Google Infrastructure</p>
+        <p class="meta">Transparent Human × AI collaboration for high school students (ages 16-18)</p>
+        <p class="meta" style="margin-top: 32px;">CURATIONS | hub.curations.org</p>
+    </div>
+
+    <!-- The Problem -->
+    <div class="page">
+        <h2>The Problem</h2>
+        <div class="section-divider"></div>
+        
+        <h3>Current State of AI in K-12 Education</h3>
+        <p><strong>What's happening:</strong></p>
+        <ul class="bullet-list">
+            <li>Students using ChatGPT to complete assignments (academic integrity crisis)</li>
+            <li>Teachers uncertain about how to incorporate AI responsibly</li>
+            <li>Parents concerned about black-box algorithms and student data privacy</li>
+            <li>School districts want AI literacy programs but lack transparent frameworks</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h3>What's Missing</h3>
+        <div class="feature-grid">
+            <div class="feature">
+                <h4>Transparency</h4>
+                <p>How is AI actually being used in student work?</p>
+            </div>
+            <div class="feature">
+                <h4>Ethics</h4>
+                <p>Who reviews AI outputs for appropriateness?</p>
+            </div>
+            <div class="feature">
+                <h4>Accountability</h4>
+                <p>Can parents see what their children are creating?</p>
+            </div>
+            <div class="feature">
+                <h4>Real-World Skills</h4>
+                <p>Are students learning collaboration or just prompt engineering?</p>
+            </div>
+        </div>
+
+        <div class="highlight">
+            <p><strong>The Question:</strong> What if AI education was transparent by default?</p>
+        </div>
+    </div>
+
+    <!-- The Solution -->
+    <div class="page">
+        <h2>The CURATIONS Solution</h2>
+        <div class="section-divider"></div>
+        
+        <h3>Youth Curator Program: Brand-Funded AI Mentorships with Full Transparency</h3>
+        
+        <p><strong>How It Works:</strong></p>
+        <ul class="bullet-list">
+            <li>High school juniors/seniors (ages 16-18) work on <strong>real brand campaigns</strong></li>
+            <li>Students learn <strong>Human × AI collaboration</strong> using professional tools</li>
+            <li><strong>Brands fund the work</strong> (not schools, not parents)</li>
+            <li><strong>Full transparency</strong> for parents, teachers, and school districts</li>
+        </ul>
+
+        <div class="section-divider"></div>
+
+        <h3>What Makes It Different</h3>
+        <ul class="check-list">
+            <li><strong>Transparency Portal</strong> – Parents and schools see every AI interaction in real-time</li>
+            <li><strong>Artifact Logs</strong> – Every student project tracked with human/AI attribution metadata</li>
+            <li><strong>Ethical Guardrails</strong> – AI Curators review all outputs for appropriateness, accuracy, and safety</li>
+            <li><strong>Professional Portfolios</strong> – Students graduate with real client work, not just classroom assignments</li>
+        </ul>
+
+        <p style="margin-top: 32px;"><strong>Technology Stack:</strong> Claude, AutoRAG, Vectorize + <strong>Google Workspace</strong></p>
+    </div>
+
+    <!-- Why Google -->
+    <div class="page">
+        <h2>Why Google Infrastructure?</h2>
+        <div class="section-divider"></div>
+        
+        <div class="highlight">
+            <p>School districts already trust Google. We layer transparency on top.</p>
+        </div>
+
+        <h3>Core Integrations</h3>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <h4>🔐 Google Single Sign-On (SSO)</h4>
+                <p>Students sign in with school accounts. No new passwords, no data silos. FERPA/COPPA compliant by design.</p>
+            </div>
+            <div class="feature">
+                <h4>📚 Google Classroom API</h4>
+                <p>Auto-sync student rosters. Youth Curator assignments appear in teachers' dashboards. Grades sync to Classroom gradebook.</p>
+            </div>
+            <div class="feature">
+                <h4>📁 Google Drive API</h4>
+                <p>Parents access student work in real-time via shared folders. Version history shows human edits vs. AI suggestions.</p>
+            </div>
+            <div class="feature">
+                <h4>📝 Docs, Sheets, Slides APIs</h4>
+                <p>Students create campaigns using familiar tools. Artifacts logged to Transparency Portal with metadata.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="highlight">
+            <p><strong>Why This Matters:</strong> CURATIONS becomes a showcase for what's possible with Google for Education—driving awareness of advanced API features school districts may not be using yet.</p>
+        </div>
+    </div>
+
+    <!-- Roadmap -->
+    <div class="page">
+        <h2>Technical Integration Roadmap</h2>
+        <div class="section-divider"></div>
+
+        <div class="phase">
+            <span class="status">✓ LIVE</span>
+            <h4>Phase 1: Foundation</h4>
+            <ul class="check-list">
+                <li>Transparency Portal operational at hub.curations.org</li>
+                <li>AI Curator framework deployed (8 specialized agents)</li>
+                <li>CurationsLA newsletter proving content model (3,356 subscribers, 100% human-reviewed)</li>
+                <li>Brand partnerships established (LA restaurants, hospitality clients)</li>
+            </ul>
+            <p style="margin-top: 16px; font-weight: 600;">Next: Integrate Google SSO + Classroom API</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="phase" style="border-left-color: #a8d5e2;">
+            <span class="status" style="background: #a8d5e2;">IN PROGRESS</span>
+            <h4>Phase 2: Pilot</h4>
+            <p><strong>Goal:</strong> Validate model with Los Angeles schools</p>
+            <ul class="check-list">
+                <li>Launch Youth Curator Program cohort (15-25 students)</li>
+                <li>Full Google Workspace integration (SSO, Classroom, Drive, Docs)</li>
+                <li>Real brand campaigns with transparency logging</li>
+                <li>Parent/teacher feedback collection</li>
+            </ul>
+            <p style="margin-top: 16px;"><strong>Success Metrics:</strong> 100% parent satisfaction with transparency tools, 90%+ student portfolio completion</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="phase" style="border-left-color: #9aa0a6;">
+            <span class="status" style="background: #9aa0a6;">PLANNED</span>
+            <h4>Phase 3: Scale</h4>
+            <p><strong>Goal:</strong> Expand to LAUSD + private school network</p>
+            <ul class="check-list">
+                <li>Apply for government grants (DOE AI literacy funding, workforce development)</li>
+                <li>Position Google as technical infrastructure partner in grant applications</li>
+                <li>Multi-city expansion roadmap (San Francisco, NYC, Austin)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- What We've Built -->
+    <div class="page">
+        <h2>What We've Already Built</h2>
+        <div class="section-divider"></div>
+        
+        <h3>Proof-of-Concept: Live Infrastructure</h3>
+
+        <div class="feature" style="margin: 24px 0;">
+            <h4>HUB by CURATIONS (hub.curations.org)</h4>
+            <p>Transparency Portal for parents/schools/districts. Learning paths: AI agent development, ethical AI workflows, Human × AI collaboration. Artifact logging system with human/AI attribution. Student dashboard for tracking mentorship progress.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="feature" style="margin: 24px 0;">
+            <h4>CurationsLA Newsletter (la.curations.cc)</h4>
+            <p>3,356 subscribers. 100% human-reviewed content (zero AI filler). "Good Vibes Only" editorial philosophy (no politics, violence, fear-driven headlines). Proof that symbiotic Human × AI model works at scale.</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="feature" style="margin: 24px 0;">
+            <h4>AI Curator Framework</h4>
+            <p>8 specialized agents with distinct roles: Kova Sterling (Orchestration), Taylor Hines (Trend Prediction), Garrett Nova (Editorial), Lucy Mills (PR), Peter Melrose (Hospitality), Kai Synapse (Branding), Jim Flenderson (Ecosystems), Molly Towns (Ethical Review - 94% accuracy).</p>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="feature" style="margin: 24px 0;">
+            <h4>Brand Partnerships</h4>
+            <p>LA restaurant clients (paid campaigns). Hospitality partners (revenue simulation, SEO optimization). Professional services (executive media training, thought leadership).</p>
+        </div>
+    </div>
+
+    <!-- Ethics -->
+    <div class="page">
+        <h2>Digital Stewardship & Ethics</h2>
+        <div class="section-divider"></div>
+        
+        <h3>Core Principles</h3>
+
+        <div class="feature-grid">
+            <div class="feature">
+                <h4>Transparent Collaboration</h4>
+                <p>AI as partner, not black box. Every AI interaction logged with timestamp, tool used, output generated. Human decision-making always visible in audit trail.</p>
+            </div>
+            <div class="feature">
+                <h4>Privacy First</h4>
+                <p>No personal data stored in AI consultations. FERPA/COPPA compliance built into system architecture. Students control what's shared with portfolio vs. kept private.</p>
+            </div>
+            <div class="feature">
+                <h4>Parent Visibility</h4>
+                <p>Real-time access to student work via Google Drive integration. Transparency Portal dashboard shows AI usage metrics per project. Opt-in notifications for major milestones.</p>
+            </div>
+            <div class="feature">
+                <h4>Responsible Innovation</h4>
+                <p>Ethical AI guardrails: Molly Towns (AI Curator) reviews all outputs. Human mentors provide strategic oversight. Students learn to question AI suggestions.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="highlight">
+            <p><strong>First in K-12:</strong> Full transparency for parents, schools, and districts—setting the standard for ethical AI education.</p>
+        </div>
+    </div>
+
+    <!-- Next Steps -->
+    <div class="page">
+        <h2>Next Steps</h2>
+        <div class="section-divider"></div>
+
+        <div class="two-col">
+            <div class="col">
+                <h4>What CURATIONS Needs from Google</h4>
+                <ul class="check-list">
+                    <li>Partner Program application guidance</li>
+                    <li>Technical support for Classroom API integration</li>
+                    <li>Sandbox environment for testing before live partnerships</li>
+                    <li>Intro to Google K-12 sales team in Los Angeles (when pilot schools confirmed)</li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>What Google Gets</h4>
+                <ul class="check-list">
+                    <li>Showcase partner for ethical AI in K-12</li>
+                    <li>Proof-of-concept for advanced Classroom API use cases</li>
+                    <li>Differentiation vs. Microsoft/OpenAI (transparency-first model)</li>
+                    <li>Grant application partnership (DOE funding)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="contact">
+            <h3>Contact</h3>
+            <p><strong>Web:</strong> curations.org</p>
+            <p><strong>Email:</strong> youth@curations.org</p>
+            <p style="margin-top: 32px; font-size: 16px; opacity: 0.9;">
+                <strong>Founder:</strong> Wyatt, CURATIONS<br>
+                <strong>Background:</strong> Apple iBooks Author, Pearson Learning, Cengage Group<br>
+                <strong>Founded:</strong> 2017 (501(c)(3) nonprofit)
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
