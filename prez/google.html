@@ -29,18 +29,20 @@
             flex-direction: column;
             justify-content: center;
             page-break-after: always;
+            border-bottom: 8px solid #a8d5e2;
         }
         
         .page:last-child {
             page-break-after: auto;
+            border-bottom: none;
         }
         
         /* Title Page */
         .title-page {
             text-align: center;
             justify-content: center;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: #f8fafb;
+            border-bottom: 8px solid #6fa8dc;
         }
         
         .title-page h1 {
@@ -48,29 +50,38 @@
             font-weight: 700;
             margin-bottom: 24px;
             line-height: 1.2;
+            color: #1a1a1a;
         }
         
         .title-page .subtitle {
             font-size: 24px;
-            font-weight: 300;
+            font-weight: 400;
             margin-bottom: 48px;
-            opacity: 0.95;
+            color: #3c4043;
         }
         
         .title-page .meta {
             font-size: 18px;
             font-weight: 400;
-            opacity: 0.9;
+            color: #5f6368;
+        }
+        
+        /* Section Dividers */
+        .section-divider {
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to right, #a8d5e2, #6fa8dc);
+            margin: 32px 0;
         }
         
         /* Section Headers */
         h2 {
             font-size: 42px;
             font-weight: 700;
-            margin-bottom: 32px;
-            color: #1a73e8;
-            border-bottom: 4px solid #1a73e8;
+            margin-bottom: 24px;
+            color: #6fa8dc;
             padding-bottom: 16px;
+            border-bottom: 3px solid #a8d5e2;
         }
         
         h3 {
@@ -96,10 +107,10 @@
         }
         
         .feature {
-            background: #f8f9fa;
+            background: #f0f7fa;
             padding: 32px;
             border-radius: 12px;
-            border-left: 6px solid #1a73e8;
+            border-left: 6px solid #6fa8dc;
         }
         
         .feature h4 {
@@ -115,10 +126,35 @@
             margin: 0;
         }
         
+        /* Lists */
+        .bullet-list {
+            list-style: none;
+            margin: 24px 0;
+            padding: 0;
+        }
+        
+        .bullet-list li {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-left: 32px;
+            position: relative;
+            color: #3c4043;
+        }
+        
+        .bullet-list li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6fa8dc;
+            font-weight: 700;
+            font-size: 24px;
+        }
+        
         /* Check Lists */
         .check-list {
             list-style: none;
             margin: 24px 0;
+            padding: 0;
         }
         
         .check-list li {
@@ -133,18 +169,18 @@
             content: "✓";
             position: absolute;
             left: 0;
-            color: #34a853;
+            color: #76c7c0;
             font-weight: 700;
             font-size: 24px;
         }
         
         /* Phases */
         .phase {
-            background: #f8f9fa;
+            background: #f0f7fa;
             padding: 32px;
             margin: 24px 0;
             border-radius: 12px;
-            border-left: 6px solid #34a853;
+            border-left: 6px solid #76c7c0;
         }
         
         .phase h4 {
@@ -156,7 +192,7 @@
         
         .phase .status {
             display: inline-block;
-            background: #34a853;
+            background: #76c7c0;
             color: white;
             padding: 4px 12px;
             border-radius: 16px;
@@ -180,21 +216,9 @@
             color: #202124;
         }
         
-        /* Screenshot Placeholder */
-        .screenshot {
-            background: #f1f3f4;
-            border: 2px solid #dadce0;
-            border-radius: 8px;
-            padding: 40px;
-            text-align: center;
-            margin: 32px 0;
-            color: #5f6368;
-            font-size: 16px;
-        }
-        
         /* Contact Section */
         .contact {
-            background: #1a73e8;
+            background: #6fa8dc;
             color: white;
             padding: 48px;
             border-radius: 12px;
@@ -215,8 +239,8 @@
         
         /* Highlight Box */
         .highlight {
-            background: #e8f0fe;
-            border-left: 6px solid #1a73e8;
+            background: #e8f4f8;
+            border-left: 6px solid #6fa8dc;
             padding: 24px 32px;
             margin: 32px 0;
             border-radius: 8px;
@@ -226,7 +250,8 @@
             margin: 0;
             font-size: 18px;
             font-style: italic;
-            color: #1967d2;
+            color: #3c4043;
+            font-weight: 500;
         }
         
         /* Print Styles */
@@ -253,15 +278,18 @@
     <!-- The Problem -->
     <div class="page">
         <h2>The Problem</h2>
+        <div class="section-divider"></div>
         
         <h3>Current State of AI in K-12 Education</h3>
         <p><strong>What's happening:</strong></p>
-        <ul class="check-list" style="list-style: disc; padding-left: 40px;">
-            <li style="padding-left: 0; margin-left: 0;">Students using ChatGPT to complete assignments (academic integrity crisis)</li>
-            <li style="padding-left: 0; margin-left: 0;">Teachers uncertain about how to incorporate AI responsibly</li>
-            <li style="padding-left: 0; margin-left: 0;">Parents concerned about black-box algorithms and student data privacy</li>
-            <li style="padding-left: 0; margin-left: 0;">School districts want AI literacy programs but lack transparent frameworks</li>
+        <ul class="bullet-list">
+            <li>Students using ChatGPT to complete assignments (academic integrity crisis)</li>
+            <li>Teachers uncertain about how to incorporate AI responsibly</li>
+            <li>Parents concerned about black-box algorithms and student data privacy</li>
+            <li>School districts want AI literacy programs but lack transparent frameworks</li>
         </ul>
+
+        <div class="section-divider"></div>
 
         <h3>What's Missing</h3>
         <div class="feature-grid">
@@ -291,16 +319,19 @@
     <!-- The Solution -->
     <div class="page">
         <h2>The CURATIONS Solution</h2>
+        <div class="section-divider"></div>
         
         <h3>Youth Curator Program: Brand-Funded AI Mentorships with Full Transparency</h3>
         
         <p><strong>How It Works:</strong></p>
-        <ul class="check-list" style="list-style: disc; padding-left: 40px;">
-            <li style="padding-left: 0; margin-left: 0;">High school juniors/seniors (ages 16-18) work on <strong>real brand campaigns</strong></li>
-            <li style="padding-left: 0; margin-left: 0;">Students learn <strong>Human × AI collaboration</strong> using professional tools</li>
-            <li style="padding-left: 0; margin-left: 0;"><strong>Brands fund the work</strong> (not schools, not parents)</li>
-            <li style="padding-left: 0; margin-left: 0;"><strong>Full transparency</strong> for parents, teachers, and school districts</li>
+        <ul class="bullet-list">
+            <li>High school juniors/seniors (ages 16-18) work on <strong>real brand campaigns</strong></li>
+            <li>Students learn <strong>Human × AI collaboration</strong> using professional tools</li>
+            <li><strong>Brands fund the work</strong> (not schools, not parents)</li>
+            <li><strong>Full transparency</strong> for parents, teachers, and school districts</li>
         </ul>
+
+        <div class="section-divider"></div>
 
         <h3>What Makes It Different</h3>
         <ul class="check-list">
@@ -316,6 +347,7 @@
     <!-- Why Google -->
     <div class="page">
         <h2>Why Google Infrastructure?</h2>
+        <div class="section-divider"></div>
         
         <div class="highlight">
             <p>School districts already trust Google. We layer transparency on top.</p>
@@ -342,7 +374,9 @@
             </div>
         </div>
 
-        <div class="highlight" style="margin-top: 48px;">
+        <div class="section-divider"></div>
+
+        <div class="highlight">
             <p><strong>Why This Matters:</strong> CURATIONS becomes a showcase for what's possible with Google for Education—driving awareness of advanced API features school districts may not be using yet.</p>
         </div>
     </div>
@@ -350,6 +384,7 @@
     <!-- Roadmap -->
     <div class="page">
         <h2>Technical Integration Roadmap</h2>
+        <div class="section-divider"></div>
 
         <div class="phase">
             <span class="status">✓ LIVE</span>
@@ -363,8 +398,10 @@
             <p style="margin-top: 16px; font-weight: 600;">Next: Integrate Google SSO + Classroom API</p>
         </div>
 
-        <div class="phase" style="border-left-color: #fbbc04;">
-            <span class="status" style="background: #fbbc04;">IN PROGRESS</span>
+        <div class="section-divider"></div>
+
+        <div class="phase" style="border-left-color: #a8d5e2;">
+            <span class="status" style="background: #a8d5e2;">IN PROGRESS</span>
             <h4>Phase 2: Pilot</h4>
             <p><strong>Goal:</strong> Validate model with Los Angeles schools</p>
             <ul class="check-list">
@@ -375,6 +412,8 @@
             </ul>
             <p style="margin-top: 16px;"><strong>Success Metrics:</strong> 100% parent satisfaction with transparency tools, 90%+ student portfolio completion</p>
         </div>
+
+        <div class="section-divider"></div>
 
         <div class="phase" style="border-left-color: #9aa0a6;">
             <span class="status" style="background: #9aa0a6;">PLANNED</span>
@@ -391,6 +430,7 @@
     <!-- What We've Built -->
     <div class="page">
         <h2>What We've Already Built</h2>
+        <div class="section-divider"></div>
         
         <h3>Proof-of-Concept: Live Infrastructure</h3>
 
@@ -399,23 +439,21 @@
             <p>Transparency Portal for parents/schools/districts. Learning paths: AI agent development, ethical AI workflows, Human × AI collaboration. Artifact logging system with human/AI attribution. Student dashboard for tracking mentorship progress.</p>
         </div>
 
-        <div class="screenshot">
-            [Screenshot: hub.curations.org Learning Path - "Foundations Learning Path" module showing 0% progress]
-        </div>
+        <div class="section-divider"></div>
 
         <div class="feature" style="margin: 24px 0;">
             <h4>CurationsLA Newsletter (la.curations.cc)</h4>
             <p>3,356 subscribers. 100% human-reviewed content (zero AI filler). "Good Vibes Only" editorial philosophy (no politics, violence, fear-driven headlines). Proof that symbiotic Human × AI model works at scale.</p>
         </div>
 
-        <div class="screenshot">
-            [Screenshot: CurationsLA article - "Multi-Billion Dollar Project Advances" - Sepulveda Pass Train development story]
-        </div>
+        <div class="section-divider"></div>
 
         <div class="feature" style="margin: 24px 0;">
             <h4>AI Curator Framework</h4>
             <p>8 specialized agents with distinct roles: Kova Sterling (Orchestration), Taylor Hines (Trend Prediction), Garrett Nova (Editorial), Lucy Mills (PR), Peter Melrose (Hospitality), Kai Synapse (Branding), Jim Flenderson (Ecosystems), Molly Towns (Ethical Review - 94% accuracy).</p>
         </div>
+
+        <div class="section-divider"></div>
 
         <div class="feature" style="margin: 24px 0;">
             <h4>Brand Partnerships</h4>
@@ -426,6 +464,7 @@
     <!-- Ethics -->
     <div class="page">
         <h2>Digital Stewardship & Ethics</h2>
+        <div class="section-divider"></div>
         
         <h3>Core Principles</h3>
 
@@ -448,7 +487,9 @@
             </div>
         </div>
 
-        <div class="highlight" style="margin-top: 48px;">
+        <div class="section-divider"></div>
+
+        <div class="highlight">
             <p><strong>First in K-12:</strong> Full transparency for parents, schools, and districts—setting the standard for ethical AI education.</p>
         </div>
     </div>
@@ -456,6 +497,7 @@
     <!-- Next Steps -->
     <div class="page">
         <h2>Next Steps</h2>
+        <div class="section-divider"></div>
 
         <div class="two-col">
             <div class="col">
@@ -478,11 +520,12 @@
             </div>
         </div>
 
+        <div class="section-divider"></div>
+
         <div class="contact">
             <h3>Contact</h3>
             <p><strong>Web:</strong> curations.org</p>
             <p><strong>Email:</strong> youth@curations.org</p>
-            <p><strong>Demo:</strong> hub.curations.org</p>
             <p style="margin-top: 32px; font-size: 16px; opacity: 0.9;">
                 <strong>Founder:</strong> Wyatt, CURATIONS<br>
                 <strong>Background:</strong> Apple iBooks Author, Pearson Learning, Cengage Group<br>
