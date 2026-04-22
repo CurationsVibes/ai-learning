@@ -111,15 +111,6 @@
   </head>
   <body style="background-color:#FBF9FF">
     <!--$--><!--html--><!--head-->
-    <div
-      style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0"
-      data-skip-in-text="true">
-      Coachella surprises, LACMA opens, and Metro&#x27;s D Line extension is
-      almost here.
-      <div>
-         ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿
-      </div>
-    </div>
     <!--body-->
     <table
       border="0"
@@ -148,21 +139,7 @@
                       style="margin:0;padding:0;font-size:18px;line-height:1.44em;padding-top:0px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#111111;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-right:0px;padding-bottom:0px;padding-left:0px">
                       CURATIONS<span style="color:#8b5cf6">LA</span>
                     </h2>
-                    <p
-                      class="node-paragraph"
-                      style="margin:0;padding:0;font-size:11px;padding-top:0.5em;padding-bottom:0.5em;color:#111111;line-height:160%">
-                      <span style="color:#7e8a9a"
-                        >TUESDAY APRIL 21ST 2026· </span
-                      ><a
-                        href="https://www.curationsla.com/vibes/2026-04-21-lacma-x-coachella-vibes"
-                        rel="noopener noreferrer nofollow"
-                        style="color:#8b5cf6;text-decoration-line:none;text-decoration:underline"
-                        target="_blank"
-                        ><span style="color:#7e8a9a"
-                          ><strong>VIEW GOOD VIBES ONLINE → </strong></span
-                        ></a
-                      >
-                    </p>
+
                     <p
                       style="margin:0;padding:0;font-size:10px;padding-top:0.5em;padding-bottom:0.5em;color:#111111;line-height:160%;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-align:right">
                       <a
@@ -2194,55 +2171,6 @@
                         </tbody>
                       </table>
 
-                      <table
-                        width="100%"
-                        border="0"
-                        cellpadding="0"
-                        cellspacing="0"
-                        role="presentation"
-                        style="margin-top:0;background-color:#FFFFF8">
-                        <tbody>
-                          <tr>
-                            <td
-                              align="center"
-                              style="padding:16px 20px 28px 20px;font-family:'Inter',Arial,Helvetica,sans-serif;font-size:12px;line-height:1.6;color:#666666">
-                              <p style="margin:0 0 8px 0;padding:0">
-                                You're receiving this because you subscribed to
-                                CurationsLA VIBES at
-                                <a
-                                  href="https://www.curationsla.com"
-                                  style="color:#8b5cf6;text-decoration:underline"
-                                  >curationsla.com</a
-                                >.
-                              </p>
-                              <p style="margin:0 0 8px 0;padding:0">
-                                <strong style="color:#111111"
-                                  >CurationsLA</strong
-                                >
-                                — 355 South Grand Avenue, Suite 2450, Los
-                                Angeles, CA 90071
-                              </p>
-                              <p style="margin:0;padding:0">
-                                <a
-                                  href="{{{RESEND_UNSUBSCRIBE_URL}}}"
-                                  style="color:#8b5cf6;text-decoration:underline"
-                                  >Unsubscribe</a
-                                >
-                                &nbsp;·&nbsp;
-                                <a
-                                  href="https://www.curationsla.com/vibes"
-                                  style="color:#8b5cf6;text-decoration:underline"
-                                  >View Archive</a
-                                >
-                              </p>
-                              <p
-                                style="margin:10px 0 0 0;padding:0;font-size:10px;color:#999999;letter-spacing:0.04em">
-                                © 2026 CurationsLA. All rights reserved.
-                              </p>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
                     </div>
                     <p
                       style="margin:0;padding:0;font-size:1em;padding-top:0.5em;padding-bottom:0.5em;color:#111111;line-height:160%">
