@@ -139,7 +139,6 @@
                       style="margin:0;padding:0;font-size:18px;line-height:1.44em;padding-top:0px;font-weight:900;text-transform:uppercase;letter-spacing:0.06em;color:#111111;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;padding-right:0px;padding-bottom:0px;padding-left:0px">
                       CURATIONS<span style="color:#8b5cf6">LA</span>
                     </h2>
-
                     <p
                       style="margin:0;padding:0;font-size:10px;padding-top:0.5em;padding-bottom:0.5em;color:#111111;line-height:160%;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-align:right">
                       <a
